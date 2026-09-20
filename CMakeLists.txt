@@ -38,13 +38,14 @@ if(BRAVELIKE_ENABLE_CEF)
     message(FATAL_ERROR "The desktop browser milestone currently targets Windows only")
   endif()
 
-  set(CEF_VERSION "151.3.24+g2384915+chromium-151.0.7922.174" CACHE STRING "CEF binary version")
+  set(CEF_VERSION "152.0.7+g83ffcba+chromium-152.0.7977.83" CACHE STRING "CEF binary version")
   set(CEF_CHANNEL "" CACHE STRING "CEF release channel")
   set(CEF_PLATFORM "windows64")
+  set(CEF_DISTRIBUTION_TYPE "minimal")
 
   list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
   include(DownloadCEF)
-  DownloadCEF("${CEF_PLATFORM}" "${CEF_CHANNEL}" "${CEF_VERSION}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party/cef")
+  DownloadCEF("${CEF_PLATFORM}" "${CEF_CHANNEL}" "${CEF_VERSION}" "${CEF_DISTRIBUTION_TYPE}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party/cef")
 
   list(APPEND CMAKE_MODULE_PATH "${CEF_ROOT}/cmake")
   find_package(CEF REQUIRED)

@@ -1,12 +1,17 @@
 # Adapted from chromiumembedded/cef-project under its BSD-style license.
-function(DownloadCEF platform channel version download_dir)
+function(DownloadCEF platform channel version distribution_type download_dir)
   if(channel STREQUAL "beta")
     set(channel_part "_beta")
   else()
     set(channel_part "")
   endif()
+  if(distribution_type STREQUAL "minimal")
+    set(type_part "_minimal")
+  else()
+    set(type_part "")
+  endif()
 
-  set(CEF_DISTRIBUTION "cef_binary_${version}_${platform}${channel_part}")
+  set(CEF_DISTRIBUTION "cef_binary_${version}_${platform}${channel_part}${type_part}")
   set(CEF_DOWNLOAD_DIR "${download_dir}")
   set(CEF_ROOT "${CEF_DOWNLOAD_DIR}/${CEF_DISTRIBUTION}" CACHE INTERNAL "CEF_ROOT")
 

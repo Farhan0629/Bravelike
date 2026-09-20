@@ -11,7 +11,7 @@ jobs:
         os: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Configure
         run: cmake -S . -B out/build -DBRAVELIKE_BUILD_TESTS=ON
       - name: Build
@@ -23,7 +23,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Configure CEF browser
         run: cmake -S . -B out/cef -G "Visual Studio 17 2022" -A x64 -DBRAVELIKE_ENABLE_CEF=ON -DUSE_SANDBOX=OFF
       - name: Build CEF browser
