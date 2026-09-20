@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <windows.h>
 
+#include "include/cef_app.h"
 #include "include/cef_browser.h"
 #include "include/cef_callback.h"
 #include "include/cef_frame.h"
