@@ -7,6 +7,8 @@ set(BRAVELIKE_BROWSER_SRCS
 )
 
 set(BRAVELIKE_TARGET bravelike_browser)
+ADD_LOGICAL_TARGET("libcef_lib" "${CEF_LIB_DEBUG}" "${CEF_LIB_RELEASE}")
+
 if(USE_SANDBOX)
   add_library(${BRAVELIKE_TARGET} SHARED ${BRAVELIKE_BROWSER_SRCS})
   SET_LIBRARY_TARGET_PROPERTIES(${BRAVELIKE_TARGET})
@@ -16,7 +18,11 @@ else()
 endif()
 
 target_include_directories(${BRAVELIKE_TARGET} PRIVATE "${CMAKE_SOURCE_DIR}")
-target_link_libraries(${BRAVELIKE_TARGET} PRIVATE bravelike_core libcef_lib libcef_dll_wrapper)
+target_link_libraries(${BRAVELIKE_TARGET} PRIVATE
+  bravelike_core
+  libcef_lib
+  libcef_dll_wrapper
+  ${CEF_STANDARD_LIBS})
 add_dependencies(${BRAVELIKE_TARGET} libcef_dll_wrapper)
 
 if(CMAKE_GENERATOR MATCHES "Ninja|Make")
