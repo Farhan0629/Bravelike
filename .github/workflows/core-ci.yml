@@ -8,7 +8,7 @@ jobs:
   core:
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [windows-2022, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v5
@@ -20,7 +20,7 @@ jobs:
         run: ctest --test-dir out/build -C Release --output-on-failure
 
   windows-browser:
-    runs-on: windows-latest
+    runs-on: windows-2022
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
