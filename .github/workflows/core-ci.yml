@@ -44,7 +44,11 @@ jobs:
           $code = $LASTEXITCODE
           $output | ForEach-Object { Write-Host $_ }
           if ($code -ne 0) {
-            $errors = $output | Where-Object { "$_" -match '(?i)(error [A-Z]+[0-9]+|fatal error|unresolved external|LNK[0-9]+|failed)' }
+            $errors = $output | Where-Object {
+              $line = "$_"
+              $line -notmatch '(?i)warning' -and
+              $line -match '(?i)(error [A-Z]+[0-9]+|fatal error|unresolved external|LNK[0-9]+|failed)'
+            }
             if (-not $errors) { $errors = $output | Select-Object -Last 40 }
             $detail = (($errors | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
             Write-Host "::error title=CEF build failed::$detail"
