@@ -1,0 +1,6 @@
+# Bravelike demonstration rules
+# Replace these examples with properly licensed lists later.
+ads.example.com
+||tracker.example^
+analytics.example.net
+@@allowed.tracker.example
