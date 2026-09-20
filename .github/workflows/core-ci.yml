@@ -31,7 +31,7 @@ jobs:
           $code = $LASTEXITCODE
           $output | ForEach-Object { Write-Host $_ }
           if ($code -ne 0) {
-            $tail = ($output | Select-Object -Last 20) -join "`n"
+            $tail = (($output | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
             Write-Host "::error title=CEF configure failed::$tail"
             exit $code
           }
@@ -42,7 +42,7 @@ jobs:
           $code = $LASTEXITCODE
           $output | ForEach-Object { Write-Host $_ }
           if ($code -ne 0) {
-            $tail = ($output | Select-Object -Last 30) -join "`n"
+            $tail = (($output | Select-Object -Last 40) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
             Write-Host "::error title=CEF build failed::$tail"
             exit $code
           }
