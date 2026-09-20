@@ -1,4 +1,5 @@
 #include "core/filter_engine.h"
+#include "core/navigation.h"
 #include "core/privacy_stats.h"
 #include "core/url_utils.h"
 #include <iostream>
@@ -36,6 +37,17 @@ not a supported rule
          "allows unsupported schemes");
   Expect(bravelike::ExtractHttpHost("HTTPS://User:Pass@Example.COM:443/a").value_or("") == "example.com",
          "normalizes authority and host");
+
+  Expect(bravelike::ResolveAddressInput("example.com") == "https://example.com",
+         "adds HTTPS to a host");
+  Expect(bravelike::ResolveAddressInput("http://localhost:8080") == "http://localhost:8080",
+         "preserves explicit schemes");
+  Expect(bravelike::ResolveAddressInput("privacy browser") ==
+             "https://search.brave.com/search?q=privacy+browser",
+         "turns words into a search query");
+  Expect(bravelike::ResolveAddressInput(" C++ browser ") ==
+             "https://search.brave.com/search?q=C%2B%2B+browser",
+         "trims and encodes a search query");
 
   bravelike::PrivacyStats stats;
   stats.Record(true); stats.Record(false);

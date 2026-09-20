@@ -1,15 +1,17 @@
 cmake_minimum_required(VERSION 3.24)
-project(Bravelike VERSION 0.1.0 LANGUAGES CXX)
+project(Bravelike VERSION 0.2.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
 option(BRAVELIKE_BUILD_TESTS "Build unit tests" ON)
-option(BRAVELIKE_ENABLE_CEF "Build the CEF desktop shell" OFF)
+option(BRAVELIKE_ENABLE_CEF "Build the CEF desktop browser" OFF)
 
 add_library(bravelike_core
     src/core/filter_engine.cpp
+    src/core/navigation.cpp
     src/core/url_utils.cpp
     src/core/privacy_stats.cpp
 )
@@ -33,12 +35,20 @@ endif()
 
 if(BRAVELIKE_ENABLE_CEF)
   if(NOT WIN32)
-    message(FATAL_ERROR "The first CEF shell milestone currently targets Windows only")
+    message(FATAL_ERROR "The desktop browser milestone currently targets Windows only")
   endif()
-  if(NOT DEFINED CEF_ROOT)
-    message(FATAL_ERROR "Set CEF_ROOT to an extracted CEF binary distribution")
-  endif()
+
+  set(CEF_VERSION "151.3.24+g2384915+chromium-151.0.7922.174" CACHE STRING "CEF binary version")
+  set(CEF_CHANNEL "" CACHE STRING "CEF release channel")
+  set(CEF_PLATFORM "windows64")
+
+  list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+  include(DownloadCEF)
+  DownloadCEF("${CEF_PLATFORM}" "${CEF_CHANNEL}" "${CEF_VERSION}" "${CMAKE_CURRENT_SOURCE_DIR}/third_party/cef")
+
   list(APPEND CMAKE_MODULE_PATH "${CEF_ROOT}/cmake")
   find_package(CEF REQUIRED)
+  add_subdirectory(${CEF_LIBCEF_DLL_WRAPPER_PATH} libcef_dll_wrapper)
   add_subdirectory(src/browser)
+  PRINT_CEF_CONFIG()
 endif()

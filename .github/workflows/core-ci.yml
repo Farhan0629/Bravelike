@@ -5,7 +5,7 @@ on:
 permissions:
   contents: read
 jobs:
-  build:
+  core:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
@@ -18,3 +18,27 @@ jobs:
         run: cmake --build out/build --config Release
       - name: Test
         run: ctest --test-dir out/build -C Release --output-on-failure
+
+  windows-browser:
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure CEF browser
+        run: cmake -S . -B out/cef -G "Visual Studio 17 2022" -A x64 -DBRAVELIKE_ENABLE_CEF=ON -DUSE_SANDBOX=OFF
+      - name: Build CEF browser
+        run: cmake --build out/cef --config Release --target bravelike_browser
+      - name: Verify runtime files
+        shell: pwsh
+        run: |
+          $dir = "out/cef/Release"
+          $required = @("bravelike_browser.exe", "libcef.dll", "chrome_elf.dll", "icudtl.dat", "resources.pak", "config/blocklist.txt")
+          foreach ($file in $required) {
+            if (-not (Test-Path (Join-Path $dir $file))) { throw "Missing runtime file: $file" }
+          }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bravelike-windows-release
+          path: out/cef/Release/
+          if-no-files-found: error
+          retention-days: 7
