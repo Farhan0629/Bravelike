@@ -49,6 +49,13 @@ if(BRAVELIKE_ENABLE_CEF)
 
   list(APPEND CMAKE_MODULE_PATH "${CEF_ROOT}/cmake")
   find_package(CEF REQUIRED)
+
+  # CEF's Windows wrapper is built with the static MSVC runtime. Every object
+  # linked into the browser must use the same runtime to avoid duplicate CRT
+  # and standard-library symbols at link time.
+  set_property(TARGET bravelike_core PROPERTY
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+
   add_subdirectory(${CEF_LIBCEF_DLL_WRAPPER_PATH} libcef_dll_wrapper)
   add_subdirectory(src/browser)
   PRINT_CEF_CONFIG()
