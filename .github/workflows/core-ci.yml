@@ -1,6 +1,7 @@
 name: Core CI
 on:
   push:
+    branches: [main]
   pull_request:
 permissions:
   contents: read
@@ -31,8 +32,10 @@ jobs:
           $code = $LASTEXITCODE
           $output | ForEach-Object { Write-Host $_ }
           if ($code -ne 0) {
-            $tail = (($output | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
-            Write-Host "::error title=CEF configure failed::$tail"
+            $errors = $output | Where-Object { "$_" -match '(?i)(cmake error|error [A-Z]+[0-9]+|fatal error|failed)' }
+            if (-not $errors) { $errors = $output | Select-Object -Last 30 }
+            $detail = (($errors | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
+            Write-Host "::error title=CEF configure failed::$detail"
             exit $code
           }
       - name: Build CEF browser
@@ -42,8 +45,10 @@ jobs:
           $code = $LASTEXITCODE
           $output | ForEach-Object { Write-Host $_ }
           if ($code -ne 0) {
-            $tail = (($output | Select-Object -Last 40) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
-            Write-Host "::error title=CEF build failed::$tail"
+            $errors = $output | Where-Object { "$_" -match '(?i)(error [A-Z]+[0-9]+|fatal error|unresolved external|LNK[0-9]+|failed)' }
+            if (-not $errors) { $errors = $output | Select-Object -Last 40 }
+            $detail = (($errors | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
+            Write-Host "::error title=CEF build failed::$detail"
             exit $code
           }
       - name: Verify runtime files
