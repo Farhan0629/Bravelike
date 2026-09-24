@@ -1,5 +1,4 @@
 #pragma once
-#include <atomic>
 #include <string>
 
 #include "include/cef_client.h"
@@ -13,6 +12,7 @@
 #include "include/views/cef_window_delegate.h"
 #include "src/core/filter_engine.h"
 #include "src/core/privacy_stats.h"
+#include "src/core/site_shields.h"
 
 namespace bravelike {
 class BrowserWindow final : public CefClient,
@@ -70,7 +70,7 @@ class BrowserWindow final : public CefClient,
   std::string startup_url_;
   FilterEngine filter_engine_;
   PrivacyStats privacy_stats_;
-  std::atomic<bool> shields_enabled_{true};
+  SiteShields site_shields_;
   CefRefPtr<CefBrowser> browser_;
   CefRefPtr<CefBrowserView> browser_view_;
   CefRefPtr<CefWindow> window_;
