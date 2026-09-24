@@ -12,6 +12,7 @@ option(BRAVELIKE_ENABLE_CEF "Build the CEF desktop browser" OFF)
 add_library(bravelike_core
     src/core/filter_engine.cpp
     src/core/navigation.cpp
+    src/core/site_shields.cpp
     src/core/url_utils.cpp
     src/core/privacy_stats.cpp
 )
@@ -31,6 +32,9 @@ if(BRAVELIKE_BUILD_TESTS)
   add_executable(bravelike_tests tests/filter_engine_tests.cpp)
   target_link_libraries(bravelike_tests PRIVATE bravelike_core)
   add_test(NAME bravelike_tests COMMAND bravelike_tests)
+  add_executable(bravelike_site_shields_tests tests/site_shields_tests.cpp)
+  target_link_libraries(bravelike_site_shields_tests PRIVATE bravelike_core)
+  add_test(NAME bravelike_site_shields_tests COMMAND bravelike_site_shields_tests)
 endif()
 
 if(BRAVELIKE_ENABLE_CEF)
@@ -50,9 +54,7 @@ if(BRAVELIKE_ENABLE_CEF)
   list(APPEND CMAKE_MODULE_PATH "${CEF_ROOT}/cmake")
   find_package(CEF REQUIRED)
 
-  # CEF's Windows wrapper is built with the static MSVC runtime. Every object
-  # linked into the browser must use the same runtime to avoid duplicate CRT
-  # and standard-library symbols at link time.
+  # Match the static MSVC runtime used by CEF's Windows wrapper.
   set_property(TARGET bravelike_core PROPERTY
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
