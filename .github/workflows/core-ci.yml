@@ -5,16 +5,66 @@ on:
 permissions:
   contents: read
 jobs:
-  build:
+  core:
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [windows-2022, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Configure
         run: cmake -S . -B out/build -DBRAVELIKE_BUILD_TESTS=ON
       - name: Build
         run: cmake --build out/build --config Release
       - name: Test
         run: ctest --test-dir out/build -C Release --output-on-failure
+
+  windows-browser:
+    runs-on: windows-2022
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - name: Configure CEF browser
+        shell: pwsh
+        run: |
+          $output = & cmake -S . -B out/cef -G "Visual Studio 17 2022" -A x64 -DBRAVELIKE_ENABLE_CEF=ON -DUSE_SANDBOX=OFF 2>&1
+          $code = $LASTEXITCODE
+          $output | ForEach-Object { Write-Host $_ }
+          if ($code -ne 0) {
+            $errors = $output | Where-Object { "$_" -match '(?i)(cmake error|error [A-Z]+[0-9]+|fatal error|failed)' }
+            if (-not $errors) { $errors = $output | Select-Object -Last 30 }
+            $detail = (($errors | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
+            Write-Host "::error title=CEF configure failed::$detail"
+            exit $code
+          }
+      - name: Build CEF browser
+        shell: pwsh
+        run: |
+          $output = & cmake --build out/cef --config Release --target bravelike_browser 2>&1
+          $code = $LASTEXITCODE
+          $output | ForEach-Object { Write-Host $_ }
+          if ($code -ne 0) {
+            $errors = $output | Where-Object {
+              $line = "$_"
+              $line -notmatch '(?i)warning' -and
+              $line -match '(?i)(error [A-Z]+[0-9]+|fatal error|unresolved external|LNK[0-9]+|failed)'
+            }
+            if (-not $errors) { $errors = $output | Select-Object -Last 40 }
+            $detail = (($errors | Select-Object -Last 30) -join " | ").Replace("%", "%25").Replace("`r", "").Replace("`n", "%0A")
+            Write-Host "::error title=CEF build failed::$detail"
+            exit $code
+          }
+      - name: Verify runtime files
+        shell: pwsh
+        run: |
+          $dir = "out/cef/Release"
+          $required = @("bravelike_browser.exe", "libcef.dll", "chrome_elf.dll", "icudtl.dat", "resources.pak", "config/blocklist.txt")
+          foreach ($file in $required) {
+            if (-not (Test-Path (Join-Path $dir $file))) { throw "Missing runtime file: $file" }
+          }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bravelike-windows-release
+          path: out/cef/Release/
+          if-no-files-found: error
+          retention-days: 7
