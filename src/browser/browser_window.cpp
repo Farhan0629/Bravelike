@@ -117,7 +117,7 @@ void BrowserWindow::OnWindowCreated(CefRefPtr<CefWindow> window) {
   UpdateNavigationState(true, false, false);
   UpdateShieldLabel();
   window_->Show();
-  address_field_->RequestFocus();
+  FocusAddressBar();
 }
 
 void BrowserWindow::OnWindowDestroyed(CefRefPtr<CefWindow> window) {
@@ -186,6 +186,55 @@ void BrowserWindow::OnLoadingStateChange(CefRefPtr<CefBrowser> browser,
   UpdateShieldLabel();
 }
 
+bool BrowserWindow::OnPreKeyEvent(CefRefPtr<CefBrowser> browser,
+                                  const CefKeyEvent& event,
+                                  CefEventHandle os_event,
+                                  bool* is_keyboard_shortcut) {
+  CEF_REQUIRE_UI_THREAD();
+  if (event.type != KEYEVENT_RAWKEYDOWN || !browser_) return false;
+
+  const bool control = (event.modifiers & EVENTFLAG_CONTROL_DOWN) != 0;
+  const bool alt = (event.modifiers & EVENTFLAG_ALT_DOWN) != 0;
+  switch (event.windows_key_code) {
+    case 'L':
+      if (control) {
+        FocusAddressBar();
+        return true;
+      }
+      break;
+    case 'R':
+      if (control) {
+        browser_->Reload();
+        return true;
+      }
+      break;
+    case VK_LEFT:
+      if (alt && browser_->CanGoBack()) {
+        browser_->GoBack();
+        return true;
+      }
+      break;
+    case VK_RIGHT:
+      if (alt && browser_->CanGoForward()) {
+        browser_->GoForward();
+        return true;
+      }
+      break;
+    case VK_HOME:
+      if (alt) {
+        browser_->GetMainFrame()->LoadURL(startup_url_);
+        return true;
+      }
+      break;
+    case VK_ESCAPE:
+      browser_->StopLoad();
+      return true;
+    default:
+      break;
+  }
+  return false;
+}
+
 void BrowserWindow::UpdateNavigationState(bool is_loading, bool can_go_back,
                                           bool can_go_forward) {
   SetEnabled(window_, kBack, can_go_back);
@@ -215,6 +264,12 @@ void BrowserWindow::Navigate(const std::string& input) {
   if (!browser_) return;
   const auto url = ResolveAddressInput(input);
   if (!url.empty()) browser_->GetMainFrame()->LoadURL(url);
+}
+
+void BrowserWindow::FocusAddressBar() {
+  if (!address_field_) return;
+  address_field_->RequestFocus();
+  address_field_->SelectAll(false);
 }
 
 void BrowserWindow::OnButtonPressed(CefRefPtr<CefButton> button) {
@@ -257,8 +312,6 @@ CefRefPtr<CefResourceRequestHandler> BrowserWindow::GetResourceRequestHandler(
 cef_return_value_t BrowserWindow::OnBeforeResourceLoad(
     CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
     CefRefPtr<CefRequest> request, CefRefPtr<CefCallback> callback) {
-  // SiteShields synchronizes the UI-thread page host and IO-thread request
-  // checks. Use the active page, never a subresource's destination host.
   const bool enabled = site_shields_.EnabledForActive();
   const auto decision = enabled ? filter_engine_.Evaluate(request->GetURL().ToString())
                                 : FilterDecision{};
