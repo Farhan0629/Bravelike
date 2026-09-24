@@ -46,6 +46,7 @@ void SetEnabled(CefRefPtr<CefWindow> window, int id, bool enabled) {
 BrowserWindow::BrowserWindow(std::string startup_url)
     : startup_url_(std::move(startup_url)) {
   LoadRules();
+  site_shields_.SetActiveUrl(startup_url_);
 }
 
 void BrowserWindow::Create(const std::string& startup_url) {
@@ -114,6 +115,7 @@ void BrowserWindow::OnWindowCreated(CefRefPtr<CefWindow> window) {
   root_layout->SetFlexForView(browser_view_, 1);
   window_->CenterWindow(CefSize(1280, 800));
   UpdateNavigationState(true, false, false);
+  UpdateShieldLabel();
   window_->Show();
   address_field_->RequestFocus();
 }
@@ -170,7 +172,10 @@ void BrowserWindow::OnAddressChange(CefRefPtr<CefBrowser> browser,
                                     CefRefPtr<CefFrame> frame,
                                     const CefString& url) {
   CEF_REQUIRE_UI_THREAD();
-  if (frame->IsMain() && address_field_) address_field_->SetText(url);
+  if (!frame->IsMain()) return;
+  site_shields_.SetActiveUrl(url.ToString());
+  if (address_field_) address_field_->SetText(url);
+  UpdateShieldLabel();
 }
 
 void BrowserWindow::OnLoadingStateChange(CefRefPtr<CefBrowser> browser,
@@ -188,13 +193,19 @@ void BrowserWindow::UpdateNavigationState(bool is_loading, bool can_go_back,
   SetEnabled(window_, kReload, !is_loading);
   SetEnabled(window_, kStop, is_loading);
   SetEnabled(window_, kHome, true);
-  SetEnabled(window_, kShield, true);
+  SetEnabled(window_, kShield, site_shields_.ActiveHost().has_value());
 }
 
 void BrowserWindow::UpdateShieldLabel() {
   if (!shield_button_) return;
+  const auto host = site_shields_.ActiveHost();
+  shield_button_->SetEnabled(host.has_value());
+  if (!host) {
+    shield_button_->SetText("Shields: N/A");
+    return;
+  }
   const auto snapshot = privacy_stats_.Snapshot();
-  std::string label = shields_enabled_.load(std::memory_order_relaxed)
+  std::string label = site_shields_.EnabledForActive()
       ? "Shields: On (" + std::to_string(snapshot.blocked) + ")"
       : "Shields: Off";
   shield_button_->SetText(label);
@@ -216,10 +227,10 @@ void BrowserWindow::OnButtonPressed(CefRefPtr<CefButton> button) {
     case kStop: browser_->StopLoad(); break;
     case kHome: browser_->GetMainFrame()->LoadURL(startup_url_); break;
     case kShield:
-      shields_enabled_.store(!shields_enabled_.load(std::memory_order_relaxed),
-                             std::memory_order_relaxed);
-      UpdateShieldLabel();
-      browser_->Reload();
+      if (site_shields_.ToggleActive()) {
+        UpdateShieldLabel();
+        browser_->Reload();
+      }
       break;
     default: break;
   }
@@ -246,7 +257,9 @@ CefRefPtr<CefResourceRequestHandler> BrowserWindow::GetResourceRequestHandler(
 cef_return_value_t BrowserWindow::OnBeforeResourceLoad(
     CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
     CefRefPtr<CefRequest> request, CefRefPtr<CefCallback> callback) {
-  const bool enabled = shields_enabled_.load(std::memory_order_relaxed);
+  // SiteShields synchronizes the UI-thread page host and IO-thread request
+  // checks. Use the active page, never a subresource's destination host.
+  const bool enabled = site_shields_.EnabledForActive();
   const auto decision = enabled ? filter_engine_.Evaluate(request->GetURL().ToString())
                                 : FilterDecision{};
   const bool blocked = enabled && decision.action == FilterAction::kBlock;

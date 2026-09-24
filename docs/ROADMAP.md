@@ -12,12 +12,13 @@
 
 ## M1 — Windows browser shell
 
-- [ ] Pin and verify a CEF binary release
+- [x] Pin and verify a CEF binary release
 - [ ] Enable the CEF sandbox
-- [ ] Create main window and tab strip
-- [ ] Address bar and navigation controls
+- [x] Create a single-window browser UI
+- [ ] Add a tab strip and tab lifecycle
+- [x] Address bar and navigation controls
 - [ ] Browser-process request logging
-- [ ] Connect FilterEngine to request interception
+- [x] Connect FilterEngine to request interception
 
 ## M2 — Browser essentials
 
@@ -29,9 +30,10 @@
 
 ## M3 — Shields experience
 
-- [ ] Per-site shield toggle and allowlist
-- [ ] Blocked-request counter
-- [ ] Explain matched rules and categories
+- [x] In-memory per-site Shields toggle, keyed by exact host
+- [ ] Persist the site allowlist and scope requests by browser/tab during navigation
+- [x] Cumulative blocked-request counter
+- [ ] Explain matched rules and categories in UI
 - [ ] Settings for filter-list sources
 - [ ] Safe list update and rollback
 
