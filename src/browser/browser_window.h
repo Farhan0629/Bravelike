@@ -2,6 +2,7 @@
 #include <string>
 
 #include "include/cef_client.h"
+#include "include/cef_keyboard_handler.h"
 #include "include/views/cef_browser_view.h"
 #include "include/views/cef_browser_view_delegate.h"
 #include "include/views/cef_button_delegate.h"
@@ -21,6 +22,7 @@ class BrowserWindow final : public CefClient,
                             public CefLoadHandler,
                             public CefRequestHandler,
                             public CefResourceRequestHandler,
+                            public CefKeyboardHandler,
                             public CefBrowserViewDelegate,
                             public CefButtonDelegate,
                             public CefTextfieldDelegate,
@@ -32,6 +34,7 @@ class BrowserWindow final : public CefClient,
   CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() override { return this; }
   CefRefPtr<CefLoadHandler> GetLoadHandler() override { return this; }
   CefRefPtr<CefRequestHandler> GetRequestHandler() override { return this; }
+  CefRefPtr<CefKeyboardHandler> GetKeyboardHandler() override { return this; }
 
   void OnTitleChange(CefRefPtr<CefBrowser> browser, const CefString& title) override;
   void OnAddressChange(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
@@ -40,6 +43,8 @@ class BrowserWindow final : public CefClient,
   void OnBeforeClose(CefRefPtr<CefBrowser> browser) override;
   void OnLoadingStateChange(CefRefPtr<CefBrowser> browser, bool is_loading,
                             bool can_go_back, bool can_go_forward) override;
+  bool OnPreKeyEvent(CefRefPtr<CefBrowser> browser, const CefKeyEvent& event,
+                     CefEventHandle os_event, bool* is_keyboard_shortcut) override;
 
   CefRefPtr<CefResourceRequestHandler> GetResourceRequestHandler(
       CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
@@ -63,6 +68,7 @@ class BrowserWindow final : public CefClient,
   explicit BrowserWindow(std::string startup_url);
   void LoadRules();
   void Navigate(const std::string& input);
+  void FocusAddressBar();
   void UpdateNavigationState(bool is_loading, bool can_go_back, bool can_go_forward);
   void UpdateShieldLabel();
   static std::string ExecutableDirectory();
