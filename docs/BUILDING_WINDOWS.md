@@ -68,9 +68,13 @@ GitHub Actions validates compilation, linking, runtime-file copying, and artifac
 5. Navigate to a second page and verify Back and Forward enable and work.
 6. Verify Reload refreshes, Stop interrupts an active load, and Home returns to the start page.
 7. Verify the address field tracks main-frame navigation.
-8. Toggle Shields off and on; each toggle must reload and update the label.
-9. Load a page that requests a configured blocked domain and confirm the blocked count increases.
-10. Close the window and confirm the process exits without hanging.
+8. On an HTTP(S) site, toggle Shields off and on; each toggle must reload and update the label.
+9. With Shields off on site A, navigate to site B: Shields must show On on B. Return to A: it must show Off. Re-enable A and confirm On.
+10. Load a page requesting a configured blocked domain with Shields on and confirm the cumulative blocked count increases. Repeat with Shields off and confirm it does not increase for that request.
+11. Open a non-HTTP page and confirm the Shields button shows N/A and is disabled.
+12. Close the window and confirm the process exits without hanging.
+
+Per-site choices are currently in memory and reset on restart. The implementation is a single-window active-page snapshot; requests initiated during cross-site navigation can briefly use the preceding page's policy. Persisted settings and browser/tab-scoped request context remain future work.
 
 ## Hardware guidance
 
