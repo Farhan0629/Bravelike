@@ -3,8 +3,12 @@
 #include "include/wrapper/cef_helpers.h"
 
 namespace bravelike {
+BrowserApp::BrowserApp(std::string startup_url)
+    : startup_url_(std::move(startup_url)) {}
+
 void BrowserApp::OnContextInitialized() {
   CEF_REQUIRE_UI_THREAD();
-  BrowserWindow::Create("https://search.brave.com");
+  const std::string url = startup_url_.empty() ? BrowserWindow::DefaultHomeUrl() : startup_url_;
+  BrowserWindow::Create(url);
 }
 }  // namespace bravelike

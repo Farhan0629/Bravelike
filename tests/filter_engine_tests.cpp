@@ -43,10 +43,10 @@ not a supported rule
   Expect(bravelike::ResolveAddressInput("http://localhost:8080") == "http://localhost:8080",
          "preserves explicit schemes");
   Expect(bravelike::ResolveAddressInput("privacy browser") ==
-             "https://search.brave.com/search?q=privacy+browser",
+             "https://duckduckgo.com/?q=privacy+browser",
          "turns words into a search query");
   Expect(bravelike::ResolveAddressInput(" C++ browser ") ==
-             "https://search.brave.com/search?q=C%2B%2B+browser",
+             "https://duckduckgo.com/?q=C%2B%2B+browser",
          "trims and encodes a search query");
 
   bravelike::PrivacyStats stats;

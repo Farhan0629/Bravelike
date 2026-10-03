@@ -29,6 +29,8 @@ class BrowserWindow final : public CefClient,
                             public CefWindowDelegate {
  public:
   static void Create(const std::string& startup_url);
+  static std::string DefaultHomeUrl();
+  static bool IsHomeUrl(const std::string& url);
 
   CefRefPtr<CefDisplayHandler> GetDisplayHandler() override { return this; }
   CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() override { return this; }

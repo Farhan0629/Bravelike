@@ -47,6 +47,6 @@ std::string ResolveAddressInput(std::string_view input) {
       (value.find('.') != std::string::npos || value == "localhost" ||
        value.rfind("localhost:", 0) == 0);
   if (looks_like_host) return "https://" + value;
-  return "https://search.brave.com/search?q=" + UrlEncodeQuery(value);
+  return "https://duckduckgo.com/?q=" + UrlEncodeQuery(value);
 }
 }  // namespace bravelike

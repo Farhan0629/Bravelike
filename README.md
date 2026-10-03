@@ -44,7 +44,7 @@ Address input is resolved by the standalone navigation module:
 | --- | --- |
 | `example.com` | Navigates to `https://example.com` |
 | `https://example.com/path` | Keeps the explicit scheme and navigates there |
-| `best privacy browser` | Creates a URL-encoded Brave Search query |
+| `best privacy browser` | Creates a URL-encoded DuckDuckGo search query |
 
 ### Keyboard shortcuts
 
@@ -122,7 +122,7 @@ Each evaluation returns an allow/block action, a reason, and the matched source 
            +--> PrivacyStats (atomic counters)
            +--> SiteShields (thread-safe active-host policy)
 
-Address/search input --> ResolveAddressInput --> URL or Brave Search URL
+Address/search input --> ResolveAddressInput --> URL or DuckDuckGo Search URL
 ```
 
 ### Why the core is separate from CEF
@@ -149,7 +149,7 @@ This table is the quickest guide to what each part of the project owns.
 | `config/sample-blocklist.txt` | Example rules copied into the runtime output as `config/blocklist.txt` |
 | `cmake/DownloadCEF.cmake` | Downloads, checksum-verifies, and extracts the pinned CEF binary distribution |
 | `src/core/filter_engine.*` | Rule loading, domain/subdomain matching, allow precedence, explainable decisions |
-| `src/core/navigation.*` | URL detection, HTTPS normalization, Brave Search fallback, query encoding |
+| `src/core/navigation.*` | URL detection, HTTPS normalization, DuckDuckGo search fallback, query encoding |
 | `src/core/url_utils.*` | ASCII host normalization, HTTP(S) host extraction, domain/subdomain checks |
 | `src/core/site_shields.*` | Thread-safe active-host Shields policy and in-memory disabled-host set |
 | `src/core/privacy_stats.*` | Thread-safe evaluated and blocked request counters |
@@ -272,7 +272,7 @@ Perform this before calling a build release-ready. Prefer real HTTPS sites such 
 1. Launch `bravelike_browser.exe`; confirm it opens without a crash dialog.
 2. Confirm the startup page loads.
 3. Type a hostname, such as `youtube.com`, then press Enter; confirm HTTPS navigation.
-4. Enter a multi-word search; confirm it reaches a Brave Search results page.
+4. Enter a multi-word search; confirm it reaches a DuckDuckGo search results page.
 5. Visit another page, then verify Back and Forward enable and work.
 6. Check Reload, Stop during an active load, and Home.
 7. Confirm the address field follows main-frame navigation.

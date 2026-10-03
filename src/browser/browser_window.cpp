@@ -76,6 +76,28 @@ std::string BrowserWindow::ExecutableDirectory() {
   return std::filesystem::path(path).parent_path().string();
 }
 
+std::string BrowserWindow::DefaultHomeUrl() {
+  const auto exe_dir = std::filesystem::path(ExecutableDirectory());
+  const auto home_path = exe_dir / "resources" / "home.html";
+  if (std::filesystem::exists(home_path)) {
+    std::string path_str = std::filesystem::canonical(home_path).string();
+    for (char& c : path_str) {
+      if (c == '\\') c = '/';
+    }
+    return "file:///" + path_str;
+  }
+  return "about:blank";
+}
+
+bool BrowserWindow::IsHomeUrl(const std::string& url) {
+  if (url.empty() || url == "about:blank" || url == "about:home") return true;
+  if (url.find("resources/home.html") != std::string::npos ||
+      url.find("resources\\home.html") != std::string::npos) {
+    return true;
+  }
+  return false;
+}
+
 void BrowserWindow::OnWindowCreated(CefRefPtr<CefWindow> window) {
   CEF_REQUIRE_UI_THREAD();
   window_ = window;
@@ -102,7 +124,9 @@ void BrowserWindow::OnWindowCreated(CefRefPtr<CefWindow> window) {
 
   address_field_ = CefTextfield::CreateTextfield(this);
   address_field_->SetID(kAddress);
-  address_field_->SetText(startup_url_);
+  if (!IsHomeUrl(startup_url_)) {
+    address_field_->SetText(startup_url_);
+  }
   address_field_->SetAccessibleName("Address and search bar");
   toolbar->AddChildView(address_field_);
   toolbar_layout->SetFlexForView(address_field_, 1);
@@ -165,7 +189,14 @@ void BrowserWindow::OnBeforeClose(CefRefPtr<CefBrowser> browser) {
 void BrowserWindow::OnTitleChange(CefRefPtr<CefBrowser> browser,
                                   const CefString& title) {
   CEF_REQUIRE_UI_THREAD();
-  if (window_) window_->SetTitle(title.empty() ? "Bravelike" : title.ToString() + " - Bravelike");
+  if (window_) {
+    const std::string title_str = title.ToString();
+    if (title_str.empty() || title_str == "Bravelike") {
+      window_->SetTitle("Bravelike");
+    } else {
+      window_->SetTitle(title_str + " - Bravelike");
+    }
+  }
 }
 
 void BrowserWindow::OnAddressChange(CefRefPtr<CefBrowser> browser,
@@ -173,8 +204,15 @@ void BrowserWindow::OnAddressChange(CefRefPtr<CefBrowser> browser,
                                     const CefString& url) {
   CEF_REQUIRE_UI_THREAD();
   if (!frame->IsMain()) return;
-  site_shields_.SetActiveUrl(url.ToString());
-  if (address_field_) address_field_->SetText(url);
+  const std::string url_str = url.ToString();
+  site_shields_.SetActiveUrl(url_str);
+  if (address_field_) {
+    if (IsHomeUrl(url_str)) {
+      address_field_->SetText("");
+    } else {
+      address_field_->SetText(url);
+    }
+  }
   UpdateShieldLabel();
 }
 
@@ -262,6 +300,11 @@ void BrowserWindow::UpdateShieldLabel() {
 
 void BrowserWindow::Navigate(const std::string& input) {
   if (!browser_) return;
+  if (input == "home" || input == "bravelike" || input == "bravelike://home" ||
+      input == "bravelike://newtab" || input == "about:home") {
+    browser_->GetMainFrame()->LoadURL(startup_url_);
+    return;
+  }
   const auto url = ResolveAddressInput(input);
   if (!url.empty()) browser_->GetMainFrame()->LoadURL(url);
 }

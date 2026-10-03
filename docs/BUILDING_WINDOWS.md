@@ -62,9 +62,9 @@ Do not move only the executable; CEF requires the adjacent runtime binaries and 
 GitHub Actions validates compilation, linking, runtime-file copying, and artifact creation. It cannot interact with the desktop GUI, so run this checklist on Windows 11 before declaring a release candidate:
 
 1. Start `bravelike_browser.exe` and confirm the window opens without a console or crash dialog.
-2. Confirm the Brave Search home page loads.
+2. Confirm the Bravelike home page loads.
 3. Enter `example.com` and confirm it resolves to `https://example.com`.
-4. Enter plain search text and confirm a Brave Search results page loads.
+4. Enter plain search text and confirm a DuckDuckGo search results page loads.
 5. Navigate to a second page and verify Back and Forward enable and work.
 6. Verify Reload refreshes, Stop interrupts an active load, and Home returns to the start page.
 7. Verify the address field tracks main-frame navigation.

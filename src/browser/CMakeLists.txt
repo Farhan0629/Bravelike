@@ -4,6 +4,7 @@ set(BRAVELIKE_BROWSER_SRCS
   browser_window.cpp
   browser_window.h
   main_win.cpp
+  bravelike.rc
 )
 
 set(BRAVELIKE_TARGET bravelike_browser)
@@ -41,4 +42,8 @@ add_custom_command(TARGET ${BRAVELIKE_TARGET} POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
           "${CMAKE_SOURCE_DIR}/config/sample-blocklist.txt"
           "${BRAVELIKE_OUT_DIR}/config/blocklist.txt"
+  COMMAND ${CMAKE_COMMAND} -E make_directory "${BRAVELIKE_OUT_DIR}/resources"
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+          "${CMAKE_SOURCE_DIR}/resources"
+          "${BRAVELIKE_OUT_DIR}/resources"
   VERBATIM)

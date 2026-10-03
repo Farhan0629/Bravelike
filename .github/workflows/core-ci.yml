@@ -58,7 +58,7 @@ jobs:
         shell: pwsh
         run: |
           $dir = "out/cef/Release"
-          $required = @("bravelike_browser.exe", "libcef.dll", "chrome_elf.dll", "icudtl.dat", "resources.pak", "config/blocklist.txt")
+          $required = @("bravelike_browser.exe", "libcef.dll", "chrome_elf.dll", "icudtl.dat", "resources.pak", "config/blocklist.txt", "resources/home.html")
           foreach ($file in $required) {
             if (-not (Test-Path (Join-Path $dir $file))) { throw "Missing runtime file: $file" }
           }
