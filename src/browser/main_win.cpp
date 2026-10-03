@@ -12,8 +12,8 @@ namespace {
 std::wstring ProfilePath() {
   wchar_t path[MAX_PATH]{};
   const DWORD length = GetModuleFileNameW(nullptr, path, MAX_PATH);
-  if (length == 0 || length == MAX_PATH) return L"BravelikeProfile";
-  return (std::filesystem::path(path).parent_path() / L"BravelikeProfile").wstring();
+  if (length == 0 || length == MAX_PATH) return L"KINGFNProfile";
+  return (std::filesystem::path(path).parent_path() / L"KINGFNProfile").wstring();
 }
 }
 
@@ -32,7 +32,7 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE previous_instance,
   settings.no_sandbox = true;
   settings.persist_session_cookies = true;
   CefString(&settings.cache_path) = ProfilePath();
-  CefString(&settings.user_agent_product) = L"Bravelike/0.2";
+  CefString(&settings.user_agent_product) = L"KINGFN/0.2";
 
   CefRefPtr<CefCommandLine> cmd = CefCommandLine::CreateCommandLine();
   cmd->InitFromString(GetCommandLineW());
@@ -43,12 +43,12 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE previous_instance,
   for (const auto& arg : args) {
     const std::string str = arg.ToString();
     if (!str.empty() && str.rfind("--", 0) != 0 && str.rfind("-", 0) != 0) {
-      startup_url = bravelike::ResolveAddressInput(str);
+      startup_url = kingfn::ResolveAddressInput(str);
       break;
     }
   }
 
-  CefRefPtr<bravelike::BrowserApp> app = new bravelike::BrowserApp(startup_url);
+  CefRefPtr<kingfn::BrowserApp> app = new kingfn::BrowserApp(startup_url);
   if (!CefInitialize(main_args, settings, app, sandbox_info)) return 1;
   CefRunMessageLoop();
   CefShutdown();

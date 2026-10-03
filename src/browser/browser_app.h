@@ -2,7 +2,7 @@
 #include <string>
 #include "include/cef_app.h"
 
-namespace bravelike {
+namespace kingfn {
 class BrowserApp final : public CefApp, public CefBrowserProcessHandler {
  public:
   explicit BrowserApp(std::string startup_url = "");
@@ -15,4 +15,4 @@ class BrowserApp final : public CefApp, public CefBrowserProcessHandler {
   IMPLEMENT_REFCOUNTING(BrowserApp);
   DISALLOW_COPY_AND_ASSIGN(BrowserApp);
 };
-}  // namespace bravelike
+}  // namespace kingfn

@@ -2,7 +2,7 @@
 #include <atomic>
 #include <cstdint>
 
-namespace bravelike {
+namespace kingfn {
 struct PrivacySnapshot { std::uint64_t evaluated; std::uint64_t blocked; };
 class PrivacyStats {
  public:
@@ -13,4 +13,4 @@ class PrivacyStats {
   std::atomic<std::uint64_t> evaluated_{0};
   std::atomic<std::uint64_t> blocked_{0};
 };
-}  // namespace bravelike
+}  // namespace kingfn

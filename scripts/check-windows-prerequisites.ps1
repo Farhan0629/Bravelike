@@ -14,4 +14,4 @@ if (Get-Command cl.exe -ErrorAction SilentlyContinue) {
 } else {
   Write-Warning "cl.exe is not on PATH. Use Developer PowerShell for Visual Studio 2022."
 }
-Write-Host "Bravelike prerequisites check completed."
+Write-Host "KINGFN prerequisites check completed."

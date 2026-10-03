@@ -14,7 +14,7 @@ void Expect(bool condition, const std::string& message) {
 }  // namespace
 
 int main() {
-  bravelike::SiteShields shields;
+  kingfn::SiteShields shields;
   Expect(!shields.ActiveHost() && !shields.EnabledForActive(),
          "empty page has no active Shields policy");
   Expect(!shields.ToggleActive(), "cannot toggle an empty page");

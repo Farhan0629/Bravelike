@@ -6,7 +6,7 @@
 #include <string_view>
 #include <unordered_set>
 
-namespace bravelike {
+namespace kingfn {
 // Policy is keyed by exact normalized HTTP(S) host. This is deliberately
 // independent of the destination of each individual subresource request.
 class SiteShields {
@@ -22,4 +22,4 @@ class SiteShields {
   std::optional<std::string> active_host_;
   std::unordered_set<std::string> disabled_hosts_;
 };
-}  // namespace bravelike
+}  // namespace kingfn

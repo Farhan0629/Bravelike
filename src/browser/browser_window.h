@@ -15,7 +15,7 @@
 #include "src/core/privacy_stats.h"
 #include "src/core/site_shields.h"
 
-namespace bravelike {
+namespace kingfn {
 class BrowserWindow final : public CefClient,
                             public CefDisplayHandler,
                             public CefLifeSpanHandler,
@@ -88,4 +88,4 @@ class BrowserWindow final : public CefClient,
   IMPLEMENT_REFCOUNTING(BrowserWindow);
   DISALLOW_COPY_AND_ASSIGN(BrowserWindow);
 };
-}  // namespace bravelike
+}  // namespace kingfn

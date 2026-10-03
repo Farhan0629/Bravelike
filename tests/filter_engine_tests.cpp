@@ -13,8 +13,8 @@ void Expect(bool condition, const std::string& message) {
 }
 
 int main() {
-  using bravelike::FilterAction;
-  bravelike::FilterEngine engine;
+  using kingfn::FilterAction;
+  kingfn::FilterEngine engine;
   const auto result = engine.LoadFromText(R"(
 # example rules
 ads.example.com
@@ -35,25 +35,25 @@ not a supported rule
          "allow rule has precedence");
   Expect(engine.Evaluate("file:///tmp/page.html").action == FilterAction::kAllow,
          "allows unsupported schemes");
-  Expect(bravelike::ExtractHttpHost("HTTPS://User:Pass@Example.COM:443/a").value_or("") == "example.com",
+  Expect(kingfn::ExtractHttpHost("HTTPS://User:Pass@Example.COM:443/a").value_or("") == "example.com",
          "normalizes authority and host");
 
-  Expect(bravelike::ResolveAddressInput("example.com") == "https://example.com",
+  Expect(kingfn::ResolveAddressInput("example.com") == "https://example.com",
          "adds HTTPS to a host");
-  Expect(bravelike::ResolveAddressInput("http://localhost:8080") == "http://localhost:8080",
+  Expect(kingfn::ResolveAddressInput("http://localhost:8080") == "http://localhost:8080",
          "preserves explicit schemes");
-  Expect(bravelike::ResolveAddressInput("privacy browser") ==
+  Expect(kingfn::ResolveAddressInput("privacy browser") ==
              "https://duckduckgo.com/?q=privacy+browser",
          "turns words into a search query");
-  Expect(bravelike::ResolveAddressInput(" C++ browser ") ==
+  Expect(kingfn::ResolveAddressInput(" C++ browser ") ==
              "https://duckduckgo.com/?q=C%2B%2B+browser",
          "trims and encodes a search query");
 
-  bravelike::PrivacyStats stats;
+  kingfn::PrivacyStats stats;
   stats.Record(true); stats.Record(false);
   const auto snapshot = stats.Snapshot();
   Expect(snapshot.evaluated == 2 && snapshot.blocked == 1, "records privacy statistics");
 
-  if (failures == 0) std::cout << "All Bravelike core tests passed.\n";
+  if (failures == 0) std::cout << "All KINGFN core tests passed.\n";
   return failures == 0 ? 0 : 1;
 }

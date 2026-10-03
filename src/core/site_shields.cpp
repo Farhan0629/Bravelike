@@ -2,7 +2,7 @@
 
 #include "core/url_utils.h"
 
-namespace bravelike {
+namespace kingfn {
 void SiteShields::SetActiveUrl(std::string_view url) {
   auto host = ExtractHttpHost(url);
   std::lock_guard<std::mutex> guard(mutex_);
@@ -29,4 +29,4 @@ bool SiteShields::ToggleActive() {
   }
   return true;
 }
-}  // namespace bravelike
+}  // namespace kingfn

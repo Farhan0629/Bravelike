@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <sstream>
 
-namespace bravelike {
+namespace kingfn {
 namespace {
 std::string Trim(std::string_view value) {
   const auto first = value.find_first_not_of(" \t\r\n");
@@ -49,4 +49,4 @@ std::string ResolveAddressInput(std::string_view input) {
   if (looks_like_host) return "https://" + value;
   return "https://duckduckgo.com/?q=" + UrlEncodeQuery(value);
 }
-}  // namespace bravelike
+}  // namespace kingfn

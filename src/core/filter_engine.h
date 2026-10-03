@@ -4,7 +4,7 @@
 #include <string_view>
 #include <vector>
 
-namespace bravelike {
+namespace kingfn {
 enum class FilterAction { kAllow, kBlock };
 
 struct FilterDecision {
@@ -31,4 +31,4 @@ class FilterEngine {
   std::vector<Rule> block_rules_;
   std::vector<Rule> allow_rules_;
 };
-}  // namespace bravelike
+}  // namespace kingfn

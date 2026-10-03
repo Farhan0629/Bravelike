@@ -6,7 +6,7 @@
 #include <sstream>
 #include <stdexcept>
 
-namespace bravelike {
+namespace kingfn {
 namespace {
 std::string Trim(std::string_view value) {
   const auto first = value.find_first_not_of(" \t\r\n");
@@ -86,4 +86,4 @@ FilterDecision FilterEngine::Evaluate(std::string_view url) const {
 std::size_t FilterEngine::rule_count() const {
   return block_rules_.size() + allow_rules_.size();
 }
-}  // namespace bravelike
+}  // namespace kingfn

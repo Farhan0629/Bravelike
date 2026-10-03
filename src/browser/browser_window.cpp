@@ -13,7 +13,7 @@
 #include "include/wrapper/cef_helpers.h"
 #include "src/core/navigation.h"
 
-namespace bravelike {
+namespace kingfn {
 namespace {
 enum ControlId {
   kWindow = 1,
@@ -105,7 +105,7 @@ void BrowserWindow::OnWindowCreated(CefRefPtr<CefWindow> window) {
   CEF_REQUIRE_UI_THREAD();
   window_ = window;
   window_->SetID(kWindow);
-  window_->SetTitle("Bravelike");
+  window_->SetTitle("KINGFN");
 
   CefBoxLayoutSettings root_settings;
   root_settings.horizontal = false;
@@ -194,10 +194,10 @@ void BrowserWindow::OnTitleChange(CefRefPtr<CefBrowser> browser,
   CEF_REQUIRE_UI_THREAD();
   if (window_) {
     const std::string title_str = title.ToString();
-    if (title_str.empty() || title_str == "Bravelike") {
-      window_->SetTitle("Bravelike");
+    if (title_str.empty() || title_str == "KINGFN") {
+      window_->SetTitle("KINGFN");
     } else {
-      window_->SetTitle(title_str + " - Bravelike");
+      window_->SetTitle(title_str + " - KINGFN");
     }
   }
 }
@@ -303,8 +303,8 @@ void BrowserWindow::UpdateShieldLabel() {
 
 void BrowserWindow::Navigate(const std::string& input) {
   if (!browser_) return;
-  if (input == "home" || input == "bravelike" || input == "bravelike://home" ||
-      input == "bravelike://newtab" || input == "about:home") {
+  if (input == "home" || input == "kingfn" || input == "kingfn://home" ||
+      input == "kingfn://newtab" || input == "about:home") {
     browser_->GetMainFrame()->LoadURL(startup_url_);
     return;
   }
@@ -365,4 +365,4 @@ cef_return_value_t BrowserWindow::OnBeforeResourceLoad(
   privacy_stats_.Record(blocked);
   return blocked ? RV_CANCEL : RV_CONTINUE;
 }
-}  // namespace bravelike
+}  // namespace kingfn

@@ -1,43 +1,50 @@
 cmake_minimum_required(VERSION 3.24)
-project(Bravelike VERSION 0.2.0 LANGUAGES CXX)
+project(KINGFN VERSION 0.2.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
-option(BRAVELIKE_BUILD_TESTS "Build unit tests" ON)
-option(BRAVELIKE_ENABLE_CEF "Build the CEF desktop browser" OFF)
+option(KINGFN_BUILD_TESTS "Build unit tests" ON)
+option(KINGFN_ENABLE_CEF "Build the CEF desktop browser" OFF)
 
-add_library(bravelike_core
+if(DEFINED BRAVELIKE_ENABLE_CEF AND NOT DEFINED KINGFN_ENABLE_CEF)
+  set(KINGFN_ENABLE_CEF ${BRAVELIKE_ENABLE_CEF})
+endif()
+if(DEFINED BRAVELIKE_BUILD_TESTS AND NOT DEFINED KINGFN_BUILD_TESTS)
+  set(KINGFN_BUILD_TESTS ${BRAVELIKE_BUILD_TESTS})
+endif()
+
+add_library(kingfn_core
     src/core/filter_engine.cpp
     src/core/navigation.cpp
     src/core/site_shields.cpp
     src/core/url_utils.cpp
     src/core/privacy_stats.cpp
 )
-target_include_directories(bravelike_core PUBLIC src)
-target_compile_features(bravelike_core PUBLIC cxx_std_20)
+target_include_directories(kingfn_core PUBLIC src)
+target_compile_features(kingfn_core PUBLIC cxx_std_20)
 if(MSVC)
-  target_compile_options(bravelike_core PRIVATE /W4 /permissive- /EHsc)
+  target_compile_options(kingfn_core PRIVATE /W4 /permissive- /EHsc)
 else()
-  target_compile_options(bravelike_core PRIVATE -Wall -Wextra -Wpedantic)
+  target_compile_options(kingfn_core PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
-add_executable(bravelike_filter_demo src/app/filter_demo.cpp)
-target_link_libraries(bravelike_filter_demo PRIVATE bravelike_core)
+add_executable(kingfn_filter_demo src/app/filter_demo.cpp)
+target_link_libraries(kingfn_filter_demo PRIVATE kingfn_core)
 
-if(BRAVELIKE_BUILD_TESTS)
+if(KINGFN_BUILD_TESTS)
   enable_testing()
-  add_executable(bravelike_tests tests/filter_engine_tests.cpp)
-  target_link_libraries(bravelike_tests PRIVATE bravelike_core)
-  add_test(NAME bravelike_tests COMMAND bravelike_tests)
-  add_executable(bravelike_site_shields_tests tests/site_shields_tests.cpp)
-  target_link_libraries(bravelike_site_shields_tests PRIVATE bravelike_core)
-  add_test(NAME bravelike_site_shields_tests COMMAND bravelike_site_shields_tests)
+  add_executable(kingfn_tests tests/filter_engine_tests.cpp)
+  target_link_libraries(kingfn_tests PRIVATE kingfn_core)
+  add_test(NAME kingfn_tests COMMAND kingfn_tests)
+  add_executable(kingfn_site_shields_tests tests/site_shields_tests.cpp)
+  target_link_libraries(kingfn_site_shields_tests PRIVATE kingfn_core)
+  add_test(NAME kingfn_site_shields_tests COMMAND kingfn_site_shields_tests)
 endif()
 
-if(BRAVELIKE_ENABLE_CEF)
+if(KINGFN_ENABLE_CEF)
   if(NOT WIN32)
     message(FATAL_ERROR "The desktop browser milestone currently targets Windows only")
   endif()
@@ -55,7 +62,7 @@ if(BRAVELIKE_ENABLE_CEF)
   find_package(CEF REQUIRED)
 
   # Match the static MSVC runtime used by CEF's Windows wrapper.
-  set_property(TARGET bravelike_core PROPERTY
+  set_property(TARGET kingfn_core PROPERTY
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
   add_subdirectory(${CEF_LIBCEF_DLL_WRAPPER_PATH} libcef_dll_wrapper)

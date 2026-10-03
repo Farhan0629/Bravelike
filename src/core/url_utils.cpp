@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <cctype>
 
-namespace bravelike {
+namespace kingfn {
 std::string ToLowerAscii(std::string_view input) {
   std::string result(input);
   std::transform(result.begin(), result.end(), result.begin(), [](unsigned char c) {
@@ -48,4 +48,4 @@ bool IsDomainOrSubdomain(std::string_view host, std::string_view domain) {
          host.compare(host.size() - domain.size(), domain.size(), domain) == 0 &&
          host[host.size() - domain.size() - 1] == '.';
 }
-}  // namespace bravelike
+}  // namespace kingfn

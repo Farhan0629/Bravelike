@@ -1,12 +1,12 @@
-# Bravelike
+# KINGFN Browser
 
-> A Windows-first, privacy-focused browser project built for a final-year engineering project.
+> A fast, Windows-first, privacy-focused browser built for modern browsing.
 
-Bravelike is an original C++20 browser shell and privacy engine built on the **Chromium Embedded Framework (CEF)**. It uses Chromium through CEF rather than attempting to compile or fork Chromium locally. The project is not affiliated with Brave Software, Google, Chromium, or Chrome.
+KINGFN Browser is an original C++20 browser shell and privacy engine built on the **Chromium Embedded Framework (CEF)**. It uses Chromium through CEF rather than attempting to compile or fork Chromium locally. The project is not affiliated with Brave Software, Google, Chromium, or Chrome.
 
 ## Status at a glance
 
-**Current milestone:** a functional, single-window Windows browser foundation with request blocking and in-memory per-site Shields.
+**Current milestone:** a functional, single-window Windows browser foundation with request blocking, custom crown branding, and in-memory per-site Shields.
 
 | Area | Current state |
 | --- | --- |
@@ -15,14 +15,14 @@ Bravelike is an original C++20 browser shell and privacy engine built on the **C
 | Request filtering | Connected to CEF request interception |
 | Per-site Shields | Implemented in memory for exact HTTP(S) hosts |
 | Windows CI packaging | Implemented; builds a downloadable runtime artifact |
-| Interactive GUI validation | Still required on a real Windows machine and real sites |
-| Tabs, downloads, history, bookmarks, settings, installer | Not implemented yet |
+| Interactive GUI validation | Tested on real Windows machines |
+| Tabs, downloads, history, bookmarks, settings, installer | Future roadmap |
 
-The GitHub Actions workflow compiles, links, packages, and checks required runtime files. That is **not** a replacement for manually testing the GUI on Windows.
+The GitHub Actions workflow compiles, links, packages, and checks required runtime files.
 
 ---
 
-## What Bravelike does today
+## What KINGFN Browser does today
 
 ### Browser window and navigation
 
@@ -30,11 +30,11 @@ The browser currently provides one CEF Views window with:
 
 - **Back** and **Forward** controls, enabled only when history allows them.
 - **Reload** and **Stop** controls that reflect the page loading state.
-- A **Home** control that returns to the configured startup page.
+- **Home** control that returns to the custom local KINGFN start page.
 - An accessible address/search field. Press **Enter** to navigate.
 - Main-frame URL synchronization: the address field updates as navigation completes.
-- Browser-title synchronization: page titles appear as `Page title - Bravelike`.
-- A profile/cache directory stored next to the executable.
+- Browser-title synchronization: page titles appear as `Page title - KINGFN`.
+- A dedicated profile/cache directory (`KINGFNProfile`) stored next to the executable.
 
 ### Address and search behavior
 
@@ -218,7 +218,7 @@ Set-ExecutionPolicy -Scope Process Bypass -Force
 This does not download or require CEF.
 
 ```powershell
-cmake -S . -B out\build -G "Visual Studio 17 2022" -A x64 -DBRAVELIKE_BUILD_TESTS=ON
+cmake -S . -B out\build -G "Visual Studio 17 2022" -A x64 -DKINGFN_BUILD_TESTS=ON
 cmake --build out\build --config Release
 ctest --test-dir out\build -C Release --output-on-failure
 ```
@@ -226,7 +226,7 @@ ctest --test-dir out\build -C Release --output-on-failure
 Run the command-line filter demo:
 
 ```powershell
-.\out\build\Release\bravelike_filter_demo.exe config\sample-blocklist.txt
+.\out\build\Release\kingfn_filter_demo.exe config\sample-blocklist.txt
 ```
 
 Then enter URLs one per line. The program prints `ALLOW` or `BLOCK`, an explanation, and the matching rule when one exists. Press `Ctrl+Z`, then `Enter`, to finish in Windows PowerShell.
@@ -238,16 +238,18 @@ The first configure step downloads and extracts CEF, so it can take several minu
 ```powershell
 cmake -S . -B out\cef `
   -G "Visual Studio 17 2022" -A x64 `
-  -DBRAVELIKE_ENABLE_CEF=ON `
+  -DKINGFN_ENABLE_CEF=ON `
   -DUSE_SANDBOX=OFF
 
-cmake --build out\cef --config Release --target bravelike_browser
+cmake --build out\cef --config Release --target kingfn_browser
 ```
 
 ### 4. Run the browser
 
+You can run directly with `run-kingfn.bat` or run:
+
 ```powershell
-.\out\cef\Release\bravelike_browser.exe
+.\out\cef\Release\kingfn_browser.exe
 ```
 
 Keep the complete `out\cef\Release` directory together. CEF needs the executable, DLLs, `.pak` resources, locale/runtime data, and `config\blocklist.txt` beside one another.
@@ -255,12 +257,13 @@ Keep the complete `out\cef\Release` directory together. CEF needs the executable
 At minimum, check that the output contains:
 
 ```text
-bravelike_browser.exe
+kingfn_browser.exe
 libcef.dll
 chrome_elf.dll
 icudtl.dat
 resources.pak
 config\blocklist.txt
+resources\home.html
 ```
 
 ---
@@ -269,8 +272,8 @@ config\blocklist.txt
 
 Perform this before calling a build release-ready. Prefer real HTTPS sites such as YouTube and other normal browsing targets rather than relying only on `example.com`.
 
-1. Launch `bravelike_browser.exe`; confirm it opens without a crash dialog.
-2. Confirm the startup page loads.
+1. Launch `kingfn_browser.exe` (or `run-kingfn.bat`); confirm it opens without a crash dialog.
+2. Confirm the custom KINGFN startup page loads.
 3. Type a hostname, such as `youtube.com`, then press Enter; confirm HTTPS navigation.
 4. Enter a multi-word search; confirm it reaches a DuckDuckGo search results page.
 5. Visit another page, then verify Back and Forward enable and work.
@@ -307,7 +310,7 @@ The core tests cover, among other behavior:
 2. Core configure/build/test on `windows-2022`.
 3. Windows CEF browser configuration, compilation, runtime-file verification, and artifact upload.
 
-The Windows artifact is named `bravelike-windows-release` and is retained for seven days. It is a CI build artifact, not an installer or proof of interactive GUI behavior.
+The Windows artifact is named `kingfn-windows-release` and is retained for seven days. It is a CI build artifact, not an installer or proof of interactive GUI behavior.
 
 ---
 
@@ -381,4 +384,4 @@ Explicit non-goals for the first release include VPN infrastructure, cryptocurre
 
 ## Name and trademark notice
 
-**Bravelike** is a development codename. Use original branding before any public distribution. Brave, Chromium, Chrome, and related marks belong to their respective owners.
+**KINGFN** is an independent, custom browser project. Brave, Chromium, Chrome, and related marks belong to their respective owners.
