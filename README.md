@@ -1,1 +1,416 @@
-PGRpdiBhbGlnbj0iY2VudGVyIj4KCjxpbWcgc3JjPSJhc3NldHMva2luZ2ZuLWJhbm5lci5qcGciIGFsdD0iS0lOR0ZOIEJyb3dzZXIgQmFubmVyIiB3aWR0aD0iMTAwJSIgLz4KCiMg8J+RkSBLSU5HRk4gQlJPV1NFUgojIyMgKlRoZSBTb3ZlcmVpZ24gV2luZG93cyBCcm93c2VyIOKAlCBIaWdoLVNwZWVkIENocm9taXVtIEVuZ2luZSDigJQgQ29tcGxldGUgUHJpdmFjeSBTdWl0ZSoKClshW0NvcmUgQ0ldKGh0dHBzOi8vZ2l0aHViLmNvbS9GYXJoYW4wNjI5L0JyYXZlbGlrZS9hY3Rpb25zL3dvcmtmbG93cy9jb3JlLWNpLnltbC9iYWRnZS5zdmcpXShodHRwczovL2dpdGh1Yi5jb20vRmFyaGFuMDYyOS9CcmF2ZWxpa2UvYWN0aW9ucy93b3JrZmxvd3MvY29yZS1jaS55bWwpClshW0MrKzIwXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0MlMkIlMkItMjAtMDA1OTlDLnN2Zz9zdHlsZT1mbGF0LXNxdWFyZSZsb2dvPWMlMkIlMkIpXShodHRwczovL2VuLmNwcHJlZmVyZW5jZS5jb20vdy9jcHAvMjApClshW1BsYXRmb3JtXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL1BsYXRmb3JtLVdpbmRvd3MlMjAxMSUyMCU3QyUyMDEwLTAwNzhENi5zdmc/c3R5bGU9ZmxhdC1zcXVhcmUmbG9nbz13aW5kb3dzKV0oaHR0cHM6Ly9taWNyb3NvZnQuY29tL3dpbmRvd3MpClshW0Nocm9taXVtIENFRl0oaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9DaHJvbWl1bSUyMENFRi0xNTIuMC43LTQyODVGNC5zdmc/c3R5bGU9ZmxhdC1zcXVhcmUmbG9nbz1nb29nbGVjaHJvbWUpXShodHRwczovL2JpdGJ1Y2tldC5vcmcvY2hyb21pdW1lbWJlZGRlZC9jZWYpClshW1NoaWVsZHMgRW5naW5lXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL1NoaWVsZHMlMjBFbmdpbmUtdjMlMjBBY3RpdmUtMDBDODUzLnN2Zz9zdHlsZT1mbGF0LXNxdWFyZSldKGNvbmZpZy9raW5nZm4tYmxvY2tsaXN0LnR4dCkKWyFbVmVyc2lvbl0oaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9WZXJzaW9uLTAuMy4wLWZmZDcwMC5zdmc/c3R5bGU9ZmxhdC1zcXVhcmUpXShodHRwczovL2dpdGh1Yi5jb20vRmFyaGFuMDYyOS9CcmF2ZWxpa2UvcmVsZWFzZXMpClshW0xpY2Vuc2VdKGh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvTGljZW5zZS1NSVQtZmZkNzAwLnN2Zz9zdHlsZT1mbGF0LXNxdWFyZSldKExJQ0VOU0UpCgpbKipGZWF0dXJlcyoqXSgjLWZlYXR1cmVzKSDigKIgWyoqUXVpY2sgU3RhcnQqKl0oIy1xdWljay1zdGFydCkg4oCiIFsqKkFyY2hpdGVjdHVyZSoqXSgjLWFyY2hpdGVjdHVyZSkg4oCiIFsqKlNoaWVsZHMgRW5naW5lKipdKCMta2luZ2ZuLXNoaWVsZHMtZW5naW5lLXYzKSDigKIgWyoqU2hvcnRjdXRzKipdKCMta2V5Ym9hcmQtc2hvcnRjdXRzKSDigKIgWyoqQnVpbGQgR3VpZGUqKl0oIy1idWlsZGluZy1mcm9tLXNvdXJjZSkg4oCiIFsqKlJvYWRtYXAqKl0oIy1yb2FkbWFwKQoKPC9kaXY+CgotLS0KCiMjIPCfk5YgT3ZlcnZpZXcKCioqS0lOR0ZOIEJyb3dzZXIqKiBpcyBhbiBvcmlnaW5hbCwgcHJpdmFjeS1maXJzdCBkZXNrdG9wIHdlYiBicm93c2VyIGJ1aWx0IGZyb20gc2NyYXRjaCBpbiBtb2Rlcm4gKipDKysyMCoqIG9uIHRoZSAqKkNocm9taXVtIEVtYmVkZGVkIEZyYW1ld29yayAoQ0VGKSoqIHdpdGggbmF0aXZlIFdpbmRvd3MgVmlld3MuCgpVbmxpa2UgY29udmVudGlvbmFsIGJyb3dzZXJzIGxvYWRlZCB3aXRoIHRyYWNraW5nIHRlbGVtZXRyeSwgYmFja2dyb3VuZCBzZXJ2aWNlcywgYW5kIGNvcnBvcmF0ZSBzdXJ2ZWlsbGFuY2UsICoqS0lOR0ZOKiogZGVsaXZlcnMgYSBjb21wbGV0ZSwgc292ZXJlaWduIGJyb3dzaW5nIGV4cGVyaWVuY2Ugd2l0aCBldmVyeSBmZWF0dXJlIHlvdSBuZWVkIGZvciBkYWlseSB1c2Ug4oCUICoqWW91VHViZSwgY2hlc3MuY29tLCBnZW5lcmFsIHdlYiBzdXJmaW5nKiog4oCUIGFsbCB3aXRob3V0IGEgc2luZ2xlIGFkIG9yIHRyYWNrZXIgaW4gc2lnaHQuCgotIPCfkZEgKipTb3ZlcmVpZ24gUHJpdmFjeSoqIOKAlCBaZXJvIGNsb3VkIHRlbGVtZXRyeSwgemVybyBzeW5jIHByb2ZpbGluZywgYW5kIGlzb2xhdGVkIGxvY2FsIHN0b3JhZ2UgKGBLSU5HRk5Qcm9maWxlYCkKLSDwn5uh77iPICoqS0lOR0ZOIFNoaWVsZHMgRW5naW5lIHYzKiog4oCUIDQtbGF5ZXIgYWQgZWxpbWluYXRpb24gKG5ldHdvcmsgYmxvY2sgKyBET00gbXV0YXRpb24gKyBKUyBpbnRlcmNlcHQgKyBTUEEgaG9vaykgd2l0aCAzMDArIHJ1bGVzIGNvdmVyaW5nIEdvb2dsZSwgWW91VHViZSwgVHdpdGNoLCBGYWNlYm9vaywgYW5kIG1vcmUKLSDwn5eC77iPICoqRnVsbCBNdWx0aS1UYWIgQnJvd3NpbmcqKiDigJQgTmF0aXZlIENFRiB0YWIgbWFuYWdlbWVudCB3aXRoIHBlci10YWIgc2hpZWxkcywgaGlzdG9yeSwgYW5kIHN0YXRzCi0g8J+TmiAqKkhpc3RvcnkgJiBCb29rbWFya3MqKiDigJQgU1FMaXRlLWJhY2tlZCwgZnVsbHkgc2VhcmNoYWJsZSwgcGVyc2lzdHMgYWNyb3NzIHNlc3Npb25zCi0g4qyH77iPICoqRG93bmxvYWQgTWFuYWdlcioqIOKAlCBCdWlsdC1pbiBwcm9ncmVzcyB0cmFja2luZyB3aXRoIGFuIGludGVybmFsIGRvd25sb2FkcyBwYWdlCi0g8J+SviAqKlBlcnNpc3RlbnQgU2hpZWxkcyBQcmVmZXJlbmNlcyoqIOKAlCBQZXItc2l0ZSBzaGllbGQgc3RhdGUgc2F2ZWQgdG8gU1FMaXRlLCBzdXJ2aXZlcyByZXN0YXJ0cwotIPCfk6YgKipOU0lTIEluc3RhbGxlcioqIOKAlCBPbmUtY2xpY2sgc2V0dXAgRVhFIHdpdGggU3RhcnQgTWVudSArIERlc2t0b3Agc2hvcnRjdXRzCi0g8J+UhCAqKkF1dG8tVXBkYXRlIENoZWNrZXIqKiDigJQgQ2hlY2tzIEdpdEh1YiBSZWxlYXNlcyBvbiBzdGFydHVwLCBzaG93cyBub3RpZmljYXRpb24gd2hlbiB1cGRhdGUgYXZhaWxhYmxlCi0g4pqhICoqVHJ1ZSBOYXRpdmUgV2luZG93cyBQZXJmb3JtYW5jZSoqIOKAlCBEaXJlY3QgQysrMjAgKyBDRUYgVmlld3Mgd2l0aCBubyBFbGVjdHJvbiwgbm8gd2ViLXZpZXcgd3JhcHBlcnMKCi0tLQoKIyMg4pqhIFN0YXR1cyBhdCBhIEdsYW5jZQoKfCBDb21wb25lbnQgfCBTdGF0dXMgfCBEZXRhaWxzIHwKfCA6LS0tIHwgOi0tLSB8IDotLS0gfAp8ICoqUHJpdmFjeSBDb3JlKiogfCDinIUgKipBY3RpdmUqKiB8IFN0YW5kYWxvbmUgQysrMjAgZW5naW5lIHdpdGggd2lsZGNhcmQgcnVsZSBzdXBwb3J0ICsgdW5pdCB0ZXN0cyB8CnwgKipTaGllbGRzIEVuZ2luZSB2MyoqIHwg4pyFICoqQWN0aXZlKiogfCA0LWxheWVyIGRlZmVuc2U6IG5ldHdvcmsgKyBNdXRhdGlvbk9ic2VydmVyICsgZmV0Y2gvWEhSIGludGVyY2VwdCArIFNQQSBob29rIHwKfCAqKldpbmRvd3MgU2hlbGwqKiB8IOKchSAqKkFjdGl2ZSoqIHwgQ0VGIFZpZXdzIHdpbmRvdyB3aXRoIHRvb2xiYXIgYW5kIGZ1bGwgbmF2aWdhdGlvbiBjb250cm9scyB8CnwgKipNdWx0aS1UYWIgQnJvd3NpbmcqKiB8IOKchSAqKkFjdGl2ZSoqIHwgTmF0aXZlIHRhYiBzdHJpcCwgQ3RybCtUL1cvVGFiLCBwZXItdGFiIHN0YXRlLCBwb3B1cCBpbnRlcmNlcHRpb24gfAp8ICoqSGlzdG9yeSAmIEJvb2ttYXJrcyoqIHwg4pyFICoqQWN0aXZlKiogfCBTUUxpdGUgZGF0YWJhc2UsIGF1dG8tcmVjb3JkZWQgdmlzaXRzLCBDdHJsK0QgYm9va21hcmsgdG9nZ2xlIHwKfCAqKkRvd25sb2FkIE1hbmFnZXIqKiB8IOKchSAqKkFjdGl2ZSoqIHwgQ2VmRG93bmxvYWRIYW5kbGVyLCBwcm9ncmVzcyB0cmFja2luZywgaW50ZXJuYWwgZG93bmxvYWRzIHBhZ2UgfAp8ICoqUGVyc2lzdGVudCBTaGllbGRzKiogfCDinIUgKipBY3RpdmUqKiB8IFBlci1zaXRlIHNoaWVsZCBwcmVmcyBwZXJzaXN0ZWQgdG8gU1FMaXRlIGFjcm9zcyByZXN0YXJ0cyB8CnwgKipOU0lTIEluc3RhbGxlcioqIHwg4pyFICoqQWN0aXZlKiogfCBPbmUtY2xpY2sgc2V0dXAgRVhFIHdpdGggc2hvcnRjdXRzLCByZWdpc3RyeSwgYW5kIHVuaW5zdGFsbGVyIHwKfCAqKkF1dG8tVXBkYXRlIENoZWNrZXIqKiB8IOKchSAqKkFjdGl2ZSoqIHwgR2l0SHViIFJlbGVhc2VzIEFQSSBjaGVjayBvbiBzdGFydHVwLCB0b29sYmFyIG5vdGlmaWNhdGlvbiB8CnwgKipZb3VUdWJlIEFkIEJsb2NraW5nKiogfCDinIUgKipBY3RpdmUqKiB8IFplcm8tZmxhc2ggYWQgZWxpbWluYXRpb246IERPTSBudWtlZCBiZWZvcmUgcmVuZGVyIHZpYSBNdXRhdGlvbk9ic2VydmVyIHwKfCAqKlR3aXRjaCBBZCBCbG9ja2luZyoqIHwg4pyFICoqQWN0aXZlKiogfCBmZXRjaC9YSFIgaW50ZXJjZXB0ICsgRE9NIHJlbW92YWwgKyBDU1MgaGlkaW5nIHwKfCAqKmNoZXNzLmNvbSBBZCBCbG9ja2luZyoqIHwg4pyFICoqQWN0aXZlKiogfCBTaWRlYmFyL2JvYXJkIGFkIHNlbGVjdG9ycyBpbiBzaGllbGRzLmpzIHwKfCAqKkdQVSBDcmFzaCBQcmV2ZW50aW9uKiogfCDinIUgKipBY3RpdmUqKiB8IFN3aWZ0U2hhZGVyIFdlYkdMICsgZGlzYWJsZS1ncHUtY29tcG9zaXRpbmcgZm9yIEludGVsIElyaXMgWGUgfAp8ICoqRnVsbHNjcmVlbiBTdXBwb3J0KiogfCDinIUgKipBY3RpdmUqKiB8IEYxMSBoaWRlcyB0YWIgc3RyaXAgKyB0b29sYmFyOyBZb3VUdWJlIEYga2V5IHdvcmtzIGNvcnJlY3RseSB8CnwgKipFcnJvciBQYWdlcyoqIHwg4pyFICoqQWN0aXZlKiogfCBCcmFuZGVkIGRhcmstbW9kZSBlcnJvciBwYWdlIGZvciBuZXR3b3JrIGZhaWx1cmVzIHwKfCAqKkRQSSBBd2FyZW5lc3MqKiB8IOKchSAqKkFjdGl2ZSoqIHwgUGVyLW1vbml0b3IgRFBJIGF3YXJlbmVzcyBWMiBmb3Igc2hhcnAgcmVuZGVyaW5nIG9uIEhpRFBJIGRpc3BsYXlzIHwKCi0tLQoKIyMg8J+RkSBGZWF0dXJlcwoKIyMjIDEuIPCfm6HvuI8gS0lOR0ZOIFNoaWVsZHMgRW5naW5lIHYzIOKAlCA0LUxheWVyIEFkIEVsaW1pbmF0aW9uCgpUaGUgU2hpZWxkcyBlbmdpbmUgdXNlcyBmb3VyIGluZGVwZW5kZW50LCBtdXR1YWxseSByZWluZm9yY2luZyBsYXllcnMgc28gYWRzIGhhdmUgbm8gY2hhbmNlIG9mIGFwcGVhcmluZyDigJQgZXZlbiBvbiBjb21wbGV4IFNQQXMgbGlrZSBZb3VUdWJlOgoKfCBMYXllciB8IFdoZXJlIHwgV2hhdCBpdCBkb2VzIHwKfCA6LS0tIHwgOi0tLSB8IDotLS0gfAp8ICoqTmV0d29yayBibG9jayAoQysrKSoqIHwgYE9uQmVmb3JlUmVzb3VyY2VMb2FkYCB8IENhbmNlbHMgSFRUUCByZXF1ZXN0cyBtYXRjaGluZyAzMDArIGRvbWFpbi9wYXRoIHJ1bGVzIGJlZm9yZSBhbnkgYnl0ZXMgYXJlIHNlbnQgfAp8ICoqTXV0YXRpb25PYnNlcnZlciAoSlMpKiogfCBgc2hpZWxkcy5qc2AgfCBXYXRjaGVzIHRoZSBET00g4oCUIHRoZSBpbnN0YW50IGFuIGFkIG5vZGUgaXMgaW5zZXJ0ZWQsIGl0IGlzIGhpZGRlbiAqYmVmb3JlKiBpdCByZW5kZXJzIHwKfCAqKmZldGNoIC8gWEhSIGludGVyY2VwdCAoSlMpKiogfCBgc2hpZWxkcy5qc2AgfCBXcmFwcyBgd2luZG93LmZldGNoYCBhbmQgYFhNTEh0dHBSZXF1ZXN0YCB0byBzaWxlbnRseSBzd2FsbG93IFlvdVR1YmUgJiBUd2l0Y2ggYWQgQVBJIGNhbGxzIHwKfCAqKkhpc3RvcnkgQVBJIGhvb2sgKEpTKSoqIHwgYHNoaWVsZHMuanNgIHwgV3JhcHMgYHB1c2hTdGF0ZWAgLyBgcmVwbGFjZVN0YXRlYCB0byByZS1hcm0gdGhlIGtpbGxlciBhZnRlciBldmVyeSBTUEEgbmF2aWdhdGlvbiAoWW91VHViZSB2aWRlby10by12aWRlbywgZXRjLikgfAoKKipZb3VUdWJlIHNwZWNpZmljczoqKiBXaGVuIGFuIGFkIGlzIGRldGVjdGVkIHZpYSB0aGUgYGFkLXNob3dpbmdgIGNsYXNzLCB0aGUgZW5naW5lIG11dGVzIHRoZSB2aWRlbywgc2V0cyBwbGF5YmFjayByYXRlIHRvIDE2w5csIHNlZWtzIHRvIHRoZSBlbmQsIGFuZCBhdXRvLWNsaWNrcyBza2lwIOKAlCBhbGwgd2l0aGluIDEwMCBtcywgbWFraW5nIGFkcyBpbnZpc2libGUgaW4gcHJhY3RpY2UuCgoqKlR3aXRjaCBzcGVjaWZpY3M6KiogQWQgbmV0d29yayBkb21haW5zIChganR2bncubmV0L2FkYCwgYHR3aXRjaGFkdmVydGlzaW5nLnR2YCwgYHNwYWRlLnR3aXRjaC50dmApIGFyZSBibG9ja2VkIGF0IHRoZSBuZXR3b3JrIGxheWVyOyBmZXRjaC9YSFIgaW50ZXJjZXB0IGhhbmRsZXMgc2FtZS1vcmlnaW4gYWQgYnJlYWsgc2lnbmFsczsgQ1NTIGhpZGVzIG92ZXJsYXkgY291bnRkb3duIHRpbWVycy4KCiMjIyAyLiDwn5eC77iPIE5hdGl2ZSBNdWx0aS1UYWIgQnJvd3NpbmcKCi0gKipUYWIgc3RyaXAqKiBhYm92ZSB0aGUgdG9vbGJhciDigJQgZWFjaCB0YWIgc2hvd3MgaXRzIHRpdGxlICsgYMOXYCBjbG9zZSBidXR0b24KLSAqKkN0cmwrVCoqIG5ldyB0YWIgwrcgKipDdHJsK1cqKiBjbG9zZSB0YWIgwrcgKipDdHJsK1RhYioqIC8gKipDdHJsK1NoaWZ0K1RhYioqIGN5Y2xlIMK3ICoqQ3RybCsx4oCTOSoqIGp1bXAKLSBFYWNoIHRhYiBydW5zIGl0cyBvd24gbGl2ZSBgQ2VmQnJvd3NlclZpZXdgIOKAlCBwYWdlcyBzdGF5IGxvYWRlZCBpbiBiYWNrZ3JvdW5kIHRhYnMKLSBFYWNoIHRhYiBoYXMgKippbmRlcGVuZGVudCBzaGllbGRzIHN0YXRlLCBibG9ja2VkLXJlcXVlc3QgY291bnRlciwgYW5kIFVSTCoqCi0gUG9wdXAgbGlua3MgKGB0YXJnZXQ9Il9ibGFuayJgLCBgd2luZG93Lm9wZW5gKSByZWRpcmVjdCBpbnRvIGEgbmV3IEtJTkdGTiB0YWIgaW5zdGVhZCBvZiBzcGF3bmluZyBhIG5ldyB3aW5kb3cKLSBBY3RpdmUgdGFiIGhpZ2hsaWdodGVkIHdpdGggYOKWtmAgcHJlZml4IGluIHRoZSBzdHJpcAoKIyMjIDMuIPCfk5ogSGlzdG9yeSAmIEJvb2ttYXJrcyAoU1FMaXRlKQoKLSBFdmVyeSBwYWdlIHZpc2l0IGlzICoqYXV0b21hdGljYWxseSByZWNvcmRlZCoqIChVUkwsIHRpdGxlLCB2aXNpdCBjb3VudCwgbGFzdC12aXNpdCB0aW1lc3RhbXApIGluIGBLSU5HRk5Qcm9maWxlL2tpbmdmbi5kYmAKLSAqKkN0cmwrSCoqIG9wZW5zIHRoZSBpbnRlcm5hbCBoaXN0b3J5IHBhZ2Ug4oCUIGEgZGFyay1tb2RlLCBzZWFyY2hhYmxlLCB0YWJiZWQgdmlldyBvZiB5b3VyIGhpc3RvcnkgYW5kIGJvb2ttYXJrcwotICoqQ3RybCtEKiogb3IgdGhlIGDimIZgIHRvb2xiYXIgYnV0dG9uIHRvZ2dsZXMgYSBib29rbWFyayBmb3IgdGhlIGN1cnJlbnQgcGFnZTsgYnV0dG9uIHNob3dzIGDimIVgIHdoZW4gYm9va21hcmtlZAotIEhpc3RvcnkgdXNlcyBgSU5TRVJUIE9SIFJFUExBQ0VgIHdpdGggYE9OIENPTkZMSUNUYCBzbyByZXZpc2l0aW5nIGEgcGFnZSBpbmNyZW1lbnRzIHRoZSB2aXNpdCBjb3VudGVyIHJhdGhlciB0aGFuIGNyZWF0aW5nIGEgZHVwbGljYXRlCi0gU1FMaXRlIHVzZXMgKipXQUwgbW9kZSoqIGZvciBzYWZlIGNvbmN1cnJlbnQgcmVhZHMgZHVyaW5nIGJyb3dzaW5nCgojIyMgNC4g4qyH77iPIERvd25sb2FkIE1hbmFnZXIKCi0gKipBbGwgZG93bmxvYWRzKiogYXJlIHRyYWNrZWQgaW4gU1FMaXRlIHdpdGggVVJMLCBmaWxlbmFtZSwgc2F2ZSBwYXRoLCBwcm9ncmVzcywgYW5kIHN0YXR1cwotIEZpbGVzIGFyZSBzYXZlZCB0byBgfi9Eb3dubG9hZHNgIHdpdGggdGhlIE9TIG5hdGl2ZSBzYXZlLWZpbGUgZGlhbG9nCi0gKipDdHJsK0oqKiBvciB0aGUgYOKGk2AgdG9vbGJhciBidXR0b24gKHNob3dzIGFjdGl2ZSBjb3VudCBsaWtlIGDihpMoMilgKSBvcGVucyB0aGUgaW50ZXJuYWwgZG93bmxvYWRzIHBhZ2UKLSBEb3dubG9hZHMgcGFnZSBzaG93cyByZWFsLXRpbWUgcHJvZ3Jlc3MgYmFycywgc3RhdHVzIGJhZGdlcyAoQ09NUExFVEUgLyBET1dOTE9BRElORyAvIEVSUk9SIC8gQ0FOQ0VMTEVEKSwgZmlsZSBwYXRocywgYW5kIHRpbWVzdGFtcHMKCiMjIyA1LiDwn5K+IFBlcnNpc3RlbnQgU2hpZWxkcyBQcmVmZXJlbmNlcwoKLSBQZXItc2l0ZSBzaGllbGQgb24vb2ZmIHN0YXRlIGlzICoqc2F2ZWQgdG8gU1FMaXRlKiogYW5kICoqbG9hZGVkIG9uIHN0YXJ0dXAqKgotIEVhY2ggdGFiIGluZGVwZW5kZW50bHkgcmVhZHMgaXRzIHNpdGUncyBzaGllbGQgcHJlZmVyZW5jZSB3aGVuIG5hdmlnYXRpbmcKLSBUb2dnbGluZyBzaGllbGRzIHZpYSB0aGUgdG9vbGJhciBidXR0b24gb3IgdGhlIGBTaGllbGRzOiBPbi9PZmZgIGxhYmVsIGluc3RhbnRseSBwZXJzaXN0cyB0aGUgY2hhbmdlCgojIyMgNi4g8J+TpiBOU0lTIEluc3RhbGxlciAoTWlsZXN0b25lIDEwKQoKLSBQcm9mZXNzaW9uYWwgb25lLWNsaWNrIHNldHVwIEVYRSBidWlsdCB3aXRoICoqTlNJUyBNb2Rlcm4gVUkgMioqCi0gSW5zdGFsbHMgdG8gYCVQcm9ncmFtRmlsZXMlXEtJTkdGTiBCcm93c2VyYAotIENyZWF0ZXMgKipTdGFydCBNZW51KiogZm9sZGVyIGFuZCAqKkRlc2t0b3AqKiBzaG9ydGN1dAotIFJlZ2lzdGVycyBpbiAqKkFkZC9SZW1vdmUgUHJvZ3JhbXMqKiB3aXRoIHNpemUgZXN0aW1hdGUgYW5kIHB1Ymxpc2hlciBpbmZvCi0gUmVnaXN0ZXJzIGFzIGEgKipkZWZhdWx0IGJyb3dzZXIgY2FuZGlkYXRlKiogaW4gdGhlIFdpbmRvd3MgcmVnaXN0cnkKLSBVbmluc3RhbGxlciBwcmVzZXJ2ZXMgYEtJTkdGTlByb2ZpbGVgICh5b3VyIGhpc3RvcnksIGJvb2ttYXJrcywgYW5kIHByZWZlcmVuY2VzKQotIEJ1aWxkIHdpdGg6IGAuXHNjcmlwdHNcYnVpbGQtaW5zdGFsbGVyLnBzMWAKCiMjIyA3LiDwn5SEIEF1dG8tVXBkYXRlIENoZWNrZXIgKE1pbGVzdG9uZSAxMCkKCi0gT24gZXZlcnkgbGF1bmNoLCBLSU5HRk4gc2lsZW50bHkgcXVlcmllcyB0aGUgKipHaXRIdWIgUmVsZWFzZXMgQVBJKiogKGBhcGkuZ2l0aHViLmNvbS9yZXBvcy9GYXJoYW4wNjI5L0JyYXZlbGlrZS9yZWxlYXNlcy9sYXRlc3RgKSBvbiBhIGJhY2tncm91bmQgdGhyZWFkCi0gSWYgYSBuZXdlciB2ZXJzaW9uIGlzIGZvdW5kLCBhIGDwn4aVIFVwZGF0ZWAgYnV0dG9uIGFwcGVhcnMgaW4gdGhlIHRvb2xiYXIgKiphbmQqKiBhIDEyLXNlY29uZCB0b2FzdCBub3RpZmljYXRpb24gaXMgaW5qZWN0ZWQgaW50byB0aGUgYWN0aXZlIHBhZ2UKLSBDbGlja2luZyBlaXRoZXIgbmF2aWdhdGVzIHRvIHRoZSBHaXRIdWIgcmVsZWFzZXMgcGFnZSBmb3IgZG93bmxvYWQKLSBVc2VzICoqV2luSFRUUCoqIChidWlsdCBpbnRvIFdpbmRvd3MsIG5vIGV4dHJhIGRlcGVuZGVuY3kpIHdpdGggNSBzIGNvbm5lY3QgLyAxMCBzIHJlY2VpdmUgdGltZW91dHMKLSBTaWxlbnRseSBpZ25vcmVzIGFsbCBuZXR3b3JrIGVycm9ycyDigJQgbmV2ZXIgYmxvY2tzIHN0YXJ0dXAKCiMjIyA4LiDwn5SNIFNtYXJ0IEFkZHJlc3MgQmFyICsgTmF2aWdhdGlvbgoKLSBEaXN0aW5ndWlzaGVzIFVSTHMsIGJhcmUgaG9zdG5hbWVzLCBhbmQgc2VhcmNoIHF1ZXJpZXMgYXV0b21hdGljYWxseQotIFR5cGluZyBgY2hlc3MuY29tYCDihpIgbmF2aWdhdGVzIHRvIGBodHRwczovL2NoZXNzLmNvbWAKLSBUeXBpbmcgcGxhaW4gdGV4dCDihpIgRHVja0R1Y2tHbyBwcml2YWN5IHNlYXJjaCAoZGVmYXVsdCkgb3IgR29vZ2xlIC8gQmluZwotICoqRXNjYXBlKiogaW4gYWRkcmVzcyBiYXIgcmVzdG9yZXMgdGhlIGN1cnJlbnQgVVJMIGFuZCByZXR1cm5zIGZvY3VzIHRvIHRoZSBwYWdlCi0gQWxpYXMga2V5d29yZHM6IGBob21lYCwgYGtpbmdmbmAsIGBraW5nZm46Ly9ob21lYCwgYGFib3V0OmhvbWVgIGFsbCByZXR1cm4gdG8gdGhlIEtJTkdGTiBzdGFydCBwYWdlCgojIyMgOS4g4oyo77iPIEZ1bGwgS2V5Ym9hcmQgU2hvcnRjdXQgU3VpdGUKCnwgU2hvcnRjdXQgfCBBY3Rpb24gfAp8IDotLS0gfCA6LS0tIHwKfCBgQ3RybCtUYCB8IE5ldyB0YWIgfAp8IGBDdHJsK1dgIHwgQ2xvc2UgY3VycmVudCB0YWIgfAp8IGBDdHJsK1RhYmAgLyBgQ3RybCtTaGlmdCtUYWJgIHwgTmV4dCAvIHByZXZpb3VzIHRhYiB8CnwgYEN0cmwrMWAg4oCTIGBDdHJsKzlgIHwgSnVtcCB0byB0YWIgYnkgbnVtYmVyIHwKfCBgQ3RybCtMYCB8IEZvY3VzIGFkZHJlc3MgYmFyIHwKfCBgQ3RybCtSYCAvIGBGNWAgfCBSZWxvYWQgcGFnZSB8CnwgYEN0cmwrU2hpZnQrUmAgLyBgU2hpZnQrRjVgIHwgSGFyZCByZWxvYWQgKGlnbm9yZSBjYWNoZSkgfAp8IGBDdHJsK0RgIHwgVG9nZ2xlIGJvb2ttYXJrIGZvciBjdXJyZW50IHBhZ2UgfAp8IGBDdHJsK0hgIHwgT3BlbiBIaXN0b3J5ICYgQm9va21hcmtzIHBhZ2UgfAp8IGBDdHJsK0pgIHwgT3BlbiBEb3dubG9hZHMgcGFnZSB8CnwgYEFsdCvihpBgIC8gYEFsdCtCYWNrc3BhY2VgIHwgR28gYmFjayB8CnwgYEFsdCvihpJgIHwgR28gZm9yd2FyZCB8CnwgYEFsdCtIb21lYCB8IEdvIHRvIEtJTkdGTiBob21lIHBhZ2UgfAp8IGBGMTFgIHwgVG9nZ2xlIGZ1bGxzY3JlZW4gKGhpZGVzIHRhYiBzdHJpcCArIHRvb2xiYXIpIHwKfCBgRXNjYXBlYCB8IFN0b3AgbG9hZGluZyAvIGV4aXQgZnVsbHNjcmVlbiB8CgotLS0KCiMjIPCfj5vvuI8gQXJjaGl0ZWN0dXJlCgpgYGBtZXJtYWlkCmdyYXBoIFRECiAgICBVc2VyKFtVc2VyIElucHV0IC8gVGFiIC8gS2V5Ym9hcmRdKSAtLT4gV2luZG93W0NFRiBWaWV3cyBUb3AtTGV2ZWwgV2luZG93XQoKICAgIHN1YmdyYXBoIFVJIFsiTmF0aXZlIFdpbmRvd3MgVUkgKENFRiBWaWV3cykiXQogICAgICAgIFRhYlN0cmlwW1RhYiBTdHJpcCBQYW5lbF0KICAgICAgICBUb29sYmFyW1Rvb2xiYXIg4oCUIE5hdiArIEFkZHJlc3MgKyBTaGllbGRzICsg4piGICsg4oaTICsg8J+GlV0KICAgICAgICBDb250ZW50UGFuZWxbQ29udGVudCBQYW5lbCDigJQgQWN0aXZlIENlZkJyb3dzZXJWaWV3XQogICAgZW5kCgogICAgV2luZG93IC0tPiBUYWJTdHJpcAogICAgV2luZG93IC0tPiBUb29sYmFyCiAgICBXaW5kb3cgLS0+IENvbnRlbnRQYW5lbAoKICAgIHN1YmdyYXBoIFRhYnMgWyJUYWIgRW50cmllcyAodmVjdG9yPFRhYkVudHJ5PikiXQogICAgICAgIFQwW1RhYiAwIOKAlCBCcm93c2VyVmlldyArIFNpdGVTaGllbGRzICsgUHJpdmFjeVN0YXRzXQogICAgICAgIFQxW1RhYiAxIOKAlCBCcm93c2VyVmlldyArIFNpdGVTaGllbGRzICsgUHJpdmFjeVN0YXRzXQogICAgICAgIFROW1RhYiBOIC4uLl0KICAgIGVuZAoKICAgIENvbnRlbnRQYW5lbCAtLT4gVDAKICAgIENvbnRlbnRQYW5lbCAtLT4gVDEKICAgIENvbnRlbnRQYW5lbCAtLT4gVE4KCiAgICBzdWJncmFwaCBDb3JlIFsiUHJpdmFjeSBDb3JlIChraW5nZm5fY29yZSDigJQgbm8gQ0VGIGRlcCkiXQogICAgICAgIEZFW0ZpbHRlckVuZ2luZSDigJQgMzAwKyBydWxlcywgd2lsZGNhcmQgc3VwcG9ydF0KICAgICAgICBOYXZbTmF2aWdhdGlvblJlc29sdmVyXQogICAgICAgIFNTW1NpdGVTaGllbGRzIOKAlCBwZXItdGFiICsgREIgcGVyc2lzdGVuY2VdCiAgICAgICAgUFNbUHJpdmFjeVN0YXRzIOKAlCBhdG9taWMgY291bnRlcnNdCiAgICBlbmQKCiAgICBzdWJncmFwaCBEQiBbIlNRTGl0ZSBEYXRhYmFzZSAoS0lOR0ZOUHJvZmlsZS9raW5nZm4uZGIpIl0KICAgICAgICBESFtIaXN0b3J5IFRhYmxlXQogICAgICAgIERCMltCb29rbWFya3MgVGFibGVdCiAgICAgICAgRFNbU2hpZWxkcyBQcmVmcyBUYWJsZV0KICAgICAgICBERFtEb3dubG9hZHMgVGFibGVdCiAgICBlbmQKCiAgICBzdWJncmFwaCBTaGllbGRzIFsiU2hpZWxkcyBFbmdpbmUgdjMgKHNoaWVsZHMuanMpIl0KICAgICAgICBTMVtMYXllciAxOiBDKysgT25CZWZvcmVSZXNvdXJjZUxvYWQg4oaSIFJWX0NBTkNFTF0KICAgICAgICBTMltMYXllciAyOiBNdXRhdGlvbk9ic2VydmVyIOKAlCBpbnN0YW50IERPTSBub2RlIHJlbW92YWxdCiAgICAgICAgUzNbTGF5ZXIgMzogZmV0Y2gvWEhSIGludGVyY2VwdCDigJQgYmxvY2tzIGFkIEFQSSBjYWxsc10KICAgICAgICBTNFtMYXllciA0OiBoaXN0b3J5IEFQSSBob29rIOKAlCBTUEEgbmF2aWdhdGlvbiByZS1hcm1dCiAgICBlbmQKCiAgICBUMCAtLT58c3VicmVzb3VyY2UgcmVxdWVzdHN8IFMxCiAgICBTMSAtLT4gRkUKICAgIFQwIC0tPnxKUyBpbmplY3Rpb258IFMyCiAgICBUMCAtLT58SlMgaW5qZWN0aW9ufCBTMwogICAgVDAgLS0+fEpTIGluamVjdGlvbnwgUzQKCiAgICBTUyAtLT4gRFMKICAgIFQwIC0tPiBTUwogICAgVDAgLS0+fHBhZ2UgbG9hZGVkfCBESAogICAgVG9vbGJhciAtLT58Q3RybCtEfCBEQjIKICAgIERMSGFuZGxlcltEb3dubG9hZEhhbmRsZXJdIC0tPiBERAoKICAgIFVDW1VwZGF0ZUNoZWNrZXIg4oCUIFdpbkhUVFAgYmFja2dyb3VuZCB0aHJlYWRdCiAgICBVQyAtLT58bmV3ZXIgdmVyc2lvbnwgVG9vbGJhcgpgYGAKCiMjIyBNb2R1bGUgUmVzcG9uc2liaWxpdGllcwoKfCBNb2R1bGUgfCBSZXNwb25zaWJpbGl0aWVzIHwKfCA6LS0tIHwgOi0tLSB8CnwgYHNyYy9jb3JlL2ZpbHRlcl9lbmdpbmUuKmAgfCBQYXJzZXMgZmlsdGVyIHJ1bGVzIChkb21haW4sIHBhdGgsIHdpbGRjYXJkcyksIGV2YWx1YXRlcyBVUkxzLCBhbGxvdyBydWxlcyB3aW4gdW5jb25kaXRpb25hbGx5IHwKfCBgc3JjL2NvcmUvbmF2aWdhdGlvbi4qYCB8IFVSTCBkZXRlY3Rpb24sIHNjaGVtZSBub3JtYWxpemF0aW9uLCBzZWFyY2ggcXVlcnkgZW5jb2RpbmcgfAp8IGBzcmMvY29yZS9zaXRlX3NoaWVsZHMuKmAgfCBQZXItdGFiIHNoaWVsZCB0b2dnbGU7IGxvYWRzL3NhdmVzIGRpc2FibGVkIGhvc3RzIGZyb20gU1FMaXRlIG9uIHN0YXJ0dXAvdG9nZ2xlIHwKfCBgc3JjL2NvcmUvcHJpdmFjeV9zdGF0cy4qYCB8IEF0b21pYyB0aHJlYWQtc2FmZSBibG9ja2VkL2V2YWx1YXRlZCByZXF1ZXN0IGNvdW50ZXJzIHBlciB0YWIgfAp8IGBzcmMvY29yZS9kYXRhYmFzZS4qYCB8IFNRTGl0ZSB3cmFwcGVyIGZvciBoaXN0b3J5LCBib29rbWFya3MsIHNoaWVsZHMgcHJlZnMsIGFuZCBkb3dubG9hZHMgfAp8IGBzcmMvYnJvd3Nlci9icm93c2VyX3dpbmRvdy4qYCB8IE11bHRpLXRhYiBvcmNoZXN0cmF0aW9uLCB0YWIgc3RyaXAsIHRvb2xiYXIsIGFsbCBDRUYgaGFuZGxlcnMgfAp8IGBzcmMvYnJvd3Nlci9kb3dubG9hZF9oYW5kbGVyLipgIHwgYENlZkRvd25sb2FkSGFuZGxlcmAg4oCUIHJvdXRlcyBkb3dubG9hZHMgdG8gYH4vRG93bmxvYWRzYCwgdHJhY2tzIHByb2dyZXNzIGluIERCIHwKfCBgc3JjL2Jyb3dzZXIvdXBkYXRlX2NoZWNrZXIuKmAgfCBXaW5IVFRQIGJhY2tncm91bmQgY2hlY2sgYWdhaW5zdCBHaXRIdWIgUmVsZWFzZXMgQVBJIHwKfCBgc3JjL2Jyb3dzZXIvYnJvd3Nlcl9hcHAuKmAgfCBDRUYgbGlmZWN5Y2xlLCBjb21tYW5kLWxpbmUgaGFyZGVuaW5nLCBHUFUgZmxhZ3MsIHByaXZhY3kgc3dpdGNoZXMgfAp8IGByZXNvdXJjZXMvc2hpZWxkcy5qc2AgfCA0LWxheWVyIEphdmFTY3JpcHQgYWQvdHJhY2tlciBlbGltaW5hdGlvbiAoWW91VHViZSArIFR3aXRjaCArIGdlbmVyaWMpIHwKfCBgcmVzb3VyY2VzL2hvbWUuaHRtbGAgfCBMb2NhbCBkYXJrLW1vZGUgc3RhcnQgcG9ydGFsIHdpdGggc2VhcmNoIGFuZCBxdWljay1sYXVuY2ggdGlsZXMgfAp8IGByZXNvdXJjZXMvaGlzdG9yeS5odG1sYCB8IEludGVybmFsIGhpc3RvcnkgJiBib29rbWFya3Mgdmlld2VyIHdpdGggc2VhcmNoIGFuZCB0YWJzIHwKfCBgcmVzb3VyY2VzL2Rvd25sb2Fkcy5odG1sYCB8IEludGVybmFsIGRvd25sb2FkcyBtYW5hZ2VyIHdpdGggcHJvZ3Jlc3MgYmFycyBhbmQgc3RhdHVzIGJhZGdlcyB8CnwgYGluc3RhbGxlci9raW5nZm4tc2V0dXAubnNpYCB8IE5TSVMgTW9kZXJuIFVJIDIgaW5zdGFsbGVyIHNjcmlwdCB8CnwgYHNjcmlwdHMvYnVpbGQtaW5zdGFsbGVyLnBzMWAgfCBPbmUtY29tbWFuZCBidWlsZCArIHBhY2thZ2Ugc2NyaXB0IHwKCi0tLQoKIyMg8J+agCBRdWljayBTdGFydAoKIyMjIE9wdGlvbiBBIOKAlCBJbnN0YWxsIGZyb20gU2V0dXAgRVhFIChSZWNvbW1lbmRlZCkKCjEuIERvd25sb2FkIGBraW5nZm4tYnJvd3Nlci1zZXR1cC0wLjMuMC5leGVgIGZyb20gdGhlIFsqKlJlbGVhc2VzIHBhZ2UqKl0oaHR0cHM6Ly9naXRodWIuY29tL0ZhcmhhbjA2MjkvQnJhdmVsaWtlL3JlbGVhc2VzKQoyLiBSdW4gdGhlIGluc3RhbGxlciBhbmQgZm9sbG93IHRoZSB3aXphcmQKMy4gTGF1bmNoICoqS0lOR0ZOIEJyb3dzZXIqKiBmcm9tIHRoZSBEZXNrdG9wIG9yIFN0YXJ0IE1lbnUgc2hvcnRjdXQKCiMjIyBPcHRpb24gQiDigJQgUnVuIGZyb20gQnVpbGQgT3V0cHV0CgpgYGBjbWQKZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9GYXJoYW4wNjI5L0JyYXZlbGlrZS5naXQKY2QgQnJhdmVsaWtlCnJ1bi1raW5nZm4uYmF0CmBgYAoKLS0tCgojIyDwn5uh77iPIEtJTkdGTiBTaGllbGRzIEVuZ2luZSB2MwoKIyMjIFJ1bGUgRm9ybWF0CgpgYGB0ZXh0CiMgQ29tbWVudHMgYW5kIGJsYW5rIGxpbmVzIGFyZSBpZ25vcmVkCmFkcy5leGFtcGxlLmNvbSAgICAgICAgICAgICAgIyBCbG9ja3MgYWRzLmV4YW1wbGUuY29tIGFuZCBhbGwgc3ViZG9tYWlucwp8fHRyYWNrZXIuZXhhbXBsZV4gICAgICAgICAgICMgU3RhbmRhcmQgQWRibG9jay1zdHlsZSBkb21haW4gYW5jaG9yCnx8ZXhhbXBsZS5jb20vYWRzLyogICAgICAgICAgIyBQYXRoIHJ1bGUgd2l0aCB3aWxkY2FyZApAQGFsbG93ZWQuZXhhbXBsZS5jb20gICAgICAgICMgQWxsb3cgcnVsZTogYWx3YXlzIHBlcm1pdHMsIG92ZXJyaWRlcyBhbnkgYmxvY2sKMC4wLjAuMCBleGFtcGxlLmNvbSAgICAgICAgICMgSG9zdHMtZmlsZSBmb3JtYXQgKDEyNy4wLjAuMSBhbHNvIGFjY2VwdGVkKQoqLmJhZC10cmFja2VyLm5ldCAgICAgICAgICAgICMgV2lsZGNhcmQgaW4gZG9tYWluCmBgYAoKIyMjIEV2YWx1YXRpb24gU2VtYW50aWNzCgoxLiAqKkFsbG93IHJ1bGVzIChgQEBgKSBoYXZlIGFic29sdXRlIHByaW9yaXR5Kiog4oCUIGEgbWF0Y2hpbmcgYWxsb3cgcnVsZSBpbW1lZGlhdGVseSBwZXJtaXRzIHRoZSByZXF1ZXN0CjIuICoqU3ViZG9tYWluIG1hdGNoaW5nKiog4oCUIGJsb2NraW5nIGBleGFtcGxlLmNvbWAgYXV0b21hdGljYWxseSBibG9ja3MgYGNkbi5leGFtcGxlLmNvbWAsIGBhZHMuZXhhbXBsZS5jb21gLCBldGMuCjMuICoqV2lsZGNhcmQgKGAqYCkgc3VwcG9ydCoqIOKAlCB3b3JrcyBpbiBib3RoIGRvbWFpbiBwYXR0ZXJucyBhbmQgVVJMIHBhdGggcnVsZXMKNC4gKipObyBzdWZmaXggY29sbGlzaW9ucyoqIOKAlCBibG9ja2luZyBgZXhhbXBsZS5jb21gIHdpbGwgKipub3QqKiBibG9jayBgYmFkZXhhbXBsZS5jb21gCjUuICoqT3B0aW9ucyBzdHJpcHBlZCBzYWZlbHkqKiDigJQgYCR0aGlyZC1wYXJ0eWAsIGAkc2NyaXB0YCwgZXRjLiBhZnRlciBgJGAgYXJlIGlnbm9yZWQgd2l0aG91dCBicmVha2luZyB0aGUgcnVsZQoKIyMjIENvdmVyZWQgTmV0d29ya3MgKDMwMCsgcnVsZXMpCgp8IENhdGVnb3J5IHwgTmV0d29ya3MgfAp8IDotLS0gfCA6LS0tIHwKfCBHb29nbGUgQWRzIHwgRG91YmxlQ2xpY2ssIFN5bmRpY2F0aW9uLCBBZFNlcnZpY2VzLCBBZE1vYiwgSU1BIFNESywgMm1kbi5uZXQgfAp8IFlvdVR1YmUgfCBgL2FwaS9zdGF0cy9hZHNgLCBgL3BhZ2VhZC9gLCBgL3B0cmFja2luZ2AsIGAvZ2V0X21pZHJvbGxfaW5mb2AsIGAveW91dHViZWkvdjEvYWRfYnJlYWtgIHwKfCBUd2l0Y2ggfCBganR2bncubmV0L2FkYCwgYHR3aXRjaGFkdmVydGlzaW5nLnR2YCwgYHNwYWRlLnR3aXRjaC50dmAsIGAvYWRfYnJlYWtgIHwKfCBQcm9ncmFtbWF0aWMgU1NQcyB8IEFwcE5leHVzLCBQdWJNYXRpYywgUnViaWNvbiwgT3BlblgsIENyaXRlbywgVGFib29sYSwgT3V0YnJhaW4sIDMwKyBtb3JlIHwKfCBBbmFseXRpY3MgLyBUZWxlbWV0cnkgfCBHb29nbGUgQW5hbHl0aWNzLCBIb3RqYXIsIE1peHBhbmVsLCBBbXBsaXR1ZGUsIEZ1bGxTdG9yeSwgSGVhcCwgU2VnbWVudCwgMjArIG1vcmUgfAp8IFNvY2lhbCBUcmFja2VycyB8IEZhY2Vib29rIFBpeGVsLCBUd2l0dGVyL1ggQWRzLCBMaW5rZWRJbiBJbnNpZ2h0LCBUaWtUb2sgUGl4ZWwsIFNuYXAgUGl4ZWwgfAp8IEZpbmdlcnByaW50aW5nIHwgRmluZ2VycHJpbnRKUywgRGV2aWNlQXRsYXMsIE1heE1pbmQsIFNpZnQgU2NpZW5jZSB8CnwgQ0ROIHRyYWNrZXIgc2NyaXB0cyB8IFBhdGgtc3BlY2lmaWMgcnVsZXMgZm9yIEdBIHNjcmlwdCwgR1RNLCBmYmV2ZW50cy5qcywgdXd0LmpzLCBldGMuIHwKCkFkZCB5b3VyIG93biBydWxlcyB0byBgY29uZmlnL2N1c3RvbS1ibG9ja2xpc3QudHh0YCDigJQgbG9hZGVkIG9uIGV2ZXJ5IHN0YXJ0dXAgd2l0aG91dCB0b3VjaGluZyB0aGUgZGVmYXVsdCBsaXN0LgoKLS0tCgojIyDwn5ug77iPIEJ1aWxkaW5nIGZyb20gU291cmNlCgojIyMgUHJlcmVxdWlzaXRlcwoKfCBSZXF1aXJlbWVudCB8IERldGFpbHMgfAp8IDotLS0gfCA6LS0tIHwKfCAqKk9TKiogfCBXaW5kb3dzIDExIG9yIFdpbmRvd3MgMTAgKDY0LWJpdCkgfAp8ICoqQ29tcGlsZXIqKiB8IFZpc3VhbCBTdHVkaW8gMjAyMiAoQ29tbXVuaXR5KyksIERlc2t0b3AgQysrIHdvcmtsb2FkLCBNU1ZDIHYxNDMgfAp8ICoqQ01ha2UqKiB8IDMuMjQgb3IgbGF0ZXIgfAp8ICoqR2l0KiogfCBHaXQgZm9yIFdpbmRvd3MgfAp8ICoqSW50ZXJuZXQqKiB8IFJlcXVpcmVkIGR1cmluZyBmaXJzdCBDTWFrZSBjb25maWd1cmUgKGRvd25sb2FkcyBDRUYgfjQwMCBNQiArIFNRTGl0ZSB+MSBNQikgfAp8ICoqTlNJUyoqIChvcHRpb25hbCkgfCAzLnggZm9yIGJ1aWxkaW5nIHRoZSBpbnN0YWxsZXIgfAoKVmVyaWZ5IGVudmlyb25tZW50OgpgYGBwb3dlcnNoZWxsCi5cc2NyaXB0c1xjaGVjay13aW5kb3dzLXByZXJlcXVpc2l0ZXMucHMxCmBgYAoKLS0tCgojIyMgU3RlcCAxIOKAlCBCdWlsZCB0aGUgUHJpdmFjeSBDb3JlICsgUnVuIFRlc3RzCgpaZXJvIGV4dGVybmFsIGRlcGVuZGVuY2llcy4gQ29tcGlsZXMgaW4gc2Vjb25kczoKCmBgYHBvd2Vyc2hlbGwKY21ha2UgLVMgLiAtQiBvdXRcYnVpbGQgLUcgIlZpc3VhbCBTdHVkaW8gMTcgMjAyMiIgLUEgeDY0IC1ES0lOR0ZOX0JVSUxEX1RFU1RTPU9OCmNtYWtlIC0tYnVpbGQgb3V0XGJ1aWxkIC0tY29uZmlnIFJlbGVhc2UKY3Rlc3QgLS10ZXN0LWRpciBvdXRcYnVpbGQgLUMgUmVsZWFzZSAtLW91dHB1dC1vbi1mYWlsdXJlCmBgYAoKLS0tCgojIyMgU3RlcCAyIOKAlCBCdWlsZCB0aGUgRnVsbCBDRUYgQnJvd3NlcgoKQ01ha2UgYXV0b21hdGljYWxseSBkb3dubG9hZHMgKipDRUYgMTUyKiogYW5kICoqU1FMaXRlKiogZHVyaW5nIGNvbmZpZ3VyZToKCmBgYHBvd2Vyc2hlbGwKY21ha2UgLVMgLiAtQiBvdXRcY2VmIGAKICAtRyAiVmlzdWFsIFN0dWRpbyAxNyAyMDIyIiAtQSB4NjQgYAogIC1ES0lOR0ZOX0VOQUJMRV9DRUY9T04gYAogIC1EVVNFX1NBTkRCT1g9T0ZGCgpjbWFrZSAtLWJ1aWxkIG91dFxjZWYgLS1jb25maWcgUmVsZWFzZSAtLXRhcmdldCBraW5nZm5fYnJvd3NlcgpgYGAKCkxhdW5jaCBkaXJlY3RseToKYGBgcG93ZXJzaGVsbAouXG91dFxjZWZcUmVsZWFzZVxraW5nZm5fYnJvd3Nlci5leGUKYGBgCgpPciB1c2UgdGhlIGxhdW5jaGVyOgpgYGBjbWQKcnVuLWtpbmdmbi5iYXQKYGBgCgotLS0KCiMjIyBTdGVwIDMg4oCUIEJ1aWxkIHRoZSBJbnN0YWxsZXIgKE9wdGlvbmFsKQoKUmVxdWlyZXMgW05TSVMgMy54XShodHRwczovL25zaXMuc291cmNlZm9yZ2UuaW8pOgoKYGBgcG93ZXJzaGVsbAouXHNjcmlwdHNcYnVpbGQtaW5zdGFsbGVyLnBzMQpgYGAKClRoaXMgY29tcGlsZXMgdGhlIGJyb3dzZXIgKFN0ZXAgMikgdGhlbiBydW5zIGBtYWtlbnNpc2AgdG8gcHJvZHVjZSBga2luZ2ZuLWJyb3dzZXItc2V0dXAtMC4zLjAuZXhlYC4KCi0tLQoKIyMg4oyo77iPIEtleWJvYXJkIFNob3J0Y3V0cwoKfCBTaG9ydGN1dCB8IEFjdGlvbiB8CnwgOi0tLSB8IDotLS0gfAp8IGBDdHJsK1RgIHwgTmV3IHRhYiB8CnwgYEN0cmwrV2AgfCBDbG9zZSBjdXJyZW50IHRhYiB8CnwgYEN0cmwrVGFiYCB8IE5leHQgdGFiIHwKfCBgQ3RybCtTaGlmdCtUYWJgIHwgUHJldmlvdXMgdGFiIHwKfCBgQ3RybCsxYCDigJMgYEN0cmwrOWAgfCBTd2l0Y2ggdG8gdGFiIGJ5IG51bWJlciB8CnwgYEN0cmwrTGAgfCBGb2N1cyBhZGRyZXNzIGJhciB8CnwgYEN0cmwrUmAgLyBgRjVgIHwgUmVsb2FkIHwKfCBgQ3RybCtTaGlmdCtSYCAvIGBTaGlmdCtGNWAgfCBIYXJkIHJlbG9hZCAoYnlwYXNzIGNhY2hlKSB8CnwgYEN0cmwrRGAgfCBCb29rbWFyayAvIHVuLWJvb2ttYXJrIGN1cnJlbnQgcGFnZSB8CnwgYEN0cmwrSGAgfCBIaXN0b3J5ICYgQm9va21hcmtzIHBhZ2UgfAp8IGBDdHJsK0pgIHwgRG93bmxvYWRzIHBhZ2UgfAp8IGBBbHQr4oaQYCAvIGBBbHQrQmFja3NwYWNlYCB8IEdvIGJhY2sgfAp8IGBBbHQr4oaSYCB8IEdvIGZvcndhcmQgfAp8IGBBbHQrSG9tZWAgfCBLSU5HRk4gaG9tZSBwYWdlIHwKfCBgRjExYCB8IFRvZ2dsZSBmdWxsc2NyZWVuIHwKfCBgRXNjYXBlYCB8IFN0b3AgbG9hZGluZyAvIGV4aXQgZnVsbHNjcmVlbiAvIHJlc3RvcmUgYWRkcmVzcyBiYXIgfAoKLS0tCgojIyDwn5e677iPIFJvYWRtYXAKCi0gW3hdICoqTWlsZXN0b25lIDEqKiDigJQgU3RhbmRhbG9uZSBDKysyMCBwcml2YWN5IGNvcmUgd2l0aCBjb21wcmVoZW5zaXZlIHVuaXQgdGVzdHMKLSBbeF0gKipNaWxlc3RvbmUgMioqIOKAlCBOYXRpdmUgQ0VGIFZpZXdzIFdpbmRvd3Mgc2hlbGwgd2l0aCBzeW5jaHJvbml6ZWQgYWRkcmVzcyBiYXIKLSBbeF0gKipNaWxlc3RvbmUgMyoqIOKAlCBOZXR3b3JrIHJlcXVlc3QgaW50ZXJjZXB0aW9uIHdpdGggU2hpZWxkcyBibG9ja2luZyBhbmQgc3RhdHMgY291bnRlcnMKLSBbeF0gKipNaWxlc3RvbmUgNCoqIOKAlCBDdXN0b20gS0lOR0ZOIHJveWFsIGJyYW5kIGlkZW50aXR5LCBjcm93biBpY29uLCBhbmQgbG9jYWwgc3RhcnQgcG9ydGFsCi0gW3hdICoqTWlsZXN0b25lIDUqKiDigJQgSGFyZHdhcmUgY3Jhc2ggcmVzaWxpZW5jZSBhbmQgR1BVIHZpcnR1YWxpemF0aW9uIHByb3RlY3Rpb24KLSBbeF0gKipNaWxlc3RvbmUgNioqIOKAlCBOYXRpdmUgbXVsdGktdGFiIGludGVyZmFjZSB3aXRoIHRhYiBzdHJpcCwgQ3RybCtUL1cvVGFiIHNob3J0Y3V0cywgYW5kIHBlci10YWIgc3RhdGUKLSBbeF0gKipNaWxlc3RvbmUgNyoqIOKAlCBTUUxpdGUgaGlzdG9yeSBhbmQgYm9va21hcmtzIGRhdGFiYXNlIHdpdGggc2VhcmNoLCBDdHJsK0QgYm9va21hcmsgdG9nZ2xlLCBDdHJsK0ggdmlld2VyCi0gW3hdICoqTWlsZXN0b25lIDgqKiDigJQgRG93bmxvYWQgbWFuYWdlciB3aXRoIHByb2dyZXNzIHRyYWNraW5nLCBPUyBzYXZlIGRpYWxvZywgYW5kIGludGVybmFsIGRvd25sb2FkcyBwYWdlCi0gW3hdICoqTWlsZXN0b25lIDkqKiDigJQgUGVyc2lzdGVkIHBlci1kb21haW4gU2hpZWxkcyBwcmVmZXJlbmNlcyBpbiBTUUxpdGUgZGF0YWJhc2UKLSBbeF0gKipNaWxlc3RvbmUgMTAqKiDigJQgTlNJUyBpbnN0YWxsZXIgd2l0aCBzaG9ydGN1dHMgKyByZWdpc3RyeSwgYW5kIEdpdEh1Yi1iYXNlZCBhdXRvLXVwZGF0ZSBjaGVja2VyCgotLS0KCiMjIOKalu+4jyBMZWdhbCAmIFRyYWRlbWFya3MKCi0gKipLSU5HRk4gQnJvd3NlcioqIGlzIGFuIGluZGVwZW5kZW50LCBjdXN0b20gb3Blbi1zb3VyY2UgYnJvd3NlciBwcm9qZWN0Ci0gQ2hyb21pdW0gYW5kIEdvb2dsZSBDaHJvbWUgYXJlIHRyYWRlbWFya3Mgb2YgR29vZ2xlIExMQwotIEJyYXZlIGlzIGEgdHJhZGVtYXJrIG9mIEJyYXZlIFNvZnR3YXJlLCBJbmMuCi0gQWxsIHByb2R1Y3QgYW5kIHNlcnZpY2UgbmFtZXMgdXNlZCBoZXJlaW4gYXJlIGZvciBpZGVudGlmaWNhdGlvbiBwdXJwb3NlcyBvbmx5IGFuZCBiZWxvbmcgdG8gdGhlaXIgcmVzcGVjdGl2ZSBvd25lcnMKCjxkaXYgYWxpZ249ImNlbnRlciI+CiAgPHN1Yj7wn5GRIEtJTkdGTiBCcm93c2VyIHYwLjMuMCDigKIgQWxsIDEwIE1pbGVzdG9uZXMgQ29tcGxldGUg4oCiIEJ1aWx0IHdpdGggcHJlY2lzaW9uIGFuZCBzb3ZlcmVpZ250eS4gQ3JhZnRlZCBmb3IgV2luZG93cy48L3N1Yj4KPC9kaXY+Cg==
+<div align="center">
+
+<img src="assets/kingfn-banner.jpg" alt="KINGFN Browser Banner" width="100%" />
+
+# 👑 KINGFN BROWSER
+### *The Sovereign Windows Browser — High-Speed Chromium Engine — Complete Privacy Suite*
+
+[![Core CI](https://github.com/Farhan0629/Bravelike/actions/workflows/core-ci.yml/badge.svg)](https://github.com/Farhan0629/Bravelike/actions/workflows/core-ci.yml)
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?style=flat-square&logo=c%2B%2B)](https://en.cppreference.com/w/cpp/20)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2011%20%7C%2010-0078D6.svg?style=flat-square&logo=windows)](https://microsoft.com/windows)
+[![Chromium CEF](https://img.shields.io/badge/Chromium%20CEF-152.0.7-4285F4.svg?style=flat-square&logo=googlechrome)](https://bitbucket.org/chromiumembedded/cef)
+[![Shields Engine](https://img.shields.io/badge/Shields%20Engine-v3%20Active-00C853.svg?style=flat-square)](config/kingfn-blocklist.txt)
+[![Version](https://img.shields.io/badge/Version-0.3.0-ffd700.svg?style=flat-square)](https://github.com/Farhan0629/Bravelike/releases)
+[![License](https://img.shields.io/badge/License-MIT-ffd700.svg?style=flat-square)](LICENSE)
+
+[**Features**](#-features) • [**Quick Start**](#-quick-start) • [**Architecture**](#-architecture) • [**Shields Engine**](#-kingfn-shields-engine-v3) • [**Shortcuts**](#-keyboard-shortcuts) • [**Build Guide**](#-building-from-source) • [**Roadmap**](#-roadmap)
+
+</div>
+
+---
+
+## 📖 Overview
+
+**KINGFN Browser** is an original, privacy-first desktop web browser built from scratch in modern **C++20** on the **Chromium Embedded Framework (CEF)** with native Windows Views.
+
+Unlike conventional browsers loaded with tracking telemetry, background services, and corporate surveillance, **KINGFN** delivers a complete, sovereign browsing experience with every feature you need for daily use — **YouTube, chess.com, general web surfing** — all without a single ad or tracker in sight.
+
+- 👑 **Sovereign Privacy** — Zero cloud telemetry, zero sync profiling, and isolated local storage (`KINGFNProfile`)
+- 🛡️ **KINGFN Shields Engine v3** — 4-layer ad elimination (network block + DOM mutation + JS intercept + SPA hook) with 300+ rules covering Google, YouTube, Twitch, Facebook, and more
+- 🗂️ **Full Multi-Tab Browsing** — Native CEF tab management with per-tab shields, history, and stats
+- 📚 **History & Bookmarks** — SQLite-backed, fully searchable, persists across sessions
+- ⬇️ **Download Manager** — Built-in progress tracking with an internal downloads page
+- 💾 **Persistent Shields Preferences** — Per-site shield state saved to SQLite, survives restarts
+- 📦 **NSIS Installer** — One-click setup EXE with Start Menu + Desktop shortcuts
+- 🔄 **Auto-Update Checker** — Checks GitHub Releases on startup, shows notification when update available
+- ⚡ **True Native Windows Performance** — Direct C++20 + CEF Views with no Electron, no web-view wrappers
+
+---
+
+## ⚡ Status at a Glance
+
+| Component | Status | Details |
+| :--- | :--- | :--- |
+| **Privacy Core** | ✅ **Active** | Standalone C++20 engine with wildcard rule support + unit tests |
+| **Shields Engine v3** | ✅ **Active** | 4-layer defense: network + MutationObserver + fetch/XHR intercept + SPA hook |
+| **Windows Shell** | ✅ **Active** | CEF Views window with toolbar and full navigation controls |
+| **Multi-Tab Browsing** | ✅ **Active** | Native tab strip, Ctrl+T/W/Tab, per-tab state, popup interception |
+| **History & Bookmarks** | ✅ **Active** | SQLite database, auto-recorded visits, Ctrl+D bookmark toggle |
+| **Download Manager** | ✅ **Active** | CefDownloadHandler, progress tracking, internal downloads page |
+| **Persistent Shields** | ✅ **Active** | Per-site shield prefs persisted to SQLite across restarts |
+| **NSIS Installer** | ✅ **Active** | One-click setup EXE with shortcuts, registry, and uninstaller |
+| **Auto-Update Checker** | ✅ **Active** | GitHub Releases API check on startup, toolbar notification |
+| **YouTube Ad Blocking** | ✅ **Active** | Zero-flash ad elimination: DOM nuked before render via MutationObserver |
+| **Twitch Ad Blocking** | ✅ **Active** | fetch/XHR intercept + DOM removal + CSS hiding |
+| **chess.com Ad Blocking** | ✅ **Active** | Sidebar/board ad selectors in shields.js |
+| **GPU Crash Prevention** | ✅ **Active** | SwiftShader WebGL + disable-gpu-compositing for Intel Iris Xe |
+| **Fullscreen Support** | ✅ **Active** | F11 hides tab strip + toolbar; YouTube F key works correctly |
+| **Error Pages** | ✅ **Active** | Branded dark-mode error page for network failures |
+| **DPI Awareness** | ✅ **Active** | Per-monitor DPI awareness V2 for sharp rendering on HiDPI displays |
+
+---
+
+## 👑 Features
+
+### 1. 🛡️ KINGFN Shields Engine v3 — 4-Layer Ad Elimination
+
+The Shields engine uses four independent, mutually reinforcing layers so ads have no chance of appearing — even on complex SPAs like YouTube:
+
+| Layer | Where | What it does |
+| :--- | :--- | :--- |
+| **Network block (C++)** | `OnBeforeResourceLoad` | Cancels HTTP requests matching 300+ domain/path rules before any bytes are sent |
+| **MutationObserver (JS)** | `shields.js` | Watches the DOM — the instant an ad node is inserted, it is hidden *before* it renders |
+| **fetch / XHR intercept (JS)** | `shields.js` | Wraps `window.fetch` and `XMLHttpRequest` to silently swallow YouTube & Twitch ad API calls |
+| **History API hook (JS)** | `shields.js` | Wraps `pushState` / `replaceState` to re-arm the killer after every SPA navigation (YouTube video-to-video, etc.) |
+
+**YouTube specifics:** When an ad is detected via the `ad-showing` class, the engine mutes the video, sets playback rate to 16×, seeks to the end, and auto-clicks skip — all within 100 ms, making ads invisible in practice.
+
+**Twitch specifics:** Ad network domains (`jtvnw.net/ad`, `twitchadvertising.tv`, `spade.twitch.tv`) are blocked at the network layer; fetch/XHR intercept handles same-origin ad break signals; CSS hides overlay countdown timers.
+
+### 2. 🗂️ Native Multi-Tab Browsing
+
+- **Tab strip** above the toolbar — each tab shows its title + `×` close button
+- **Ctrl+T** new tab · **Ctrl+W** close tab · **Ctrl+Tab** / **Ctrl+Shift+Tab** cycle · **Ctrl+1–9** jump
+- Each tab runs its own live `CefBrowserView` — pages stay loaded in background tabs
+- Each tab has **independent shields state, blocked-request counter, and URL**
+- Popup links (`target="_blank"`, `window.open`) redirect into a new KINGFN tab instead of spawning a new window
+- Active tab highlighted with `▶` prefix in the strip
+
+### 3. 📚 History & Bookmarks (SQLite)
+
+- Every page visit is **automatically recorded** (URL, title, visit count, last-visit timestamp) in `KINGFNProfile/kingfn.db`
+- **Ctrl+H** opens the internal history page — a dark-mode, searchable, tabbed view of your history and bookmarks
+- **Ctrl+D** or the `☆` toolbar button toggles a bookmark for the current page; button shows `★` when bookmarked
+- History uses `INSERT OR REPLACE` with `ON CONFLICT` so revisiting a page increments the visit counter rather than creating a duplicate
+- SQLite uses **WAL mode** for safe concurrent reads during browsing
+
+### 4. ⬇️ Download Manager
+
+- **All downloads** are tracked in SQLite with URL, filename, save path, progress, and status
+- Files are saved to `~/Downloads` with the OS native save-file dialog
+- **Ctrl+J** or the `↓` toolbar button (shows active count like `↓(2)`) opens the internal downloads page
+- Downloads page shows real-time progress bars, status badges (COMPLETE / DOWNLOADING / ERROR / CANCELLED), file paths, and timestamps
+
+### 5. 💾 Persistent Shields Preferences
+
+- Per-site shield on/off state is **saved to SQLite** and **loaded on startup**
+- Each tab independently reads its site's shield preference when navigating
+- Toggling shields via the toolbar button or the `Shields: On/Off` label instantly persists the change
+
+### 6. 📦 NSIS Installer (Milestone 10)
+
+- Professional one-click setup EXE built with **NSIS Modern UI 2**
+- Installs to `%ProgramFiles%\KINGFN Browser`
+- Creates **Start Menu** folder and **Desktop** shortcut
+- Registers in **Add/Remove Programs** with size estimate and publisher info
+- Registers as a **default browser candidate** in the Windows registry
+- Uninstaller preserves `KINGFNProfile` (your history, bookmarks, and preferences)
+- Build with: `.\scripts\build-installer.ps1`
+
+### 7. 🔄 Auto-Update Checker (Milestone 10)
+
+- On every launch, KINGFN silently queries the **GitHub Releases API** (`api.github.com/repos/Farhan0629/Bravelike/releases/latest`) on a background thread
+- If a newer version is found, a `🆕 Update` button appears in the toolbar **and** a 12-second toast notification is injected into the active page
+- Clicking either navigates to the GitHub releases page for download
+- Uses **WinHTTP** (built into Windows, no extra dependency) with 5 s connect / 10 s receive timeouts
+- Silently ignores all network errors — never blocks startup
+
+### 8. 🔍 Smart Address Bar + Navigation
+
+- Distinguishes URLs, bare hostnames, and search queries automatically
+- Typing `chess.com` → navigates to `https://chess.com`
+- Typing plain text → DuckDuckGo privacy search (default) or Google / Bing
+- **Escape** in address bar restores the current URL and returns focus to the page
+- Alias keywords: `home`, `kingfn`, `kingfn://home`, `about:home` all return to the KINGFN start page
+
+### 9. ⌨️ Full Keyboard Shortcut Suite
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Ctrl+T` | New tab |
+| `Ctrl+W` | Close current tab |
+| `Ctrl+Tab` / `Ctrl+Shift+Tab` | Next / previous tab |
+| `Ctrl+1` – `Ctrl+9` | Jump to tab by number |
+| `Ctrl+L` | Focus address bar |
+| `Ctrl+R` / `F5` | Reload page |
+| `Ctrl+Shift+R` / `Shift+F5` | Hard reload (ignore cache) |
+| `Ctrl+D` | Toggle bookmark for current page |
+| `Ctrl+H` | Open History & Bookmarks page |
+| `Ctrl+J` | Open Downloads page |
+| `Alt+←` / `Alt+Backspace` | Go back |
+| `Alt+→` | Go forward |
+| `Alt+Home` | Go to KINGFN home page |
+| `F11` | Toggle fullscreen (hides tab strip + toolbar) |
+| `Escape` | Stop loading / exit fullscreen |
+
+---
+
+## 🏛️ Architecture
+
+```mermaid
+graph TD
+    User([User Input / Tab / Keyboard]) --> Window[CEF Views Top-Level Window]
+
+    subgraph UI ["Native Windows UI (CEF Views)"]
+        TabStrip[Tab Strip Panel]
+        Toolbar[Toolbar — Nav + Address + Shields + ☆ + ↓ + 🆕]
+        ContentPanel[Content Panel — Active CefBrowserView]
+    end
+
+    Window --> TabStrip
+    Window --> Toolbar
+    Window --> ContentPanel
+
+    subgraph Tabs ["Tab Entries (vector<TabEntry>)"]
+        T0[Tab 0 — BrowserView + SiteShields + PrivacyStats]
+        T1[Tab 1 — BrowserView + SiteShields + PrivacyStats]
+        TN[Tab N ...]
+    end
+
+    ContentPanel --> T0
+    ContentPanel --> T1
+    ContentPanel --> TN
+
+    subgraph Core ["Privacy Core (kingfn_core — no CEF dep)"]
+        FE[FilterEngine — 300+ rules, wildcard support]
+        Nav[NavigationResolver]
+        SS[SiteShields — per-tab + DB persistence]
+        PS[PrivacyStats — atomic counters]
+    end
+
+    subgraph DB ["SQLite Database (KINGFNProfile/kingfn.db)"]
+        DH[History Table]
+        DB2[Bookmarks Table]
+        DS[Shields Prefs Table]
+        DD[Downloads Table]
+    end
+
+    subgraph Shields ["Shields Engine v3 (shields.js)"]
+        S1[Layer 1: C++ OnBeforeResourceLoad → RV_CANCEL]
+        S2[Layer 2: MutationObserver — instant DOM node removal]
+        S3[Layer 3: fetch/XHR intercept — blocks ad API calls]
+        S4[Layer 4: history API hook — SPA navigation re-arm]
+    end
+
+    T0 -->|subresource requests| S1
+    S1 --> FE
+    T0 -->|JS injection| S2
+    T0 -->|JS injection| S3
+    T0 -->|JS injection| S4
+
+    SS --> DS
+    T0 --> SS
+    T0 -->|page loaded| DH
+    Toolbar -->|Ctrl+D| DB2
+    DLHandler[DownloadHandler] --> DD
+
+    UC[UpdateChecker — WinHTTP background thread]
+    UC -->|newer version| Toolbar
+```
+
+### Module Responsibilities
+
+| Module | Responsibilities |
+| :--- | :--- |
+| `src/core/filter_engine.*` | Parses filter rules (domain, path, wildcards), evaluates URLs, allow rules win unconditionally |
+| `src/core/navigation.*` | URL detection, scheme normalization, search query encoding |
+| `src/core/site_shields.*` | Per-tab shield toggle; loads/saves disabled hosts from SQLite on startup/toggle |
+| `src/core/privacy_stats.*` | Atomic thread-safe blocked/evaluated request counters per tab |
+| `src/core/database.*` | SQLite wrapper for history, bookmarks, shields prefs, and downloads |
+| `src/browser/browser_window.*` | Multi-tab orchestration, tab strip, toolbar, all CEF handlers |
+| `src/browser/download_handler.*` | `CefDownloadHandler` — routes downloads to `~/Downloads`, tracks progress in DB |
+| `src/browser/update_checker.*` | WinHTTP background check against GitHub Releases API |
+| `src/browser/browser_app.*` | CEF lifecycle, command-line hardening, GPU flags, privacy switches |
+| `resources/shields.js` | 4-layer JavaScript ad/tracker elimination (YouTube + Twitch + generic) |
+| `resources/home.html` | Local dark-mode start portal with search and quick-launch tiles |
+| `resources/history.html` | Internal history & bookmarks viewer with search and tabs |
+| `resources/downloads.html` | Internal downloads manager with progress bars and status badges |
+| `installer/kingfn-setup.nsi` | NSIS Modern UI 2 installer script |
+| `scripts/build-installer.ps1` | One-command build + package script |
+
+---
+
+## 🚀 Quick Start
+
+### Option A — Install from Setup EXE (Recommended)
+
+1. Download `kingfn-browser-setup-0.3.0.exe` from the [**Releases page**](https://github.com/Farhan0629/Bravelike/releases)
+2. Run the installer and follow the wizard
+3. Launch **KINGFN Browser** from the Desktop or Start Menu shortcut
+
+### Option B — Run from Build Output
+
+```cmd
+git clone https://github.com/Farhan0629/Bravelike.git
+cd Bravelike
+run-kingfn.bat
+```
+
+---
+
+## 🛡️ KINGFN Shields Engine v3
+
+### Rule Format
+
+```text
+# Comments and blank lines are ignored
+ads.example.com              # Blocks ads.example.com and all subdomains
+||tracker.example^           # Standard Adblock-style domain anchor
+||example.com/ads/*          # Path rule with wildcard
+@@allowed.example.com        # Allow rule: always permits, overrides any block
+0.0.0.0 example.com         # Hosts-file format (127.0.0.1 also accepted)
+*.bad-tracker.net            # Wildcard in domain
+```
+
+### Evaluation Semantics
+
+1. **Allow rules (`@@`) have absolute priority** — a matching allow rule immediately permits the request
+2. **Subdomain matching** — blocking `example.com` automatically blocks `cdn.example.com`, `ads.example.com`, etc.
+3. **Wildcard (`*`) support** — works in both domain patterns and URL path rules
+4. **No suffix collisions** — blocking `example.com` will **not** block `badexample.com`
+5. **Options stripped safely** — `$third-party`, `$script`, etc. after `$` are ignored without breaking the rule
+
+### Covered Networks (300+ rules)
+
+| Category | Networks |
+| :--- | :--- |
+| Google Ads | DoubleClick, Syndication, AdServices, AdMob, IMA SDK, 2mdn.net |
+| YouTube | `/api/stats/ads`, `/pagead/`, `/ptracking`, `/get_midroll_info`, `/youtubei/v1/ad_break` |
+| Twitch | `jtvnw.net/ad`, `twitchadvertising.tv`, `spade.twitch.tv`, `/ad_break` |
+| Programmatic SSPs | AppNexus, PubMatic, Rubicon, OpenX, Criteo, Taboola, Outbrain, 30+ more |
+| Analytics / Telemetry | Google Analytics, Hotjar, Mixpanel, Amplitude, FullStory, Heap, Segment, 20+ more |
+| Social Trackers | Facebook Pixel, Twitter/X Ads, LinkedIn Insight, TikTok Pixel, Snap Pixel |
+| Fingerprinting | FingerprintJS, DeviceAtlas, MaxMind, Sift Science |
+| CDN tracker scripts | Path-specific rules for GA script, GTM, fbevents.js, uwt.js, etc. |
+
+Add your own rules to `config/custom-blocklist.txt` — loaded on every startup without touching the default list.
+
+---
+
+## 🛠️ Building from Source
+
+### Prerequisites
+
+| Requirement | Details |
+| :--- | :--- |
+| **OS** | Windows 11 or Windows 10 (64-bit) |
+| **Compiler** | Visual Studio 2022 (Community+), Desktop C++ workload, MSVC v143 |
+| **CMake** | 3.24 or later |
+| **Git** | Git for Windows |
+| **Internet** | Required during first CMake configure (downloads CEF ~400 MB + SQLite ~1 MB) |
+| **NSIS** (optional) | 3.x for building the installer |
+
+Verify environment:
+```powershell
+.\scripts\check-windows-prerequisites.ps1
+```
+
+---
+
+### Step 1 — Build the Privacy Core + Run Tests
+
+Zero external dependencies. Compiles in seconds:
+
+```powershell
+cmake -S . -B out\build -G "Visual Studio 17 2022" -A x64 -DKINGFN_BUILD_TESTS=ON
+cmake --build out\build --config Release
+ctest --test-dir out\build -C Release --output-on-failure
+```
+
+---
+
+### Step 2 — Build the Full CEF Browser
+
+CMake automatically downloads **CEF 152** and **SQLite** during configure:
+
+```powershell
+cmake -S . -B out\cef `
+  -G "Visual Studio 17 2022" -A x64 `
+  -DKINGFN_ENABLE_CEF=ON `
+  -DUSE_SANDBOX=OFF
+
+cmake --build out\cef --config Release --target kingfn_browser
+```
+
+Launch directly:
+```powershell
+.\out\cef\Release\kingfn_browser.exe
+```
+
+Or use the launcher:
+```cmd
+run-kingfn.bat
+```
+
+---
+
+### Step 3 — Build the Installer (Optional)
+
+Requires [NSIS 3.x](https://nsis.sourceforge.io):
+
+```powershell
+.\scripts\build-installer.ps1
+```
+
+This compiles the browser (Step 2) then runs `makensis` to produce `kingfn-browser-setup-0.3.0.exe`.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Ctrl+T` | New tab |
+| `Ctrl+W` | Close current tab |
+| `Ctrl+Tab` | Next tab |
+| `Ctrl+Shift+Tab` | Previous tab |
+| `Ctrl+1` – `Ctrl+9` | Switch to tab by number |
+| `Ctrl+L` | Focus address bar |
+| `Ctrl+R` / `F5` | Reload |
+| `Ctrl+Shift+R` / `Shift+F5` | Hard reload (bypass cache) |
+| `Ctrl+D` | Bookmark / un-bookmark current page |
+| `Ctrl+H` | History & Bookmarks page |
+| `Ctrl+J` | Downloads page |
+| `Alt+←` / `Alt+Backspace` | Go back |
+| `Alt+→` | Go forward |
+| `Alt+Home` | KINGFN home page |
+| `F11` | Toggle fullscreen |
+| `Escape` | Stop loading / exit fullscreen / restore address bar |
+
+---
+
+## 🗺️ Roadmap
+
+- [x] **Milestone 1** — Standalone C++20 privacy core with comprehensive unit tests
+- [x] **Milestone 2** — Native CEF Views Windows shell with synchronized address bar
+- [x] **Milestone 3** — Network request interception with Shields blocking and stats counters
+- [x] **Milestone 4** — Custom KINGFN royal brand identity, crown icon, and local start portal
+- [x] **Milestone 5** — Hardware crash resilience and GPU virtualization protection
+- [x] **Milestone 6** — Native multi-tab interface with tab strip, Ctrl+T/W/Tab shortcuts, and per-tab state
+- [x] **Milestone 7** — SQLite history and bookmarks database with search, Ctrl+D bookmark toggle, Ctrl+H viewer
+- [x] **Milestone 8** — Download manager with progress tracking, OS save dialog, and internal downloads page
+- [x] **Milestone 9** — Persisted per-domain Shields preferences in SQLite database
+- [x] **Milestone 10** — NSIS installer with shortcuts + registry, and GitHub-based auto-update checker
+
+---
+
+## ⚖️ Legal & Trademarks
+
+- **KINGFN Browser** is an independent, custom open-source browser project
+- Chromium and Google Chrome are trademarks of Google LLC
+- Brave is a trademark of Brave Software, Inc.
+- All product and service names used herein are for identification purposes only and belong to their respective owners
+
+<div align="center">
+  <sub>👑 KINGFN Browser v0.3.0 • All 10 Milestones Complete • Built with precision and sovereignty. Crafted for Windows.</sub>
+</div>
