@@ -1,1 +1,164 @@
-I2luY2x1ZGUgInNyYy9icm93c2VyL3VwZGF0ZV9jaGVja2VyLmgiCgojaW5jbHVkZSA8d2luZG93cy5oPgojaW5jbHVkZSA8d2luaHR0cC5oPgoKI2luY2x1ZGUgPGFsZ29yaXRobT4KI2luY2x1ZGUgPHNzdHJlYW0+CiNpbmNsdWRlIDxzdGRleGNlcHQ+CgojaW5jbHVkZSAiaW5jbHVkZS9jZWZfdGFzay5oIgojaW5jbHVkZSAiaW5jbHVkZS93cmFwcGVyL2NlZl9oZWxwZXJzLmgiCgovLyBMaW5rIFdpbkhUVFAg4oCUIGFsc28gZGVjbGFyZWQgaW4gQ01ha2VMaXN0cy4KI3ByYWdtYSBjb21tZW50KGxpYiwgIndpbmh0dHAubGliIikKCm5hbWVzcGFjZSBraW5nZm4gewoKLy8g4pSA4pSAIFZlcnNpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgpWZXJzaW9uIFZlcnNpb246OlBhcnNlKGNvbnN0IHN0ZDo6c3RyaW5nJiBzKSB7CiAgVmVyc2lvbiB2OwogIC8vIFN0cmlwIGxlYWRpbmcgJ3YnIG9yICdWJy4KICBjb25zdCBjaGFyKiBwID0gcy5jX3N0cigpOwogIGlmICgqcCA9PSAndicgfHwgKnAgPT0gJ1YnKSArK3A7CiAgc3RkOjpzc2NhbmYocCwgIiVkLiVkLiVkIiwgJnYubWFqb3IsICZ2Lm1pbm9yLCAmdi5wYXRjaCk7CiAgcmV0dXJuIHY7Cn0KCmJvb2wgVmVyc2lvbjo6b3BlcmF0b3I+KGNvbnN0IFZlcnNpb24mIG8pIGNvbnN0IHsKICBpZiAobWFqb3IgIT0gby5tYWpvcikgcmV0dXJuIG1ham9yID4gby5tYWpvcjsKICBpZiAobWlub3IgIT0gby5taW5vcikgcmV0dXJuIG1pbm9yID4gby5taW5vcjsKICByZXR1cm4gcGF0Y2ggPiBvLnBhdGNoOwp9CgpzdGQ6OnN0cmluZyBWZXJzaW9uOjpUb1N0cmluZygpIGNvbnN0IHsKICByZXR1cm4gc3RkOjp0b19zdHJpbmcobWFqb3IpICsgIi4iICsKICAgICAgICAgc3RkOjp0b19zdHJpbmcobWlub3IpICsgIi4iICsKICAgICAgICAgc3RkOjp0b19zdHJpbmcocGF0Y2gpOwp9CgovLyDilIDilIAgSFRUUCBoZWxwZXIgKFdpbkhUVFApIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKbmFtZXNwYWNlIHsKCi8vIFZlcnkgc21hbGwgSlNPTiBmaWVsZCBleHRyYWN0b3Ig4oCUIGF2b2lkcyBhZGRpbmcgYSBKU09OIGxpYnJhcnkgZGVwZW5kZW5jeS4KLy8gRmluZHMgdGhlIGZpcnN0IG9jY3VycmVuY2Ugb2YgYCJrZXkiOiJ2YWx1ZSJgIG9yIGAia2V5IjogInZhbHVlImAuCnN0ZDo6c3RyaW5nIEV4dHJhY3RKc29uU3RyaW5nKGNvbnN0IHN0ZDo6c3RyaW5nJiBqc29uLCBjb25zdCBzdGQ6OnN0cmluZyYga2V5KSB7CiAgY29uc3Qgc3RkOjpzdHJpbmcgbmVlZGxlID0gIlwiIiArIGtleSArICJcIiI7CiAgYXV0byBwb3MgPSBqc29uLmZpbmQobmVlZGxlKTsKICBpZiAocG9zID09IHN0ZDo6c3RyaW5nOjpucG9zKSByZXR1cm4ge307CiAgcG9zID0ganNvbi5maW5kKCciJywgcG9zICsgbmVlZGxlLnNpemUoKSk7CiAgaWYgKHBvcyA9PSBzdGQ6OnN0cmluZzo6bnBvcykgcmV0dXJuIHt9OwogIC8vIFNraXAgb3B0aW9uYWwgJzogJyBiZXR3ZWVuIGtleSBhbmQgdmFsdWUuCiAgd2hpbGUgKHBvcyA8IGpzb24uc2l6ZSgpICYmIChqc29uW3Bvc10gPT0gJyInIHx8IGpzb25bcG9zXSA9PSAnOicgfHwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBqc29uW3Bvc10gPT0gJyAnKSkgKytwb3M7CiAgaWYgKHBvcyA+PSBqc29uLnNpemUoKSB8fCBqc29uW3BvcyAtIDFdICE9ICciJykgcmV0dXJuIHt9OwogIC8vIE5vdyBwb3MgcG9pbnRzIHRvIGZpcnN0IGNoYXIgb2YgdmFsdWUuICBGaW5kIGNsb3NpbmcgcXVvdGUuCiAgc3RkOjpzdHJpbmcgcmVzdWx0OwogIHdoaWxlIChwb3MgPCBqc29uLnNpemUoKSAmJiBqc29uW3Bvc10gIT0gJyInKSB7CiAgICBpZiAoanNvbltwb3NdID09ICdcXCcpIHsgKytwb3M7IH0KICAgIHJlc3VsdCArPSBqc29uW3BvcysrXTsKICB9CiAgcmV0dXJuIHJlc3VsdDsKfQoKc3RydWN0IFdpbkh0dHBHdWFyZCB7CiAgSElOVEVSTkVUIGh7bnVsbHB0cn07CiAgZXhwbGljaXQgV2luSHR0cEd1YXJkKEhJTlRFUk5FVCBoKSA6IGgoaCkge30KICB+V2luSHR0cEd1YXJkKCkgeyBpZiAoaCkgV2luSHR0cENsb3NlSGFuZGxlKGgpOyB9CiAgb3BlcmF0b3IgSElOVEVSTkVUKCkgY29uc3QgeyByZXR1cm4gaDsgfQogIGJvb2wgb2soKSBjb25zdCB7IHJldHVybiBoICE9IG51bGxwdHI7IH0KfTsKCnN0ZDo6c3RyaW5nIFdpbkh0dHBHZXQoY29uc3Qgc3RkOjp3c3RyaW5nJiBob3N0LCBjb25zdCBzdGQ6OndzdHJpbmcmIHBhdGgpIHsKICBXaW5IdHRwR3VhcmQgc2Vzc2lvbntXaW5IdHRwT3BlbigKICAgICAgTCJLSU5HRk5Ccm93c2VyLzAuMyAodXBkYXRlLWNoZWNrOyBXaW5kb3dzKSIsCiAgICAgIFdJTkhUVFBfQUNDRVNTX1RZUEVfREVGQVVMVF9QUk9YWSwKICAgICAgV0lOSFRUUF9OT19QUk9YWV9OQU1FLAogICAgICBXSU5IVFRQX05PX1BST1hZX0JZUEFTUywgMCl9OwogIGlmICghc2Vzc2lvbi5vaygpKSByZXR1cm4ge307CgogIFdpbkh0dHBHdWFyZCBjb25uZWN0e1dpbkh0dHBDb25uZWN0KHNlc3Npb24sIGhvc3QuY19zdHIoKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJTlRFUk5FVF9ERUZBVUxUX0hUVFBTX1BPUlQsIDApfTsKICBpZiAoIWNvbm5lY3Qub2soKSkgcmV0dXJuIHt9OwoKICBXaW5IdHRwR3VhcmQgcmVxdWVzdHtXaW5IdHRwT3BlblJlcXVlc3QoCiAgICAgIGNvbm5lY3QsIEwiR0VUIiwgcGF0aC5jX3N0cigpLCBudWxscHRyLAogICAgICBXSU5IVFRQX05PX1JFRkVSRVIsIFdJTkhUVFBfREVGQVVMVF9BQ0NFUFRfVFlQRVMsCiAgICAgIFdJTkhUVFBfRkxBR19TRUNVUkUpfTsKICBpZiAoIXJlcXVlc3Qub2soKSkgcmV0dXJuIHt9OwoKICAvLyBTZXQgdGltZW91dDogNSBzIGNvbm5lY3QsIDEwIHMgcmVjZWl2ZS4KICBEV09SRCB0aW1lb3V0X2Nvbm5lY3QgPSA1MDAwLCB0aW1lb3V0X3JlY2VpdmUgPSAxMDAwMDsKICBXaW5IdHRwU2V0T3B0aW9uKHJlcXVlc3QsIFdJTkhUVFBfT1BUSU9OX0NPTk5FQ1RfVElNRU9VVCwKICAgICAgICAgICAgICAgICAgICZ0aW1lb3V0X2Nvbm5lY3QsIHNpemVvZih0aW1lb3V0X2Nvbm5lY3QpKTsKICBXaW5IdHRwU2V0T3B0aW9uKHJlcXVlc3QsIFdJTkhUVFBfT1BUSU9OX1JFQ0VJVkVfVElNRU9VVCwKICAgICAgICAgICAgICAgICAgICZ0aW1lb3V0X3JlY2VpdmUsIHNpemVvZih0aW1lb3V0X3JlY2VpdmUpKTsKCiAgaWYgKCFXaW5IdHRwU2VuZFJlcXVlc3QocmVxdWVzdCwgV0lOSFRUUF9OT19BRERJVElPTkFMX0hFQURFUlMsIDAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgIFdJTkhUVFBfTk9fUkVRVUVTVF9EQVRBLCAwLCAwLCAwKSkKICAgIHJldHVybiB7fTsKICBpZiAoIVdpbkh0dHBSZWNlaXZlUmVzcG9uc2UocmVxdWVzdCwgbnVsbHB0cikpIHJldHVybiB7fTsKCiAgc3RkOjpzdHJpbmcgYm9keTsKICBEV09SRCBhdmFpbCA9IDA7CiAgd2hpbGUgKFdpbkh0dHBRdWVyeURhdGFBdmFpbGFibGUocmVxdWVzdCwgJmF2YWlsKSAmJiBhdmFpbCA+IDApIHsKICAgIHN0ZDo6c3RyaW5nIGNodW5rKGF2YWlsLCAnXDAnKTsKICAgIERXT1JEIHJlYWQgPSAwOwogICAgV2luSHR0cFJlYWREYXRhKHJlcXVlc3QsIGNodW5rLmRhdGEoKSwgYXZhaWwsICZyZWFkKTsKICAgIGJvZHkuYXBwZW5kKGNodW5rLmRhdGEoKSwgcmVhZCk7CiAgfQogIHJldHVybiBib2R5Owp9Cgp9ICAvLyBuYW1lc3BhY2UKCi8vIOKUgOKUgCBVcGRhdGVDaGVja2VyIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKVXBkYXRlQ2hlY2tlcjo6VXBkYXRlQ2hlY2tlcigKICAgIHN0ZDo6c3RyaW5nIGN1cnJlbnRfdmVyc2lvbiwKICAgIHN0ZDo6ZnVuY3Rpb248dm9pZChzdGQ6OnN0cmluZywgc3RkOjpzdHJpbmcpPiBvbl91cGRhdGVfYXZhaWxhYmxlKQogICAgOiBjdXJyZW50X3ZlcnNpb25fKHN0ZDo6bW92ZShjdXJyZW50X3ZlcnNpb24pKSwKICAgICAgY2FsbGJhY2tfKHN0ZDo6bW92ZShvbl91cGRhdGVfYXZhaWxhYmxlKSkge30KClVwZGF0ZUNoZWNrZXI6On5VcGRhdGVDaGVja2VyKCkgewogIGlmICh0aHJlYWRfLmpvaW5hYmxlKCkpIHRocmVhZF8uZGV0YWNoKCk7Cn0KCnZvaWQgVXBkYXRlQ2hlY2tlcjo6Q2hlY2tBc3luYygpIHsKICB0aHJlYWRfID0gc3RkOjp0aHJlYWQoW3RoaXNdIHsgRG9DaGVjaygpOyB9KTsKfQoKdm9pZCBVcGRhdGVDaGVja2VyOjpEb0NoZWNrKCkgewogIHRyeSB7CiAgICBjb25zdCBzdGQ6OnN0cmluZyBqc29uID0gV2luSHR0cEdldCgKICAgICAgICBMImFwaS5naXRodWIuY29tIiwKICAgICAgICBMIi9yZXBvcy9GYXJoYW4wNjI5L0JyYXZlbGlrZS9yZWxlYXNlcy9sYXRlc3QiKTsKICAgIGlmIChqc29uLmVtcHR5KCkpIHJldHVybjsKCiAgICBjb25zdCBzdGQ6OnN0cmluZyB0YWcgID0gRXh0cmFjdEpzb25TdHJpbmcoanNvbiwgInRhZ19uYW1lIik7CiAgICBjb25zdCBzdGQ6OnN0cmluZyB1cmwgID0gRXh0cmFjdEpzb25TdHJpbmcoanNvbiwgImh0bWxfdXJsIik7CiAgICBpZiAodGFnLmVtcHR5KCkpIHJldHVybjsKCiAgICBjb25zdCBWZXJzaW9uIGxhdGVzdCAgPSBWZXJzaW9uOjpQYXJzZSh0YWcpOwogICAgY29uc3QgVmVyc2lvbiBjdXJyZW50ID0gVmVyc2lvbjo6UGFyc2UoY3VycmVudF92ZXJzaW9uXyk7CgogICAgaWYgKGxhdGVzdCA+IGN1cnJlbnQpIHsKICAgICAgLy8gUG9zdCByZXN1bHQgYmFjayB0byB0aGUgQ0VGIFVJIHRocmVhZC4KICAgICAgYXV0byBjYiA9IGNhbGxiYWNrXzsKICAgICAgY29uc3Qgc3RkOjpzdHJpbmcgbmV3X3ZlciA9IGxhdGVzdC5Ub1N0cmluZygpOwogICAgICBjb25zdCBzdGQ6OnN0cmluZyByZWxfdXJsID0gdXJsLmVtcHR5KCkKICAgICAgICAgID8gImh0dHBzOi8vZ2l0aHViLmNvbS9GYXJoYW4wNjI5L0JyYXZlbGlrZS9yZWxlYXNlcy9sYXRlc3QiCiAgICAgICAgICA6IHVybDsKICAgICAgQ2VmUG9zdFRhc2soVElEX1VJLCBiYXNlOjpCaW5kT25jZSgKICAgICAgICAgIFtdKHN0ZDo6ZnVuY3Rpb248dm9pZChzdGQ6OnN0cmluZywgc3RkOjpzdHJpbmcpPiBmLAogICAgICAgICAgICAgc3RkOjpzdHJpbmcgdiwgc3RkOjpzdHJpbmcgdSkgeyBmKHYsIHUpOyB9LAogICAgICAgICAgc3RkOjptb3ZlKGNiKSwgbmV3X3ZlciwgcmVsX3VybCkpOwogICAgfQogIH0gY2F0Y2ggKC4uLikgewogICAgLy8gU2lsZW50bHkgaWdub3JlIG5ldHdvcmsgLyBwYXJzZSBlcnJvcnMuCiAgfQp9Cgp9ICAvLyBuYW1lc3BhY2Uga2luZ2ZuCg==
+#include "src/browser/update_checker.h"
+
+#include <windows.h>
+#include <winhttp.h>
+
+#include <algorithm>
+#include <sstream>
+#include <stdexcept>
+
+#include "include/cef_task.h"
+#include "include/wrapper/cef_helpers.h"
+
+// Link WinHTTP — also declared in CMakeLists.
+#pragma comment(lib, "winhttp.lib")
+
+namespace kingfn {
+
+// ── Version ───────────────────────────────────────────────────────────────────
+
+Version Version::Parse(const std::string& s) {
+  Version v;
+  // Strip leading 'v' or 'V'.
+  const char* p = s.c_str();
+  if (*p == 'v' || *p == 'V') ++p;
+  std::sscanf(p, "%d.%d.%d", &v.major, &v.minor, &v.patch);
+  return v;
+}
+
+bool Version::operator>(const Version& o) const {
+  if (major != o.major) return major > o.major;
+  if (minor != o.minor) return minor > o.minor;
+  return patch > o.patch;
+}
+
+std::string Version::ToString() const {
+  return std::to_string(major) + "." +
+         std::to_string(minor) + "." +
+         std::to_string(patch);
+}
+
+// ── HTTP helper (WinHTTP) ─────────────────────────────────────────────────────
+
+namespace {
+
+// Very small JSON field extractor — avoids adding a JSON library dependency.
+// Finds the first occurrence of `"key":"value"` or `"key": "value"`.
+std::string ExtractJsonString(const std::string& json, const std::string& key) {
+  const std::string needle = "\"" + key + "\"";
+  auto pos = json.find(needle);
+  if (pos == std::string::npos) return {};
+  pos = json.find('"', pos + needle.size());
+  if (pos == std::string::npos) return {};
+  // Skip optional ': ' between key and value.
+  while (pos < json.size() && (json[pos] == '"' || json[pos] == ':' ||
+                                json[pos] == ' ')) ++pos;
+  if (pos >= json.size() || json[pos - 1] != '"') return {};
+  // Now pos points to first char of value.  Find closing quote.
+  std::string result;
+  while (pos < json.size() && json[pos] != '"') {
+    if (json[pos] == '\\') { ++pos; }
+    result += json[pos++];
+  }
+  return result;
+}
+
+struct WinHttpGuard {
+  HINTERNET h{nullptr};
+  explicit WinHttpGuard(HINTERNET h) : h(h) {}
+  ~WinHttpGuard() { if (h) WinHttpCloseHandle(h); }
+  operator HINTERNET() const { return h; }
+  bool ok() const { return h != nullptr; }
+};
+
+std::string WinHttpGet(const std::wstring& host, const std::wstring& path) {
+  WinHttpGuard session{WinHttpOpen(
+      L"KINGFNBrowser/0.3 (update-check; Windows)",
+      WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
+      WINHTTP_NO_PROXY_NAME,
+      WINHTTP_NO_PROXY_BYPASS, 0)};
+  if (!session.ok()) return {};
+
+  WinHttpGuard connect{WinHttpConnect(session, host.c_str(),
+                                      INTERNET_DEFAULT_HTTPS_PORT, 0)};
+  if (!connect.ok()) return {};
+
+  WinHttpGuard request{WinHttpOpenRequest(
+      connect, L"GET", path.c_str(), nullptr,
+      WINHTTP_NO_REFERER, WINHTTP_DEFAULT_ACCEPT_TYPES,
+      WINHTTP_FLAG_SECURE)};
+  if (!request.ok()) return {};
+
+  // Set timeout: 5 s connect, 10 s receive.
+  DWORD timeout_connect = 5000, timeout_receive = 10000;
+  WinHttpSetOption(request, WINHTTP_OPTION_CONNECT_TIMEOUT,
+                   &timeout_connect, sizeof(timeout_connect));
+  WinHttpSetOption(request, WINHTTP_OPTION_RECEIVE_TIMEOUT,
+                   &timeout_receive, sizeof(timeout_receive));
+
+  if (!WinHttpSendRequest(request, WINHTTP_NO_ADDITIONAL_HEADERS, 0,
+                           WINHTTP_NO_REQUEST_DATA, 0, 0, 0))
+    return {};
+  if (!WinHttpReceiveResponse(request, nullptr)) return {};
+
+  std::string body;
+  DWORD avail = 0;
+  while (WinHttpQueryDataAvailable(request, &avail) && avail > 0) {
+    std::string chunk(avail, '\0');
+    DWORD read = 0;
+    WinHttpReadData(request, chunk.data(), avail, &read);
+    body.append(chunk.data(), read);
+  }
+  return body;
+}
+
+}  // namespace
+
+// ── UpdateChecker ─────────────────────────────────────────────────────────────
+
+UpdateChecker::UpdateChecker(
+    std::string current_version,
+    std::function<void(std::string, std::string)> on_update_available)
+    : current_version_(std::move(current_version)),
+      callback_(std::move(on_update_available)) {}
+
+UpdateChecker::~UpdateChecker() {
+  if (thread_.joinable()) thread_.detach();
+}
+
+void UpdateChecker::CheckAsync() {
+  thread_ = std::thread([this] { DoCheck(); });
+}
+
+void UpdateChecker::DoCheck() {
+  try {
+    const std::string json = WinHttpGet(
+        L"api.github.com",
+        L"/repos/Farhan0629/Bravelike/releases/latest");
+    if (json.empty()) return;
+
+    const std::string tag  = ExtractJsonString(json, "tag_name");
+    const std::string url  = ExtractJsonString(json, "html_url");
+    if (tag.empty()) return;
+
+    const Version latest  = Version::Parse(tag);
+    const Version current = Version::Parse(current_version_);
+
+    if (latest > current) {
+      // Post result back to the CEF UI thread.
+      auto cb = callback_;
+      const std::string new_ver = latest.ToString();
+      const std::string rel_url = url.empty()
+          ? "https://github.com/Farhan0629/Bravelike/releases/latest"
+          : url;
+      CefPostTask(TID_UI, base::BindOnce(
+          [](std::function<void(std::string, std::string)> f,
+             std::string v, std::string u) { f(v, u); },
+          std::move(cb), new_ver, rel_url));
+    }
+  } catch (...) {
+    // Silently ignore network / parse errors.
+  }
+}
+
+}  // namespace kingfn

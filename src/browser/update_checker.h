@@ -1,1 +1,41 @@
-I3ByYWdtYSBvbmNlCiNpbmNsdWRlIDxmdW5jdGlvbmFsPgojaW5jbHVkZSA8c3RyaW5nPgojaW5jbHVkZSA8dGhyZWFkPgoKbmFtZXNwYWNlIGtpbmdmbiB7CgovLyBTZW1hbnRpYyB2ZXJzaW9uIGNvbXBhcmlzb24gaGVscGVyLgpzdHJ1Y3QgVmVyc2lvbiB7CiAgaW50IG1ham9yezB9LCBtaW5vcnswfSwgcGF0Y2h7MH07CiAgc3RhdGljIFZlcnNpb24gUGFyc2UoY29uc3Qgc3RkOjpzdHJpbmcmIHMpOwogIGJvb2wgb3BlcmF0b3I+KGNvbnN0IFZlcnNpb24mIG8pIGNvbnN0OwogIHN0ZDo6c3RyaW5nIFRvU3RyaW5nKCkgY29uc3Q7Cn07CgovLyBDaGVja3MgR2l0SHViIHJlbGVhc2VzIEFQSSBmb3IgYSBuZXdlciB2ZXJzaW9uIG9mIEtJTkdGTi4KLy8gQWxsIG5ldHdvcmsgd29yayBoYXBwZW5zIG9uIGEgYmFja2dyb3VuZCB0aHJlYWQ7IHRoZSBjYWxsYmFjawovLyBpcyBwb3N0ZWQgdG8gdGhlIENFRiBVSSB0aHJlYWQgd2hlbiBhIHJlc3VsdCBpcyBhdmFpbGFibGUuCmNsYXNzIFVwZGF0ZUNoZWNrZXIgewogcHVibGljOgogIC8vIGN1cnJlbnRfdmVyc2lvbjogZS5nLiAiMC4zLjAiCiAgLy8gb25fdXBkYXRlX2F2YWlsYWJsZTogY2FsbGVkIHdpdGggdGhlIG5ldyB2ZXJzaW9uIHN0cmluZyB3aGVuIGZvdW5kLgogIC8vICAgICAgICAgICAgICAgICAgICAgIENhbGxlZCBvbiB0aGUgQ0VGIFVJIHRocmVhZC4KICBVcGRhdGVDaGVja2VyKHN0ZDo6c3RyaW5nIGN1cnJlbnRfdmVyc2lvbiwKICAgICAgICAgICAgICAgIHN0ZDo6ZnVuY3Rpb248dm9pZChzdGQ6OnN0cmluZyBuZXdfdmVyc2lvbiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZyByZWxlYXNlX3VybCk+IG9uX3VwZGF0ZV9hdmFpbGFibGUpOwogIH5VcGRhdGVDaGVja2VyKCk7CgogIC8vIFN0YXJ0cyB0aGUgYmFja2dyb3VuZCBjaGVjay4gU2FmZSB0byBjYWxsIG9ubHkgb25jZS4KICB2b2lkIENoZWNrQXN5bmMoKTsKCiBwcml2YXRlOgogIHZvaWQgRG9DaGVjaygpOwogIHN0YXRpYyBzdGQ6OnN0cmluZyBGZXRjaExhdGVzdFJlbGVhc2UoKTsKCiAgc3RkOjpzdHJpbmcgY3VycmVudF92ZXJzaW9uXzsKICBzdGQ6OmZ1bmN0aW9uPHZvaWQoc3RkOjpzdHJpbmcsIHN0ZDo6c3RyaW5nKT4gY2FsbGJhY2tfOwogIHN0ZDo6dGhyZWFkIHRocmVhZF87Cn07Cgp9ICAvLyBuYW1lc3BhY2Uga2luZ2ZuCg==
+#pragma once
+#include <functional>
+#include <string>
+#include <thread>
+
+namespace kingfn {
+
+// Semantic version comparison helper.
+struct Version {
+  int major{0}, minor{0}, patch{0};
+  static Version Parse(const std::string& s);
+  bool operator>(const Version& o) const;
+  std::string ToString() const;
+};
+
+// Checks GitHub releases API for a newer version of KINGFN.
+// All network work happens on a background thread; the callback
+// is posted to the CEF UI thread when a result is available.
+class UpdateChecker {
+ public:
+  // current_version: e.g. "0.3.0"
+  // on_update_available: called with the new version string when found.
+  //                      Called on the CEF UI thread.
+  UpdateChecker(std::string current_version,
+                std::function<void(std::string new_version,
+                                   std::string release_url)> on_update_available);
+  ~UpdateChecker();
+
+  // Starts the background check. Safe to call only once.
+  void CheckAsync();
+
+ private:
+  void DoCheck();
+  static std::string FetchLatestRelease();
+
+  std::string current_version_;
+  std::function<void(std::string, std::string)> callback_;
+  std::thread thread_;
+};
+
+}  // namespace kingfn
