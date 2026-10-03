@@ -1,50 +1,36 @@
-set(KINGFN_BROWSER_SRCS
-  browser_app.cpp
-  browser_app.h
-  browser_window.cpp
-  browser_window.h
-  main_win.cpp
-  kingfn.rc
-)
-
+set(KINGFN_BROWSER_SRCS browser_app.cpp browser_app.h browser_window.cpp browser_window.h main_win.cpp kingfn.rc)
 set(KINGFN_TARGET kingfn_browser)
 ADD_LOGICAL_TARGET("libcef_lib" "${CEF_LIB_DEBUG}" "${CEF_LIB_RELEASE}")
-
 if(USE_SANDBOX)
+  # M138+ official Windows CEF requires a prebuilt bootstrap EXE + client DLL.
+  # Do not attempt to link an MSVC client against Chromium's sandbox library.
   add_library(${KINGFN_TARGET} SHARED ${KINGFN_BROWSER_SRCS})
   SET_LIBRARY_TARGET_PROPERTIES(${KINGFN_TARGET})
+  target_compile_definitions(${KINGFN_TARGET} PRIVATE KINGFN_USE_BOOTSTRAP)
+  if(NOT EXISTS "${CEF_BINARY_DIR}/bootstrap.exe")
+    message(FATAL_ERROR "Sandbox bootstrap missing from CEF package: ${CEF_BINARY_DIR}/bootstrap.exe. Use an official package containing bootstrap.exe; no silent unsandboxed fallback is permitted.")
+  endif()
 else()
+  message(WARNING "KINGFN sandbox is disabled: development-only build")
   add_executable(${KINGFN_TARGET} WIN32 ${KINGFN_BROWSER_SRCS})
   SET_EXECUTABLE_TARGET_PROPERTIES(${KINGFN_TARGET})
 endif()
-
 target_include_directories(${KINGFN_TARGET} PRIVATE "${CMAKE_SOURCE_DIR}")
-target_link_libraries(${KINGFN_TARGET} PRIVATE
-  kingfn_core
-  libcef_lib
-  libcef_dll_wrapper
-  ${CEF_STANDARD_LIBS})
+target_link_libraries(${KINGFN_TARGET} PRIVATE kingfn_core libcef_lib libcef_dll_wrapper ${CEF_STANDARD_LIBS})
 add_dependencies(${KINGFN_TARGET} libcef_dll_wrapper)
-
 if(CMAKE_GENERATOR MATCHES "Ninja|Make")
   set(KINGFN_OUT_DIR "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}")
 else()
-  set(KINGFN_OUT_DIR "${CMAKE_BINARY_DIR}/$<CONFIGURATION>")
+  set(KINGFN_OUT_DIR "${CMAKE_BINARY_DIR}/$<CONFIG>")
 endif()
-set_target_properties(${KINGFN_TARGET} PROPERTIES
-  RUNTIME_OUTPUT_DIRECTORY "${KINGFN_OUT_DIR}"
-  LIBRARY_OUTPUT_DIRECTORY "${KINGFN_OUT_DIR}")
-
+set_target_properties(${KINGFN_TARGET} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${KINGFN_OUT_DIR}" LIBRARY_OUTPUT_DIRECTORY "${KINGFN_OUT_DIR}")
 COPY_FILES(${KINGFN_TARGET} "${CEF_BINARY_FILES}" "${CEF_BINARY_DIR}" "${KINGFN_OUT_DIR}")
 COPY_FILES(${KINGFN_TARGET} "${CEF_RESOURCE_FILES}" "${CEF_RESOURCE_DIR}" "${KINGFN_OUT_DIR}")
+if(USE_SANDBOX)
+  add_custom_command(TARGET ${KINGFN_TARGET} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CEF_BINARY_DIR}/bootstrap.exe" "${KINGFN_OUT_DIR}/kingfn_browser.exe" VERBATIM)
+endif()
 add_custom_command(TARGET ${KINGFN_TARGET} POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E make_directory "${KINGFN_OUT_DIR}/config"
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different
-          "${CMAKE_SOURCE_DIR}/config/sample-blocklist.txt"
-          "${KINGFN_OUT_DIR}/config/blocklist.txt"
-  COMMAND ${CMAKE_COMMAND} -E make_directory "${KINGFN_OUT_DIR}/resources"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory
-          "${CMAKE_SOURCE_DIR}/resources"
-          "${KINGFN_OUT_DIR}/resources"
-  VERBATIM)
-
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/config/sample-blocklist.txt" "${KINGFN_OUT_DIR}/config/blocklist.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/resources" "${KINGFN_OUT_DIR}/resources" VERBATIM)
