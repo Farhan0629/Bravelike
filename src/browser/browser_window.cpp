@@ -80,7 +80,10 @@ std::string BrowserWindow::DefaultHomeUrl() {
   const auto exe_dir = std::filesystem::path(ExecutableDirectory());
   const auto home_path = exe_dir / "resources" / "home.html";
   if (std::filesystem::exists(home_path)) {
-    std::string path_str = std::filesystem::canonical(home_path).string();
+    std::string path_str = std::filesystem::absolute(home_path).lexically_normal().string();
+    if (path_str.rfind("\\\\?\\", 0) == 0) {
+      path_str = path_str.substr(4);
+    }
     for (char& c : path_str) {
       if (c == '\\') c = '/';
     }
