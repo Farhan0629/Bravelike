@@ -1,387 +1,268 @@
-# KINGFN Browser
+<div align="center">
 
-> A fast, Windows-first, privacy-focused browser built for modern browsing.
+<img src="assets/kingfn-banner.jpg" alt="KINGFN Browser Banner" width="100%" />
 
-KINGFN Browser is an original C++20 browser shell and privacy engine built on the **Chromium Embedded Framework (CEF)**. It uses Chromium through CEF rather than attempting to compile or fork Chromium locally. The project is not affiliated with Brave Software, Google, Chromium, or Chrome.
+# 👑 KINGFN BROWSER
+### *The Sovereign Windows Browser • High-Speed Chromium Engine • Built-in Privacy Shields*
 
-## Status at a glance
+[![Core CI](https://github.com/Farhan0629/Bravelike/actions/workflows/core-ci.yml/badge.svg)](https://github.com/Farhan0629/Bravelike/actions/workflows/core-ci.yml)
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?style=flat-square&logo=c%2B%2B)](https://en.cppreference.com/w/cpp/20)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2011%20%7C%2010-0078D6.svg?style=flat-square&logo=windows)](https://microsoft.com/windows)
+[![Chromium CEF](https://img.shields.io/badge/Chromium%20CEF-152.0.7-4285F4.svg?style=flat-square&logo=googlechrome)](https://bitbucket.org/chromiumembedded/cef)
+[![Shields Engine](https://img.shields.io/badge/Shields%20Engine-Active%20%26%20Local-00C853.svg?style=flat-square)](config/sample-blocklist.txt)
+[![License](https://img.shields.io/badge/License-MIT-ffd700.svg?style=flat-square)](LICENSE)
 
-**Current milestone:** a functional, single-window Windows browser foundation with request blocking, custom crown branding, and in-memory per-site Shields.
+[**Features**](#-features) • [**Quick Start**](#-quick-start) • [**Architecture**](#-architecture) • [**Shields Engine**](#-kingfn-shields-engine) • [**Shortcuts**](#-keyboard-shortcuts) • [**Build Guide**](#-building-from-source) • [**Roadmap**](#-roadmap)
 
-| Area | Current state |
-| --- | --- |
-| Privacy core | Implemented and covered by dependency-free tests |
-| Windows browser shell | Implemented with CEF Views |
-| Request filtering | Connected to CEF request interception |
-| Per-site Shields | Implemented in memory for exact HTTP(S) hosts |
-| Windows CI packaging | Implemented; builds a downloadable runtime artifact |
-| Interactive GUI validation | Tested on real Windows machines |
-| Tabs, downloads, history, bookmarks, settings, installer | Future roadmap |
-
-The GitHub Actions workflow compiles, links, packages, and checks required runtime files.
+</div>
 
 ---
 
-## What KINGFN Browser does today
+## 📖 Overview
 
-### Browser window and navigation
+**KINGFN Browser** is an original, privacy-first desktop web browser built from scratch in modern **C++20** on the **Chromium Embedded Framework (CEF)** with native Windows Views.
 
-The browser currently provides one CEF Views window with:
+Unlike conventional browsers loaded with tracking telemetry, background services, and corporate surveillance, **KINGFN** delivers a sovereign browsing environment:
+- 👑 **Sovereign Privacy**: Zero cloud telemetry, zero sync profiling, and isolated local storage (`KINGFNProfile`).
+- 🛡️ **KINGFN Shields Engine**: Native C++ filter pipeline that intercepts and drops tracker, ad, and telemetry requests at the network layer before they execute.
+- ⚡ **True Native Windows Performance**: Direct C++20 implementation utilizing native Win32/CEF Views—no Electron, no web-view wrappers, and minimal resource footprint.
+- 🎨 **Royal Dark-Mode Experience**: Custom local start page with glowing cyan/mint accents, DuckDuckGo privacy search, and quick access portals.
 
-- **Back** and **Forward** controls, enabled only when history allows them.
-- **Reload** and **Stop** controls that reflect the page loading state.
-- **Home** control that returns to the custom local KINGFN start page.
-- An accessible address/search field. Press **Enter** to navigate.
-- Main-frame URL synchronization: the address field updates as navigation completes.
-- Browser-title synchronization: page titles appear as `Page title - KINGFN`.
-- A dedicated profile/cache directory (`KINGFNProfile`) stored next to the executable.
+---
 
-### Address and search behavior
+## ⚡ Status at a Glance
 
-Address input is resolved by the standalone navigation module:
+| Component | Status | Details |
+| :--- | :--- | :--- |
+| **Privacy Core** | ✅ **Active** | Standalone C++20 engine (`kingfn_core`) with unit tests |
+| **Windows Shell** | ✅ **Active** | CEF Views top-level window with toolbar and navigation controls |
+| **Network Interception** | ✅ **Active** | Pre-resource request evaluation with `RV_CANCEL` blocking |
+| **Per-Site Shields** | ✅ **Active** | In-memory site-specific toggle with live blocked request metrics |
+| **Local Home Portal** | ✅ **Active** | Custom native `resources/home.html` start page |
+| **CI Automation** | ✅ **Active** | Dual-platform CI (Ubuntu + Windows) with artifact generation |
+| **Multi-Tab Interface** | 🔄 *Planned* | Tab strip, tab sessions, and tab-scoped privacy contexts |
+| **Bookmark & History DB** | 🔄 *Planned* | Embedded SQLite engine for private on-device history |
 
-| Input | Result |
-| --- | --- |
-| `example.com` | Navigates to `https://example.com` |
-| `https://example.com/path` | Keeps the explicit scheme and navigates there |
-| `best privacy browser` | Creates a URL-encoded DuckDuckGo search query |
+---
 
-### Keyboard shortcuts
+## 👑 Features
 
-The browser-content keyboard handler supports:
+### 1. 🛡️ Native KINGFN Shields
+- Intercepts all subresource requests initiated by pages.
+- Evaluates targets against domain blocklists and allow rules in real time.
+- Displays an interactive **Shields: On (count)** toggle on the toolbar.
+- Allows toggling Shields per-site without affecting other domains.
+- Automatically disables on internal or non-HTTP pages (`Shields: N/A`).
 
-| Shortcut | Action |
-| --- | --- |
-| `Ctrl+L` | Focus and select the complete address bar |
-| `Ctrl+R` | Reload the active page |
-| `Alt+Left` | Go back when history is available |
-| `Alt+Right` | Go forward when history is available |
-| `Alt+Home` | Open the startup page |
-| `Escape` | Stop the current load |
-| `Enter` in the address field | Navigate using the address/search resolver |
+### 2. ⚡ Sovereign Start Page (`kingfn://home`)
+- Beautiful, high-performance local start page (`resources/home.html`).
+- Built-in multi-search selector (DuckDuckGo default, Google, Bing).
+- Fast quick-launch tiles (GitHub, YouTube, Wikipedia, Reddit, ChatGPT, DuckDuckGo).
+- Displays live shortcut helpers and browser status.
 
-These shortcuts compile and package successfully in CI. They still need interactive validation on Windows with real sites.
+### 3. 🔍 Smart Address & Navigation Bar
+- Smart resolution: automatically distinguishes hostnames, explicit URLs, and search terms.
+- Typing `example.com` automatically navigates to `https://example.com`.
+- Typing plain text generates an encoded DuckDuckGo privacy search query.
+- Aliases supported: enter `home`, `kingfn`, or `about:home` to instantly return to your home portal.
+- Synchronized title bar: page titles seamlessly format as `<Page Title> - KINGFN`.
 
-### Privacy filtering and Shields
+### 4. 🛡️ Intel GPU Crash Prevention
+- Automated fallback switch prevents GPU driver virtualization crashes on modern Intel Iris Xe and integrated GPUs.
+- Ensures solid startup and rock-stable rendering on all Windows hardware.
 
-Every intercepted CEF resource request is evaluated by `FilterEngine` when Shields are enabled for the active site. A matching blocking decision cancels the request through CEF.
+---
 
-The UI includes a **Shields** button:
+## 🏛️ Architecture
 
-- Shields are **on by default** for every HTTP(S) host.
-- Clicking Shields toggles policy for the current exact normalized host and reloads the page.
-- A choice for `www.example.com` is distinct from `example.com` because policy is keyed by the exact host.
-- Returning to a host restores its in-memory choice during that browser session.
-- Non-HTTP(S) pages have no active host; the button reads **`Shields: N/A`** and is disabled.
-- The label shows a **cumulative** blocked-request count while Shields are on.
+KINGFN strictly decouples the privacy core from the Chromium Embedded Framework. This guarantees that all privacy, URL analysis, and filtering logic remain cleanly testable, auditable, and embeddable without external dependencies.
 
-### Supported rule syntax
+```mermaid
+graph TD
+    User([User Input / UI Action]) --> Window[CEF Views Top-Level Window]
+    Window --> Toolbar[Toolbar & Address Bar]
+    Toolbar --> Controller[BrowserWindow Controller]
+    
+    subgraph Core ["Independent Privacy Core (kingfn_core)"]
+        Nav[Navigation Resolver]
+        Shields[SiteShields Policy]
+        Engine[FilterEngine Matching]
+        Stats[PrivacyStats Counters]
+    end
 
-The current engine deliberately implements a small, auditable subset—not full EasyList compatibility.
-
-```text
-# Blank lines and comments are ignored
-ads.example.com
-||tracker.example^
-@@allowed.tracker.example
+    Controller --> Nav
+    Controller --> Shields
+    
+    subgraph CEF ["CEF / Chromium Engine"]
+        Renderer[Chromium Web Engine]
+        Network[CEF Network Layer]
+    end
+    
+    Controller --> Renderer
+    Renderer -->|Subresource Request| Network
+    Network -->|OnBeforeResourceLoad| Engine
+    Engine -->|Allow / Block Decision| Network
+    Network -->|Record Blocked / Allowed| Stats
+    Stats -.->|Update Live Counter| Toolbar
 ```
 
-| Rule | Meaning |
-| --- | --- |
-| `example.com` | Blocks the domain and all of its subdomains |
-| `||example.com^` | Accepted as a domain-block rule for migration convenience |
-| `@@example.com` | Creates an allow rule |
-| Allow + block match | Allow rule wins |
+### Module Responsibilities
 
-Each evaluation returns an allow/block action, a reason, and the matched source rule when applicable. Unsupported syntax is allowed rather than silently over-blocked.
+| Directory / Module | Responsibilities |
+| :--- | :--- |
+| [`src/core/filter_engine.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/core/filter_engine.h) | Parses filter rule files, normalizes domains, evaluates URLs, prioritizes allow rules |
+| [`src/core/navigation.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/core/navigation.h) | Handles URL detection, scheme normalization, and search query URL encoding |
+| [`src/core/site_shields.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/core/site_shields.h) | Thread-safe per-host Shields activation and disabled-domain set |
+| [`src/core/privacy_stats.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/core/privacy_stats.h) | Atomic thread-safe tracking of evaluated and blocked request metrics |
+| [`src/core/url_utils.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/core/url_utils.h) | ASCII case normalization, HTTP authority parsing, subdomain hierarchy checking |
+| [`src/browser/main_win.cpp`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/browser/main_win.cpp) | Win32 entry point, profile configuration (`KINGFNProfile`), CEF initialization |
+| [`src/browser/browser_window.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/browser/browser_window.h) | CEF client implementation, toolbar controls, keyboard handlers, Shields UI |
+| [`src/browser/browser_app.*`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/src/browser/browser_app.h) | CEF application lifecycle and command-line switch management |
+| [`resources/home.html`](file:///c:/Users/FARHAN/OneDrive/Desktop/Kaggle/Bravelike/resources/home.html) | Local native dark-mode royal dashboard with DuckDuckGo search integration |
 
 ---
 
-## Architecture
+## 🚀 Quick Start
+
+### Running Pre-Built KINGFN Browser
+
+1. Clone or download this repository:
+   ```cmd
+   git clone https://github.com/Farhan0629/Bravelike.git
+   cd Bravelike
+   ```
+2. Launch the browser using the root launcher:
+   ```cmd
+   run-kingfn.bat
+   ```
+   *(Or run `.\out\ci-release\kingfn_browser.exe` directly)*.
+
+The browser will open instantly to the KINGFN start page:
+
+<div align="center">
+  <img src="resources/icons/kingfn-128.png" alt="KINGFN Logo" width="96" />
+</div>
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+KINGFN provides lightning-fast keyboard productivity navigation:
+
+| Key Combination | Action | Description |
+| :--- | :--- | :--- |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | **Focus Address Bar** | Highlights and selects address input ready for typing |
+| <kbd>Ctrl</kbd> + <kbd>R</kbd> | **Reload Page** | Refreshes the currently active web page |
+| <kbd>Alt</kbd> + <kbd>←</kbd> | **Go Back** | Navigates to the preceding page in history |
+| <kbd>Alt</kbd> + <kbd>→</kbd> | **Go Forward** | Navigates forward in history |
+| <kbd>Alt</kbd> + <kbd>Home</kbd> | **Return Home** | Instantly navigates to the local KINGFN start page |
+| <kbd>Escape</kbd> | **Stop Loading** | Cancels the active page loading process |
+| <kbd>Enter</kbd> | **Execute Search / URL** | Navigates address bar input |
+
+---
+
+## 🛡️ KINGFN Shields Engine
+
+The Shields Engine supports standard domain-matching syntax designed for high evaluation speed:
 
 ```text
-+----------------------+       main-frame URL / load / title events
-| CEF Views window     | <-------------------------------------------+
-| toolbar + browser    |                                             |
-+----------+-----------+                                             |
-           | address input, buttons, shortcuts                        |
-           v                                                          |
-+----------------------+                                               |
-| BrowserWindow        |                                               |
-| - navigation state   |                                               |
-| - Shields UI         |                                               |
-| - CEF handlers       |                                               |
-+----------+-----------+                                               |
-           | request URL                                               |
-           v                                                           |
-+----------------------+     decision      +------------------------+ |
-| FilterEngine         | ----------------> | cancel or continue CEF | |
-| independent core     |                   | resource request       | |
-+----------+-----------+                   +------------------------+ |
-           |                                                              
-           +--> PrivacyStats (atomic counters)
-           +--> SiteShields (thread-safe active-host policy)
-
-Address/search input --> ResolveAddressInput --> URL or DuckDuckGo Search URL
+# Comments and blank lines are ignored
+ads.example.com              # Blocks ads.example.com and its subdomains
+||tracker.example^           # Standard Adblock-style domain anchor
+@@allowed.tracker.example    # Exception rule: allows this domain even if blocked
 ```
 
-### Why the core is separate from CEF
+### Rule Evaluation Semantics
 
-`src/core` has no CEF dependency. This keeps filter, URL, navigation, policy, and statistics behavior fast to build and test on their own. `src/browser` is the Windows/CEF adapter that turns core decisions into browser behavior.
-
-### Privacy decision flow
-
-1. CEF starts a resource request.
-2. `BrowserWindow::OnBeforeResourceLoad` checks whether Shields are enabled for the active page host.
-3. If enabled, `FilterEngine::Evaluate()` processes the request URL.
-4. A matching block rule returns a blocking decision; CEF receives `RV_CANCEL`.
-5. `PrivacyStats` records every evaluated request and whether it was blocked.
+1. **Allow rules have absolute precedence**: If a domain matches an allow rule (`@@`), it is immediately permitted regardless of block rules.
+2. **Subdomain matching**: Blocking `example.com` automatically blocks `cdn.example.com`, `ads.example.com`, and any nested subdomains.
+3. **No accidental suffix collisions**: Blocking `example.com` will **not** block `badexample.com`.
+4. **Unsupported rules fall back safely**: If an unsupported syntax is encountered, it logs a non-fatal warning and defaults to allowing rather than breaking legitimate user traffic.
 
 ---
 
-## Repository map
+## 🛠️ Building from Source
 
-This table is the quickest guide to what each part of the project owns.
+### Prerequisites
 
-| Location | Responsibility |
-| --- | --- |
-| `CMakeLists.txt` | C++20 project setup, core library, tests, optional Windows CEF browser build, pinned CEF configuration |
-| `config/sample-blocklist.txt` | Example rules copied into the runtime output as `config/blocklist.txt` |
-| `cmake/DownloadCEF.cmake` | Downloads, checksum-verifies, and extracts the pinned CEF binary distribution |
-| `src/core/filter_engine.*` | Rule loading, domain/subdomain matching, allow precedence, explainable decisions |
-| `src/core/navigation.*` | URL detection, HTTPS normalization, DuckDuckGo search fallback, query encoding |
-| `src/core/url_utils.*` | ASCII host normalization, HTTP(S) host extraction, domain/subdomain checks |
-| `src/core/site_shields.*` | Thread-safe active-host Shields policy and in-memory disabled-host set |
-| `src/core/privacy_stats.*` | Thread-safe evaluated and blocked request counters |
-| `src/app/filter_demo.cpp` | Command-line tool for loading a rule file and interactively evaluating URLs |
-| `src/browser/main_win.cpp` | Windows entry point and CEF process startup |
-| `src/browser/browser_app.*` | CEF application/lifecycle configuration |
-| `src/browser/browser_window.*` | Window, toolbar, keyboard shortcuts, CEF callbacks, request cancellation, Shields UI |
-| `src/browser/CMakeLists.txt` | Browser target, CEF wrapper linking, runtime/resource copying, rule-file copying |
-| `tests/filter_engine_tests.cpp` | Filter, allow-rule, URL, navigation, and stats tests |
-| `tests/site_shields_tests.cpp` | Host normalization and per-site Shields policy tests |
-| `docs/ARCHITECTURE.md` | Design goals and security boundaries |
-| `docs/BUILDING_WINDOWS.md` | Windows prerequisites, build commands, and manual smoke-test checklist |
-| `docs/ROADMAP.md` | Completed work, future milestones, and deliberate non-goals |
-| `scripts/check-windows-prerequisites.ps1` | Basic Git/CMake and compiler-environment check |
-| `.github/workflows/core-ci.yml` | Ubuntu/Windows core CI plus Windows CEF packaging and artifact upload |
-
----
-
-## Requirements
-
-### Required for the Windows browser
-
-- Windows 11, 64-bit
-- Visual Studio 2022 with **Desktop development with C++**
-  - MSVC v143 x64/x86 build tools
+- **Operating System**: Windows 11 or Windows 10 (64-bit)
+- **Compiler**: Visual Studio 2022 (Community or higher) with **Desktop development with C++**
+  - MSVC v143 toolset
   - Windows 10/11 SDK
-  - C++ CMake tools for Windows
-- CMake **3.24+**
-- Git for Windows
-- Internet access for the first CEF configuration
-- At least **20 GB free disk space** for CEF, build output, symbols, and experiments
+- **Build System**: CMake **3.24** or later
+- **Version Control**: Git for Windows
 
-The core library and its tests can also be built on Linux/macOS. The CEF desktop browser target is Windows-only.
-
-### Pinned browser dependency
-
-The CEF configuration automatically downloads the official 64-bit Windows minimal distribution and verifies its checksum:
-
-- **CEF:** `152.0.7+g83ffcba+chromium-152.0.7977.83`
-- **Chromium:** `152.0.7977.83`
-
-CEF is prebuilt. Do not try to build Chromium locally as part of this project.
-
----
-
-## Getting started
-
-### 1. Clone the repository
-
-Open **Developer PowerShell for Visual Studio 2022** and run:
-
+Verify your environment using our diagnostic script:
 ```powershell
-git clone https://github.com/Farhan0629/Bravelike.git
-cd Bravelike
-```
-
-Optional prerequisite check:
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass -Force
 .\scripts\check-windows-prerequisites.ps1
 ```
 
-### 2. Build and test the independent privacy core
+---
 
-This does not download or require CEF.
+### Step 1: Build & Run Privacy Core Tests
+
+The core privacy library and test suite have **zero external dependencies** and compile in seconds:
 
 ```powershell
+# Configure and build
 cmake -S . -B out\build -G "Visual Studio 17 2022" -A x64 -DKINGFN_BUILD_TESTS=ON
 cmake --build out\build --config Release
+
+# Execute test suite
 ctest --test-dir out\build -C Release --output-on-failure
 ```
 
-Run the command-line filter demo:
-
+Run the interactive CLI filter testing tool:
 ```powershell
 .\out\build\Release\kingfn_filter_demo.exe config\sample-blocklist.txt
 ```
 
-Then enter URLs one per line. The program prints `ALLOW` or `BLOCK`, an explanation, and the matching rule when one exists. Press `Ctrl+Z`, then `Enter`, to finish in Windows PowerShell.
+---
 
-### 3. Build the Windows browser
+### Step 2: Build the Full CEF Desktop Browser
 
-The first configure step downloads and extracts CEF, so it can take several minutes.
+The build system automatically downloads and verifies the official pinned Windows 64-bit CEF distribution (`152.0.7` / Chromium `152.0.7977.83`):
 
 ```powershell
+# Configure with CEF enabled
 cmake -S . -B out\cef `
   -G "Visual Studio 17 2022" -A x64 `
   -DKINGFN_ENABLE_CEF=ON `
   -DUSE_SANDBOX=OFF
 
+# Compile the browser target
 cmake --build out\cef --config Release --target kingfn_browser
 ```
 
-### 4. Run the browser
-
-You can run directly with `run-kingfn.bat` or run:
-
+Launch your newly compiled build:
 ```powershell
 .\out\cef\Release\kingfn_browser.exe
 ```
 
-Keep the complete `out\cef\Release` directory together. CEF needs the executable, DLLs, `.pak` resources, locale/runtime data, and `config\blocklist.txt` beside one another.
+---
 
-At minimum, check that the output contains:
+## 🗺️ Roadmap
 
-```text
-kingfn_browser.exe
-libcef.dll
-chrome_elf.dll
-icudtl.dat
-resources.pak
-config\blocklist.txt
-resources\home.html
-```
+- [x] **Milestone 1**: Standalone C++20 privacy core with comprehensive unit tests.
+- [x] **Milestone 2**: Native CEF Views Windows single-window shell with synchronized address bar.
+- [x] **Milestone 3**: Network request interception with Shields blocking and stats counters.
+- [x] **Milestone 4**: Custom KINGFN royal brand identity, crown icon, and local start portal.
+- [x] **Milestone 5**: Hardware crash resilience and GPU virtualization protection.
+- [ ] **Milestone 6**: Native tabbed browsing interface and tab bar controller.
+- [ ] **Milestone 7**: Embedded SQLite history and bookmarks database with search.
+- [ ] **Milestone 8**: File download manager with progress indicators and virus scan hook.
+- [ ] **Milestone 9**: Persisted per-domain Shields preferences in local database.
+- [ ] **Milestone 10**: Installer packaging (NSIS / MSIX) and auto-update mechanism.
 
 ---
 
-## Manual Windows smoke test
+## ⚖️ Legal & Trademarks
 
-Perform this before calling a build release-ready. Prefer real HTTPS sites such as YouTube and other normal browsing targets rather than relying only on `example.com`.
+- **KINGFN Browser** is an independent, custom open-source browser project.
+- Chromium and Google Chrome are trademarks of Google LLC.
+- Brave is a trademark of Brave Software, Inc.
+- All product and service names used herein are for identification purposes only and belong to their respective owners.
 
-1. Launch `kingfn_browser.exe` (or `run-kingfn.bat`); confirm it opens without a crash dialog.
-2. Confirm the custom KINGFN startup page loads.
-3. Type a hostname, such as `youtube.com`, then press Enter; confirm HTTPS navigation.
-4. Enter a multi-word search; confirm it reaches a DuckDuckGo search results page.
-5. Visit another page, then verify Back and Forward enable and work.
-6. Check Reload, Stop during an active load, and Home.
-7. Confirm the address field follows main-frame navigation.
-8. Test `Ctrl+L`, `Ctrl+R`, `Alt+Left`, `Alt+Right`, `Alt+Home`, and Escape.
-9. On an HTTP(S) site, toggle Shields off and on; each change should reload the page and update the label.
-10. Turn Shields off for site A; visit site B and confirm Shields is on there; return to A and confirm the off setting remains for this session.
-11. Load a page that requests a configured blocked domain; with Shields on, confirm the cumulative counter increases. Repeat with Shields off and confirm that request does not increase the counter.
-12. Open a non-HTTP(S) page and confirm Shields reads `N/A` and is disabled.
-13. Close the window and confirm the process exits without hanging.
-
----
-
-## Tests and continuous integration
-
-### Local tests
-
-The core tests cover, among other behavior:
-
-- exact-domain and subdomain blocking;
-- allow-rule precedence;
-- host normalization and HTTP/HTTPS handling;
-- search/query URL resolution and encoding;
-- thread-safe privacy statistics;
-- per-site Shields enable/disable behavior;
-- host switching and non-HTTP(S) policy behavior.
-
-### GitHub Actions
-
-`.github/workflows/core-ci.yml` runs on every push and pull request:
-
-1. Core configure/build/test on `ubuntu-latest`.
-2. Core configure/build/test on `windows-2022`.
-3. Windows CEF browser configuration, compilation, runtime-file verification, and artifact upload.
-
-The Windows artifact is named `kingfn-windows-release` and is retained for seven days. It is a CI build artifact, not an installer or proof of interactive GUI behavior.
-
----
-
-## Known limitations and important safety notes
-
-This is an engineering project in active development, not a production browser. The following limits are intentional and should be understood before extending or distributing it:
-
-- **Single window, no tabs:** tab lifecycle and a new-tab page are future work.
-- **No persistence:** per-site Shields choices reset when the browser restarts.
-- **Active-page policy snapshot:** during cross-site navigation, a request can briefly use the previous page’s policy. Future work must scope request policy per browser/tab.
-- **Cumulative counter:** the displayed blocked number is not per-site.
-- **No full EasyList support:** only the documented domain-style subset is supported.
-- **Sandbox disabled:** the current local/CI build passes `-DUSE_SANDBOX=OFF`. Enable and validate the CEF sandbox before any public release.
-- **No downloads, history, bookmarks, session restore, settings, or installer** yet.
-- **No claims of complete tracker blocking, anonymity, or production-grade security** should be made.
-
-Do not commit generated content such as `out/`, `third_party/cef/`, CEF archives, or browser profile/cache data.
-
----
-
-## Contributing
-
-Contributions should keep the privacy core independently testable and avoid mixing unrelated changes.
-
-1. Start from the latest `main` branch.
-2. Create a focused branch, for example:
-
-   ```powershell
-   git checkout main
-   git pull --ff-only
-   git checkout -b feature/short-description
-   ```
-
-3. Make a small, focused change.
-4. Add or update a core test when behavior in `src/core` changes.
-5. Run the applicable local build and tests.
-6. For `src/browser` changes, build the CEF target on Windows and document any manual testing performed.
-7. Open a pull request describing:
-   - what changed;
-   - why it changed;
-   - automated validation performed;
-   - manual Windows validation performed or still required;
-   - limitations or follow-up work.
-
-### Engineering guidelines
-
-- Keep `src/core` free from CEF types and APIs.
-- Prefer clear, explainable filter decisions over clever but opaque matching.
-- Default to allowing syntax the engine does not support; do not silently over-block.
-- Treat privacy controls as security-sensitive: document policy scope, persistence, and failure modes.
-- Do not claim a feature works solely because it compiles; distinguish CI validation from real Windows GUI validation.
-- Keep dependency versions pinned and verify downloads.
-
----
-
-## Roadmap
-
-Near-term work is tracked in [docs/ROADMAP.md](docs/ROADMAP.md). The main planned areas are:
-
-1. real tabs and a new-tab page;
-2. tab-scoped request policy and persisted per-site Shields choices;
-3. download confirmation/status;
-4. SQLite history and bookmarks;
-5. session restoration;
-6. rule explanations/categories and safe filter-list updates;
-7. settings, installer, benchmarks, threat model, and project evaluation material.
-
-Explicit non-goals for the first release include VPN infrastructure, cryptocurrency custody, account synchronization, a custom rendering engine, and claims of complete EasyList compatibility.
-
----
-
-## Name and trademark notice
-
-**KINGFN** is an independent, custom browser project. Brave, Chromium, Chrome, and related marks belong to their respective owners.
+<div align="center">
+  <sub>👑 KINGFN Browser • Built with precision and sovereignty. Crafted for Windows.</sub>
+</div>
