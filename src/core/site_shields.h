@@ -1,1 +1,32 @@
-I3ByYWdtYSBvbmNlCiNpbmNsdWRlIDxtZW1vcnk+CiNpbmNsdWRlIDxtdXRleD4KI2luY2x1ZGUgPG9wdGlvbmFsPgojaW5jbHVkZSA8c3RyaW5nPgojaW5jbHVkZSA8c3RyaW5nX3ZpZXc+CiNpbmNsdWRlIDx1bm9yZGVyZWRfc2V0PgoKbmFtZXNwYWNlIGtpbmdmbiB7CgpjbGFzcyBEYXRhYmFzZTsKCmNsYXNzIFNpdGVTaGllbGRzIHsKIHB1YmxpYzoKICBTaXRlU2hpZWxkcygpID0gZGVmYXVsdDsKICAvLyBBdHRhY2ggYSBkYXRhYmFzZSBmb3IgcGVyc2lzdGVudCBzdG9yYWdlIG9mIHBlci1zaXRlIHNoaWVsZCBwcmVmcy4KICB2b2lkIEF0dGFjaERhdGFiYXNlKERhdGFiYXNlKiBkYik7CgogIHZvaWQgU2V0QWN0aXZlVXJsKHN0ZDo6c3RyaW5nX3ZpZXcgdXJsKTsKICBzdGQ6Om9wdGlvbmFsPHN0ZDo6c3RyaW5nPiBBY3RpdmVIb3N0KCkgY29uc3Q7CiAgYm9vbCBFbmFibGVkRm9yQWN0aXZlKCkgY29uc3Q7CiAgLy8gUmV0dXJucyBmYWxzZSB3aGVuIHRoZSBhY3RpdmUgcGFnZSBoYXMgbm8gSFRUUChTKSBob3N0LgogIGJvb2wgVG9nZ2xlQWN0aXZlKCk7CgogcHJpdmF0ZToKICBtdXRhYmxlIHN0ZDo6bXV0ZXggbXV0ZXhfOwogIHN0ZDo6b3B0aW9uYWw8c3RkOjpzdHJpbmc+IGFjdGl2ZV9ob3N0XzsKICBzdGQ6OnVub3JkZXJlZF9zZXQ8c3RkOjpzdHJpbmc+IGRpc2FibGVkX2hvc3RzXzsKICBEYXRhYmFzZSogZGJfe251bGxwdHJ9OyAgLy8gbm90IG93bmVkCn07Cgp9ICAvLyBuYW1lc3BhY2Uga2luZ2ZuCg==
+#pragma once
+#include <memory>
+#include <mutex>
+#include <optional>
+#include <string>
+#include <string_view>
+#include <unordered_set>
+
+namespace kingfn {
+
+class Database;
+
+class SiteShields {
+ public:
+  SiteShields() = default;
+  // Attach a database for persistent storage of per-site shield prefs.
+  void AttachDatabase(Database* db);
+
+  void SetActiveUrl(std::string_view url);
+  std::optional<std::string> ActiveHost() const;
+  bool EnabledForActive() const;
+  // Returns false when the active page has no HTTP(S) host.
+  bool ToggleActive();
+
+ private:
+  mutable std::mutex mutex_;
+  std::optional<std::string> active_host_;
+  std::unordered_set<std::string> disabled_hosts_;
+  Database* db_{nullptr};  // not owned
+};
+
+}  // namespace kingfn

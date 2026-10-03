@@ -1,1 +1,346 @@
-I2luY2x1ZGUgImNvcmUvZGF0YWJhc2UuaCIKI2luY2x1ZGUgPHNxbGl0ZTMuaD4KI2luY2x1ZGUgPGNocm9ubz4KI2luY2x1ZGUgPGN0aW1lPgojaW5jbHVkZSA8aW9tYW5pcD4KI2luY2x1ZGUgPHNzdHJlYW0+CiNpbmNsdWRlIDxzdGRleGNlcHQ+CgpuYW1lc3BhY2Uga2luZ2ZuIHsKbmFtZXNwYWNlIHsKc3RkOjpzdHJpbmcgSXNvTm93KCkgewogIGF1dG8gbm93ID0gc3RkOjpjaHJvbm86OnN5c3RlbV9jbG9jazo6bm93KCk7CiAgYXV0byB0ICAgPSBzdGQ6OmNocm9ubzo6c3lzdGVtX2Nsb2NrOjp0b190aW1lX3Qobm93KTsKICBzdGQ6OnRtIHRtX2J1Znt9OwojaWZkZWYgX1dJTjMyCiAgZ210aW1lX3MoJnRtX2J1ZiwgJnQpOwojZWxzZQogIGdtdGltZV9yKCZ0LCAmdG1fYnVmKTsKI2VuZGlmCiAgc3RkOjpvc3RyaW5nc3RyZWFtIG9zczsKICBvc3MgPDwgc3RkOjpwdXRfdGltZSgmdG1fYnVmLCAiJVktJW0tJWRUJUg6JU06JVNaIik7CiAgcmV0dXJuIG9zcy5zdHIoKTsKfQp9ICAvLyBuYW1lc3BhY2UKCkRhdGFiYXNlOjpEYXRhYmFzZShjb25zdCBzdGQ6OnN0cmluZyYgcGF0aCkgewogIGlmIChzcWxpdGUzX29wZW4ocGF0aC5jX3N0cigpLCAmZGJfKSAhPSBTUUxJVEVfT0spIHsKICAgIGRiXyA9IG51bGxwdHI7CiAgICByZXR1cm47CiAgfQogIC8vIFBlcmZvcm1hbmNlIHByYWdtYXMuCiAgRXhlY3V0ZSgiUFJBR01BIGpvdXJuYWxfbW9kZT1XQUw7Iik7CiAgRXhlY3V0ZSgiUFJBR01BIHN5bmNocm9ub3VzPU5PUk1BTDsiKTsKICBFeGVjdXRlKCJQUkFHTUEgZm9yZWlnbl9rZXlzPU9OOyIpOwogIENyZWF0ZVRhYmxlcygpOwp9CgpEYXRhYmFzZTo6fkRhdGFiYXNlKCkgewogIGlmIChkYl8pIHNxbGl0ZTNfY2xvc2UoZGJfKTsKfQoKdm9pZCBEYXRhYmFzZTo6RXhlY3V0ZShjb25zdCBjaGFyKiBzcWwpIHsKICBjaGFyKiBlcnIgPSBudWxscHRyOwogIHNxbGl0ZTNfZXhlYyhkYl8sIHNxbCwgbnVsbHB0ciwgbnVsbHB0ciwgJmVycik7CiAgaWYgKGVycikgc3FsaXRlM19mcmVlKGVycik7Cn0KCnNxbGl0ZTNfc3RtdCogRGF0YWJhc2U6OlByZXBhcmUoY29uc3QgY2hhciogc3FsKSB7CiAgc3FsaXRlM19zdG10KiBzdG10ID0gbnVsbHB0cjsKICBzcWxpdGUzX3ByZXBhcmVfdjIoZGJfLCBzcWwsIC0xLCAmc3RtdCwgbnVsbHB0cik7CiAgcmV0dXJuIHN0bXQ7Cn0KCnZvaWQgRGF0YWJhc2U6OkNyZWF0ZVRhYmxlcygpIHsKICBFeGVjdXRlKFIiKAogICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgaGlzdG9yeSAoCiAgICAgIGlkICAgICAgICAgSU5URUdFUiBQUklNQVJZIEtFWSBBVVRPSU5DUkVNRU5ULAogICAgICB1cmwgICAgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgIHRpdGxlICAgICAgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgICB2aXNpdF9jb3VudCBJTlRFR0VSIE5PVCBOVUxMIERFRkFVTFQgMSwKICAgICAgbGFzdF92aXNpdCAgVEVYVCBOT1QgTlVMTAogICAgKTsKICAgIENSRUFURSBVTklRVUUgSU5ERVggSUYgTk9UIEVYSVNUUyBoaXN0b3J5X3VybCBPTiBoaXN0b3J5KHVybCk7CiAgKSIpOwoKICBFeGVjdXRlKFIiKAogICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgYm9va21hcmtzICgKICAgICAgaWQgICAgICAgICBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgIHVybCAgICAgICAgVEVYVCBOT1QgTlVMTCBVTklRVUUsCiAgICAgIHRpdGxlICAgICAgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgICBjcmVhdGVkX2F0IFRFWFQgTk9UIE5VTEwKICAgICk7CiAgKSIpOwoKICBFeGVjdXRlKFIiKAogICAgQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgc2hpZWxkc19wcmVmcyAoCiAgICAgIGhvc3QgICAgICAgVEVYVCBQUklNQVJZIEtFWSwKICAgICAgZW5hYmxlZCAgICBJTlRFR0VSIE5PVCBOVUxMIERFRkFVTFQgMQogICAgKTsKICApIik7CgogIEV4ZWN1dGUoUiIoCiAgICBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyBkb3dubG9hZHMgKAogICAgICBpZCAgICAgICAgICAgICBJTlRFR0VSIFBSSU1BUlkgS0VZIEFVVE9JTkNSRU1FTlQsCiAgICAgIHVybCAgICAgICAgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgIGZpbGVuYW1lICAgICAgIFRFWFQgTk9UIE5VTEwsCiAgICAgIHNhdmVfcGF0aCAgICAgIFRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJywKICAgICAgdG90YWxfYnl0ZXMgICAgSU5URUdFUiBOT1QgTlVMTCBERUZBVUxUIDAsCiAgICAgIHJlY2VpdmVkX2J5dGVzIElOVEVHRVIgTk9UIE5VTEwgREVGQVVMVCAwLAogICAgICBzdGF0dXMgICAgICAgICBURVhUIE5PVCBOVUxMIERFRkFVTFQgJ2Rvd25sb2FkaW5nJywKICAgICAgc3RhcnRlZF9hdCAgICAgVEVYVCBOT1QgTlVMTCwKICAgICAgY29tcGxldGVkX2F0ICAgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnCiAgICApOwogICkiKTsKfQoKLy8g4pSA4pSAIEhpc3Rvcnkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgp2b2lkIERhdGFiYXNlOjpBZGRIaXN0b3J5KGNvbnN0IHN0ZDo6c3RyaW5nJiB1cmwsIGNvbnN0IHN0ZDo6c3RyaW5nJiB0aXRsZSkgewogIGlmICghZGJfIHx8IHVybC5lbXB0eSgpKSByZXR1cm47CiAgY29uc3QgY2hhciogc3FsID0gUiIoCiAgICBJTlNFUlQgSU5UTyBoaXN0b3J5KHVybCwgdGl0bGUsIHZpc2l0X2NvdW50LCBsYXN0X3Zpc2l0KQogICAgVkFMVUVTKD8sID8sIDEsID8pCiAgICBPTiBDT05GTElDVCh1cmwpIERPIFVQREFURSBTRVQKICAgICAgdGl0bGUgICAgICAgPSBleGNsdWRlZC50aXRsZSwKICAgICAgdmlzaXRfY291bnQgPSB2aXNpdF9jb3VudCArIDEsCiAgICAgIGxhc3RfdmlzaXQgID0gZXhjbHVkZWQubGFzdF92aXNpdDsKICApIjsKICBhdXRvKiBzdG10ID0gUHJlcGFyZShzcWwpOwogIGlmICghc3RtdCkgcmV0dXJuOwogIGNvbnN0IGF1dG8gbm93ID0gSXNvTm93KCk7CiAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMSwgdXJsLmNfc3RyKCksICAgLTEsIFNRTElURV9UUkFOU0lFTlQpOwogIHNxbGl0ZTNfYmluZF90ZXh0KHN0bXQsIDIsIHRpdGxlLmNfc3RyKCksIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAzLCBub3cuY19zdHIoKSwgICAtMSwgU1FMSVRFX1RSQU5TSUVOVCk7CiAgc3FsaXRlM19zdGVwKHN0bXQpOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7Cn0KCnN0ZDo6dmVjdG9yPEhpc3RvcnlFbnRyeT4gRGF0YWJhc2U6OkdldEhpc3RvcnkoaW50IGxpbWl0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHN0ZDo6c3RyaW5nJiBxdWVyeSkgewogIHN0ZDo6dmVjdG9yPEhpc3RvcnlFbnRyeT4gcmVzdWx0OwogIGlmICghZGJfKSByZXR1cm4gcmVzdWx0OwoKICBjb25zdCBjaGFyKiBzcWwgPSBxdWVyeS5lbXB0eSgpCiAgICAgID8gIlNFTEVDVCB1cmwsdGl0bGUsdmlzaXRfY291bnQsbGFzdF92aXNpdCBGUk9NIGhpc3RvcnkgT1JERVIgQlkgbGFzdF92aXNpdCBERVNDIExJTUlUID87IgogICAgICA6ICJTRUxFQ1QgdXJsLHRpdGxlLHZpc2l0X2NvdW50LGxhc3RfdmlzaXQgRlJPTSBoaXN0b3J5IFdIRVJFIHVybCBMSUtFID8gT1IgdGl0bGUgTElLRSA/IE9SREVSIEJZIGxhc3RfdmlzaXQgREVTQyBMSU1JVCA/OyI7CgogIGF1dG8qIHN0bXQgPSBQcmVwYXJlKHNxbCk7CiAgaWYgKCFzdG10KSByZXR1cm4gcmVzdWx0OwoKICBpZiAocXVlcnkuZW1wdHkoKSkgewogICAgc3FsaXRlM19iaW5kX2ludChzdG10LCAxLCBsaW1pdCk7CiAgfSBlbHNlIHsKICAgIGNvbnN0IHN0ZDo6c3RyaW5nIHBhdHRlcm4gPSAiJSIgKyBxdWVyeSArICIlIjsKICAgIHNxbGl0ZTNfYmluZF90ZXh0KHN0bXQsIDEsIHBhdHRlcm4uY19zdHIoKSwgLTEsIFNRTElURV9UUkFOU0lFTlQpOwogICAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMiwgcGF0dGVybi5jX3N0cigpLCAtMSwgU1FMSVRFX1RSQU5TSUVOVCk7CiAgICBzcWxpdGUzX2JpbmRfaW50KHN0bXQsIDMsIGxpbWl0KTsKICB9CgogIHdoaWxlIChzcWxpdGUzX3N0ZXAoc3RtdCkgPT0gU1FMSVRFX1JPVykgewogICAgSGlzdG9yeUVudHJ5IGU7CiAgICBhdXRvIGNvbCA9IFsmXShpbnQgaSkgewogICAgICBhdXRvKiB0ID0gcmVpbnRlcnByZXRfY2FzdDxjb25zdCBjaGFyKj4oc3FsaXRlM19jb2x1bW5fdGV4dChzdG10LCBpKSk7CiAgICAgIHJldHVybiB0ID8gc3RkOjpzdHJpbmcodCkgOiBzdGQ6OnN0cmluZ3t9OwogICAgfTsKICAgIGUudXJsICAgICAgICAgPSBjb2woMCk7CiAgICBlLnRpdGxlICAgICAgID0gY29sKDEpOwogICAgZS52aXNpdF9jb3VudCA9IHNxbGl0ZTNfY29sdW1uX2ludDY0KHN0bXQsIDIpOwogICAgZS5sYXN0X3Zpc2l0ICA9IGNvbCgzKTsKICAgIHJlc3VsdC5wdXNoX2JhY2soc3RkOjptb3ZlKGUpKTsKICB9CiAgc3FsaXRlM19maW5hbGl6ZShzdG10KTsKICByZXR1cm4gcmVzdWx0Owp9Cgp2b2lkIERhdGFiYXNlOjpDbGVhckhpc3RvcnkoKSB7CiAgaWYgKGRiXykgRXhlY3V0ZSgiREVMRVRFIEZST00gaGlzdG9yeTsiKTsKfQoKLy8g4pSA4pSAIEJvb2ttYXJrcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCmludDY0X3QgRGF0YWJhc2U6OkFkZEJvb2ttYXJrKGNvbnN0IHN0ZDo6c3RyaW5nJiB1cmwsIGNvbnN0IHN0ZDo6c3RyaW5nJiB0aXRsZSkgewogIGlmICghZGJfIHx8IHVybC5lbXB0eSgpKSByZXR1cm4gLTE7CiAgY29uc3QgY2hhciogc3FsID0KICAgICAgIklOU0VSVCBPUiBJR05PUkUgSU5UTyBib29rbWFya3ModXJsLHRpdGxlLGNyZWF0ZWRfYXQpIFZBTFVFUyg/LD8sPyk7IjsKICBhdXRvKiBzdG10ID0gUHJlcGFyZShzcWwpOwogIGlmICghc3RtdCkgcmV0dXJuIC0xOwogIHNxbGl0ZTNfYmluZF90ZXh0KHN0bXQsIDEsIHVybC5jX3N0cigpLCAgIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAyLCB0aXRsZS5jX3N0cigpLCAtMSwgU1FMSVRFX1RSQU5TSUVOVCk7CiAgY29uc3QgYXV0byBub3cgPSBJc29Ob3coKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAzLCBub3cuY19zdHIoKSwgICAtMSwgU1FMSVRFX1RSQU5TSUVOVCk7CiAgc3FsaXRlM19zdGVwKHN0bXQpOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7CiAgcmV0dXJuIHNxbGl0ZTNfbGFzdF9pbnNlcnRfcm93aWQoZGJfKTsKfQoKdm9pZCBEYXRhYmFzZTo6UmVtb3ZlQm9va21hcmsoaW50NjRfdCBpZCkgewogIGlmICghZGJfKSByZXR1cm47CiAgYXV0byogc3RtdCA9IFByZXBhcmUoIkRFTEVURSBGUk9NIGJvb2ttYXJrcyBXSEVSRSBpZD0/OyIpOwogIGlmICghc3RtdCkgcmV0dXJuOwogIHNxbGl0ZTNfYmluZF9pbnQ2NChzdG10LCAxLCBpZCk7CiAgc3FsaXRlM19zdGVwKHN0bXQpOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7Cn0KCmJvb2wgRGF0YWJhc2U6OklzQm9va21hcmtlZChjb25zdCBzdGQ6OnN0cmluZyYgdXJsKSB7CiAgcmV0dXJuIEdldEJvb2ttYXJrSWQodXJsKSAhPSAtMTsKfQoKaW50NjRfdCBEYXRhYmFzZTo6R2V0Qm9va21hcmtJZChjb25zdCBzdGQ6OnN0cmluZyYgdXJsKSB7CiAgaWYgKCFkYl8pIHJldHVybiAtMTsKICBhdXRvKiBzdG10ID0gUHJlcGFyZSgiU0VMRUNUIGlkIEZST00gYm9va21hcmtzIFdIRVJFIHVybD0/IExJTUlUIDE7Iik7CiAgaWYgKCFzdG10KSByZXR1cm4gLTE7CiAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMSwgdXJsLmNfc3RyKCksIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBpbnQ2NF90IGlkID0gLTE7CiAgaWYgKHNxbGl0ZTNfc3RlcChzdG10KSA9PSBTUUxJVEVfUk9XKSBpZCA9IHNxbGl0ZTNfY29sdW1uX2ludDY0KHN0bXQsIDApOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7CiAgcmV0dXJuIGlkOwp9CgpzdGQ6OnZlY3RvcjxCb29rbWFya0VudHJ5PiBEYXRhYmFzZTo6R2V0Qm9va21hcmtzKCkgewogIHN0ZDo6dmVjdG9yPEJvb2ttYXJrRW50cnk+IHJlc3VsdDsKICBpZiAoIWRiXykgcmV0dXJuIHJlc3VsdDsKICBhdXRvKiBzdG10ID0gUHJlcGFyZSgKICAgICAgIlNFTEVDVCBpZCx1cmwsdGl0bGUsY3JlYXRlZF9hdCBGUk9NIGJvb2ttYXJrcyBPUkRFUiBCWSBjcmVhdGVkX2F0IERFU0M7Iik7CiAgaWYgKCFzdG10KSByZXR1cm4gcmVzdWx0OwogIHdoaWxlIChzcWxpdGUzX3N0ZXAoc3RtdCkgPT0gU1FMSVRFX1JPVykgewogICAgQm9va21hcmtFbnRyeSBlOwogICAgZS5pZCAgICAgICAgID0gc3FsaXRlM19jb2x1bW5faW50NjQoc3RtdCwgMCk7CiAgICBhdXRvIGNvbCA9IFsmXShpbnQgaSkgewogICAgICBhdXRvKiB0ID0gcmVpbnRlcnByZXRfY2FzdDxjb25zdCBjaGFyKj4oc3FsaXRlM19jb2x1bW5fdGV4dChzdG10LCBpKSk7CiAgICAgIHJldHVybiB0ID8gc3RkOjpzdHJpbmcodCkgOiBzdGQ6OnN0cmluZ3t9OwogICAgfTsKICAgIGUudXJsICAgICAgICA9IGNvbCgxKTsKICAgIGUudGl0bGUgICAgICA9IGNvbCgyKTsKICAgIGUuY3JlYXRlZF9hdCA9IGNvbCgzKTsKICAgIHJlc3VsdC5wdXNoX2JhY2soc3RkOjptb3ZlKGUpKTsKICB9CiAgc3FsaXRlM19maW5hbGl6ZShzdG10KTsKICByZXR1cm4gcmVzdWx0Owp9CgovLyDilIDilIAgU2hpZWxkcyBwcmVmZXJlbmNlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCnZvaWQgRGF0YWJhc2U6OlNldFNoaWVsZHNFbmFibGVkKGNvbnN0IHN0ZDo6c3RyaW5nJiBob3N0LCBib29sIGVuYWJsZWQpIHsKICBpZiAoIWRiXykgcmV0dXJuOwogIGNvbnN0IGNoYXIqIHNxbCA9CiAgICAgICJJTlNFUlQgT1IgUkVQTEFDRSBJTlRPIHNoaWVsZHNfcHJlZnMoaG9zdCxlbmFibGVkKSBWQUxVRVMoPyw/KTsiOwogIGF1dG8qIHN0bXQgPSBQcmVwYXJlKHNxbCk7CiAgaWYgKCFzdG10KSByZXR1cm47CiAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMSwgaG9zdC5jX3N0cigpLCAtMSwgU1FMSVRFX1RSQU5TSUVOVCk7CiAgc3FsaXRlM19iaW5kX2ludChzdG10LCAyLCBlbmFibGVkID8gMSA6IDApOwogIHNxbGl0ZTNfc3RlcChzdG10KTsKICBzcWxpdGUzX2ZpbmFsaXplKHN0bXQpOwp9Cgpib29sIERhdGFiYXNlOjpHZXRTaGllbGRzRW5hYmxlZChjb25zdCBzdGQ6OnN0cmluZyYgaG9zdCwgYm9vbCBkZWZhdWx0X3ZhbCkgewogIGlmICghZGJfKSByZXR1cm4gZGVmYXVsdF92YWw7CiAgYXV0byogc3RtdCA9IFByZXBhcmUoIlNFTEVDVCBlbmFibGVkIEZST00gc2hpZWxkc19wcmVmcyBXSEVSRSBob3N0PT8gTElNSVQgMTsiKTsKICBpZiAoIXN0bXQpIHJldHVybiBkZWZhdWx0X3ZhbDsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAxLCBob3N0LmNfc3RyKCksIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBib29sIHJlc3VsdCA9IGRlZmF1bHRfdmFsOwogIGlmIChzcWxpdGUzX3N0ZXAoc3RtdCkgPT0gU1FMSVRFX1JPVykKICAgIHJlc3VsdCA9IHNxbGl0ZTNfY29sdW1uX2ludChzdG10LCAwKSAhPSAwOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7CiAgcmV0dXJuIHJlc3VsdDsKfQoKc3RkOjp1bm9yZGVyZWRfc2V0PHN0ZDo6c3RyaW5nPiBEYXRhYmFzZTo6R2V0QWxsRGlzYWJsZWRIb3N0cygpIHsKICBzdGQ6OnVub3JkZXJlZF9zZXQ8c3RkOjpzdHJpbmc+IHJlc3VsdDsKICBpZiAoIWRiXykgcmV0dXJuIHJlc3VsdDsKICBhdXRvKiBzdG10ID0gUHJlcGFyZSgiU0VMRUNUIGhvc3QgRlJPTSBzaGllbGRzX3ByZWZzIFdIRVJFIGVuYWJsZWQ9MDsiKTsKICBpZiAoIXN0bXQpIHJldHVybiByZXN1bHQ7CiAgd2hpbGUgKHNxbGl0ZTNfc3RlcChzdG10KSA9PSBTUUxJVEVfUk9XKSB7CiAgICBhdXRvKiB0ID0gcmVpbnRlcnByZXRfY2FzdDxjb25zdCBjaGFyKj4oc3FsaXRlM19jb2x1bW5fdGV4dChzdG10LCAwKSk7CiAgICBpZiAodCkgcmVzdWx0Lmluc2VydCh0KTsKICB9CiAgc3FsaXRlM19maW5hbGl6ZShzdG10KTsKICByZXR1cm4gcmVzdWx0Owp9CgovLyDilIDilIAgRG93bmxvYWRzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKaW50NjRfdCBEYXRhYmFzZTo6QWRkRG93bmxvYWQoY29uc3Qgc3RkOjpzdHJpbmcmIHVybCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHN0ZDo6c3RyaW5nJiBmaWxlbmFtZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHN0ZDo6c3RyaW5nJiBzYXZlX3BhdGgsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpbnQ2NF90IHRvdGFsX2J5dGVzKSB7CiAgaWYgKCFkYl8pIHJldHVybiAtMTsKICBjb25zdCBjaGFyKiBzcWwgPQogICAgICAiSU5TRVJUIElOVE8gZG93bmxvYWRzKHVybCxmaWxlbmFtZSxzYXZlX3BhdGgsdG90YWxfYnl0ZXMsc3RhcnRlZF9hdCkiCiAgICAgICIgVkFMVUVTKD8sPyw/LD8sPyk7IjsKICBhdXRvKiBzdG10ID0gUHJlcGFyZShzcWwpOwogIGlmICghc3RtdCkgcmV0dXJuIC0xOwogIGNvbnN0IGF1dG8gbm93ID0gSXNvTm93KCk7CiAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMSwgdXJsLmNfc3RyKCksICAgICAgIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAyLCBmaWxlbmFtZS5jX3N0cigpLCAgIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAzLCBzYXZlX3BhdGguY19zdHIoKSwgIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfaW50NjQoc3RtdCwgNCwgdG90YWxfYnl0ZXMpOwogIHNxbGl0ZTNfYmluZF90ZXh0KHN0bXQsIDUsIG5vdy5jX3N0cigpLCAgICAgICAgLTEsIFNRTElURV9UUkFOU0lFTlQpOwogIHNxbGl0ZTNfc3RlcChzdG10KTsKICBzcWxpdGUzX2ZpbmFsaXplKHN0bXQpOwogIHJldHVybiBzcWxpdGUzX2xhc3RfaW5zZXJ0X3Jvd2lkKGRiXyk7Cn0KCnZvaWQgRGF0YWJhc2U6OlVwZGF0ZURvd25sb2FkKGludDY0X3QgaWQsIGludDY0X3QgcmVjZWl2ZWQsIGludDY0X3QgdG90YWwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBzdGQ6OnN0cmluZyYgc3RhdHVzKSB7CiAgaWYgKCFkYl8pIHJldHVybjsKICBhdXRvKiBzdG10ID0gUHJlcGFyZSgKICAgICAgIlVQREFURSBkb3dubG9hZHMgU0VUIHJlY2VpdmVkX2J5dGVzPT8sdG90YWxfYnl0ZXM9PyxzdGF0dXM9PyBXSEVSRSBpZD0/OyIpOwogIGlmICghc3RtdCkgcmV0dXJuOwogIHNxbGl0ZTNfYmluZF9pbnQ2NChzdG10LCAxLCByZWNlaXZlZCk7CiAgc3FsaXRlM19iaW5kX2ludDY0KHN0bXQsIDIsIHRvdGFsKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAzLCBzdGF0dXMuY19zdHIoKSwgLTEsIFNRTElURV9UUkFOU0lFTlQpOwogIHNxbGl0ZTNfYmluZF9pbnQ2NChzdG10LCA0LCBpZCk7CiAgc3FsaXRlM19zdGVwKHN0bXQpOwogIHNxbGl0ZTNfZmluYWxpemUoc3RtdCk7Cn0KCnZvaWQgRGF0YWJhc2U6OkNvbXBsZXRlRG93bmxvYWQoaW50NjRfdCBpZCwgY29uc3Qgc3RkOjpzdHJpbmcmIHNhdmVfcGF0aCkgewogIGlmICghZGJfKSByZXR1cm47CiAgY29uc3QgYXV0byBub3cgPSBJc29Ob3coKTsKICBhdXRvKiBzdG10ID0gUHJlcGFyZSgKICAgICAgIlVQREFURSBkb3dubG9hZHMgU0VUIHN0YXR1cz0nY29tcGxldGUnLHNhdmVfcGF0aD0/LGNvbXBsZXRlZF9hdD0/IFdIRVJFIGlkPT87Iik7CiAgaWYgKCFzdG10KSByZXR1cm47CiAgc3FsaXRlM19iaW5kX3RleHQoc3RtdCwgMSwgc2F2ZV9wYXRoLmNfc3RyKCksIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfdGV4dChzdG10LCAyLCBub3cuY19zdHIoKSwgICAgICAgIC0xLCBTUUxJVEVfVFJBTlNJRU5UKTsKICBzcWxpdGUzX2JpbmRfaW50NjQoc3RtdCwgMywgaWQpOwogIHNxbGl0ZTNfc3RlcChzdG10KTsKICBzcWxpdGUzX2ZpbmFsaXplKHN0bXQpOwp9CgpzdGQ6OnZlY3RvcjxEb3dubG9hZFJlY29yZD4gRGF0YWJhc2U6OkdldERvd25sb2FkcyhpbnQgbGltaXQpIHsKICBzdGQ6OnZlY3RvcjxEb3dubG9hZFJlY29yZD4gcmVzdWx0OwogIGlmICghZGJfKSByZXR1cm4gcmVzdWx0OwogIGF1dG8qIHN0bXQgPSBQcmVwYXJlKAogICAgICAiU0VMRUNUIGlkLHVybCxmaWxlbmFtZSxzYXZlX3BhdGgsdG90YWxfYnl0ZXMscmVjZWl2ZWRfYnl0ZXMsIgogICAgICAic3RhdHVzLHN0YXJ0ZWRfYXQsY29tcGxldGVkX2F0IEZST00gZG93bmxvYWRzIE9SREVSIEJZIHN0YXJ0ZWRfYXQgREVTQyBMSU1JVCA/OyIpOwogIGlmICghc3RtdCkgcmV0dXJuIHJlc3VsdDsKICBzcWxpdGUzX2JpbmRfaW50KHN0bXQsIDEsIGxpbWl0KTsKICB3aGlsZSAoc3FsaXRlM19zdGVwKHN0bXQpID09IFNRTElURV9ST1cpIHsKICAgIERvd25sb2FkUmVjb3JkIHI7CiAgICByLmlkICAgICAgICAgICAgID0gc3FsaXRlM19jb2x1bW5faW50NjQoc3RtdCwgMCk7CiAgICBhdXRvIGNvbCA9IFsmXShpbnQgaSkgewogICAgICBhdXRvKiB0ID0gcmVpbnRlcnByZXRfY2FzdDxjb25zdCBjaGFyKj4oc3FsaXRlM19jb2x1bW5fdGV4dChzdG10LCBpKSk7CiAgICAgIHJldHVybiB0ID8gc3RkOjpzdHJpbmcodCkgOiBzdGQ6OnN0cmluZ3t9OwogICAgfTsKICAgIHIudXJsICAgICAgICAgICAgPSBjb2woMSk7CiAgICByLmZpbGVuYW1lICAgICAgID0gY29sKDIpOwogICAgci5zYXZlX3BhdGggICAgICA9IGNvbCgzKTsKICAgIHIudG90YWxfYnl0ZXMgICAgPSBzcWxpdGUzX2NvbHVtbl9pbnQ2NChzdG10LCA0KTsKICAgIHIucmVjZWl2ZWRfYnl0ZXMgPSBzcWxpdGUzX2NvbHVtbl9pbnQ2NChzdG10LCA1KTsKICAgIHIuc3RhdHVzICAgICAgICAgPSBjb2woNik7CiAgICByLnN0YXJ0ZWRfYXQgICAgID0gY29sKDcpOwogICAgci5jb21wbGV0ZWRfYXQgICA9IGNvbCg4KTsKICAgIHJlc3VsdC5wdXNoX2JhY2soc3RkOjptb3ZlKHIpKTsKICB9CiAgc3FsaXRlM19maW5hbGl6ZShzdG10KTsKICByZXR1cm4gcmVzdWx0Owp9Cgp2b2lkIERhdGFiYXNlOjpDbGVhckNvbXBsZXRlZERvd25sb2FkcygpIHsKICBpZiAoZGJfKQogICAgRXhlY3V0ZSgiREVMRVRFIEZST00gZG93bmxvYWRzIFdIRVJFIHN0YXR1cyBJTiAoJ2NvbXBsZXRlJywnY2FuY2VsbGVkJywnZXJyb3InKTsiKTsKfQoKfSAgLy8gbmFtZXNwYWNlIGtpbmdmbgo=
+#include "core/database.h"
+#include <sqlite3.h>
+#include <chrono>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
+#include <stdexcept>
+
+namespace kingfn {
+namespace {
+std::string IsoNow() {
+  auto now = std::chrono::system_clock::now();
+  auto t   = std::chrono::system_clock::to_time_t(now);
+  std::tm tm_buf{};
+#ifdef _WIN32
+  gmtime_s(&tm_buf, &t);
+#else
+  gmtime_r(&t, &tm_buf);
+#endif
+  std::ostringstream oss;
+  oss << std::put_time(&tm_buf, "%Y-%m-%dT%H:%M:%SZ");
+  return oss.str();
+}
+}  // namespace
+
+Database::Database(const std::string& path) {
+  if (sqlite3_open(path.c_str(), &db_) != SQLITE_OK) {
+    db_ = nullptr;
+    return;
+  }
+  // Performance pragmas.
+  Execute("PRAGMA journal_mode=WAL;");
+  Execute("PRAGMA synchronous=NORMAL;");
+  Execute("PRAGMA foreign_keys=ON;");
+  CreateTables();
+}
+
+Database::~Database() {
+  if (db_) sqlite3_close(db_);
+}
+
+void Database::Execute(const char* sql) {
+  char* err = nullptr;
+  sqlite3_exec(db_, sql, nullptr, nullptr, &err);
+  if (err) sqlite3_free(err);
+}
+
+sqlite3_stmt* Database::Prepare(const char* sql) {
+  sqlite3_stmt* stmt = nullptr;
+  sqlite3_prepare_v2(db_, sql, -1, &stmt, nullptr);
+  return stmt;
+}
+
+void Database::CreateTables() {
+  Execute(R"(
+    CREATE TABLE IF NOT EXISTS history (
+      id         INTEGER PRIMARY KEY AUTOINCREMENT,
+      url        TEXT NOT NULL,
+      title      TEXT NOT NULL DEFAULT '',
+      visit_count INTEGER NOT NULL DEFAULT 1,
+      last_visit  TEXT NOT NULL
+    );
+    CREATE UNIQUE INDEX IF NOT EXISTS history_url ON history(url);
+  )");
+
+  Execute(R"(
+    CREATE TABLE IF NOT EXISTS bookmarks (
+      id         INTEGER PRIMARY KEY AUTOINCREMENT,
+      url        TEXT NOT NULL UNIQUE,
+      title      TEXT NOT NULL DEFAULT '',
+      created_at TEXT NOT NULL
+    );
+  )");
+
+  Execute(R"(
+    CREATE TABLE IF NOT EXISTS shields_prefs (
+      host       TEXT PRIMARY KEY,
+      enabled    INTEGER NOT NULL DEFAULT 1
+    );
+  )");
+
+  Execute(R"(
+    CREATE TABLE IF NOT EXISTS downloads (
+      id             INTEGER PRIMARY KEY AUTOINCREMENT,
+      url            TEXT NOT NULL,
+      filename       TEXT NOT NULL,
+      save_path      TEXT NOT NULL DEFAULT '',
+      total_bytes    INTEGER NOT NULL DEFAULT 0,
+      received_bytes INTEGER NOT NULL DEFAULT 0,
+      status         TEXT NOT NULL DEFAULT 'downloading',
+      started_at     TEXT NOT NULL,
+      completed_at   TEXT NOT NULL DEFAULT ''
+    );
+  )");
+}
+
+// ── History ──────────────────────────────────────────────────────────────────
+
+void Database::AddHistory(const std::string& url, const std::string& title) {
+  if (!db_ || url.empty()) return;
+  const char* sql = R"(
+    INSERT INTO history(url, title, visit_count, last_visit)
+    VALUES(?, ?, 1, ?)
+    ON CONFLICT(url) DO UPDATE SET
+      title       = excluded.title,
+      visit_count = visit_count + 1,
+      last_visit  = excluded.last_visit;
+  )";
+  auto* stmt = Prepare(sql);
+  if (!stmt) return;
+  const auto now = IsoNow();
+  sqlite3_bind_text(stmt, 1, url.c_str(),   -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 2, title.c_str(), -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 3, now.c_str(),   -1, SQLITE_TRANSIENT);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+}
+
+std::vector<HistoryEntry> Database::GetHistory(int limit,
+                                               const std::string& query) {
+  std::vector<HistoryEntry> result;
+  if (!db_) return result;
+
+  const char* sql = query.empty()
+      ? "SELECT url,title,visit_count,last_visit FROM history ORDER BY last_visit DESC LIMIT ?;"
+      : "SELECT url,title,visit_count,last_visit FROM history WHERE url LIKE ? OR title LIKE ? ORDER BY last_visit DESC LIMIT ?;";
+
+  auto* stmt = Prepare(sql);
+  if (!stmt) return result;
+
+  if (query.empty()) {
+    sqlite3_bind_int(stmt, 1, limit);
+  } else {
+    const std::string pattern = "%" + query + "%";
+    sqlite3_bind_text(stmt, 1, pattern.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, pattern.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_int(stmt, 3, limit);
+  }
+
+  while (sqlite3_step(stmt) == SQLITE_ROW) {
+    HistoryEntry e;
+    auto col = [&](int i) {
+      auto* t = reinterpret_cast<const char*>(sqlite3_column_text(stmt, i));
+      return t ? std::string(t) : std::string{};
+    };
+    e.url         = col(0);
+    e.title       = col(1);
+    e.visit_count = sqlite3_column_int64(stmt, 2);
+    e.last_visit  = col(3);
+    result.push_back(std::move(e));
+  }
+  sqlite3_finalize(stmt);
+  return result;
+}
+
+void Database::ClearHistory() {
+  if (db_) Execute("DELETE FROM history;");
+}
+
+// ── Bookmarks ────────────────────────────────────────────────────────────────
+
+int64_t Database::AddBookmark(const std::string& url, const std::string& title) {
+  if (!db_ || url.empty()) return -1;
+  const char* sql =
+      "INSERT OR IGNORE INTO bookmarks(url,title,created_at) VALUES(?,?,?);";
+  auto* stmt = Prepare(sql);
+  if (!stmt) return -1;
+  sqlite3_bind_text(stmt, 1, url.c_str(),   -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 2, title.c_str(), -1, SQLITE_TRANSIENT);
+  const auto now = IsoNow();
+  sqlite3_bind_text(stmt, 3, now.c_str(),   -1, SQLITE_TRANSIENT);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+  return sqlite3_last_insert_rowid(db_);
+}
+
+void Database::RemoveBookmark(int64_t id) {
+  if (!db_) return;
+  auto* stmt = Prepare("DELETE FROM bookmarks WHERE id=?;");
+  if (!stmt) return;
+  sqlite3_bind_int64(stmt, 1, id);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+}
+
+bool Database::IsBookmarked(const std::string& url) {
+  return GetBookmarkId(url) != -1;
+}
+
+int64_t Database::GetBookmarkId(const std::string& url) {
+  if (!db_) return -1;
+  auto* stmt = Prepare("SELECT id FROM bookmarks WHERE url=? LIMIT 1;");
+  if (!stmt) return -1;
+  sqlite3_bind_text(stmt, 1, url.c_str(), -1, SQLITE_TRANSIENT);
+  int64_t id = -1;
+  if (sqlite3_step(stmt) == SQLITE_ROW) id = sqlite3_column_int64(stmt, 0);
+  sqlite3_finalize(stmt);
+  return id;
+}
+
+std::vector<BookmarkEntry> Database::GetBookmarks() {
+  std::vector<BookmarkEntry> result;
+  if (!db_) return result;
+  auto* stmt = Prepare(
+      "SELECT id,url,title,created_at FROM bookmarks ORDER BY created_at DESC;");
+  if (!stmt) return result;
+  while (sqlite3_step(stmt) == SQLITE_ROW) {
+    BookmarkEntry e;
+    e.id         = sqlite3_column_int64(stmt, 0);
+    auto col = [&](int i) {
+      auto* t = reinterpret_cast<const char*>(sqlite3_column_text(stmt, i));
+      return t ? std::string(t) : std::string{};
+    };
+    e.url        = col(1);
+    e.title      = col(2);
+    e.created_at = col(3);
+    result.push_back(std::move(e));
+  }
+  sqlite3_finalize(stmt);
+  return result;
+}
+
+// ── Shields preferences ──────────────────────────────────────────────────────
+
+void Database::SetShieldsEnabled(const std::string& host, bool enabled) {
+  if (!db_) return;
+  const char* sql =
+      "INSERT OR REPLACE INTO shields_prefs(host,enabled) VALUES(?,?);";
+  auto* stmt = Prepare(sql);
+  if (!stmt) return;
+  sqlite3_bind_text(stmt, 1, host.c_str(), -1, SQLITE_TRANSIENT);
+  sqlite3_bind_int(stmt, 2, enabled ? 1 : 0);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+}
+
+bool Database::GetShieldsEnabled(const std::string& host, bool default_val) {
+  if (!db_) return default_val;
+  auto* stmt = Prepare("SELECT enabled FROM shields_prefs WHERE host=? LIMIT 1;");
+  if (!stmt) return default_val;
+  sqlite3_bind_text(stmt, 1, host.c_str(), -1, SQLITE_TRANSIENT);
+  bool result = default_val;
+  if (sqlite3_step(stmt) == SQLITE_ROW)
+    result = sqlite3_column_int(stmt, 0) != 0;
+  sqlite3_finalize(stmt);
+  return result;
+}
+
+std::unordered_set<std::string> Database::GetAllDisabledHosts() {
+  std::unordered_set<std::string> result;
+  if (!db_) return result;
+  auto* stmt = Prepare("SELECT host FROM shields_prefs WHERE enabled=0;");
+  if (!stmt) return result;
+  while (sqlite3_step(stmt) == SQLITE_ROW) {
+    auto* t = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+    if (t) result.insert(t);
+  }
+  sqlite3_finalize(stmt);
+  return result;
+}
+
+// ── Downloads ────────────────────────────────────────────────────────────────
+
+int64_t Database::AddDownload(const std::string& url,
+                               const std::string& filename,
+                               const std::string& save_path,
+                               int64_t total_bytes) {
+  if (!db_) return -1;
+  const char* sql =
+      "INSERT INTO downloads(url,filename,save_path,total_bytes,started_at)"
+      " VALUES(?,?,?,?,?);";
+  auto* stmt = Prepare(sql);
+  if (!stmt) return -1;
+  const auto now = IsoNow();
+  sqlite3_bind_text(stmt, 1, url.c_str(),       -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 2, filename.c_str(),   -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 3, save_path.c_str(),  -1, SQLITE_TRANSIENT);
+  sqlite3_bind_int64(stmt, 4, total_bytes);
+  sqlite3_bind_text(stmt, 5, now.c_str(),        -1, SQLITE_TRANSIENT);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+  return sqlite3_last_insert_rowid(db_);
+}
+
+void Database::UpdateDownload(int64_t id, int64_t received, int64_t total,
+                               const std::string& status) {
+  if (!db_) return;
+  auto* stmt = Prepare(
+      "UPDATE downloads SET received_bytes=?,total_bytes=?,status=? WHERE id=?;");
+  if (!stmt) return;
+  sqlite3_bind_int64(stmt, 1, received);
+  sqlite3_bind_int64(stmt, 2, total);
+  sqlite3_bind_text(stmt, 3, status.c_str(), -1, SQLITE_TRANSIENT);
+  sqlite3_bind_int64(stmt, 4, id);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+}
+
+void Database::CompleteDownload(int64_t id, const std::string& save_path) {
+  if (!db_) return;
+  const auto now = IsoNow();
+  auto* stmt = Prepare(
+      "UPDATE downloads SET status='complete',save_path=?,completed_at=? WHERE id=?;");
+  if (!stmt) return;
+  sqlite3_bind_text(stmt, 1, save_path.c_str(), -1, SQLITE_TRANSIENT);
+  sqlite3_bind_text(stmt, 2, now.c_str(),        -1, SQLITE_TRANSIENT);
+  sqlite3_bind_int64(stmt, 3, id);
+  sqlite3_step(stmt);
+  sqlite3_finalize(stmt);
+}
+
+std::vector<DownloadRecord> Database::GetDownloads(int limit) {
+  std::vector<DownloadRecord> result;
+  if (!db_) return result;
+  auto* stmt = Prepare(
+      "SELECT id,url,filename,save_path,total_bytes,received_bytes,"
+      "status,started_at,completed_at FROM downloads ORDER BY started_at DESC LIMIT ?;");
+  if (!stmt) return result;
+  sqlite3_bind_int(stmt, 1, limit);
+  while (sqlite3_step(stmt) == SQLITE_ROW) {
+    DownloadRecord r;
+    r.id             = sqlite3_column_int64(stmt, 0);
+    auto col = [&](int i) {
+      auto* t = reinterpret_cast<const char*>(sqlite3_column_text(stmt, i));
+      return t ? std::string(t) : std::string{};
+    };
+    r.url            = col(1);
+    r.filename       = col(2);
+    r.save_path      = col(3);
+    r.total_bytes    = sqlite3_column_int64(stmt, 4);
+    r.received_bytes = sqlite3_column_int64(stmt, 5);
+    r.status         = col(6);
+    r.started_at     = col(7);
+    r.completed_at   = col(8);
+    result.push_back(std::move(r));
+  }
+  sqlite3_finalize(stmt);
+  return result;
+}
+
+void Database::ClearCompletedDownloads() {
+  if (db_)
+    Execute("DELETE FROM downloads WHERE status IN ('complete','cancelled','error');");
+}
+
+}  // namespace kingfn

@@ -1,1 +1,103 @@
-I2luY2x1ZGUgInNyYy9icm93c2VyL2Rvd25sb2FkX2hhbmRsZXIuaCIKCiNpbmNsdWRlIDxmaWxlc3lzdGVtPgojaW5jbHVkZSA8d2luZG93cy5oPgojaW5jbHVkZSA8c2hsb2JqLmg+CgojaW5jbHVkZSAiaW5jbHVkZS9jZWZfYnJvd3Nlci5oIgojaW5jbHVkZSAiaW5jbHVkZS93cmFwcGVyL2NlZl9oZWxwZXJzLmgiCgpuYW1lc3BhY2Uga2luZ2ZuIHsKCkRvd25sb2FkSGFuZGxlcjo6RG93bmxvYWRIYW5kbGVyKERhdGFiYXNlKiBkYiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRG93bmxvYWRCYWRnZUNhbGxiYWNrIG9uX2JhZGdlX2NoYW5nZSkKICAgIDogZGJfKGRiKSwgb25fYmFkZ2VfY2hhbmdlXyhzdGQ6Om1vdmUob25fYmFkZ2VfY2hhbmdlKSkge30KCmJvb2wgRG93bmxvYWRIYW5kbGVyOjpDYW5Eb3dubG9hZChDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4gLypicm93c2VyKi8sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBDZWZTdHJpbmcmIC8qdXJsKi8sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBDZWZTdHJpbmcmIC8qcmVxdWVzdF9tZXRob2QqLykgewogIHJldHVybiB0cnVlOwp9CgpzdGQ6OnN0cmluZyBEb3dubG9hZEhhbmRsZXI6OkRvd25sb2Fkc0ZvbGRlcigpIHsKICB3Y2hhcl90IHBhdGhbTUFYX1BBVEhde307CiAgaWYgKFNVQ0NFRURFRChTSEdldEZvbGRlclBhdGhXKG51bGxwdHIsIENTSURMX01ZRE9DVU1FTlRTLCBudWxscHRyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU0hHRlBfVFlQRV9DVVJSRU5ULCBwYXRoKSkpIHsKICAgIGF1dG8gYmFzZSA9IHN0ZDo6ZmlsZXN5c3RlbTo6cGF0aChwYXRoKS5wYXJlbnRfcGF0aCgpIC8gTCJEb3dubG9hZHMiOwogICAgc3RkOjpmaWxlc3lzdGVtOjpjcmVhdGVfZGlyZWN0b3JpZXMoYmFzZSk7CiAgICByZXR1cm4gYmFzZS5zdHJpbmcoKTsKICB9CiAgcmV0dXJuICIuIjsKfQoKdm9pZCBEb3dubG9hZEhhbmRsZXI6Ok9uQmVmb3JlRG93bmxvYWQoCiAgICBDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4gLypicm93c2VyKi8sCiAgICBDZWZSZWZQdHI8Q2VmRG93bmxvYWRJdGVtPiBpdGVtLAogICAgY29uc3QgQ2VmU3RyaW5nJiBzdWdnZXN0ZWRfbmFtZSwKICAgIENlZlJlZlB0cjxDZWZCZWZvcmVEb3dubG9hZENhbGxiYWNrPiBjYWxsYmFjaykgewogIENFRl9SRVFVSVJFX1VJX1RIUkVBRCgpOwoKICBjb25zdCBzdGQ6OnN0cmluZyBmb2xkZXIgPSBEb3dubG9hZHNGb2xkZXIoKTsKICBjb25zdCBzdGQ6OnN0cmluZyBmaWxlbmFtZSA9IHN1Z2dlc3RlZF9uYW1lLlRvU3RyaW5nKCk7CiAgY29uc3Qgc3RkOjpzdHJpbmcgc2F2ZV9wYXRoID0KICAgICAgKHN0ZDo6ZmlsZXN5c3RlbTo6cGF0aChmb2xkZXIpIC8gZmlsZW5hbWUpLnN0cmluZygpOwoKICAvLyBSZWNvcmQgaW4gREIuCiAgaW50NjRfdCBkYl9pZCA9IC0xOwogIGlmIChkYl8gJiYgZGJfLT5Jc09wZW4oKSkgewogICAgZGJfaWQgPSBkYl8tPkFkZERvd25sb2FkKGl0ZW0tPkdldFVSTCgpLlRvU3RyaW5nKCksIGZpbGVuYW1lLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNhdmVfcGF0aCwgaXRlbS0+R2V0VG90YWxCeXRlcygpKTsKICB9CgogIHsKICAgIHN0ZDo6bG9ja19ndWFyZDxzdGQ6Om11dGV4PiBnKG11dGV4Xyk7CiAgICBjZWZfaWRfdG9fZGJfaWRfW2l0ZW0tPkdldElkKCldID0gZGJfaWQ7CiAgICArK2FjdGl2ZV9jb3VudF87CiAgfQoKICBpZiAob25fYmFkZ2VfY2hhbmdlXykgb25fYmFkZ2VfY2hhbmdlXyhBY3RpdmVEb3dubG9hZENvdW50KCkpOwoKICAvLyBTaG93IE9TIHNhdmUtZmlsZSBkaWFsb2cuCiAgY2FsbGJhY2stPkNvbnRpbnVlKHNhdmVfcGF0aCwgLypzaG93X2RpYWxvZz0qL3RydWUpOwp9Cgp2b2lkIERvd25sb2FkSGFuZGxlcjo6T25Eb3dubG9hZFVwZGF0ZWQoCiAgICBDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4gLypicm93c2VyKi8sCiAgICBDZWZSZWZQdHI8Q2VmRG93bmxvYWRJdGVtPiBpdGVtLAogICAgQ2VmUmVmUHRyPENlZkRvd25sb2FkSXRlbUNhbGxiYWNrPiAvKmNhbGxiYWNrKi8pIHsKICBDRUZfUkVRVUlSRV9VSV9USFJFQUQoKTsKCiAgaW50NjRfdCBkYl9pZCA9IC0xOwogIHsKICAgIHN0ZDo6bG9ja19ndWFyZDxzdGQ6Om11dGV4PiBnKG11dGV4Xyk7CiAgICBhdXRvIGl0ID0gY2VmX2lkX3RvX2RiX2lkXy5maW5kKGl0ZW0tPkdldElkKCkpOwogICAgaWYgKGl0ICE9IGNlZl9pZF90b19kYl9pZF8uZW5kKCkpIGRiX2lkID0gaXQtPnNlY29uZDsKICB9CgogIHN0ZDo6c3RyaW5nIHN0YXR1cyA9ICJkb3dubG9hZGluZyI7CiAgaWYgKGl0ZW0tPklzQ2FuY2VsbGVkKCkpICBzdGF0dXMgPSAiY2FuY2VsbGVkIjsKICBlbHNlIGlmIChpdGVtLT5Jc0NvbXBsZXRlKCkpIHN0YXR1cyA9ICJjb21wbGV0ZSI7CgogIGlmIChkYl8gJiYgZGJfLT5Jc09wZW4oKSAmJiBkYl9pZCAhPSAtMSkgewogICAgaWYgKGl0ZW0tPklzQ29tcGxldGUoKSkgewogICAgICBkYl8tPkNvbXBsZXRlRG93bmxvYWQoZGJfaWQsIGl0ZW0tPkdldEZ1bGxQYXRoKCkuVG9TdHJpbmcoKSk7CiAgICB9IGVsc2UgewogICAgICBkYl8tPlVwZGF0ZURvd25sb2FkKGRiX2lkLCBpdGVtLT5HZXRSZWNlaXZlZEJ5dGVzKCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgaXRlbS0+R2V0VG90YWxCeXRlcygpLCBzdGF0dXMpOwogICAgfQogIH0KCiAgaWYgKGl0ZW0tPklzQ29tcGxldGUoKSB8fCBpdGVtLT5Jc0NhbmNlbGxlZCgpKSB7CiAgICBzdGQ6OmxvY2tfZ3VhcmQ8c3RkOjptdXRleD4gZyhtdXRleF8pOwogICAgY2VmX2lkX3RvX2RiX2lkXy5lcmFzZShpdGVtLT5HZXRJZCgpKTsKICAgIGlmIChhY3RpdmVfY291bnRfID4gMCkgLS1hY3RpdmVfY291bnRfOwogICAgaWYgKG9uX2JhZGdlX2NoYW5nZV8pIG9uX2JhZGdlX2NoYW5nZV8oYWN0aXZlX2NvdW50Xyk7CiAgfQp9CgppbnQgRG93bmxvYWRIYW5kbGVyOjpBY3RpdmVEb3dubG9hZENvdW50KCkgY29uc3QgewogIHN0ZDo6bG9ja19ndWFyZDxzdGQ6Om11dGV4PiBnKG11dGV4Xyk7CiAgcmV0dXJuIGFjdGl2ZV9jb3VudF87Cn0KCn0gIC8vIG5hbWVzcGFjZSBraW5nZm4K
+#include "src/browser/download_handler.h"
+
+#include <filesystem>
+#include <windows.h>
+#include <shlobj.h>
+
+#include "include/cef_browser.h"
+#include "include/wrapper/cef_helpers.h"
+
+namespace kingfn {
+
+DownloadHandler::DownloadHandler(Database* db,
+                                 DownloadBadgeCallback on_badge_change)
+    : db_(db), on_badge_change_(std::move(on_badge_change)) {}
+
+bool DownloadHandler::CanDownload(CefRefPtr<CefBrowser> /*browser*/,
+                                  const CefString& /*url*/,
+                                  const CefString& /*request_method*/) {
+  return true;
+}
+
+std::string DownloadHandler::DownloadsFolder() {
+  wchar_t path[MAX_PATH]{};
+  if (SUCCEEDED(SHGetFolderPathW(nullptr, CSIDL_MYDOCUMENTS, nullptr,
+                                  SHGFP_TYPE_CURRENT, path))) {
+    auto base = std::filesystem::path(path).parent_path() / L"Downloads";
+    std::filesystem::create_directories(base);
+    return base.string();
+  }
+  return ".";
+}
+
+void DownloadHandler::OnBeforeDownload(
+    CefRefPtr<CefBrowser> /*browser*/,
+    CefRefPtr<CefDownloadItem> item,
+    const CefString& suggested_name,
+    CefRefPtr<CefBeforeDownloadCallback> callback) {
+  CEF_REQUIRE_UI_THREAD();
+
+  const std::string folder = DownloadsFolder();
+  const std::string filename = suggested_name.ToString();
+  const std::string save_path =
+      (std::filesystem::path(folder) / filename).string();
+
+  // Record in DB.
+  int64_t db_id = -1;
+  if (db_ && db_->IsOpen()) {
+    db_id = db_->AddDownload(item->GetURL().ToString(), filename,
+                             save_path, item->GetTotalBytes());
+  }
+
+  {
+    std::lock_guard<std::mutex> g(mutex_);
+    cef_id_to_db_id_[item->GetId()] = db_id;
+    ++active_count_;
+  }
+
+  if (on_badge_change_) on_badge_change_(ActiveDownloadCount());
+
+  // Show OS save-file dialog.
+  callback->Continue(save_path, /*show_dialog=*/true);
+}
+
+void DownloadHandler::OnDownloadUpdated(
+    CefRefPtr<CefBrowser> /*browser*/,
+    CefRefPtr<CefDownloadItem> item,
+    CefRefPtr<CefDownloadItemCallback> /*callback*/) {
+  CEF_REQUIRE_UI_THREAD();
+
+  int64_t db_id = -1;
+  {
+    std::lock_guard<std::mutex> g(mutex_);
+    auto it = cef_id_to_db_id_.find(item->GetId());
+    if (it != cef_id_to_db_id_.end()) db_id = it->second;
+  }
+
+  std::string status = "downloading";
+  if (item->IsCancelled())  status = "cancelled";
+  else if (item->IsComplete()) status = "complete";
+
+  if (db_ && db_->IsOpen() && db_id != -1) {
+    if (item->IsComplete()) {
+      db_->CompleteDownload(db_id, item->GetFullPath().ToString());
+    } else {
+      db_->UpdateDownload(db_id, item->GetReceivedBytes(),
+                          item->GetTotalBytes(), status);
+    }
+  }
+
+  if (item->IsComplete() || item->IsCancelled()) {
+    std::lock_guard<std::mutex> g(mutex_);
+    cef_id_to_db_id_.erase(item->GetId());
+    if (active_count_ > 0) --active_count_;
+    if (on_badge_change_) on_badge_change_(active_count_);
+  }
+}
+
+int DownloadHandler::ActiveDownloadCount() const {
+  std::lock_guard<std::mutex> g(mutex_);
+  return active_count_;
+}
+
+}  // namespace kingfn
