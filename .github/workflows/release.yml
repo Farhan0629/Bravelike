@@ -1,1 +1,203 @@
-bmFtZTog8J+Pl++4jyBCdWlsZCAmIFJlbGVhc2UgS0lOR0ZOIEJyb3dzZXIKCm9uOgogICMg4pSA4pSAIE1hbnVhbCB0cmlnZ2VyIGZyb20gR2l0SHViIFVJIChBY3Rpb25zIHRhYiDihpIgUnVuIHdvcmtmbG93KSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICB3b3JrZmxvd19kaXNwYXRjaDoKICAgIGlucHV0czoKICAgICAgdmVyc2lvbjoKICAgICAgICBkZXNjcmlwdGlvbjogJ1JlbGVhc2UgdmVyc2lvbiAoZS5nLiAwLjMuMCkg4oCUIHVzZWQgZm9yIHRhZyArIGluc3RhbGxlciBuYW1lJwogICAgICAgIHJlcXVpcmVkOiB0cnVlCiAgICAgICAgZGVmYXVsdDogJzAuMy4wJwogICAgICBkcmFmdDoKICAgICAgICBkZXNjcmlwdGlvbjogJ1B1Ymxpc2ggYXMgZHJhZnQgcmVsZWFzZSAocmV2aWV3IGJlZm9yZSBnb2luZyBsaXZlKScKICAgICAgICB0eXBlOiBib29sZWFuCiAgICAgICAgZGVmYXVsdDogZmFsc2UKCiAgIyDilIDilIAgQXV0b21hdGljIHRyaWdnZXIgd2hlbiB5b3UgcHVzaCBhIHZlcnNpb24gdGFnOiBnaXQgdGFnIHYwLjMuMSAmJiBnaXQgcHVzaCAtLXRhZ3MKICBwdXNoOgogICAgdGFnczoKICAgICAgLSAndlswLTldKi5bMC05XSouWzAtOV0qJwoKcGVybWlzc2lvbnM6CiAgY29udGVudHM6IHdyaXRlICAgIyBuZWVkZWQgdG8gY3JlYXRlIHJlbGVhc2VzIGFuZCB1cGxvYWQgYXNzZXRzCgplbnY6CiAgQ0VGX1ZFUlNJT046ICIxNTIuMC43K2c4M2ZmY2JhK2Nocm9taXVtLTE1Mi4wLjc5NzcuODMiCiAgQlVJTERfRElSOiBidWlsZAoKam9iczoKICBidWlsZC1hbmQtcmVsZWFzZToKICAgIG5hbWU6IEJ1aWxkIG9uIFdpbmRvd3MgKyBQYWNrYWdlICsgUmVsZWFzZQogICAgcnVucy1vbjogd2luZG93cy1sYXRlc3QKICAgIHRpbWVvdXQtbWludXRlczogMTUwICAgIyBDRUYgZG93bmxvYWQgKyBidWlsZCBjYW4gdGFrZSB+NjAtOTAgbWluIG9uIGZpcnN0IHJ1bgoKICAgIHN0ZXBzOgogICAgICAjIOKUgOKUgCAxLiBDaGVja291dCDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBDaGVja291dCByZXBvc2l0b3J5CiAgICAgICAgdXNlczogYWN0aW9ucy9jaGVja291dEB2NAoKICAgICAgIyDilIDilIAgMi4gUmVzb2x2ZSB2ZXJzaW9uICYgdGFnIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAtIG5hbWU6IFJlc29sdmUgdmVyc2lvbgogICAgICAgIGlkOiB2ZXIKICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgaWYgW1sgIiRHSVRIVUJfRVZFTlRfTkFNRSIgPT0gInB1c2giIF1dOyB0aGVuCiAgICAgICAgICAgIFRBRz0iJHtHSVRIVUJfUkVGX05BTUV9IgogICAgICAgICAgICBWRVI9IiR7VEFHI3Z9IgogICAgICAgICAgZWxzZQogICAgICAgICAgICBWRVI9IiR7eyBnaXRodWIuZXZlbnQuaW5wdXRzLnZlcnNpb24gfX0iCiAgICAgICAgICAgIFRBRz0idiR7VkVSfSIKICAgICAgICAgIGZpCiAgICAgICAgICBlY2hvICJ2ZXJzaW9uPSRWRVIiICA+PiAiJEdJVEhVQl9PVVRQVVQiCiAgICAgICAgICBlY2hvICJ0YWc9JFRBRyIgICAgICA+PiAiJEdJVEhVQl9PVVRQVVQiCiAgICAgICAgICBlY2hvICJleGU9a2luZ2ZuLWJyb3dzZXItc2V0dXAtJHtWRVJ9LmV4ZSIgPj4gIiRHSVRIVUJfT1VUUFVUIgogICAgICAgICAgZWNobyAiUmVzb2x2ZWQg4oaSIHRhZz0kVEFHICB2ZXJzaW9uPSRWRVIiCgogICAgICAjIOKUgOKUgCAzLiBDYWNoZSBDRUYgZGlzdHJpYnV0aW9uICh+NDAwIE1CLCBrZXllZCBieSB2ZXJzaW9uKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBDYWNoZSBDRUYgZG93bmxvYWQKICAgICAgICB1c2VzOiBhY3Rpb25zL2NhY2hlQHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIHBhdGg6IHRoaXJkX3BhcnR5L2NlZgogICAgICAgICAga2V5OiBjZWYtJHt7IGVudi5DRUZfVkVSU0lPTiB9fS13aW5kb3dzNjQtbWluaW1hbAogICAgICAgICAgcmVzdG9yZS1rZXlzOiBjZWYtJHt7IGVudi5DRUZfVkVSU0lPTiB9fS0KCiAgICAgICMg4pSA4pSAIDQuIENhY2hlIFNRTGl0ZSBhbWFsZ2FtYXRpb24gKH4xIE1CLCBrZXllZCBieSB2ZXJzaW9uKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBDYWNoZSBTUUxpdGUgZG93bmxvYWQKICAgICAgICB1c2VzOiBhY3Rpb25zL2NhY2hlQHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIHBhdGg6ICR7eyBlbnYuQlVJTERfRElSIH19L19kZXBzCiAgICAgICAgICBrZXk6IHNxbGl0ZS0zNDYwMTAwLSR7eyBoYXNoRmlsZXMoJ2NtYWtlL0Rvd25sb2FkU1FMaXRlLmNtYWtlJykgfX0KCiAgICAgICMg4pSA4pSAIDUuIENvbmZpZ3VyZSBDTWFrZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBDb25maWd1cmUgQ01ha2UKICAgICAgICBzaGVsbDogcHdzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgY21ha2UgLVMgLiAtQiAkZW52OkJVSUxEX0RJUiBgCiAgICAgICAgICAgIC1HICJWaXN1YWwgU3R1ZGlvIDE3IDIwMjIiIC1BIHg2NCBgCiAgICAgICAgICAgIC1ES0lOR0ZOX0VOQUJMRV9DRUY9T04gYAogICAgICAgICAgICAtRFVTRV9TQU5EQk9YPU9GRiBgCiAgICAgICAgICAgIC1ES0lOR0ZOX0JVSUxEX1RFU1RTPU9GRgoKICAgICAgIyDilIDilIAgNi4gQnVpbGQga2luZ2ZuX2Jyb3dzZXIgaW4gUmVsZWFzZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBCdWlsZCBraW5nZm5fYnJvd3NlciAoUmVsZWFzZSkKICAgICAgICBzaGVsbDogcHdzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgY21ha2UgLS1idWlsZCAkZW52OkJVSUxEX0RJUiAtLWNvbmZpZyBSZWxlYXNlIC0tdGFyZ2V0IGtpbmdmbl9icm93c2VyIC1qNAoKICAgICAgIyDilIDilIAgNy4gVmVyaWZ5IHRoZSBFWEUgZXhpc3RzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAtIG5hbWU6IFZlcmlmeSBidWlsZCBvdXRwdXQKICAgICAgICBzaGVsbDogcHdzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgJGV4ZSA9ICIkZW52OkJVSUxEX0RJUlxSZWxlYXNlXGtpbmdmbl9icm93c2VyLmV4ZSIKICAgICAgICAgIGlmICgtbm90IChUZXN0LVBhdGggJGV4ZSkpIHsKICAgICAgICAgICAgV3JpdGUtRXJyb3IgIkJ1aWxkIG91dHB1dCBub3QgZm91bmQ6ICRleGUiCiAgICAgICAgICAgIEdldC1DaGlsZEl0ZW0gIiRlbnY6QlVJTERfRElSXFJlbGVhc2UiIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlCiAgICAgICAgICAgIGV4aXQgMQogICAgICAgICAgfQogICAgICAgICAgJHNpemUgPSBbbWF0aF06OlJvdW5kKChHZXQtSXRlbSAkZXhlKS5MZW5ndGggLyAxTUIsIDEpCiAgICAgICAgICBXcml0ZS1Ib3N0ICJraW5nZm5fYnJvd3Nlci5leGUgZm91bmQg4oCUICRzaXplIE1CIgoKICAgICAgIyDilIDilIAgOC4gSW5zdGFsbCBOU0lTIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAtIG5hbWU6IEluc3RhbGwgTlNJUwogICAgICAgIHNoZWxsOiBwd3NoCiAgICAgICAgcnVuOiBjaG9jbyBpbnN0YWxsIG5zaXMgLS12ZXJzaW9uIDMuMTAgLXkgLS1uby1wcm9ncmVzcwoKICAgICAgIyDilIDilIAgOS4gQnVpbGQgaW5zdGFsbGVyIEVYRSB3aXRoIE5TSVMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICAgIC0gbmFtZTogQnVpbGQgTlNJUyBpbnN0YWxsZXIKICAgICAgICBzaGVsbDogcHdzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgJG5zaXMgID0gIkM6XFByb2dyYW0gRmlsZXMgKHg4NilcTlNJU1xtYWtlbnNpcy5leGUiCiAgICAgICAgICAkYnVpbGQgPSBSZXNvbHZlLVBhdGggIiRlbnY6QlVJTERfRElSXFJlbGVhc2UiCiAgICAgICAgICAkcmVwbyAgPSBSZXNvbHZlLVBhdGggIi4iCiAgICAgICAgICAmICRuc2lzIC9WMyBgCiAgICAgICAgICAgIC9EQlVJTERfT1VUX0RJUj0iJGJ1aWxkIiBgCiAgICAgICAgICAgIC9EUkVQT19ST09UPSIkcmVwbyIgYAogICAgICAgICAgICAvRFBST0RVQ1RfVkVSU0lPTj0iJHt7IHN0ZXBzLnZlci5vdXRwdXRzLnZlcnNpb24gfX0iIGAKICAgICAgICAgICAgImluc3RhbGxlclxraW5nZm4tc2V0dXAubnNpIgogICAgICAgICAgaWYgKCRMQVNURVhJVENPREUgLW5lIDApIHsgZXhpdCAkTEFTVEVYSVRDT0RFIH0KCiAgICAgICMg4pSA4pSAIDEwLiBMb2NhdGUgKyByZW5hbWUgdGhlIGluc3RhbGxlciBFWEUg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICAgIC0gbmFtZTogTG9jYXRlIGluc3RhbGxlciBFWEUKICAgICAgICBpZDogaW5zdGFsbGVyCiAgICAgICAgc2hlbGw6IHB3c2gKICAgICAgICBydW46IHwKICAgICAgICAgICMgTlNJUyB3cml0ZXMgdGhlIGZpbGUgbmV4dCB0byB0aGUgLm5zaSBzY3JpcHQgYnkgZGVmYXVsdC4KICAgICAgICAgICRmb3VuZCA9IEdldC1DaGlsZEl0ZW0gLVJlY3Vyc2UgLUZpbHRlciAia2luZ2ZuLWJyb3dzZXItc2V0dXAtKi5leGUiIHwKICAgICAgICAgICAgICAgICAgIFNlbGVjdC1PYmplY3QgLUZpcnN0IDEKICAgICAgICAgIGlmICgtbm90ICRmb3VuZCkgewogICAgICAgICAgICBXcml0ZS1FcnJvciAiSW5zdGFsbGVyIEVYRSBub3QgZm91bmQuIENoZWNrIE5TSVMgb3V0cHV0IGFib3ZlLiIKICAgICAgICAgICAgZXhpdCAxCiAgICAgICAgICB9CiAgICAgICAgICAkZGVzdCA9ICIke3sgc3RlcHMudmVyLm91dHB1dHMuZXhlIH19IgogICAgICAgICAgQ29weS1JdGVtICRmb3VuZC5GdWxsTmFtZSAtRGVzdGluYXRpb24gJGRlc3QKICAgICAgICAgICRzaXplID0gW21hdGhdOjpSb3VuZCgkZm91bmQuTGVuZ3RoIC8gMU1CLCAxKQogICAgICAgICAgV3JpdGUtSG9zdCAiSW5zdGFsbGVyOiAkZGVzdCAoJHNpemUgTUIpIgogICAgICAgICAgZWNobyAicGF0aD0kZGVzdCIgPj4gJGVudjpHSVRIVUJfT1VUUFVUCgogICAgICAjIOKUgOKUgCAxMS4gVXBsb2FkIGluc3RhbGxlciBhcyB3b3JrZmxvdyBhcnRpZmFjdCAoYWx3YXlzKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBVcGxvYWQgaW5zdGFsbGVyIGFydGlmYWN0CiAgICAgICAgdXNlczogYWN0aW9ucy91cGxvYWQtYXJ0aWZhY3RAdjQKICAgICAgICB3aXRoOgogICAgICAgICAgbmFtZToga2luZ2ZuLWJyb3dzZXItc2V0dXAtJHt7IHN0ZXBzLnZlci5vdXRwdXRzLnZlcnNpb24gfX0KICAgICAgICAgIHBhdGg6ICR7eyBzdGVwcy5pbnN0YWxsZXIub3V0cHV0cy5wYXRoIH19CiAgICAgICAgICByZXRlbnRpb24tZGF5czogMzAKCiAgICAgICMg4pSA4pSAIDEyLiBHZW5lcmF0ZSByZWxlYXNlIG5vdGVzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAtIG5hbWU6IEdlbmVyYXRlIHJlbGVhc2Ugbm90ZXMKICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgY2F0ID4gcmVsZWFzZS1ub3Rlcy5tZCA8PCAnRU9GJwogICAgICAgICAgIyMg8J+RkSBLSU5HRk4gQnJvd3NlciB2JHt7IHN0ZXBzLnZlci5vdXRwdXRzLnZlcnNpb24gfX0KCiAgICAgICAgICAjIyMgV2hhdCdzIGluIHRoaXMgcmVsZWFzZQogICAgICAgICAgLSDinIUgKipNdWx0aS10YWIgYnJvd3NpbmcqKiDigJQgQ3RybCtUL1cvVGFiLCBwZXItdGFiIHNoaWVsZHMgJiBzdGF0cwogICAgICAgICAgLSDinIUgKipIaXN0b3J5ICYgQm9va21hcmtzKiog4oCUIFNRTGl0ZS1iYWNrZWQsIEN0cmwrSCB2aWV3ZXIsIEN0cmwrRCBib29rbWFyayB0b2dnbGUKICAgICAgICAgIC0g4pyFICoqRG93bmxvYWQgTWFuYWdlcioqIOKAlCBQcm9ncmVzcyB0cmFja2luZywgQ3RybCtKIGRvd25sb2FkcyBwYWdlCiAgICAgICAgICAtIOKchSAqKlBlcnNpc3RlbnQgU2hpZWxkcyoqIOKAlCBQZXItc2l0ZSBhZC1ibG9jayBwcmVmZXJlbmNlcyBzdXJ2aXZlIHJlc3RhcnRzCiAgICAgICAgICAtIOKchSAqKkF1dG8tdXBkYXRlIGNoZWNrZXIqKiDigJQgTm90aWZpZXMgeW91IHdoZW4gYSBuZXdlciB2ZXJzaW9uIGlzIGF2YWlsYWJsZQogICAgICAgICAgLSDinIUgKipTaGllbGRzIEVuZ2luZSB2MyoqIOKAlCBZb3VUdWJlICsgVHdpdGNoICsgMzAwKyBydWxlcywgemVyby1mbGFzaCBhZCBlbGltaW5hdGlvbgogICAgICAgICAgLSDinIUgKipOU0lTIEluc3RhbGxlcioqIOKAlCBEZXNrdG9wICYgU3RhcnQgTWVudSBzaG9ydGN1dHMsIEFkZC9SZW1vdmUgUHJvZ3JhbXMKCiAgICAgICAgICAjIyMgSW5zdGFsbGF0aW9uCiAgICAgICAgICAxLiBEb3dubG9hZCAqKmBraW5nZm4tYnJvd3Nlci1zZXR1cC0ke3sgc3RlcHMudmVyLm91dHB1dHMudmVyc2lvbiB9fS5leGVgKiogYmVsb3cKICAgICAgICAgIDIuIFJ1biBpdCBhbmQgZm9sbG93IHRoZSB3aXphcmQKICAgICAgICAgIDMuIExhdW5jaCAqKktJTkdGTiBCcm93c2VyKiogZnJvbSB0aGUgRGVza3RvcCBvciBTdGFydCBNZW51CgogICAgICAgICAgWW91ciBwcm9maWxlIGRhdGEgKGBLSU5HRk5Qcm9maWxlL2ApIGlzIHByZXNlcnZlZCBvbiB1cGdyYWRlLgoKICAgICAgICAgICMjIyBCdWlsZCBpbmZvCiAgICAgICAgICAtIENFRjogYCR7eyBlbnYuQ0VGX1ZFUlNJT04gfX1gCiAgICAgICAgICAtIENvbXBpbGVyOiBNU1ZDIDIwMjIgKHYxNDMpLCBDKysyMAogICAgICAgICAgLSBQbGF0Zm9ybTogV2luZG93cyA2NC1iaXQKICAgICAgICAgIC0gQ29tbWl0OiBgJHt7IGdpdGh1Yi5zaGEgfX1gCiAgICAgICAgICBFT0YKCiAgICAgICMg4pSA4pSAIDEzLiBDcmVhdGUgR2l0SHViIFJlbGVhc2UgKyBhdHRhY2ggRVhFIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAtIG5hbWU6IENyZWF0ZSBHaXRIdWIgUmVsZWFzZQogICAgICAgIGVudjoKICAgICAgICAgIEdJVEhVQl9UT0tFTjogJHt7IHNlY3JldHMuR0lUSFVCX1RPS0VOIH19CiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBydW46IHwKICAgICAgICAgIERSQUZUX0ZMQUc9IiIKICAgICAgICAgIGlmIFtbICIke3sgZ2l0aHViLmV2ZW50LmlucHV0cy5kcmFmdCB9fSIgPT0gInRydWUiIF1dOyB0aGVuCiAgICAgICAgICAgIERSQUZUX0ZMQUc9Ii0tZHJhZnQiCiAgICAgICAgICBmaQoKICAgICAgICAgICMgQ3JlYXRlIG9yIHVwZGF0ZSB0aGUgcmVsZWFzZS4KICAgICAgICAgIGdoIHJlbGVhc2UgY3JlYXRlICIke3sgc3RlcHMudmVyLm91dHB1dHMudGFnIH19IiBcCiAgICAgICAgICAgIC0tdGl0bGUgIvCfkZEgS0lOR0ZOIEJyb3dzZXIgdiR7eyBzdGVwcy52ZXIub3V0cHV0cy52ZXJzaW9uIH19IiBcCiAgICAgICAgICAgIC0tbm90ZXMtZmlsZSByZWxlYXNlLW5vdGVzLm1kIFwKICAgICAgICAgICAgJERSQUZUX0ZMQUcgXAogICAgICAgICAgICAiJHt7IHN0ZXBzLmluc3RhbGxlci5vdXRwdXRzLnBhdGggfX0iIHx8IFwKICAgICAgICAgIGdoIHJlbGVhc2UgdXBsb2FkICIke3sgc3RlcHMudmVyLm91dHB1dHMudGFnIH19IiBcCiAgICAgICAgICAgICIke3sgc3RlcHMuaW5zdGFsbGVyLm91dHB1dHMucGF0aCB9fSIgLS1jbG9iYmVyCgogICAgICAjIOKUgOKUgCAxNC4gUHJpbnQgc3VtbWFyeSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgLSBuYW1lOiBQcmludCBzdW1tYXJ5CiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBydW46IHwKICAgICAgICAgIGVjaG8gIiMjIOKchSBLSU5HRk4gQnJvd3NlciB2JHt7IHN0ZXBzLnZlci5vdXRwdXRzLnZlcnNpb24gfX0gcmVsZWFzZWQhIiA+PiAkR0lUSFVCX1NURVBfU1VNTUFSWQogICAgICAgICAgZWNobyAiIiA+PiAkR0lUSFVCX1NURVBfU1VNTUFSWQogICAgICAgICAgZWNobyAi8J+UlyAqKlJlbGVhc2UgVVJMOioqIGh0dHBzOi8vZ2l0aHViLmNvbS8ke3sgZ2l0aHViLnJlcG9zaXRvcnkgfX0vcmVsZWFzZXMvdGFnLyR7eyBzdGVwcy52ZXIub3V0cHV0cy50YWcgfX0iID4+ICRHSVRIVUJfU1RFUF9TVU1NQVJZCiAgICAgICAgICBlY2hvICLwn5OmICoqSW5zdGFsbGVyOioqIFxgJHt7IHN0ZXBzLnZlci5vdXRwdXRzLmV4ZSB9fVxgIiA+PiAkR0lUSFVCX1NURVBfU1VNTUFSWQogICAgICAgICAgZWNobyAi8J+UliAqKkNvbW1pdDoqKiBcYCR7eyBnaXRodWIuc2hhIH19XGAiID4+ICRHSVRIVUJfU1RFUF9TVU1NQVJZCg==
+name: 🏗️ Build & Release KINGFN Browser
+
+on:
+  # ── Manual trigger from GitHub UI (Actions tab → Run workflow) ─────────────
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g. 0.3.0) — used for tag + installer name'
+        required: true
+        default: '0.3.0'
+      draft:
+        description: 'Publish as draft release (review before going live)'
+        type: boolean
+        default: false
+
+  # ── Automatic trigger when you push a version tag: git tag v0.3.1 && git push --tags
+  push:
+    tags:
+      - 'v[0-9]*.[0-9]*.[0-9]*'
+
+permissions:
+  contents: write   # needed to create releases and upload assets
+
+env:
+  CEF_VERSION: "152.0.7+g83ffcba+chromium-152.0.7977.83"
+  BUILD_DIR: build
+
+jobs:
+  build-and-release:
+    name: Build on Windows + Package + Release
+    runs-on: windows-latest
+    timeout-minutes: 150   # CEF download + build can take ~60-90 min on first run
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Resolve version & tag ─────────────────────────────────────────────
+      - name: Resolve version
+        id: ver
+        shell: bash
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            TAG="${GITHUB_REF_NAME}"
+            VER="${TAG#v}"
+          else
+            VER="${{ github.event.inputs.version }}"
+            TAG="v${VER}"
+          fi
+          echo "version=$VER"  >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG"      >> "$GITHUB_OUTPUT"
+          echo "exe=kingfn-browser-setup-${VER}.exe" >> "$GITHUB_OUTPUT"
+          echo "Resolved → tag=$TAG  version=$VER"
+
+      # ── 3. Cache CEF distribution (~400 MB, keyed by version) ────────────────
+      - name: Cache CEF download
+        uses: actions/cache@v4
+        with:
+          path: third_party/cef
+          key: cef-${{ env.CEF_VERSION }}-windows64-minimal
+          restore-keys: cef-${{ env.CEF_VERSION }}-
+
+      # ── 4. Cache SQLite amalgamation (~1 MB, keyed by version) ───────────────
+      - name: Cache SQLite download
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.BUILD_DIR }}/_deps
+          key: sqlite-3460100-${{ hashFiles('cmake/DownloadSQLite.cmake') }}
+
+      # ── 5. Configure CMake ────────────────────────────────────────────────────
+      - name: Configure CMake
+        shell: pwsh
+        run: |
+          cmake -S . -B $env:BUILD_DIR `
+            -G "Visual Studio 17 2022" -A x64 `
+            -DKINGFN_ENABLE_CEF=ON `
+            -DUSE_SANDBOX=OFF `
+            -DKINGFN_BUILD_TESTS=OFF
+
+      # ── 6. Build kingfn_browser in Release ────────────────────────────────────
+      - name: Build kingfn_browser (Release)
+        shell: pwsh
+        run: |
+          cmake --build $env:BUILD_DIR --config Release --target kingfn_browser -j4
+
+      # ── 7. Verify the EXE exists ─────────────────────────────────────────────
+      - name: Verify build output
+        shell: pwsh
+        run: |
+          $exe = "$env:BUILD_DIR\Release\kingfn_browser.exe"
+          if (-not (Test-Path $exe)) {
+            Write-Error "Build output not found: $exe"
+            Get-ChildItem "$env:BUILD_DIR\Release" -ErrorAction SilentlyContinue
+            exit 1
+          }
+          $size = [math]::Round((Get-Item $exe).Length / 1MB, 1)
+          Write-Host "kingfn_browser.exe found — $size MB"
+
+      # ── 8. Install NSIS ───────────────────────────────────────────────────────
+      - name: Install NSIS
+        shell: pwsh
+        run: choco install nsis --version 3.10 -y --no-progress
+
+      # ── 9. Build installer EXE with NSIS ─────────────────────────────────────
+      - name: Build NSIS installer
+        shell: pwsh
+        run: |
+          $nsis  = "C:\Program Files (x86)\NSIS\makensis.exe"
+          $build = Resolve-Path "$env:BUILD_DIR\Release"
+          $repo  = Resolve-Path "."
+          & $nsis /V3 `
+            /DBUILD_OUT_DIR="$build" `
+            /DREPO_ROOT="$repo" `
+            /DPRODUCT_VERSION="${{ steps.ver.outputs.version }}" `
+            "installer\kingfn-setup.nsi"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      # ── 10. Locate + rename the installer EXE ────────────────────────────────
+      - name: Locate installer EXE
+        id: installer
+        shell: pwsh
+        run: |
+          # NSIS writes the file next to the .nsi script by default.
+          $found = Get-ChildItem -Recurse -Filter "kingfn-browser-setup-*.exe" |
+                   Select-Object -First 1
+          if (-not $found) {
+            Write-Error "Installer EXE not found. Check NSIS output above."
+            exit 1
+          }
+          $dest = "${{ steps.ver.outputs.exe }}"
+          Copy-Item $found.FullName -Destination $dest
+          $size = [math]::Round($found.Length / 1MB, 1)
+          Write-Host "Installer: $dest ($size MB)"
+          echo "path=$dest" >> $env:GITHUB_OUTPUT
+
+      # ── 11. Upload installer as workflow artifact (always) ────────────────────
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kingfn-browser-setup-${{ steps.ver.outputs.version }}
+          path: ${{ steps.installer.outputs.path }}
+          retention-days: 30
+
+      # ── 12. Generate release notes ────────────────────────────────────────────
+      - name: Generate release notes
+        shell: bash
+        run: |
+          cat > release-notes.md << 'EOF'
+          ## 👑 KINGFN Browser v${{ steps.ver.outputs.version }}
+
+          ### What's in this release
+          - ✅ **Multi-tab browsing** — Ctrl+T/W/Tab, per-tab shields & stats
+          - ✅ **History & Bookmarks** — SQLite-backed, Ctrl+H viewer, Ctrl+D bookmark toggle
+          - ✅ **Download Manager** — Progress tracking, Ctrl+J downloads page
+          - ✅ **Persistent Shields** — Per-site ad-block preferences survive restarts
+          - ✅ **Auto-update checker** — Notifies you when a newer version is available
+          - ✅ **Shields Engine v3** — YouTube + Twitch + 300+ rules, zero-flash ad elimination
+          - ✅ **NSIS Installer** — Desktop & Start Menu shortcuts, Add/Remove Programs
+
+          ### Installation
+          1. Download **`kingfn-browser-setup-${{ steps.ver.outputs.version }}.exe`** below
+          2. Run it and follow the wizard
+          3. Launch **KINGFN Browser** from the Desktop or Start Menu
+
+          Your profile data (`KINGFNProfile/`) is preserved on upgrade.
+
+          ### Build info
+          - CEF: `${{ env.CEF_VERSION }}`
+          - Compiler: MSVC 2022 (v143), C++20
+          - Platform: Windows 64-bit
+          - Commit: `${{ github.sha }}`
+          EOF
+
+      # ── 13. Create GitHub Release + attach EXE ────────────────────────────────
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          DRAFT_FLAG=""
+          if [[ "${{ github.event.inputs.draft }}" == "true" ]]; then
+            DRAFT_FLAG="--draft"
+          fi
+
+          # Create or update the release.
+          gh release create "${{ steps.ver.outputs.tag }}" \
+            --title "👑 KINGFN Browser v${{ steps.ver.outputs.version }}" \
+            --notes-file release-notes.md \
+            $DRAFT_FLAG \
+            "${{ steps.installer.outputs.path }}" || \
+          gh release upload "${{ steps.ver.outputs.tag }}" \
+            "${{ steps.installer.outputs.path }}" --clobber
+
+      # ── 14. Print summary ─────────────────────────────────────────────────────
+      - name: Print summary
+        shell: bash
+        run: |
+          echo "## ✅ KINGFN Browser v${{ steps.ver.outputs.version }} released!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **Release URL:** https://github.com/${{ github.repository }}/releases/tag/${{ steps.ver.outputs.tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "📦 **Installer:** \`${{ steps.ver.outputs.exe }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "🔖 **Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
