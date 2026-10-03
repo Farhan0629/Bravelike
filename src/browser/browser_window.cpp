@@ -108,8 +108,8 @@ void BrowserWindow::OnLoadStart(CefRefPtr<CefBrowser> browser,
 void BrowserWindow::OnLoadEnd(CefRefPtr<CefBrowser> browser,
                               CefRefPtr<CefFrame> frame, int http_status_code) {
   CEF_REQUIRE_UI_THREAD();
-  // The script guards against double execution, so re-injecting is safe and
-  // covers documents where the load-start injection ran too early.
+  // The script guards against double execution on full page loads, so
+  // re-injecting is safe and covers documents where OnLoadStart ran too early.
   InjectShieldsScript(frame);
 }
 
@@ -125,7 +125,7 @@ std::string BrowserWindow::DefaultHomeUrl() {
   const auto home_path = exe_dir / "resources" / "home.html";
   if (std::filesystem::exists(home_path)) {
     std::string path_str = std::filesystem::absolute(home_path).lexically_normal().string();
-    if (path_str.rfind("\\\\?\\", 0) == 0) {
+    if (path_str.rfind("\\\\\\.\\?\\\\", 0) == 0) {
       path_str = path_str.substr(4);
     }
     for (char& c : path_str) {
@@ -261,6 +261,13 @@ void BrowserWindow::OnAddressChange(CefRefPtr<CefBrowser> browser,
     }
   }
   UpdateShieldLabel();
+
+  // SPA navigation (e.g. YouTube video-to-video): OnLoadStart/End may not
+  // fire again. Re-inject the shields script whenever the address changes
+  // so the YouTube ad killer stays active for the new page context.
+  if (browser_ && frame->IsMain()) {
+    InjectShieldsScript(frame);
+  }
 }
 
 void BrowserWindow::OnLoadingStateChange(CefRefPtr<CefBrowser> browser,
