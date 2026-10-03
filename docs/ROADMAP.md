@@ -1,50 +1,39 @@
 # Roadmap
 
-## M0 — Repository and privacy core
+## Existing foundation
 
-- [x] CMake C++20 project
-- [x] Domain/subdomain rules
-- [x] Allow-rule precedence
-- [x] Explainable decisions
-- [x] Thread-safe counters
-- [x] Unit tests and CLI demo
-- [x] CEF shell scaffold
+- [x] Independent C++20 core, domain rules, allow precedence, explainable decisions
+- [x] Core tests and CLI demo
+- [x] Single Windows CEF Views window and toolbar
+- [x] Address/search resolution and navigation shortcuts
+- [x] Request cancellation and in-memory exact-host Shields
+- [x] Cumulative counters, local home page and branding
+- [x] Exact-home URL spoof protection and startup-independent Home navigation (review branch)
+- [x] Legacy build-option precedence fix (review branch)
+- [x] CEF bootstrap sandbox build path (review branch)
+- [ ] Windows runtime verification of sandbox and new UI changes
 
-## M1 — Windows browser shell
+## Reliability before expansion
 
-- [x] Pin and verify a CEF binary release
-- [ ] Enable the CEF sandbox
-- [x] Create a single-window browser UI
-- [ ] Add a tab strip and tab lifecycle
-- [x] Address bar and navigation controls
-- [ ] Browser-process request logging
-- [x] Connect FilterEngine to request interception
+- [ ] Browser/navigation-scoped Shields policy, including redirects
+- [ ] Defined popup and external-protocol behavior
+- [ ] Repeatable Windows GUI automation and fixture-driven request tests
+- [ ] GPU compatibility benchmarks and crash diagnostics
+- [ ] Traffic audit and precise privacy statement
+- [ ] Maintainer-authorized license and distribution notices
 
-## M2 — Browser essentials
+## Browser essentials
 
-- [ ] Multiple tabs and keyboard shortcuts
-- [ ] New-tab page
-- [ ] Downloads with confirmation and status
+- [ ] Tabs, tab lifecycle and tab-scoped state
+- [ ] Download confirmation/progress and safe handling
 - [ ] SQLite history and bookmarks
-- [ ] Session restoration
+- [ ] Persistent Shields settings and session restore
+- [ ] Settings and integrity-checked filter updates/rollback
 
-## M3 — Shields experience
+## Release
 
-- [x] In-memory per-site Shields toggle, keyed by exact host
-- [ ] Persist the site allowlist and scope requests by browser/tab during navigation
-- [x] Cumulative blocked-request counter
-- [ ] Explain matched rules and categories in UI
-- [ ] Settings for filter-list sources
-- [ ] Safe list update and rollback
+- [ ] Validated sandbox, permissions and internal-page boundaries
+- [ ] Writable per-user profile storage design
+- [ ] Benchmarks, signed installer/update strategy, threat model
 
-## M4 — Evaluation and release
-
-- [ ] Repeatable benchmark harness
-- [ ] CSV/JSON metrics export
-- [ ] Windows installer
-- [ ] Threat model and privacy statement
-- [ ] Final report figures and demo script
-
-## Explicit non-goals for the first release
-
-VPN infrastructure, cryptocurrency custody, account synchronization, a custom rendering engine, and claims of complete EasyList compatibility.
+VPN, cryptocurrency custody, account sync, a custom rendering engine, and full EasyList compatibility are not first-release promises.

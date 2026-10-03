@@ -1,82 +1,46 @@
-# Building on Windows 11
+# Windows build guide
 
-## Prerequisites
+Use Visual Studio 2022 Community or Build Tools with Desktop development with C++, MSVC v143 x64/x86, Windows SDK and CMake 3.24+. Run commands in Developer PowerShell for VS 2022. Git is required for cloning; Python/Node are optional supplemental test tools.
 
-Install:
-
-1. Visual Studio 2022 Community with **Desktop development with C++**.
-2. CMake 3.24 or later.
-3. Git for Windows.
-4. The Windows 10/11 SDK included by Visual Studio.
-
-Run `scripts/check-windows-prerequisites.ps1` from PowerShell to verify the command-line tools.
-
-## Build and test the privacy core
+## Core
 
 ```powershell
-cmake -S . -B out/build -G "Visual Studio 17 2022" -A x64 -DKINGFN_BUILD_TESTS=ON
-cmake --build out/build --config Release
-ctest --test-dir out/build -C Release --output-on-failure
+cmake -S . -B out\core -G "Visual Studio 17 2022" -A x64 -DKINGFN_BUILD_TESTS=ON
+cmake --build out\core --config Release
+ctest --test-dir out\core -C Release --output-on-failure
 ```
 
-This build does not require CEF.
-
-## Build the Windows browser
-
-The project pins the official Windows 64-bit minimal distribution:
-
-- CEF `152.0.7+g83ffcba+chromium-152.0.7977.83`
-- Chromium `152.0.7977.83`
-
-Configuration downloads the checksum and archive, verifies the archive, and extracts it under `third_party/cef`.
+## Sandboxed CEF browser
 
 ```powershell
-cmake -S . -B out/cef `
-  -G "Visual Studio 17 2022" -A x64 `
-  -DKINGFN_ENABLE_CEF=ON `
-  -DUSE_SANDBOX=OFF
-cmake --build out/cef --config Release --target kingfn_browser
+cmake -S . -B out\sandbox -G "Visual Studio 17 2022" -A x64 -DKINGFN_ENABLE_CEF=ON -DUSE_SANDBOX=ON
+cmake --build out\sandbox --config Release --target kingfn_browser
+.\out\sandbox\Release\kingfn_browser.exe
 ```
 
-Run:
+CEF is pinned to 152.0.7+g83ffcba+chromium-152.0.7977.83, Windows64 minimal. The download helper verifies the upstream checksum. Internet is needed on the first configuration. Missing `bootstrap.exe` fails configuration. The official CEF M138+ bootstrap EXE loads the same-named client DLL and supplies sandbox context; merely setting no_sandbox=false in an ordinary EXE is not sufficient.
+
+Required packaging includes the bootstrap `kingfn_browser.exe`, client `kingfn_browser.dll`, `libcef.dll`, `chrome_elf.dll`, `icudtl.dat`, `resources.pak`, all other copied CEF resources/locales, `config/blocklist.txt`, and `resources/home.html`. Keep the complete output directory. Before distributing, preserve CEF/third-party notices and choose an authorized project license. The upstream bootstrap's icon/version resources are not automatically replaced by DLL resources.
+
+## GPU workaround
+
+Default is normal Chromium GPU behavior. For a machine requiring software rendering:
 
 ```powershell
-.\out\cef\Release\kingfn_browser.exe
+.\out\sandbox\Release\kingfn_browser.exe --gpu-compatibility
 ```
 
-The browser output directory must include at least:
+This is not automatic GPU recovery. Record the flag in bug reports.
 
-```text
-kingfn_browser.exe
-libcef.dll
-chrome_elf.dll
-icudtl.dat
-resources.pak
-config/blocklist.txt
-resources/home.html
+## Development-only unsandboxed build
+
+```powershell
+cmake -S . -B out\dev -G "Visual Studio 17 2022" -A x64 -DKINGFN_ENABLE_CEF=ON -DUSE_SANDBOX=OFF
+cmake --build out\dev --config Release --target kingfn_browser
 ```
 
-Do not move only the executable; CEF requires the adjacent runtime binaries and resources. Do not commit `third_party/cef`, `out`, the generated profile directory, or downloaded archives.
+Do not use unsandboxed builds as public release candidates. Use separate output directories to avoid stale EXE/DLL combinations between modes. Existing BRAVELIKE_* cache options import only when the corresponding KINGFN_* entry is absent; explicit KINGFN_* wins.
 
-## Functional smoke test
+## Runtime validation
 
-GitHub Actions validates compilation, linking, runtime-file copying, and artifact creation. It cannot interact with the desktop GUI, so run this checklist on Windows 11 before declaring a release candidate:
-
-1. Start `kingfn_browser.exe` and confirm the window opens without a console or crash dialog.
-2. Confirm the KINGFN home page loads.
-3. Enter `example.com` and confirm it resolves to `https://example.com`.
-4. Enter plain search text and confirm a DuckDuckGo search results page loads.
-5. Navigate to a second page and verify Back and Forward enable and work.
-6. Verify Reload refreshes, Stop interrupts an active load, and Home returns to the start page.
-7. Verify the address field tracks main-frame navigation.
-8. On an HTTP(S) site, toggle Shields off and on; each toggle must reload and update the label.
-9. With Shields off on site A, navigate to site B: Shields must show On on B. Return to A: it must show Off. Re-enable A and confirm On.
-10. Load a page requesting a configured blocked domain with Shields on and confirm the cumulative blocked count increases. Repeat with Shields off and confirm it does not increase for that request.
-11. Open a non-HTTP page and confirm the Shields button shows N/A and is disabled.
-12. Close the window and confirm the process exits without hanging.
-
-Per-site choices are currently in memory and reset on restart. The implementation is a single-window active-page snapshot; requests initiated during cross-site navigation can briefly use the preceding page's policy. Persisted settings and browser/tab-scoped request context remain future work.
-
-## Hardware guidance
-
-The core build is lightweight. A prebuilt CEF package is much more practical on a 16 GB laptop than compiling Chromium. Keep at least 20 GB free for CEF packages, build outputs, symbols, and packaging experiments. Integrated graphics are sufficient for this milestone.
+Compilation and packaged-file checks do not prove sandbox isolation or working GUI features. Follow [WINDOWS_VALIDATION.md](WINDOWS_VALIDATION.md). `KINGFNProfile` beside the executable stores persistent local browsing data; installation under a read-only directory can prevent profile creation. A profile migration to a per-user writable application directory remains future work.
