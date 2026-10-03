@@ -1,6 +1,8 @@
 #include "src/browser/browser_window.h"
 
 #include <filesystem>
+#include <fstream>
+#include <sstream>
 #include <windows.h>
 
 #include "include/cef_app.h"
@@ -59,14 +61,56 @@ void BrowserWindow::Create(const std::string& startup_url) {
   CefWindow::CreateTopLevelWindow(controller);
 }
 
+namespace {
+std::string ReadTextFile(const std::filesystem::path& path) {
+  std::ifstream file(path, std::ios::binary);
+  if (!file) return {};
+  std::ostringstream buffer;
+  buffer << file.rdbuf();
+  return buffer.str();
+}
+
+constexpr const char* kFallbackRules =
+    "doubleclick.net\ngooglesyndication.com\ngoogleadservices.com\n"
+    "google-analytics.com\ngoogletagmanager.com\nadservice.google.com\n"
+    "amazon-adsystem.com\nadnxs.com\npubmatic.com\nrubiconproject.com\n"
+    "criteo.com\ntaboola.com\noutbrain.com\nfacebook.net\n"
+    "||youtube.com/api/stats/ads\n||youtube.com/pagead/\n"
+    "||youtube.com/ptracking\n||youtube.com/get_midroll_info\n";
+}  // namespace
+
 void BrowserWindow::LoadRules() {
-  try {
-    filter_engine_.LoadFromFile(ExecutableDirectory() + "\\config\\blocklist.txt");
-  } catch (...) {
-    filter_engine_.LoadFromText(
-        "||doubleclick.net^\n||googlesyndication.com^\n"
-        "||google-analytics.com^\n||facebook.net^\n");
-  }
+  const auto base = std::filesystem::path(ExecutableDirectory());
+  const std::string rules = ReadTextFile(base / "config" / "blocklist.txt");
+  filter_engine_.LoadFromText(rules.empty() ? kFallbackRules : rules);
+  // Optional user rules, appended on top of the defaults.
+  const std::string custom = ReadTextFile(base / "config" / "custom-blocklist.txt");
+  if (!custom.empty()) filter_engine_.AppendFromText(custom);
+
+  shields_script_ = ReadTextFile(base / "resources" / "shields.js");
+}
+
+void BrowserWindow::InjectShieldsScript(CefRefPtr<CefFrame> frame) {
+  if (shields_script_.empty() || !frame || !frame->IsMain()) return;
+  const std::string url = frame->GetURL().ToString();
+  if (url.rfind("http://", 0) != 0 && url.rfind("https://", 0) != 0) return;
+  if (!site_shields_.EnabledForActive()) return;
+  frame->ExecuteJavaScript(shields_script_, url, 0);
+}
+
+void BrowserWindow::OnLoadStart(CefRefPtr<CefBrowser> browser,
+                                CefRefPtr<CefFrame> frame,
+                                TransitionType transition_type) {
+  CEF_REQUIRE_UI_THREAD();
+  InjectShieldsScript(frame);
+}
+
+void BrowserWindow::OnLoadEnd(CefRefPtr<CefBrowser> browser,
+                              CefRefPtr<CefFrame> frame, int http_status_code) {
+  CEF_REQUIRE_UI_THREAD();
+  // The script guards against double execution, so re-injecting is safe and
+  // covers documents where the load-start injection ran too early.
+  InjectShieldsScript(frame);
 }
 
 std::string BrowserWindow::ExecutableDirectory() {

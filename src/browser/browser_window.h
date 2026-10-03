@@ -47,6 +47,10 @@ class BrowserWindow final : public CefClient,
                             bool can_go_back, bool can_go_forward) override;
   bool OnPreKeyEvent(CefRefPtr<CefBrowser> browser, const CefKeyEvent& event,
                      CefEventHandle os_event, bool* is_keyboard_shortcut) override;
+  void OnLoadStart(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
+                   TransitionType transition_type) override;
+  void OnLoadEnd(CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
+                 int http_status_code) override;
 
   CefRefPtr<CefResourceRequestHandler> GetResourceRequestHandler(
       CefRefPtr<CefBrowser> browser, CefRefPtr<CefFrame> frame,
@@ -69,6 +73,7 @@ class BrowserWindow final : public CefClient,
  private:
   explicit BrowserWindow(std::string startup_url);
   void LoadRules();
+  void InjectShieldsScript(CefRefPtr<CefFrame> frame);
   void Navigate(const std::string& input);
   void FocusAddressBar();
   void UpdateNavigationState(bool is_loading, bool can_go_back, bool can_go_forward);
@@ -76,6 +81,7 @@ class BrowserWindow final : public CefClient,
   static std::string ExecutableDirectory();
 
   std::string startup_url_;
+  std::string shields_script_;
   FilterEngine filter_engine_;
   PrivacyStats privacy_stats_;
   SiteShields site_shields_;

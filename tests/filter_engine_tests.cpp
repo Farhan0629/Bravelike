@@ -54,6 +54,32 @@ not a supported rule
   const auto snapshot = stats.Snapshot();
   Expect(snapshot.evaluated == 2 && snapshot.blocked == 1, "records privacy statistics");
 
+  // Real-world rule syntax used by the shipped blocklist.
+  kingfn::FilterEngine real;
+  const auto loaded = real.LoadFromText(R"(
+doubleclick.net
+0.0.0.0 tracker.net
+||adnxs.com^$third-party
+||youtube.com/api/stats/ads
+||youtube.com/pagead/
+example.com##.ad-banner
+)");
+  Expect(loaded.block_rules == 5 && loaded.warnings.empty(), "parses real-world syntax");
+  Expect(real.Evaluate("https://googleads.g.doubleclick.net/pagead/id").action == FilterAction::kBlock,
+         "blocks doubleclick subdomain");
+  Expect(real.Evaluate("https://cdn.tracker.net/p.gif").action == FilterAction::kBlock,
+         "hosts-file rule blocks");
+  Expect(real.Evaluate("https://ib.adnxs.com/ut/v3").action == FilterAction::kBlock,
+         "options are ignored");
+  Expect(real.Evaluate("https://www.youtube.com/api/stats/ads?ver=2").action == FilterAction::kBlock,
+         "blocks YouTube ad stats path");
+  Expect(real.Evaluate("https://www.youtube.com/pagead/viewthroughconversion/1").action == FilterAction::kBlock,
+         "blocks YouTube pagead path");
+  Expect(real.Evaluate("https://www.youtube.com/watch?v=abc").action == FilterAction::kAllow,
+         "does not block YouTube videos");
+  Expect(real.Evaluate("https://www.youtube.com/youtubei/v1/player").action == FilterAction::kAllow,
+         "does not block YouTube player API");
+
   if (failures == 0) std::cout << "All KINGFN core tests passed.\n";
   return failures == 0 ? 0 : 1;
 }

@@ -40,7 +40,7 @@ COPY_FILES(${KINGFN_TARGET} "${CEF_RESOURCE_FILES}" "${CEF_RESOURCE_DIR}" "${KIN
 add_custom_command(TARGET ${KINGFN_TARGET} POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E make_directory "${KINGFN_OUT_DIR}/config"
   COMMAND ${CMAKE_COMMAND} -E copy_if_different
-          "${CMAKE_SOURCE_DIR}/config/sample-blocklist.txt"
+          "${CMAKE_SOURCE_DIR}/config/kingfn-blocklist.txt"
           "${KINGFN_OUT_DIR}/config/blocklist.txt"
   COMMAND ${CMAKE_COMMAND} -E make_directory "${KINGFN_OUT_DIR}/resources"
   COMMAND ${CMAKE_COMMAND} -E copy_directory
