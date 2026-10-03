@@ -1,1 +1,68 @@
-I3ByYWdtYSBvbmNlCiNpbmNsdWRlIDxjc3RkZGVmPgojaW5jbHVkZSA8c3RyaW5nPgojaW5jbHVkZSA8c3RyaW5nX3ZpZXc+CiNpbmNsdWRlIDx1bm9yZGVyZWRfbWFwPgojaW5jbHVkZSA8dmVjdG9yPgoKbmFtZXNwYWNlIGtpbmdmbiB7CmVudW0gY2xhc3MgRmlsdGVyQWN0aW9uIHsga0FsbG93LCBrQmxvY2sgfTsKCnN0cnVjdCBGaWx0ZXJEZWNpc2lvbiB7CiAgRmlsdGVyQWN0aW9uIGFjdGlvbntGaWx0ZXJBY3Rpb246OmtBbGxvd307CiAgc3RkOjpzdHJpbmcgbWF0Y2hlZF9ydWxlOwogIHN0ZDo6c3RyaW5nIHJlYXNvbjsKfTsKCnN0cnVjdCBMb2FkUmVzdWx0IHsKICBzdGQ6OnNpemVfdCBibG9ja19ydWxlc3swfTsKICBzdGQ6OnNpemVfdCBhbGxvd19ydWxlc3swfTsKICBzdGQ6OnZlY3RvcjxzdGQ6OnN0cmluZz4gd2FybmluZ3M7Cn07CgovLyBTdXBwb3J0ZWQgcnVsZSBzeW50YXggKG9uZSBwZXIgbGluZSk6Ci8vICAgZXhhbXBsZS5jb20gICAgICAgICAgICAgICAgICBibG9jayBkb21haW4gYW5kIGFsbCBzdWJkb21haW5zCi8vICAgfHxleGFtcGxlLmNvbV4gICAgICAgICAgICAgICBzYW1lLCBBZGJsb2NrLXN0eWxlIGFuY2hvcgovLyAgIHx8ZXhhbXBsZS5jb20vcGF0aC8gICAgICAgICAgYmxvY2sgb25seSB3aGVuIFVSTCBwYXRoIHN0YXJ0cyB3aXRoIC9wYXRoLwovLyAgIHx8ZXhhbXBsZS5jb20vcHJlZml4KiAgICAgICAgYmxvY2sgcGF0aCB1c2luZyB3aWxkY2FyZAovLyAgICouZXhhbXBsZS5jb20gICAgICAgICAgICAgICAgd2lsZGNhcmQgZG9tYWluIGJsb2NrCi8vICAgQEBleGFtcGxlLmNvbSAgICAgICAgICAgICAgICBhbGxvdyBydWxlICh3aW5zIG92ZXIgYW55IGJsb2NrKQovLyAgIDAuMC4wLjAgZXhhbXBsZS5jb20gICAgICAgICAgaG9zdHMtZmlsZSBmb3JtYXQgKDEyNy4wLjAuMSBhbHNvIGFjY2VwdGVkKQovLyAgIHx8ZXhhbXBsZS5jb21eJHRoaXJkLXBhcnR5ICAgb3B0aW9ucyBhZnRlciAnJCcgYXJlIHN0cmlwcGVkIGFuZCBpZ25vcmVkCi8vIExpbmVzIHN0YXJ0aW5nIHdpdGggJyMnLCAnIScsIG9yICdbJyBhcmUgY29tbWVudHMuCi8vIENvc21ldGljIHJ1bGVzICgjIywgI0AjLCAjPyMpIGFyZSBza2lwcGVkIChoYW5kbGVkIGJ5IHNoaWVsZHMuanMpLgpjbGFzcyBGaWx0ZXJFbmdpbmUgewogcHVibGljOgogIExvYWRSZXN1bHQgTG9hZEZyb21GaWxlKGNvbnN0IHN0ZDo6c3RyaW5nJiBwYXRoKTsKICBMb2FkUmVzdWx0IExvYWRGcm9tVGV4dChzdGQ6OnN0cmluZ192aWV3IHRleHQpOwogIC8vIEFkZHMgcnVsZXMgd2l0aG91dCBjbGVhcmluZyBwcmV2aW91c2x5IGxvYWRlZCBvbmVzLgogIExvYWRSZXN1bHQgQXBwZW5kRnJvbVRleHQoc3RkOjpzdHJpbmdfdmlldyB0ZXh0KTsKICBGaWx0ZXJEZWNpc2lvbiBFdmFsdWF0ZShzdGQ6OnN0cmluZ192aWV3IHVybCkgY29uc3Q7CiAgc3RkOjpzaXplX3QgcnVsZV9jb3VudCgpIGNvbnN0OwoKIHByaXZhdGU6CiAgc3RydWN0IFJ1bGUgewogICAgc3RkOjpzdHJpbmcgcGF0aF9wcmVmaXg7ICAvLyBlbXB0eSA9IHdob2xlIGRvbWFpbjsgbWF5IGNvbnRhaW4gJyonCiAgICBzdGQ6OnN0cmluZyBzb3VyY2U7CiAgfTsKICBzdHJ1Y3QgV2lsZGNhcmRSdWxlIHsKICAgIHN0ZDo6c3RyaW5nIGRvbWFpbl9wYXR0ZXJuOyAgLy8gY29udGFpbnMgJyonCiAgICBzdGQ6OnN0cmluZyBwYXRoX3ByZWZpeDsKICAgIHN0ZDo6c3RyaW5nIHNvdXJjZTsKICB9OwoKICB1c2luZyBSdWxlTWFwID0gc3RkOjp1bm9yZGVyZWRfbWFwPHN0ZDo6c3RyaW5nLCBzdGQ6OnZlY3RvcjxSdWxlPj47CgogIHN0YXRpYyBjb25zdCBSdWxlKiBNYXRjaChjb25zdCBSdWxlTWFwJiBydWxlcywgc3RkOjpzdHJpbmdfdmlldyBob3N0LAogICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZ192aWV3IHBhdGgpOwogIHN0YXRpYyBib29sIE1hdGNoV2lsZGNhcmQoY29uc3Qgc3RkOjp2ZWN0b3I8V2lsZGNhcmRSdWxlPiYgcnVsZXMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZ192aWV3IGhvc3QsIHN0ZDo6c3RyaW5nX3ZpZXcgcGF0aCk7CgogIFJ1bGVNYXAgYmxvY2tfcnVsZXNfOwogIFJ1bGVNYXAgYWxsb3dfcnVsZXNfOwogIHN0ZDo6dmVjdG9yPFdpbGRjYXJkUnVsZT4gd2lsZGNhcmRfYmxvY2tfcnVsZXNfOwogIHN0ZDo6dmVjdG9yPFdpbGRjYXJkUnVsZT4gd2lsZGNhcmRfYWxsb3dfcnVsZXNfOwogIHN0ZDo6c2l6ZV90IGJsb2NrX2NvdW50X3swfTsKICBzdGQ6OnNpemVfdCBhbGxvd19jb3VudF97MH07Cn07Cn0gIC8vIG5hbWVzcGFjZSBraW5nZm4K
+#pragma once
+#include <cstddef>
+#include <string>
+#include <string_view>
+#include <unordered_map>
+#include <vector>
+
+namespace kingfn {
+enum class FilterAction { kAllow, kBlock };
+
+struct FilterDecision {
+  FilterAction action{FilterAction::kAllow};
+  std::string matched_rule;
+  std::string reason;
+};
+
+struct LoadResult {
+  std::size_t block_rules{0};
+  std::size_t allow_rules{0};
+  std::vector<std::string> warnings;
+};
+
+// Supported rule syntax (one per line):
+//   example.com                  block domain and all subdomains
+//   ||example.com^               same, Adblock-style anchor
+//   ||example.com/path/          block only when URL path starts with /path/
+//   ||example.com/prefix*        block path using wildcard
+//   *.example.com                wildcard domain block
+//   @@example.com                allow rule (wins over any block)
+//   0.0.0.0 example.com          hosts-file format (127.0.0.1 also accepted)
+//   ||example.com^$third-party   options after '$' are stripped and ignored
+// Lines starting with '#', '!', or '[' are comments.
+// Cosmetic rules (##, #@#, #?#) are skipped (handled by shields.js).
+class FilterEngine {
+ public:
+  LoadResult LoadFromFile(const std::string& path);
+  LoadResult LoadFromText(std::string_view text);
+  // Adds rules without clearing previously loaded ones.
+  LoadResult AppendFromText(std::string_view text);
+  FilterDecision Evaluate(std::string_view url) const;
+  std::size_t rule_count() const;
+
+ private:
+  struct Rule {
+    std::string path_prefix;  // empty = whole domain; may contain '*'
+    std::string source;
+  };
+  struct WildcardRule {
+    std::string domain_pattern;  // contains '*'
+    std::string path_prefix;
+    std::string source;
+  };
+
+  using RuleMap = std::unordered_map<std::string, std::vector<Rule>>;
+
+  static const Rule* Match(const RuleMap& rules, std::string_view host,
+                           std::string_view path);
+  static bool MatchWildcard(const std::vector<WildcardRule>& rules,
+                            std::string_view host, std::string_view path);
+
+  RuleMap block_rules_;
+  RuleMap allow_rules_;
+  std::vector<WildcardRule> wildcard_block_rules_;
+  std::vector<WildcardRule> wildcard_allow_rules_;
+  std::size_t block_count_{0};
+  std::size_t allow_count_{0};
+};
+}  // namespace kingfn

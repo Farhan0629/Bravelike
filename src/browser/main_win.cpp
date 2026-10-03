@@ -1,1 +1,65 @@
-I2luY2x1ZGUgPGZpbGVzeXN0ZW0+CiNpbmNsdWRlIDxzdHJpbmc+CiNpbmNsdWRlIDx3aW5kb3dzLmg+CiNpbmNsdWRlIDxzaGVsbGFwaS5oPgoKI2luY2x1ZGUgImluY2x1ZGUvY2VmX2FwcC5oIgojaW5jbHVkZSAiaW5jbHVkZS9jZWZfY29tbWFuZF9saW5lLmgiCiNpbmNsdWRlICJzcmMvYnJvd3Nlci9icm93c2VyX2FwcC5oIgojaW5jbHVkZSAic3JjL2NvcmUvbmF2aWdhdGlvbi5oIgoKbmFtZXNwYWNlIHsKc3RkOjp3c3RyaW5nIFByb2ZpbGVQYXRoKCkgewogIHdjaGFyX3QgcGF0aFtNQVhfUEFUSF17fTsKICBjb25zdCBEV09SRCBsZW5ndGggPSBHZXRNb2R1bGVGaWxlTmFtZVcobnVsbHB0ciwgcGF0aCwgTUFYX1BBVEgpOwogIGlmIChsZW5ndGggPT0gMCB8fCBsZW5ndGggPT0gTUFYX1BBVEgpIHJldHVybiBMIktJTkdGTlByb2ZpbGUiOwogIHJldHVybiAoc3RkOjpmaWxlc3lzdGVtOjpwYXRoKHBhdGgpLnBhcmVudF9wYXRoKCkgLyBMIktJTkdGTlByb2ZpbGUiKS53c3RyaW5nKCk7Cn0KfQoKaW50IEFQSUVOVFJZIHdXaW5NYWluKEhJTlNUQU5DRSBpbnN0YW5jZSwgSElOU1RBTkNFIHByZXZpb3VzX2luc3RhbmNlLAogICAgICAgICAgICAgICAgICAgICAgd2NoYXJfdCogY29tbWFuZF9saW5lLCBpbnQgc2hvd19jb21tYW5kKSB7CiAgVU5SRUZFUkVOQ0VEX1BBUkFNRVRFUihwcmV2aW91c19pbnN0YW5jZSk7CiAgVU5SRUZFUkVOQ0VEX1BBUkFNRVRFUihjb21tYW5kX2xpbmUpOwogIFVOUkVGRVJFTkNFRF9QQVJBTUVURVIoc2hvd19jb21tYW5kKTsKCiAgLy8gSGlnaC1EUEkgYXdhcmVuZXNzIOKAlCBtdXN0IGJlIHNldCBiZWZvcmUgYW55IHdpbmRvdyBpcyBjcmVhdGVkLgogIFNldFByb2Nlc3NEcGlBd2FyZW5lc3NDb250ZXh0KERQSV9BV0FSRU5FU1NfQ09OVEVYVF9QRVJfTU9OSVRPUl9BV0FSRV9WMik7CgogIENlZk1haW5BcmdzIG1haW5fYXJncyhpbnN0YW5jZSk7CiAgdm9pZCogc2FuZGJveF9pbmZvID0gbnVsbHB0cjsKICBjb25zdCBpbnQgc3VicHJvY2Vzc19jb2RlID0gQ2VmRXhlY3V0ZVByb2Nlc3MobWFpbl9hcmdzLCBudWxscHRyLCBzYW5kYm94X2luZm8pOwogIGlmIChzdWJwcm9jZXNzX2NvZGUgPj0gMCkgcmV0dXJuIHN1YnByb2Nlc3NfY29kZTsKCiAgQ2VmU2V0dGluZ3Mgc2V0dGluZ3M7CiAgc2V0dGluZ3Mubm9fc2FuZGJveCA9IHRydWU7CiAgc2V0dGluZ3MucGVyc2lzdF9zZXNzaW9uX2Nvb2tpZXMgPSB0cnVlOwogIC8vIEJhY2tncm91bmQgbmV0d29ya2luZyBmZWF0dXJlcyB0aGF0IG5lZWQgc2VwYXJhdGUgZW5hYmxlIGZsYWdzLgogIHNldHRpbmdzLmJhY2tncm91bmRfY29sb3IgPSAweEZGMEEwRTE3OyAgLy8gbWF0Y2ggaG9tZSBwYWdlIGJnCiAgQ2VmU3RyaW5nKCZzZXR0aW5ncy5jYWNoZV9wYXRoKSA9IFByb2ZpbGVQYXRoKCk7CiAgLy8gVXNlIGEgbW9kZXJuIENocm9tZS1jb21wYXRpYmxlIHVzZXItYWdlbnQgc28gc2l0ZXMgZG9uJ3Qgc2VydmUgZGVncmFkZWQKICAvLyBjb250ZW50LiBDaHJvbWl1bSAxNTIgbWFwcyB0byBDaHJvbWUgMTUyLgogIENlZlN0cmluZygmc2V0dGluZ3MudXNlcl9hZ2VudF9wcm9kdWN0KSA9IEwiQ2hyb21lLzE1Mi4wLjc5NzcuODMgS0lOR0ZOLzAuMyI7CiAgLy8gQWNjZXB0LUxhbmd1YWdlIGhlYWRlciDigJQgdXNlIGEgYnJvYWQgZGVmYXVsdC4KICBDZWZTdHJpbmcoJnNldHRpbmdzLmFjY2VwdF9sYW5ndWFnZV9saXN0KSA9IEwiZW4tVVMsZW47cT0wLjkiOwoKICBDZWZSZWZQdHI8Q2VmQ29tbWFuZExpbmU+IGNtZCA9IENlZkNvbW1hbmRMaW5lOjpDcmVhdGVDb21tYW5kTGluZSgpOwogIGNtZC0+SW5pdEZyb21TdHJpbmcoR2V0Q29tbWFuZExpbmVXKCkpOwogIENlZkNvbW1hbmRMaW5lOjpBcmd1bWVudExpc3QgYXJnczsKICBjbWQtPkdldEFyZ3VtZW50cyhhcmdzKTsKCiAgc3RkOjpzdHJpbmcgc3RhcnR1cF91cmw7CiAgZm9yIChjb25zdCBhdXRvJiBhcmcgOiBhcmdzKSB7CiAgICBjb25zdCBzdGQ6OnN0cmluZyBzdHIgPSBhcmcuVG9TdHJpbmcoKTsKICAgIGlmICghc3RyLmVtcHR5KCkgJiYgc3RyLnJmaW5kKCItLSIsIDApICE9IDAgJiYgc3RyLnJmaW5kKCItIiwgMCkgIT0gMCkgewogICAgICBzdGFydHVwX3VybCA9IGtpbmdmbjo6UmVzb2x2ZUFkZHJlc3NJbnB1dChzdHIpOwogICAgICBicmVhazsKICAgIH0KICB9CgogIENlZlJlZlB0cjxraW5nZm46OkJyb3dzZXJBcHA+IGFwcCA9IG5ldyBraW5nZm46OkJyb3dzZXJBcHAoc3RhcnR1cF91cmwpOwogIGlmICghQ2VmSW5pdGlhbGl6ZShtYWluX2FyZ3MsIHNldHRpbmdzLCBhcHAsIHNhbmRib3hfaW5mbykpIHJldHVybiAxOwogIENlZlJ1bk1lc3NhZ2VMb29wKCk7CiAgQ2VmU2h1dGRvd24oKTsKICByZXR1cm4gMDsKfQo=
+#include <filesystem>
+#include <string>
+#include <windows.h>
+#include <shellapi.h>
+
+#include "include/cef_app.h"
+#include "include/cef_command_line.h"
+#include "src/browser/browser_app.h"
+#include "src/core/navigation.h"
+
+namespace {
+std::wstring ProfilePath() {
+  wchar_t path[MAX_PATH]{};
+  const DWORD length = GetModuleFileNameW(nullptr, path, MAX_PATH);
+  if (length == 0 || length == MAX_PATH) return L"KINGFNProfile";
+  return (std::filesystem::path(path).parent_path() / L"KINGFNProfile").wstring();
+}
+}
+
+int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE previous_instance,
+                      wchar_t* command_line, int show_command) {
+  UNREFERENCED_PARAMETER(previous_instance);
+  UNREFERENCED_PARAMETER(command_line);
+  UNREFERENCED_PARAMETER(show_command);
+
+  // High-DPI awareness — must be set before any window is created.
+  SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
+
+  CefMainArgs main_args(instance);
+  void* sandbox_info = nullptr;
+  const int subprocess_code = CefExecuteProcess(main_args, nullptr, sandbox_info);
+  if (subprocess_code >= 0) return subprocess_code;
+
+  CefSettings settings;
+  settings.no_sandbox = true;
+  settings.persist_session_cookies = true;
+  // Background networking features that need separate enable flags.
+  settings.background_color = 0xFF0A0E17;  // match home page bg
+  CefString(&settings.cache_path) = ProfilePath();
+  // Use a modern Chrome-compatible user-agent so sites don't serve degraded
+  // content. Chromium 152 maps to Chrome 152.
+  CefString(&settings.user_agent_product) = L"Chrome/152.0.7977.83 KINGFN/0.3";
+  // Accept-Language header — use a broad default.
+  CefString(&settings.accept_language_list) = L"en-US,en;q=0.9";
+
+  CefRefPtr<CefCommandLine> cmd = CefCommandLine::CreateCommandLine();
+  cmd->InitFromString(GetCommandLineW());
+  CefCommandLine::ArgumentList args;
+  cmd->GetArguments(args);
+
+  std::string startup_url;
+  for (const auto& arg : args) {
+    const std::string str = arg.ToString();
+    if (!str.empty() && str.rfind("--", 0) != 0 && str.rfind("-", 0) != 0) {
+      startup_url = kingfn::ResolveAddressInput(str);
+      break;
+    }
+  }
+
+  CefRefPtr<kingfn::BrowserApp> app = new kingfn::BrowserApp(startup_url);
+  if (!CefInitialize(main_args, settings, app, sandbox_info)) return 1;
+  CefRunMessageLoop();
+  CefShutdown();
+  return 0;
+}

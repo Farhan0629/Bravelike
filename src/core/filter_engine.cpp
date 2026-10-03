@@ -1,1 +1,253 @@
-I2luY2x1ZGUgImNvcmUvZmlsdGVyX2VuZ2luZS5oIgojaW5jbHVkZSAiY29yZS91cmxfdXRpbHMuaCIKI2luY2x1ZGUgPGFsZ29yaXRobT4KI2luY2x1ZGUgPGNjdHlwZT4KI2luY2x1ZGUgPGZzdHJlYW0+CiNpbmNsdWRlIDxzc3RyZWFtPgojaW5jbHVkZSA8c3RkZXhjZXB0PgoKbmFtZXNwYWNlIGtpbmdmbiB7Cm5hbWVzcGFjZSB7CnN0ZDo6c3RyaW5nIFRyaW0oc3RkOjpzdHJpbmdfdmlldyB2YWx1ZSkgewogIGNvbnN0IGF1dG8gZmlyc3QgPSB2YWx1ZS5maW5kX2ZpcnN0X25vdF9vZigiIFx0XHJcbiIpOwogIGlmIChmaXJzdCA9PSBzdGQ6OnN0cmluZ192aWV3OjpucG9zKSByZXR1cm4ge307CiAgY29uc3QgYXV0byBsYXN0ID0gdmFsdWUuZmluZF9sYXN0X25vdF9vZigiIFx0XHJcbiIpOwogIHJldHVybiBzdGQ6OnN0cmluZyh2YWx1ZS5zdWJzdHIoZmlyc3QsIGxhc3QgLSBmaXJzdCArIDEpKTsKfQoKYm9vbCBJc1BsYXVzaWJsZURvbWFpbihzdGQ6OnN0cmluZ192aWV3IGRvbWFpbikgewogIGlmIChkb21haW4uZW1wdHkoKSB8fCBkb21haW4uZnJvbnQoKSA9PSAnLicgfHwgZG9tYWluLmJhY2soKSA9PSAnLicpIHJldHVybiBmYWxzZTsKICBpZiAoZG9tYWluLmZpbmQoJy4nKSA9PSBzdGQ6OnN0cmluZ192aWV3OjpucG9zKSByZXR1cm4gZmFsc2U7CiAgcmV0dXJuIHN0ZDo6YWxsX29mKGRvbWFpbi5iZWdpbigpLCBkb21haW4uZW5kKCksIFtdKHVuc2lnbmVkIGNoYXIgYykgewogICAgcmV0dXJuIHN0ZDo6aXNhbG51bShjKSB8fCBjID09ICcuJyB8fCBjID09ICctJyB8fCBjID09ICdfJyB8fCBjID09ICcqJzsKICB9KTsKfQoKYm9vbCBJc1BsYXVzaWJsZVBhdGgoc3RkOjpzdHJpbmdfdmlldyBwYXRoKSB7CiAgaWYgKHBhdGguZW1wdHkoKSB8fCBwYXRoLmZyb250KCkgIT0gJy8nKSByZXR1cm4gZmFsc2U7CiAgcmV0dXJuIHN0ZDo6bm9uZV9vZihwYXRoLmJlZ2luKCksIHBhdGguZW5kKCksIFtdKHVuc2lnbmVkIGNoYXIgYykgewogICAgcmV0dXJuIHN0ZDo6aXNzcGFjZShjKSB8fCBjID09ICdeJyB8fCBjID09ICd8JzsKICB9KTsKfQoKLy8gUmV0dXJucyB0aGUgVVJMIHBhdGggKHdpdGhvdXQgcXVlcnkvZnJhZ21lbnQpLCBsb3dlci1jYXNlZC4gIi8iIGlmIGFic2VudC4Kc3RkOjpzdHJpbmcgRXh0cmFjdFBhdGgoc3RkOjpzdHJpbmdfdmlldyB1cmwpIHsKICBjb25zdCBhdXRvIHNjaGVtZV9lbmQgPSB1cmwuZmluZCgiOi8vIik7CiAgaWYgKHNjaGVtZV9lbmQgPT0gc3RkOjpzdHJpbmdfdmlldzo6bnBvcykgcmV0dXJuICIvIjsKICBhdXRvIHJlc3QgPSB1cmwuc3Vic3RyKHNjaGVtZV9lbmQgKyAzKTsKICBjb25zdCBhdXRvIHNsYXNoID0gcmVzdC5maW5kX2ZpcnN0X29mKCIvPyMiKTsKICBpZiAoc2xhc2ggPT0gc3RkOjpzdHJpbmdfdmlldzo6bnBvcyB8fCByZXN0W3NsYXNoXSAhPSAnLycpIHJldHVybiAiLyI7CiAgcmVzdCA9IHJlc3Quc3Vic3RyKHNsYXNoKTsKICBjb25zdCBhdXRvIGVuZCA9IHJlc3QuZmluZF9maXJzdF9vZigiPyMiKTsKICByZXR1cm4gVG9Mb3dlckFzY2lpKHJlc3Quc3Vic3RyKDAsIGVuZCkpOwp9CgovLyBTaW1wbGUgd2lsZGNhcmQgbWF0Y2g6IHBhdHRlcm4gbWF5IGNvbnRhaW4gJyonIChtYXRjaGVzIGFueSBzdWJzdHJpbmcpLgpib29sIFdpbGRjYXJkTWF0Y2goc3RkOjpzdHJpbmdfdmlldyBwYXR0ZXJuLCBzdGQ6OnN0cmluZ192aWV3IHRleHQpIHsKICBpZiAocGF0dGVybi5lbXB0eSgpKSByZXR1cm4gdHJ1ZTsKICBpZiAocGF0dGVybiA9PSAiKiIpIHJldHVybiB0cnVlOwoKICAvLyBTcGxpdCBwYXR0ZXJuIGJ5ICcqJyBhbmQgZ3JlZWRpbHkgbWF0Y2ggc3Vic3RyaW5ncy4KICBzdGQ6OnZlY3RvcjxzdGQ6OnN0cmluZ192aWV3PiBwYXJ0czsKICBzdGQ6OnNpemVfdCBzdGFydCA9IDA7CiAgd2hpbGUgKHRydWUpIHsKICAgIGNvbnN0IGF1dG8gcG9zID0gcGF0dGVybi5maW5kKCcqJywgc3RhcnQpOwogICAgcGFydHMucHVzaF9iYWNrKHBhdHRlcm4uc3Vic3RyKHN0YXJ0LCBwb3MgPT0gc3RkOjpzdHJpbmdfdmlldzo6bnBvcyA/IHBvcyA6IHBvcyAtIHN0YXJ0KSk7CiAgICBpZiAocG9zID09IHN0ZDo6c3RyaW5nX3ZpZXc6Om5wb3MpIGJyZWFrOwogICAgc3RhcnQgPSBwb3MgKyAxOwogIH0KCiAgc3RkOjpzaXplX3Qgc2VhcmNoX2Zyb20gPSAwOwogIGJvb2wgZmlyc3QgPSB0cnVlOwogIGZvciAoc3RkOjpzaXplX3QgaSA9IDA7IGkgPCBwYXJ0cy5zaXplKCk7ICsraSkgewogICAgY29uc3QgYXV0byYgcGFydCA9IHBhcnRzW2ldOwogICAgaWYgKHBhcnQuZW1wdHkoKSkgewogICAgICBpZiAoaSA9PSAwKSBmaXJzdCA9IGZhbHNlOwogICAgICBjb250aW51ZTsKICAgIH0KICAgIGNvbnN0IGF1dG8gZm91bmQgPSB0ZXh0LmZpbmQocGFydCwgc2VhcmNoX2Zyb20pOwogICAgaWYgKGZvdW5kID09IHN0ZDo6c3RyaW5nX3ZpZXc6Om5wb3MpIHJldHVybiBmYWxzZTsKICAgIGlmIChmaXJzdCAmJiBpID09IDAgJiYgZm91bmQgIT0gMCkgcmV0dXJuIGZhbHNlOyAgLy8gYW5jaG9yZWQgc3RhcnQKICAgIHNlYXJjaF9mcm9tID0gZm91bmQgKyBwYXJ0LnNpemUoKTsKICAgIGZpcnN0ID0gZmFsc2U7CiAgfQoKICAvLyBJZiBsYXN0IHNlZ21lbnQgaXMgbm9uLWVtcHR5LCBpdCBtdXN0IG1hdGNoIHVwIHRvIGVuZC4KICBpZiAoIXBhcnRzLmVtcHR5KCkgJiYgIXBhcnRzLmJhY2soKS5lbXB0eSgpKSB7CiAgICBpZiAocGF0dGVybi5iYWNrKCkgIT0gJyonKSB7CiAgICAgIC8vIFRoZSBsYXN0IHBhcnQgbXVzdCBiZSBhIHN1ZmZpeCBtYXRjaC4KICAgICAgcmV0dXJuIHRleHQuc2l6ZSgpID49IHBhcnRzLmJhY2soKS5zaXplKCkgJiYKICAgICAgICAgICAgIHRleHQuc3Vic3RyKHRleHQuc2l6ZSgpIC0gcGFydHMuYmFjaygpLnNpemUoKSkgPT0gcGFydHMuYmFjaygpOwogICAgfQogIH0KICByZXR1cm4gdHJ1ZTsKfQp9ICAvLyBuYW1lc3BhY2UKCkxvYWRSZXN1bHQgRmlsdGVyRW5naW5lOjpMb2FkRnJvbUZpbGUoY29uc3Qgc3RkOjpzdHJpbmcmIHBhdGgpIHsKICBzdGQ6Omlmc3RyZWFtIGZpbGUocGF0aCk7CiAgaWYgKCFmaWxlKSB0aHJvdyBzdGQ6OnJ1bnRpbWVfZXJyb3IoIkNvdWxkIG5vdCBvcGVuIGZpbHRlciBsaXN0OiAiICsgcGF0aCk7CiAgc3RkOjpvc3RyaW5nc3RyZWFtIGJ1ZmZlcjsKICBidWZmZXIgPDwgZmlsZS5yZGJ1ZigpOwogIHJldHVybiBMb2FkRnJvbVRleHQoYnVmZmVyLnN0cigpKTsKfQoKTG9hZFJlc3VsdCBGaWx0ZXJFbmdpbmU6OkxvYWRGcm9tVGV4dChzdGQ6OnN0cmluZ192aWV3IHRleHQpIHsKICBibG9ja19ydWxlc18uY2xlYXIoKTsKICBhbGxvd19ydWxlc18uY2xlYXIoKTsKICB3aWxkY2FyZF9ibG9ja19ydWxlc18uY2xlYXIoKTsKICB3aWxkY2FyZF9hbGxvd19ydWxlc18uY2xlYXIoKTsKICBibG9ja19jb3VudF8gPSAwOwogIGFsbG93X2NvdW50XyA9IDA7CiAgcmV0dXJuIEFwcGVuZEZyb21UZXh0KHRleHQpOwp9CgpMb2FkUmVzdWx0IEZpbHRlckVuZ2luZTo6QXBwZW5kRnJvbVRleHQoc3RkOjpzdHJpbmdfdmlldyB0ZXh0KSB7CiAgTG9hZFJlc3VsdCByZXN1bHQ7CiAgc3RkOjppc3RyaW5nc3RyZWFtIHN0cmVhbXtzdGQ6OnN0cmluZyh0ZXh0KX07CiAgc3RkOjpzdHJpbmcgbGluZTsKICBzdGQ6OnNpemVfdCBsaW5lX251bWJlciA9IDA7CiAgd2hpbGUgKHN0ZDo6Z2V0bGluZShzdHJlYW0sIGxpbmUpKSB7CiAgICArK2xpbmVfbnVtYmVyOwogICAgY29uc3Qgc3RkOjpzdHJpbmcgc291cmNlID0gVHJpbShsaW5lKTsKICAgIHN0ZDo6c3RyaW5nIHJ1bGUgPSBzb3VyY2U7CiAgICBpZiAocnVsZS5lbXB0eSgpIHx8IHJ1bGUuZnJvbnQoKSA9PSAnIycgfHwgcnVsZS5mcm9udCgpID09ICchJyB8fAogICAgICAgIHJ1bGUuZnJvbnQoKSA9PSAnWycpIGNvbnRpbnVlOwogICAgLy8gQ29zbWV0aWMvZWxlbWVudC1oaWRlIHJ1bGVzIOKAlCBoYW5kbGVkIGJ5IHRoZSBpbi1wYWdlIEpTLCBub3QgQysrLgogICAgaWYgKHJ1bGUuZmluZCgiIyMiKSAhPSBzdGQ6OnN0cmluZzo6bnBvcyB8fAogICAgICAgIHJ1bGUuZmluZCgiI0AjIikgIT0gc3RkOjpzdHJpbmc6Om5wb3MgfHwKICAgICAgICBydWxlLmZpbmQoIiM/IyIpICE9IHN0ZDo6c3RyaW5nOjpucG9zKSBjb250aW51ZTsKCiAgICAvLyBIb3N0cy1maWxlIGZvcm1hdDogIjAuMC4wLjAgZG9tYWluIiBvciAiMTI3LjAuMC4xIGRvbWFpbiIuCiAgICBpZiAocnVsZS5yZmluZCgiMC4wLjAuMCIsIDApID09IDAgfHwgcnVsZS5yZmluZCgiMTI3LjAuMC4xIiwgMCkgPT0gMCkgewogICAgICBzdGQ6OmlzdHJpbmdzdHJlYW0gcGFydHMocnVsZSk7CiAgICAgIHN0ZDo6c3RyaW5nIGlwLCBob3N0OwogICAgICBwYXJ0cyA+PiBpcCA+PiBob3N0OwogICAgICBpZiAoaG9zdC5lbXB0eSgpIHx8IGhvc3QgPT0gImxvY2FsaG9zdCIgfHwgaG9zdCA9PSAiMC4wLjAuMCIpIGNvbnRpbnVlOwogICAgICBydWxlID0gaG9zdDsKICAgIH0KCiAgICBib29sIGFsbG93ID0gZmFsc2U7CiAgICBpZiAocnVsZS5yZmluZCgiQEAiLCAwKSA9PSAwKSB7CiAgICAgIGFsbG93ID0gdHJ1ZTsKICAgICAgcnVsZS5lcmFzZSgwLCAyKTsKICAgIH0KCiAgICAvLyBTdHJpcCBvcHRpb25zIGFmdGVyICckJyDigJQgc3BsaXQgb24gZmlyc3QgJyQnLCBkaXNjYXJkIGV2ZXJ5dGhpbmcgYWZ0ZXIuCiAgICBjb25zdCBhdXRvIG9wdGlvbnNfcG9zID0gcnVsZS5maW5kKCckJyk7CiAgICBpZiAob3B0aW9uc19wb3MgIT0gc3RkOjpzdHJpbmc6Om5wb3MpIHJ1bGUuZXJhc2Uob3B0aW9uc19wb3MpOwoKICAgIC8vIFN0cmlwIEFkYmxvY2stc3R5bGUgYW5jaG9ycy4KICAgIGlmIChydWxlLnJmaW5kKCJ8fCIsIDApID09IDApIHJ1bGUuZXJhc2UoMCwgMik7CiAgICB3aGlsZSAoIXJ1bGUuZW1wdHkoKSAmJiAocnVsZS5iYWNrKCkgPT0gJ14nIHx8IHJ1bGUuYmFjaygpID09ICd8JykpCiAgICAgIHJ1bGUucG9wX2JhY2soKTsKCiAgICBydWxlID0gVG9Mb3dlckFzY2lpKFRyaW0ocnVsZSkpOwogICAgaWYgKHJ1bGUuZW1wdHkoKSkgY29udGludWU7CgogICAgc3RkOjpzdHJpbmcgZG9tYWluID0gcnVsZTsKICAgIHN0ZDo6c3RyaW5nIHBhdGg7CiAgICBjb25zdCBhdXRvIHNsYXNoID0gcnVsZS5maW5kKCcvJyk7CiAgICBpZiAoc2xhc2ggIT0gc3RkOjpzdHJpbmc6Om5wb3MpIHsKICAgICAgZG9tYWluID0gcnVsZS5zdWJzdHIoMCwgc2xhc2gpOwogICAgICBwYXRoID0gcnVsZS5zdWJzdHIoc2xhc2gpOwogICAgfQoKICAgIGNvbnN0IGJvb2wgaGFzX2RvbWFpbl93aWxkY2FyZCA9IGRvbWFpbi5maW5kKCcqJykgIT0gc3RkOjpzdHJpbmc6Om5wb3M7CiAgICBjb25zdCBib29sIGhhc19wYXRoX3dpbGRjYXJkICAgPSBwYXRoLmZpbmQoJyonKSAgICE9IHN0ZDo6c3RyaW5nOjpucG9zOwoKICAgIGlmIChoYXNfZG9tYWluX3dpbGRjYXJkKSB7CiAgICAgIC8vIFdpbGRjYXJkIGRvbWFpbiBydWxlIOKAlCBzdG9yZWQgc2VwYXJhdGVseS4KICAgICAgV2lsZGNhcmRSdWxlIHdye2RvbWFpbiwgcGF0aCwgc291cmNlfTsKICAgICAgaWYgKGFsbG93KSB7CiAgICAgICAgd2lsZGNhcmRfYWxsb3dfcnVsZXNfLnB1c2hfYmFjayhzdGQ6Om1vdmUod3IpKTsKICAgICAgfSBlbHNlIHsKICAgICAgICB3aWxkY2FyZF9ibG9ja19ydWxlc18ucHVzaF9iYWNrKHN0ZDo6bW92ZSh3cikpOwogICAgICB9CiAgICAgIGFsbG93ID8gKythbGxvd19jb3VudF8gOiArK2Jsb2NrX2NvdW50XzsKICAgICAgYWxsb3cgPyArK3Jlc3VsdC5hbGxvd19ydWxlcyA6ICsrcmVzdWx0LmJsb2NrX3J1bGVzOwogICAgICBjb250aW51ZTsKICAgIH0KCiAgICBpZiAoIUlzUGxhdXNpYmxlRG9tYWluKGRvbWFpbikgfHwKICAgICAgICAoIXBhdGguZW1wdHkoKSAmJiAhaGFzX3BhdGhfd2lsZGNhcmQgJiYgIUlzUGxhdXNpYmxlUGF0aChwYXRoKSkpIHsKICAgICAgcmVzdWx0Lndhcm5pbmdzLnB1c2hfYmFjaygiTGluZSAiICsgc3RkOjp0b19zdHJpbmcobGluZV9udW1iZXIpICsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIjogdW5zdXBwb3J0ZWQgcnVsZTogIiArIHNvdXJjZSk7CiAgICAgIGNvbnRpbnVlOwogICAgfQoKICAgIFJ1bGUgcGFyc2Vke3BhdGgsIHNvdXJjZX07CiAgICBpZiAoYWxsb3cpIHsKICAgICAgYWxsb3dfcnVsZXNfW2RvbWFpbl0ucHVzaF9iYWNrKHN0ZDo6bW92ZShwYXJzZWQpKTsKICAgICAgKythbGxvd19jb3VudF87CiAgICAgICsrcmVzdWx0LmFsbG93X3J1bGVzOwogICAgfSBlbHNlIHsKICAgICAgYmxvY2tfcnVsZXNfW2RvbWFpbl0ucHVzaF9iYWNrKHN0ZDo6bW92ZShwYXJzZWQpKTsKICAgICAgKytibG9ja19jb3VudF87CiAgICAgICsrcmVzdWx0LmJsb2NrX3J1bGVzOwogICAgfQogIH0KICByZXR1cm4gcmVzdWx0Owp9Cgpjb25zdCBGaWx0ZXJFbmdpbmU6OlJ1bGUqIEZpbHRlckVuZ2luZTo6TWF0Y2goY29uc3QgUnVsZU1hcCYgcnVsZXMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZ192aWV3IGhvc3QsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZ192aWV3IHBhdGgpIHsKICBpZiAocnVsZXMuZW1wdHkoKSkgcmV0dXJuIG51bGxwdHI7CiAgLy8gV2FsayBob3N0IHN1ZmZpeGVzOiBhLmIuZXhhbXBsZS5jb20g4oaSIGIuZXhhbXBsZS5jb20g4oaSIGV4YW1wbGUuY29tIOKGkiBjb20KICBzdGQ6OnN0cmluZ192aWV3IGNhbmRpZGF0ZSA9IGhvc3Q7CiAgd2hpbGUgKCFjYW5kaWRhdGUuZW1wdHkoKSkgewogICAgY29uc3QgYXV0byBpdCA9IHJ1bGVzLmZpbmQoc3RkOjpzdHJpbmcoY2FuZGlkYXRlKSk7CiAgICBpZiAoaXQgIT0gcnVsZXMuZW5kKCkpIHsKICAgICAgZm9yIChjb25zdCBhdXRvJiBydWxlIDogaXQtPnNlY29uZCkgewogICAgICAgIGlmIChydWxlLnBhdGhfcHJlZml4LmVtcHR5KCkpIHJldHVybiAmcnVsZTsKICAgICAgICAvLyBQYXRoIG1hdGNoaW5nOiBzdXBwb3J0IHdpbGRjYXJkcyBpbiBwYXRoIHByZWZpeC4KICAgICAgICBpZiAocnVsZS5wYXRoX3ByZWZpeC5maW5kKCcqJykgIT0gc3RkOjpzdHJpbmc6Om5wb3MpIHsKICAgICAgICAgIGlmIChXaWxkY2FyZE1hdGNoKHJ1bGUucGF0aF9wcmVmaXgsIHBhdGgpKSByZXR1cm4gJnJ1bGU7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgIGlmIChwYXRoLnJmaW5kKHJ1bGUucGF0aF9wcmVmaXgsIDApID09IDApIHJldHVybiAmcnVsZTsKICAgICAgICB9CiAgICAgIH0KICAgIH0KICAgIGNvbnN0IGF1dG8gZG90ID0gY2FuZGlkYXRlLmZpbmQoJy4nKTsKICAgIGlmIChkb3QgPT0gc3RkOjpzdHJpbmdfdmlldzo6bnBvcykgYnJlYWs7CiAgICBjYW5kaWRhdGUucmVtb3ZlX3ByZWZpeChkb3QgKyAxKTsKICB9CiAgcmV0dXJuIG51bGxwdHI7Cn0KCmJvb2wgRmlsdGVyRW5naW5lOjpNYXRjaFdpbGRjYXJkKGNvbnN0IHN0ZDo6dmVjdG9yPFdpbGRjYXJkUnVsZT4mIHJ1bGVzLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnN0cmluZ192aWV3IGhvc3QsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ZDo6c3RyaW5nX3ZpZXcgcGF0aCkgewogIGZvciAoY29uc3QgYXV0byYgd3IgOiBydWxlcykgewogICAgaWYgKFdpbGRjYXJkTWF0Y2god3IuZG9tYWluX3BhdHRlcm4sIGhvc3QpKSB7CiAgICAgIGlmICh3ci5wYXRoX3ByZWZpeC5lbXB0eSgpIHx8IFdpbGRjYXJkTWF0Y2god3IucGF0aF9wcmVmaXgsIHBhdGgpKQogICAgICAgIHJldHVybiB0cnVlOwogICAgfQogIH0KICByZXR1cm4gZmFsc2U7Cn0KCkZpbHRlckRlY2lzaW9uIEZpbHRlckVuZ2luZTo6RXZhbHVhdGUoc3RkOjpzdHJpbmdfdmlldyB1cmwpIGNvbnN0IHsKICBjb25zdCBhdXRvIGhvc3QgPSBFeHRyYWN0SHR0cEhvc3QodXJsKTsKICBpZiAoIWhvc3QpIHJldHVybiB7RmlsdGVyQWN0aW9uOjprQWxsb3csIHt9LCAidW5zdXBwb3J0ZWQgb3IgaW52YWxpZCBVUkwifTsKICBjb25zdCBzdGQ6OnN0cmluZyBwYXRoID0gRXh0cmFjdFBhdGgodXJsKTsKCiAgLy8gQWxsb3cgcnVsZXMgd2luIHVuY29uZGl0aW9uYWxseS4KICBpZiAoY29uc3QgYXV0byogcnVsZSA9IE1hdGNoKGFsbG93X3J1bGVzXywgKmhvc3QsIHBhdGgpKQogICAgcmV0dXJuIHtGaWx0ZXJBY3Rpb246OmtBbGxvdywgcnVsZS0+c291cmNlLCAibWF0Y2hlZCBhbGxvdyBydWxlIn07CiAgaWYgKE1hdGNoV2lsZGNhcmQod2lsZGNhcmRfYWxsb3dfcnVsZXNfLCAqaG9zdCwgcGF0aCkpCiAgICByZXR1cm4ge0ZpbHRlckFjdGlvbjo6a0FsbG93LCB7fSwgIm1hdGNoZWQgd2lsZGNhcmQgYWxsb3cgcnVsZSJ9OwoKICBpZiAoY29uc3QgYXV0byogcnVsZSA9IE1hdGNoKGJsb2NrX3J1bGVzXywgKmhvc3QsIHBhdGgpKQogICAgcmV0dXJuIHtGaWx0ZXJBY3Rpb246OmtCbG9jaywgcnVsZS0+c291cmNlLCAibWF0Y2hlZCBibG9jayBydWxlIn07CiAgaWYgKE1hdGNoV2lsZGNhcmQod2lsZGNhcmRfYmxvY2tfcnVsZXNfLCAqaG9zdCwgcGF0aCkpCiAgICByZXR1cm4ge0ZpbHRlckFjdGlvbjo6a0Jsb2NrLCB7fSwgIm1hdGNoZWQgd2lsZGNhcmQgYmxvY2sgcnVsZSJ9OwoKICByZXR1cm4ge0ZpbHRlckFjdGlvbjo6a0FsbG93LCB7fSwgIm5vIG1hdGNoaW5nIHJ1bGUifTsKfQoKc3RkOjpzaXplX3QgRmlsdGVyRW5naW5lOjpydWxlX2NvdW50KCkgY29uc3QgewogIHJldHVybiBibG9ja19jb3VudF8gKyBhbGxvd19jb3VudF87Cn0KfSAgLy8gbmFtZXNwYWNlIGtpbmdmbgo=
+#include "core/filter_engine.h"
+#include "core/url_utils.h"
+#include <algorithm>
+#include <cctype>
+#include <fstream>
+#include <sstream>
+#include <stdexcept>
+
+namespace kingfn {
+namespace {
+std::string Trim(std::string_view value) {
+  const auto first = value.find_first_not_of(" \t\r\n");
+  if (first == std::string_view::npos) return {};
+  const auto last = value.find_last_not_of(" \t\r\n");
+  return std::string(value.substr(first, last - first + 1));
+}
+
+bool IsPlausibleDomain(std::string_view domain) {
+  if (domain.empty() || domain.front() == '.' || domain.back() == '.') return false;
+  if (domain.find('.') == std::string_view::npos) return false;
+  return std::all_of(domain.begin(), domain.end(), [](unsigned char c) {
+    return std::isalnum(c) || c == '.' || c == '-' || c == '_' || c == '*';
+  });
+}
+
+bool IsPlausiblePath(std::string_view path) {
+  if (path.empty() || path.front() != '/') return false;
+  return std::none_of(path.begin(), path.end(), [](unsigned char c) {
+    return std::isspace(c) || c == '^' || c == '|';
+  });
+}
+
+// Returns the URL path (without query/fragment), lower-cased. "/" if absent.
+std::string ExtractPath(std::string_view url) {
+  const auto scheme_end = url.find("://");
+  if (scheme_end == std::string_view::npos) return "/";
+  auto rest = url.substr(scheme_end + 3);
+  const auto slash = rest.find_first_of("/?#");
+  if (slash == std::string_view::npos || rest[slash] != '/') return "/";
+  rest = rest.substr(slash);
+  const auto end = rest.find_first_of("?#");
+  return ToLowerAscii(rest.substr(0, end));
+}
+
+// Simple wildcard match: pattern may contain '*' (matches any substring).
+bool WildcardMatch(std::string_view pattern, std::string_view text) {
+  if (pattern.empty()) return true;
+  if (pattern == "*") return true;
+
+  // Split pattern by '*' and greedily match substrings.
+  std::vector<std::string_view> parts;
+  std::size_t start = 0;
+  while (true) {
+    const auto pos = pattern.find('*', start);
+    parts.push_back(pattern.substr(start, pos == std::string_view::npos ? pos : pos - start));
+    if (pos == std::string_view::npos) break;
+    start = pos + 1;
+  }
+
+  std::size_t search_from = 0;
+  bool first = true;
+  for (std::size_t i = 0; i < parts.size(); ++i) {
+    const auto& part = parts[i];
+    if (part.empty()) {
+      if (i == 0) first = false;
+      continue;
+    }
+    const auto found = text.find(part, search_from);
+    if (found == std::string_view::npos) return false;
+    if (first && i == 0 && found != 0) return false;  // anchored start
+    search_from = found + part.size();
+    first = false;
+  }
+
+  // If last segment is non-empty, it must match up to end.
+  if (!parts.empty() && !parts.back().empty()) {
+    if (pattern.back() != '*') {
+      // The last part must be a suffix match.
+      return text.size() >= parts.back().size() &&
+             text.substr(text.size() - parts.back().size()) == parts.back();
+    }
+  }
+  return true;
+}
+}  // namespace
+
+LoadResult FilterEngine::LoadFromFile(const std::string& path) {
+  std::ifstream file(path);
+  if (!file) throw std::runtime_error("Could not open filter list: " + path);
+  std::ostringstream buffer;
+  buffer << file.rdbuf();
+  return LoadFromText(buffer.str());
+}
+
+LoadResult FilterEngine::LoadFromText(std::string_view text) {
+  block_rules_.clear();
+  allow_rules_.clear();
+  wildcard_block_rules_.clear();
+  wildcard_allow_rules_.clear();
+  block_count_ = 0;
+  allow_count_ = 0;
+  return AppendFromText(text);
+}
+
+LoadResult FilterEngine::AppendFromText(std::string_view text) {
+  LoadResult result;
+  std::istringstream stream{std::string(text)};
+  std::string line;
+  std::size_t line_number = 0;
+  while (std::getline(stream, line)) {
+    ++line_number;
+    const std::string source = Trim(line);
+    std::string rule = source;
+    if (rule.empty() || rule.front() == '#' || rule.front() == '!' ||
+        rule.front() == '[') continue;
+    // Cosmetic/element-hide rules — handled by the in-page JS, not C++.
+    if (rule.find("##") != std::string::npos ||
+        rule.find("#@#") != std::string::npos ||
+        rule.find("#?#") != std::string::npos) continue;
+
+    // Hosts-file format: "0.0.0.0 domain" or "127.0.0.1 domain".
+    if (rule.rfind("0.0.0.0", 0) == 0 || rule.rfind("127.0.0.1", 0) == 0) {
+      std::istringstream parts(rule);
+      std::string ip, host;
+      parts >> ip >> host;
+      if (host.empty() || host == "localhost" || host == "0.0.0.0") continue;
+      rule = host;
+    }
+
+    bool allow = false;
+    if (rule.rfind("@@", 0) == 0) {
+      allow = true;
+      rule.erase(0, 2);
+    }
+
+    // Strip options after '$' — split on first '$', discard everything after.
+    const auto options_pos = rule.find('$');
+    if (options_pos != std::string::npos) rule.erase(options_pos);
+
+    // Strip Adblock-style anchors.
+    if (rule.rfind("||", 0) == 0) rule.erase(0, 2);
+    while (!rule.empty() && (rule.back() == '^' || rule.back() == '|'))
+      rule.pop_back();
+
+    rule = ToLowerAscii(Trim(rule));
+    if (rule.empty()) continue;
+
+    std::string domain = rule;
+    std::string path;
+    const auto slash = rule.find('/');
+    if (slash != std::string::npos) {
+      domain = rule.substr(0, slash);
+      path = rule.substr(slash);
+    }
+
+    const bool has_domain_wildcard = domain.find('*') != std::string::npos;
+    const bool has_path_wildcard   = path.find('*')   != std::string::npos;
+
+    if (has_domain_wildcard) {
+      // Wildcard domain rule — stored separately.
+      WildcardRule wr{domain, path, source};
+      if (allow) {
+        wildcard_allow_rules_.push_back(std::move(wr));
+      } else {
+        wildcard_block_rules_.push_back(std::move(wr));
+      }
+      allow ? ++allow_count_ : ++block_count_;
+      allow ? ++result.allow_rules : ++result.block_rules;
+      continue;
+    }
+
+    if (!IsPlausibleDomain(domain) ||
+        (!path.empty() && !has_path_wildcard && !IsPlausiblePath(path))) {
+      result.warnings.push_back("Line " + std::to_string(line_number) +
+                                 ": unsupported rule: " + source);
+      continue;
+    }
+
+    Rule parsed{path, source};
+    if (allow) {
+      allow_rules_[domain].push_back(std::move(parsed));
+      ++allow_count_;
+      ++result.allow_rules;
+    } else {
+      block_rules_[domain].push_back(std::move(parsed));
+      ++block_count_;
+      ++result.block_rules;
+    }
+  }
+  return result;
+}
+
+const FilterEngine::Rule* FilterEngine::Match(const RuleMap& rules,
+                                              std::string_view host,
+                                              std::string_view path) {
+  if (rules.empty()) return nullptr;
+  // Walk host suffixes: a.b.example.com → b.example.com → example.com → com
+  std::string_view candidate = host;
+  while (!candidate.empty()) {
+    const auto it = rules.find(std::string(candidate));
+    if (it != rules.end()) {
+      for (const auto& rule : it->second) {
+        if (rule.path_prefix.empty()) return &rule;
+        // Path matching: support wildcards in path prefix.
+        if (rule.path_prefix.find('*') != std::string::npos) {
+          if (WildcardMatch(rule.path_prefix, path)) return &rule;
+        } else {
+          if (path.rfind(rule.path_prefix, 0) == 0) return &rule;
+        }
+      }
+    }
+    const auto dot = candidate.find('.');
+    if (dot == std::string_view::npos) break;
+    candidate.remove_prefix(dot + 1);
+  }
+  return nullptr;
+}
+
+bool FilterEngine::MatchWildcard(const std::vector<WildcardRule>& rules,
+                                 std::string_view host,
+                                 std::string_view path) {
+  for (const auto& wr : rules) {
+    if (WildcardMatch(wr.domain_pattern, host)) {
+      if (wr.path_prefix.empty() || WildcardMatch(wr.path_prefix, path))
+        return true;
+    }
+  }
+  return false;
+}
+
+FilterDecision FilterEngine::Evaluate(std::string_view url) const {
+  const auto host = ExtractHttpHost(url);
+  if (!host) return {FilterAction::kAllow, {}, "unsupported or invalid URL"};
+  const std::string path = ExtractPath(url);
+
+  // Allow rules win unconditionally.
+  if (const auto* rule = Match(allow_rules_, *host, path))
+    return {FilterAction::kAllow, rule->source, "matched allow rule"};
+  if (MatchWildcard(wildcard_allow_rules_, *host, path))
+    return {FilterAction::kAllow, {}, "matched wildcard allow rule"};
+
+  if (const auto* rule = Match(block_rules_, *host, path))
+    return {FilterAction::kBlock, rule->source, "matched block rule"};
+  if (MatchWildcard(wildcard_block_rules_, *host, path))
+    return {FilterAction::kBlock, {}, "matched wildcard block rule"};
+
+  return {FilterAction::kAllow, {}, "no matching rule"};
+}
+
+std::size_t FilterEngine::rule_count() const {
+  return block_count_ + allow_count_;
+}
+}  // namespace kingfn

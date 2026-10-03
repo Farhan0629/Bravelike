@@ -1,1 +1,51 @@
-I2luY2x1ZGUgInNyYy9icm93c2VyL2Jyb3dzZXJfYXBwLmgiCiNpbmNsdWRlICJzcmMvYnJvd3Nlci9icm93c2VyX3dpbmRvdy5oIgojaW5jbHVkZSAiaW5jbHVkZS93cmFwcGVyL2NlZl9oZWxwZXJzLmgiCgpuYW1lc3BhY2Uga2luZ2ZuIHsKQnJvd3NlckFwcDo6QnJvd3NlckFwcChzdGQ6OnN0cmluZyBzdGFydHVwX3VybCkKICAgIDogc3RhcnR1cF91cmxfKHN0ZDo6bW92ZShzdGFydHVwX3VybCkpIHt9Cgp2b2lkIEJyb3dzZXJBcHA6Ok9uQmVmb3JlQ29tbWFuZExpbmVQcm9jZXNzaW5nKAogICAgY29uc3QgQ2VmU3RyaW5nJiBwcm9jZXNzX3R5cGUsCiAgICBDZWZSZWZQdHI8Q2VmQ29tbWFuZExpbmU+IGNvbW1hbmRfbGluZSkgewogIC8vIOKUgOKUgCBQcml2YWN5ICYgc2VjdXJpdHkgaGFyZGVuaW5nIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIC8vIERpc2FibGUgZmVhdHVyZXMgdGhhdCBwaG9uZSBob21lIG9yIGVuYWJsZSByZW1vdGUgY29udHJvbCBzdXJmYWNlcy4KICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS1iYWNrZ3JvdW5kLW5ldHdvcmtpbmciKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS1jbGllbnQtc2lkZS1waGlzaGluZy1kZXRlY3Rpb24iKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS1jb21wb25lbnQtdXBkYXRlIik7CiAgY29tbWFuZF9saW5lLT5BcHBlbmRTd2l0Y2goImRpc2FibGUtZGVmYXVsdC1hcHBzIik7CiAgY29tbWFuZF9saW5lLT5BcHBlbmRTd2l0Y2goImRpc2FibGUtZXh0ZW5zaW9ucyIpOwogIGNvbW1hbmRfbGluZS0+QXBwZW5kU3dpdGNoKCJkaXNhYmxlLXN5bmMiKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS10cmFuc2xhdGUiKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgibWV0cmljcy1yZWNvcmRpbmctb25seSIpOwogIGNvbW1hbmRfbGluZS0+QXBwZW5kU3dpdGNoKCJuby1maXJzdC1ydW4iKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgibm8tcGluZ3MiKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgic2FmZWJyb3dzaW5nLWRpc2FibGUtYXV0by11cGRhdGUiKTsKCiAgLy8g4pSA4pSAIEdQVSBjcmFzaCBwcmV2ZW50aW9uIChJbnRlbCBJcmlzIFhlICYgaW50ZWdyYXRlZCBHUFVzKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAvLyBQcmVmZXIgZGlzYWJsaW5nIG9ubHkgR1BVIGNvbXBvc2l0aW5nIChzb2Z0d2FyZSByYXN0ZXJpemVyKSByYXRoZXIgdGhhbgogIC8vIHRoZSB3aG9sZSBHUFUgc3RhY2ssIHdoaWNoIHdvdWxkIGFsc28ga2lsbCBXZWJHTCBhbmQgaGFyZHdhcmUgdmlkZW8gZGVjb2RlLgogIC8vIEZhbGwgYmFjayB0byBmdWxsIC0tZGlzYWJsZS1ncHUgb25seSBpZiB0aGUgdXNlciBoYXNuJ3Qgb3B0ZWQgaW50byBHUFUuCiAgaWYgKCFjb21tYW5kX2xpbmUtPkhhc1N3aXRjaCgiZW5hYmxlLWdwdSIpKSB7CiAgICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS1ncHUtY29tcG9zaXRpbmciKTsKICAgIC8vIEFsc28gZm9yY2UgdGhlIHN3aWZ0c2hhZGVyIHBhdGggb24gc3lzdGVtcyB3aXRoIGtub3duLXByb2JsZW1hdGljIGRyaXZlcnMuCiAgICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgidXNlLWdsIik7CiAgICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaFdpdGhWYWx1ZSgidXNlLWdsIiwgInN3aWZ0c2hhZGVyLXdlYmdsIik7CiAgfQoKICAvLyDilIDilIAgTWVkaWEgJiBjb2RlYyBmbGFncyBmb3IgWW91VHViZSAvIGdlbmVyYWwgdmlkZW8gcGxheWJhY2sg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgY29tbWFuZF9saW5lLT5BcHBlbmRTd2l0Y2goImF1dG9wbGF5LXBvbGljeT1uby11c2VyLWdlc3R1cmUtcmVxdWlyZWQiKTsKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZW5hYmxlLWZlYXR1cmVzPVZhYXBpVmlkZW9EZWNvZGVMaW51eEdMIik7CgogIC8vIOKUgOKUgCBNaXNjIFVYIGltcHJvdmVtZW50cyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBjb21tYW5kX2xpbmUtPkFwcGVuZFN3aXRjaCgiZGlzYWJsZS1wb3B1cC1ibG9ja2luZyIpOwogIGNvbW1hbmRfbGluZS0+QXBwZW5kU3dpdGNoKCJkaXNhYmxlLWhhbmctbW9uaXRvciIpOwp9Cgp2b2lkIEJyb3dzZXJBcHA6Ok9uQ29udGV4dEluaXRpYWxpemVkKCkgewogIENFRl9SRVFVSVJFX1VJX1RIUkVBRCgpOwogIGNvbnN0IHN0ZDo6c3RyaW5nIHVybCA9IHN0YXJ0dXBfdXJsXy5lbXB0eSgpID8gQnJvd3NlcldpbmRvdzo6RGVmYXVsdEhvbWVVcmwoKSA6IHN0YXJ0dXBfdXJsXzsKICBCcm93c2VyV2luZG93OjpDcmVhdGUodXJsKTsKfQp9ICAvLyBuYW1lc3BhY2Uga2luZ2ZuCg==
+#include "src/browser/browser_app.h"
+#include "src/browser/browser_window.h"
+#include "include/wrapper/cef_helpers.h"
+
+namespace kingfn {
+BrowserApp::BrowserApp(std::string startup_url)
+    : startup_url_(std::move(startup_url)) {}
+
+void BrowserApp::OnBeforeCommandLineProcessing(
+    const CefString& process_type,
+    CefRefPtr<CefCommandLine> command_line) {
+  // ── Privacy & security hardening ──────────────────────────────────────────
+  // Disable features that phone home or enable remote control surfaces.
+  command_line->AppendSwitch("disable-background-networking");
+  command_line->AppendSwitch("disable-client-side-phishing-detection");
+  command_line->AppendSwitch("disable-component-update");
+  command_line->AppendSwitch("disable-default-apps");
+  command_line->AppendSwitch("disable-extensions");
+  command_line->AppendSwitch("disable-sync");
+  command_line->AppendSwitch("disable-translate");
+  command_line->AppendSwitch("metrics-recording-only");
+  command_line->AppendSwitch("no-first-run");
+  command_line->AppendSwitch("no-pings");
+  command_line->AppendSwitch("safebrowsing-disable-auto-update");
+
+  // ── GPU crash prevention (Intel Iris Xe & integrated GPUs) ───────────────
+  // Prefer disabling only GPU compositing (software rasterizer) rather than
+  // the whole GPU stack, which would also kill WebGL and hardware video decode.
+  // Fall back to full --disable-gpu only if the user hasn't opted into GPU.
+  if (!command_line->HasSwitch("enable-gpu")) {
+    command_line->AppendSwitch("disable-gpu-compositing");
+    // Also force the swiftshader path on systems with known-problematic drivers.
+    command_line->AppendSwitch("use-gl");
+    command_line->AppendSwitchWithValue("use-gl", "swiftshader-webgl");
+  }
+
+  // ── Media & codec flags for YouTube / general video playback ─────────────
+  command_line->AppendSwitch("autoplay-policy=no-user-gesture-required");
+  command_line->AppendSwitch("enable-features=VaapiVideoDecodeLinuxGL");
+
+  // ── Misc UX improvements ──────────────────────────────────────────────────
+  command_line->AppendSwitch("disable-popup-blocking");
+  command_line->AppendSwitch("disable-hang-monitor");
+}
+
+void BrowserApp::OnContextInitialized() {
+  CEF_REQUIRE_UI_THREAD();
+  const std::string url = startup_url_.empty() ? BrowserWindow::DefaultHomeUrl() : startup_url_;
+  BrowserWindow::Create(url);
+}
+}  // namespace kingfn

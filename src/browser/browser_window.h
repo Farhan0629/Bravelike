@@ -1,1 +1,198 @@
-I3ByYWdtYSBvbmNlCiNpbmNsdWRlIDxtZW1vcnk+CiNpbmNsdWRlIDxzdHJpbmc+CiNpbmNsdWRlIDx2ZWN0b3I+CgojaW5jbHVkZSAiaW5jbHVkZS9jZWZfY2xpZW50LmgiCiNpbmNsdWRlICJpbmNsdWRlL2NlZl9rZXlib2FyZF9oYW5kbGVyLmgiCiNpbmNsdWRlICJpbmNsdWRlL3ZpZXdzL2NlZl9icm93c2VyX3ZpZXcuaCIKI2luY2x1ZGUgImluY2x1ZGUvdmlld3MvY2VmX2Jyb3dzZXJfdmlld19kZWxlZ2F0ZS5oIgojaW5jbHVkZSAiaW5jbHVkZS92aWV3cy9jZWZfYnV0dG9uX2RlbGVnYXRlLmgiCiNpbmNsdWRlICJpbmNsdWRlL3ZpZXdzL2NlZl9sYWJlbF9idXR0b24uaCIKI2luY2x1ZGUgImluY2x1ZGUvdmlld3MvY2VmX3BhbmVsLmgiCiNpbmNsdWRlICJpbmNsdWRlL3ZpZXdzL2NlZl90ZXh0ZmllbGQuaCIKI2luY2x1ZGUgImluY2x1ZGUvdmlld3MvY2VmX3RleHRmaWVsZF9kZWxlZ2F0ZS5oIgojaW5jbHVkZSAiaW5jbHVkZS92aWV3cy9jZWZfd2luZG93LmgiCiNpbmNsdWRlICJpbmNsdWRlL3ZpZXdzL2NlZl93aW5kb3dfZGVsZWdhdGUuaCIKCiNpbmNsdWRlICJzcmMvY29yZS9kYXRhYmFzZS5oIgojaW5jbHVkZSAic3JjL2NvcmUvZmlsdGVyX2VuZ2luZS5oIgojaW5jbHVkZSAic3JjL2NvcmUvcHJpdmFjeV9zdGF0cy5oIgojaW5jbHVkZSAic3JjL2NvcmUvc2l0ZV9zaGllbGRzLmgiCiNpbmNsdWRlICJzcmMvYnJvd3Nlci9kb3dubG9hZF9oYW5kbGVyLmgiCiNpbmNsdWRlICJzcmMvYnJvd3Nlci91cGRhdGVfY2hlY2tlci5oIgoKbmFtZXNwYWNlIGtpbmdmbiB7CgovLyDilIDilIAgUGVyLXRhYiBzdGF0ZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKc3RydWN0IFRhYkVudHJ5IHsKICBpbnQgICAgICAgICAgICAgICAgICAgICAgICAgdGFiX2lkey0xfTsKICBDZWZSZWZQdHI8Q2VmQnJvd3NlclZpZXc+ICAgYnJvd3Nlcl92aWV3OwogIENlZlJlZlB0cjxDZWZCcm93c2VyPiAgICAgICBicm93c2VyOwogIHN0ZDo6c3RyaW5nICAgICAgICAgICAgICAgICB1cmw7CiAgc3RkOjpzdHJpbmcgICAgICAgICAgICAgICAgIHRpdGxleyJOZXcgVGFiIn07CiAgYm9vbCAgICAgICAgICAgICAgICAgICAgICAgIGlzX2xvYWRpbmd7ZmFsc2V9OwogIGJvb2wgICAgICAgICAgICAgICAgICAgICAgICBjYW5fZ29fYmFja3tmYWxzZX07CiAgYm9vbCAgICAgICAgICAgICAgICAgICAgICAgIGNhbl9nb19mb3J3YXJke2ZhbHNlfTsKICBTaXRlU2hpZWxkcyAgICAgICAgICAgICAgICAgc2hpZWxkczsgICAvLyBwZXItdGFiIHNoaWVsZHMKICBQcml2YWN5U3RhdHMgICAgICAgICAgICAgICAgc3RhdHM7ICAgIC8vIHBlci10YWIgYmxvY2tlZCBjb3VudGVyCn07CgovLyDilIDilIAgSUQgcmFuZ2VzIGZvciBDRUYgVmlld3MgY29udHJvbHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACi8vIGtXaW5kb3c9MSwga0JhY2s9Miwga0ZvcndhcmQ9Mywga1JlbG9hZD00LCBrU3RvcD01LCBrSG9tZT02Ci8vIGtBZGRyZXNzPTcsIGtTaGllbGQ9OCwga0Jvb2ttYXJrPTksIGtEb3dubG9hZHM9MTAKLy8ga05ld1RhYj0xMQovLyBrVGFiQnV0dG9uW2ldICA9IGtUYWJCdXR0b25CYXNlICsgaSAgIChzd2l0Y2ggdG8gdGFiIGkpCi8vIGtUYWJDbG9zZVtpXSAgID0ga1RhYkNsb3NlQmFzZSAgKyBpICAgKGNsb3NlIHRhYiBpKQpjb25zdGV4cHIgaW50IGtUYWJCdXR0b25CYXNlID0gMTAwOwpjb25zdGV4cHIgaW50IGtUYWJDbG9zZUJhc2UgID0gMzAwOwpjb25zdGV4cHIgaW50IGtCcm93c2VyVmlld0Jhc2UgPSA1MDA7ICAvLyBicm93c2VyIHZpZXcgSURzCgpjbGFzcyBCcm93c2VyV2luZG93IGZpbmFsCiAgICA6IHB1YmxpYyBDZWZDbGllbnQsCiAgICAgIHB1YmxpYyBDZWZEaXNwbGF5SGFuZGxlciwKICAgICAgcHVibGljIENlZkxpZmVTcGFuSGFuZGxlciwKICAgICAgcHVibGljIENlZkxvYWRIYW5kbGVyLAogICAgICBwdWJsaWMgQ2VmUmVxdWVzdEhhbmRsZXIsCiAgICAgIHB1YmxpYyBDZWZSZXNvdXJjZVJlcXVlc3RIYW5kbGVyLAogICAgICBwdWJsaWMgQ2VmS2V5Ym9hcmRIYW5kbGVyLAogICAgICBwdWJsaWMgQ2VmQnJvd3NlclZpZXdEZWxlZ2F0ZSwKICAgICAgcHVibGljIENlZkJ1dHRvbkRlbGVnYXRlLAogICAgICBwdWJsaWMgQ2VmVGV4dGZpZWxkRGVsZWdhdGUsCiAgICAgIHB1YmxpYyBDZWZXaW5kb3dEZWxlZ2F0ZSB7CiBwdWJsaWM6CiAgc3RhdGljIHZvaWQgQ3JlYXRlKGNvbnN0IHN0ZDo6c3RyaW5nJiBzdGFydHVwX3VybCk7CiAgc3RhdGljIHN0ZDo6c3RyaW5nIERlZmF1bHRIb21lVXJsKCk7CiAgc3RhdGljIGJvb2wgSXNIb21lVXJsKGNvbnN0IHN0ZDo6c3RyaW5nJiB1cmwpOwogIHN0YXRpYyBib29sIElzSW50ZXJuYWxVcmwoY29uc3Qgc3RkOjpzdHJpbmcmIHVybCk7CgogIC8vIOKUgOKUgCBIYW5kbGVyIGdldHRlcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgQ2VmUmVmUHRyPENlZkRpc3BsYXlIYW5kbGVyPiAgR2V0RGlzcGxheUhhbmRsZXIoKSAgb3ZlcnJpZGUgeyByZXR1cm4gdGhpczsgfQogIENlZlJlZlB0cjxDZWZMaWZlU3BhbkhhbmRsZXI+IEdldExpZmVTcGFuSGFuZGxlcigpIG92ZXJyaWRlIHsgcmV0dXJuIHRoaXM7IH0KICBDZWZSZWZQdHI8Q2VmTG9hZEhhbmRsZXI+ICAgICBHZXRMb2FkSGFuZGxlcigpICAgICBvdmVycmlkZSB7IHJldHVybiB0aGlzOyB9CiAgQ2VmUmVmUHRyPENlZlJlcXVlc3RIYW5kbGVyPiAgR2V0UmVxdWVzdEhhbmRsZXIoKSAgb3ZlcnJpZGUgeyByZXR1cm4gdGhpczsgfQogIENlZlJlZlB0cjxDZWZLZXlib2FyZEhhbmRsZXI+IEdldEtleWJvYXJkSGFuZGxlcigpIG92ZXJyaWRlIHsgcmV0dXJuIHRoaXM7IH0KICBDZWZSZWZQdHI8Q2VmRG93bmxvYWRIYW5kbGVyPiBHZXREb3dubG9hZEhhbmRsZXIoKSBvdmVycmlkZSB7CiAgICByZXR1cm4gZG93bmxvYWRfaGFuZGxlcl87CiAgfQoKICAvLyDilIDilIAgQ2VmRGlzcGxheUhhbmRsZXIg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgdm9pZCBPblRpdGxlQ2hhbmdlKENlZlJlZlB0cjxDZWZCcm93c2VyPiwgY29uc3QgQ2VmU3RyaW5nJikgb3ZlcnJpZGU7CiAgdm9pZCBPbkFkZHJlc3NDaGFuZ2UoQ2VmUmVmUHRyPENlZkJyb3dzZXI+LCBDZWZSZWZQdHI8Q2VmRnJhbWU+LAogICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IENlZlN0cmluZyYpIG92ZXJyaWRlOwogIHZvaWQgT25GdWxsc2NyZWVuTW9kZUNoYW5nZShDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4sIGJvb2wpIG92ZXJyaWRlOwogIGJvb2wgT25Db25zb2xlTWVzc2FnZShDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4sIGNlZl9sb2dfc2V2ZXJpdHlfdCwKICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgQ2VmU3RyaW5nJiwgY29uc3QgQ2VmU3RyaW5nJiwgaW50KSBvdmVycmlkZTsKCiAgLy8g4pSA4pSAIENlZkxpZmVTcGFuSGFuZGxlciDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICB2b2lkIE9uQWZ0ZXJDcmVhdGVkKENlZlJlZlB0cjxDZWZCcm93c2VyPikgb3ZlcnJpZGU7CiAgdm9pZCBPbkJlZm9yZUNsb3NlKENlZlJlZlB0cjxDZWZCcm93c2VyPikgb3ZlcnJpZGU7CiAgYm9vbCBPbkJlZm9yZVBvcHVwKENlZlJlZlB0cjxDZWZCcm93c2VyPiwgQ2VmUmVmUHRyPENlZkZyYW1lPiwKICAgICAgICAgICAgICAgICAgICAgY29uc3QgQ2VmU3RyaW5nJiB0YXJnZXRfdXJsLAogICAgICAgICAgICAgICAgICAgICBjb25zdCBDZWZTdHJpbmcmIHRhcmdldF9mcmFtZV9uYW1lLAogICAgICAgICAgICAgICAgICAgICBXaW5kb3dPcGVuRGlzcG9zaXRpb24sIGJvb2wgdXNlcl9nZXN0dXJlLAogICAgICAgICAgICAgICAgICAgICBjb25zdCBDZWZQb3B1cEZlYXR1cmVzJiwgQ2VmV2luZG93SW5mbyYsCiAgICAgICAgICAgICAgICAgICAgIENlZlJlZlB0cjxDZWZDbGllbnQ+JiwgQ2VmQnJvd3NlclNldHRpbmdzJiwKICAgICAgICAgICAgICAgICAgICAgQ2VmUmVmUHRyPENlZkRpY3Rpb25hcnlWYWx1ZT4mLAogICAgICAgICAgICAgICAgICAgICBib29sKiBub19qYXZhc2NyaXB0X2FjY2Vzcykgb3ZlcnJpZGU7CgogIC8vIOKUgOKUgCBDZWZMb2FkSGFuZGxlciDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICB2b2lkIE9uTG9hZGluZ1N0YXRlQ2hhbmdlKENlZlJlZlB0cjxDZWZCcm93c2VyPiwgYm9vbCwgYm9vbCwgYm9vbCkgb3ZlcnJpZGU7CiAgdm9pZCBPbkxvYWRTdGFydChDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4sIENlZlJlZlB0cjxDZWZGcmFtZT4sCiAgICAgICAgICAgICAgICAgICBUcmFuc2l0aW9uVHlwZSkgb3ZlcnJpZGU7CiAgdm9pZCBPbkxvYWRFbmQoQ2VmUmVmUHRyPENlZkJyb3dzZXI+LCBDZWZSZWZQdHI8Q2VmRnJhbWU+LCBpbnQpIG92ZXJyaWRlOwogIHZvaWQgT25Mb2FkRXJyb3IoQ2VmUmVmUHRyPENlZkJyb3dzZXI+LCBDZWZSZWZQdHI8Q2VmRnJhbWU+LAogICAgICAgICAgICAgICAgICAgRXJyb3JDb2RlLCBjb25zdCBDZWZTdHJpbmcmLCBjb25zdCBDZWZTdHJpbmcmKSBvdmVycmlkZTsKCiAgLy8g4pSA4pSAIENlZktleWJvYXJkSGFuZGxlciDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBib29sIE9uUHJlS2V5RXZlbnQoQ2VmUmVmUHRyPENlZkJyb3dzZXI+LCBjb25zdCBDZWZLZXlFdmVudCYsCiAgICAgICAgICAgICAgICAgICAgIENlZkV2ZW50SGFuZGxlLCBib29sKikgb3ZlcnJpZGU7CgogIC8vIOKUgOKUgCBDZWZSZXF1ZXN0SGFuZGxlciAvIENlZlJlc291cmNlUmVxdWVzdEhhbmRsZXIg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgQ2VmUmVmUHRyPENlZlJlc291cmNlUmVxdWVzdEhhbmRsZXI+IEdldFJlc291cmNlUmVxdWVzdEhhbmRsZXIoCiAgICAgIENlZlJlZlB0cjxDZWZCcm93c2VyPiwgQ2VmUmVmUHRyPENlZkZyYW1lPiwgQ2VmUmVmUHRyPENlZlJlcXVlc3Q+LAogICAgICBib29sLCBib29sLCBjb25zdCBDZWZTdHJpbmcmLCBib29sJikgb3ZlcnJpZGU7CiAgY2VmX3JldHVybl92YWx1ZV90IE9uQmVmb3JlUmVzb3VyY2VMb2FkKAogICAgICBDZWZSZWZQdHI8Q2VmQnJvd3Nlcj4sIENlZlJlZlB0cjxDZWZGcmFtZT4sIENlZlJlZlB0cjxDZWZSZXF1ZXN0PiwKICAgICAgQ2VmUmVmUHRyPENlZkNhbGxiYWNrPikgb3ZlcnJpZGU7CgogIC8vIOKUgOKUgCBWaWV3IGRlbGVnYXRlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBjZWZfcnVudGltZV9zdHlsZV90IEdldEJyb3dzZXJSdW50aW1lU3R5bGUoKSBvdmVycmlkZTsKICB2b2lkIE9uQnV0dG9uUHJlc3NlZChDZWZSZWZQdHI8Q2VmQnV0dG9uPikgb3ZlcnJpZGU7CiAgYm9vbCBPbktleUV2ZW50KENlZlJlZlB0cjxDZWZUZXh0ZmllbGQ+LCBjb25zdCBDZWZLZXlFdmVudCYpIG92ZXJyaWRlOwoKICAvLyDilIDilIAgQ2VmV2luZG93RGVsZWdhdGUg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgdm9pZCAgICBPbldpbmRvd0NyZWF0ZWQoQ2VmUmVmUHRyPENlZldpbmRvdz4pIG92ZXJyaWRlOwogIHZvaWQgICAgT25XaW5kb3dEZXN0cm95ZWQoQ2VmUmVmUHRyPENlZldpbmRvdz4pIG92ZXJyaWRlOwogIGJvb2wgICAgQ2FuQ2xvc2UoQ2VmUmVmUHRyPENlZldpbmRvdz4pIG92ZXJyaWRlOwogIENlZlNpemUgR2V0UHJlZmVycmVkU2l6ZShDZWZSZWZQdHI8Q2VmVmlldz4pIG92ZXJyaWRlOwogIENlZlNpemUgR2V0TWluaW11bVNpemUoQ2VmUmVmUHRyPENlZlZpZXc+KSBvdmVycmlkZTsKICBjZWZfcnVudGltZV9zdHlsZV90IEdldFdpbmRvd1J1bnRpbWVTdHlsZSgpIG92ZXJyaWRlOwoKIHByaXZhdGU6CiAgZXhwbGljaXQgQnJvd3NlcldpbmRvdyhzdGQ6OnN0cmluZyBzdGFydHVwX3VybCk7CgogIC8vIOKUgOKUgCBJbml0aWFsaXphdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICB2b2lkIExvYWRSdWxlcygpOwogIHN0YXRpYyBzdGQ6OnN0cmluZyBFeGVjdXRhYmxlRGlyZWN0b3J5KCk7CgogIC8vIOKUgOKUgCBUYWIgbWFuYWdlbWVudCDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICBpbnQgIE5ld1RhYihjb25zdCBzdGQ6OnN0cmluZyYgdXJsID0gIiIpOwogIHZvaWQgQ2xvc2VUYWIoaW50IHRhYl9pbmRleCk7CiAgdm9pZCBBY3RpdmF0ZVRhYihpbnQgdGFiX2luZGV4KTsKICBpbnQgIEZpbmRUYWJCeUJyb3dzZXJJZChpbnQgYnJvd3Nlcl9pZCkgY29uc3Q7CiAgVGFiRW50cnkqIEFjdGl2ZVRhYigpOwogIGNvbnN0IFRhYkVudHJ5KiBBY3RpdmVUYWIoKSBjb25zdDsKCiAgLy8g4pSA4pSAIFVJIGhlbHBlcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgdm9pZCBSZWJ1aWxkVGFiU3RyaXAoKTsKICB2b2lkIFVwZGF0ZVRvb2xiYXIoKTsKICB2b2lkIFVwZGF0ZVNoaWVsZExhYmVsKCk7CiAgdm9pZCBVcGRhdGVCb29rbWFya0J1dHRvbigpOwogIHZvaWQgVXBkYXRlRG93bmxvYWRCdXR0b24oaW50IGFjdGl2ZV9jb3VudCk7CiAgdm9pZCBJbmplY3RTaGllbGRzU2NyaXB0KENlZlJlZlB0cjxDZWZGcmFtZT4gZnJhbWUsIFRhYkVudHJ5KiB0YWIpOwogIHZvaWQgSW5qZWN0UGFnZURhdGEoQ2VmUmVmUHRyPENlZkZyYW1lPiBmcmFtZSwgY29uc3Qgc3RkOjpzdHJpbmcmIHVybCk7CiAgdm9pZCBOYXZpZ2F0ZShjb25zdCBzdGQ6OnN0cmluZyYgaW5wdXQpOwogIHZvaWQgRm9jdXNBZGRyZXNzQmFyKCk7CiAgdm9pZCBUb2dnbGVCb29rbWFyaygpOwogIHZvaWQgT25VcGRhdGVBdmFpbGFibGUoc3RkOjpzdHJpbmcgbmV3X3Zlciwgc3RkOjpzdHJpbmcgdXJsKTsKCiAgLy8g4pSA4pSAIFN0YXRlIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIHN0ZDo6c3RyaW5nIHN0YXJ0dXBfdXJsXzsKICBzdGQ6OnN0cmluZyBzaGllbGRzX3NjcmlwdF87CiAgc3RkOjpzdHJpbmcgaGlzdG9yeV9odG1sXzsKICBzdGQ6OnN0cmluZyBkb3dubG9hZHNfaHRtbF87CiAgaW50IG5leHRfdGFiX2lkX3swfTsKICBpbnQgYWN0aXZlX3RhYl9pbmRleF97LTF9OwogIGJvb2wgaXNfZnVsbHNjcmVlbl97ZmFsc2V9OwogIGludCBjbG9zaW5nX3RhYl9jb3VudF97MH07ICAvLyBicm93c2VycyBzdGlsbCB3YWl0aW5nIGZvciBPbkJlZm9yZUNsb3NlCgogIHN0ZDo6dmVjdG9yPFRhYkVudHJ5PiB0YWJzXzsKCiAgLy8gQ29yZSBlbmdpbmUgKHNoYXJlZCBhY3Jvc3MgYWxsIHRhYnMpLgogIEZpbHRlckVuZ2luZSBmaWx0ZXJfZW5naW5lXzsKCiAgLy8gRGF0YWJhc2UgKGhpc3RvcnksIGJvb2ttYXJrcywgc2hpZWxkcywgZG93bmxvYWRzKS4KICBzdGQ6OnVuaXF1ZV9wdHI8RGF0YWJhc2U+IGRiXzsKCiAgLy8gRG93bmxvYWQgaGFuZGxlci4KICBDZWZSZWZQdHI8RG93bmxvYWRIYW5kbGVyPiBkb3dubG9hZF9oYW5kbGVyXzsKCiAgLy8gVXBkYXRlIGNoZWNrZXIuCiAgc3RkOjp1bmlxdWVfcHRyPFVwZGF0ZUNoZWNrZXI+IHVwZGF0ZV9jaGVja2VyXzsKICBDZWZSZWZQdHI8Q2VmTGFiZWxCdXR0b24+ICB1cGRhdGVfYnV0dG9uXzsKCiAgLy8gQ0VGIFZpZXdzIHJlZmVyZW5jZXMuCiAgQ2VmUmVmUHRyPENlZldpbmRvdz4gICAgICAgd2luZG93XzsKICBDZWZSZWZQdHI8Q2VmUGFuZWw+ICAgICAgICB0YWJfc3RyaXBfOwogIENlZlJlZlB0cjxDZWZUZXh0ZmllbGQ+ICAgIGFkZHJlc3NfZmllbGRfOwogIENlZlJlZlB0cjxDZWZMYWJlbEJ1dHRvbj4gIHNoaWVsZF9idXR0b25fOwogIENlZlJlZlB0cjxDZWZMYWJlbEJ1dHRvbj4gIGJvb2ttYXJrX2J1dHRvbl87CiAgQ2VmUmVmUHRyPENlZkxhYmVsQnV0dG9uPiAgZG93bmxvYWRfYnV0dG9uXzsKICBDZWZSZWZQdHI8Q2VmUGFuZWw+ICAgICAgICBjb250ZW50X3BhbmVsXzsKCiAgSU1QTEVNRU5UX1JFRkNPVU5USU5HKEJyb3dzZXJXaW5kb3cpOwogIERJU0FMTE9XX0NPUFlfQU5EX0FTU0lHTihCcm93c2VyV2luZG93KTsKfTsKCn0gIC8vIG5hbWVzcGFjZSBraW5nZm4K
+#pragma once
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "include/cef_client.h"
+#include "include/cef_keyboard_handler.h"
+#include "include/views/cef_browser_view.h"
+#include "include/views/cef_browser_view_delegate.h"
+#include "include/views/cef_button_delegate.h"
+#include "include/views/cef_label_button.h"
+#include "include/views/cef_panel.h"
+#include "include/views/cef_textfield.h"
+#include "include/views/cef_textfield_delegate.h"
+#include "include/views/cef_window.h"
+#include "include/views/cef_window_delegate.h"
+
+#include "src/core/database.h"
+#include "src/core/filter_engine.h"
+#include "src/core/privacy_stats.h"
+#include "src/core/site_shields.h"
+#include "src/browser/download_handler.h"
+#include "src/browser/update_checker.h"
+
+namespace kingfn {
+
+// ── Per-tab state ─────────────────────────────────────────────────────────────
+struct TabEntry {
+  int                         tab_id{-1};
+  CefRefPtr<CefBrowserView>   browser_view;
+  CefRefPtr<CefBrowser>       browser;
+  std::string                 url;
+  std::string                 title{"New Tab"};
+  bool                        is_loading{false};
+  bool                        can_go_back{false};
+  bool                        can_go_forward{false};
+  SiteShields                 shields;   // per-tab shields
+  PrivacyStats                stats;    // per-tab blocked counter
+};
+
+// ── ID ranges for CEF Views controls ─────────────────────────────────────────
+// kWindow=1, kBack=2, kForward=3, kReload=4, kStop=5, kHome=6
+// kAddress=7, kShield=8, kBookmark=9, kDownloads=10
+// kNewTab=11
+// kTabButton[i]  = kTabButtonBase + i   (switch to tab i)
+// kTabClose[i]   = kTabCloseBase  + i   (close tab i)
+constexpr int kTabButtonBase = 100;
+constexpr int kTabCloseBase  = 300;
+constexpr int kBrowserViewBase = 500;  // browser view IDs
+
+class BrowserWindow final
+    : public CefClient,
+      public CefDisplayHandler,
+      public CefLifeSpanHandler,
+      public CefLoadHandler,
+      public CefRequestHandler,
+      public CefResourceRequestHandler,
+      public CefKeyboardHandler,
+      public CefBrowserViewDelegate,
+      public CefButtonDelegate,
+      public CefTextfieldDelegate,
+      public CefWindowDelegate {
+ public:
+  static void Create(const std::string& startup_url);
+  static std::string DefaultHomeUrl();
+  static bool IsHomeUrl(const std::string& url);
+  static bool IsInternalUrl(const std::string& url);
+
+  // ── Handler getters ───────────────────────────────────────────────────────
+  CefRefPtr<CefDisplayHandler>  GetDisplayHandler()  override { return this; }
+  CefRefPtr<CefLifeSpanHandler> GetLifeSpanHandler() override { return this; }
+  CefRefPtr<CefLoadHandler>     GetLoadHandler()     override { return this; }
+  CefRefPtr<CefRequestHandler>  GetRequestHandler()  override { return this; }
+  CefRefPtr<CefKeyboardHandler> GetKeyboardHandler() override { return this; }
+  CefRefPtr<CefDownloadHandler> GetDownloadHandler() override {
+    return download_handler_;
+  }
+
+  // ── CefDisplayHandler ─────────────────────────────────────────────────────
+  void OnTitleChange(CefRefPtr<CefBrowser>, const CefString&) override;
+  void OnAddressChange(CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>,
+                       const CefString&) override;
+  void OnFullscreenModeChange(CefRefPtr<CefBrowser>, bool) override;
+  bool OnConsoleMessage(CefRefPtr<CefBrowser>, cef_log_severity_t,
+                        const CefString&, const CefString&, int) override;
+
+  // ── CefLifeSpanHandler ────────────────────────────────────────────────────
+  void OnAfterCreated(CefRefPtr<CefBrowser>) override;
+  void OnBeforeClose(CefRefPtr<CefBrowser>) override;
+  bool OnBeforePopup(CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>,
+                     const CefString& target_url,
+                     const CefString& target_frame_name,
+                     WindowOpenDisposition, bool user_gesture,
+                     const CefPopupFeatures&, CefWindowInfo&,
+                     CefRefPtr<CefClient>&, CefBrowserSettings&,
+                     CefRefPtr<CefDictionaryValue>&,
+                     bool* no_javascript_access) override;
+
+  // ── CefLoadHandler ────────────────────────────────────────────────────────
+  void OnLoadingStateChange(CefRefPtr<CefBrowser>, bool, bool, bool) override;
+  void OnLoadStart(CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>,
+                   TransitionType) override;
+  void OnLoadEnd(CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>, int) override;
+  void OnLoadError(CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>,
+                   ErrorCode, const CefString&, const CefString&) override;
+
+  // ── CefKeyboardHandler ────────────────────────────────────────────────────
+  bool OnPreKeyEvent(CefRefPtr<CefBrowser>, const CefKeyEvent&,
+                     CefEventHandle, bool*) override;
+
+  // ── CefRequestHandler / CefResourceRequestHandler ─────────────────────────
+  CefRefPtr<CefResourceRequestHandler> GetResourceRequestHandler(
+      CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>, CefRefPtr<CefRequest>,
+      bool, bool, const CefString&, bool&) override;
+  cef_return_value_t OnBeforeResourceLoad(
+      CefRefPtr<CefBrowser>, CefRefPtr<CefFrame>, CefRefPtr<CefRequest>,
+      CefRefPtr<CefCallback>) override;
+
+  // ── View delegates ────────────────────────────────────────────────────────
+  cef_runtime_style_t GetBrowserRuntimeStyle() override;
+  void OnButtonPressed(CefRefPtr<CefButton>) override;
+  bool OnKeyEvent(CefRefPtr<CefTextfield>, const CefKeyEvent&) override;
+
+  // ── CefWindowDelegate ─────────────────────────────────────────────────────
+  void    OnWindowCreated(CefRefPtr<CefWindow>) override;
+  void    OnWindowDestroyed(CefRefPtr<CefWindow>) override;
+  bool    CanClose(CefRefPtr<CefWindow>) override;
+  CefSize GetPreferredSize(CefRefPtr<CefView>) override;
+  CefSize GetMinimumSize(CefRefPtr<CefView>) override;
+  cef_runtime_style_t GetWindowRuntimeStyle() override;
+
+ private:
+  explicit BrowserWindow(std::string startup_url);
+
+  // ── Initialization ────────────────────────────────────────────────────────
+  void LoadRules();
+  static std::string ExecutableDirectory();
+
+  // ── Tab management ────────────────────────────────────────────────────────
+  int  NewTab(const std::string& url = "");
+  void CloseTab(int tab_index);
+  void ActivateTab(int tab_index);
+  int  FindTabByBrowserId(int browser_id) const;
+  TabEntry* ActiveTab();
+  const TabEntry* ActiveTab() const;
+
+  // ── UI helpers ────────────────────────────────────────────────────────────
+  void RebuildTabStrip();
+  void UpdateToolbar();
+  void UpdateShieldLabel();
+  void UpdateBookmarkButton();
+  void UpdateDownloadButton(int active_count);
+  void InjectShieldsScript(CefRefPtr<CefFrame> frame, TabEntry* tab);
+  void InjectPageData(CefRefPtr<CefFrame> frame, const std::string& url);
+  void Navigate(const std::string& input);
+  void FocusAddressBar();
+  void ToggleBookmark();
+  void OnUpdateAvailable(std::string new_ver, std::string url);
+
+  // ── State ─────────────────────────────────────────────────────────────────
+  std::string startup_url_;
+  std::string shields_script_;
+  std::string history_html_;
+  std::string downloads_html_;
+  int next_tab_id_{0};
+  int active_tab_index_{-1};
+  bool is_fullscreen_{false};
+  int closing_tab_count_{0};  // browsers still waiting for OnBeforeClose
+
+  std::vector<TabEntry> tabs_;
+
+  // Core engine (shared across all tabs).
+  FilterEngine filter_engine_;
+
+  // Database (history, bookmarks, shields, downloads).
+  std::unique_ptr<Database> db_;
+
+  // Download handler.
+  CefRefPtr<DownloadHandler> download_handler_;
+
+  // Update checker.
+  std::unique_ptr<UpdateChecker> update_checker_;
+  CefRefPtr<CefLabelButton>  update_button_;
+
+  // CEF Views references.
+  CefRefPtr<CefWindow>       window_;
+  CefRefPtr<CefPanel>        tab_strip_;
+  CefRefPtr<CefTextfield>    address_field_;
+  CefRefPtr<CefLabelButton>  shield_button_;
+  CefRefPtr<CefLabelButton>  bookmark_button_;
+  CefRefPtr<CefLabelButton>  download_button_;
+  CefRefPtr<CefPanel>        content_panel_;
+
+  IMPLEMENT_REFCOUNTING(BrowserWindow);
+  DISALLOW_COPY_AND_ASSIGN(BrowserWindow);
+};
+
+}  // namespace kingfn
