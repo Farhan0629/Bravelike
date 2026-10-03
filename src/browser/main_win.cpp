@@ -4,6 +4,7 @@
 #include <shellapi.h>
 
 #include "include/cef_app.h"
+#include "include/cef_command_line.h"
 #include "src/browser/browser_app.h"
 #include "src/core/navigation.h"
 
@@ -33,20 +34,17 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE previous_instance,
   CefString(&settings.cache_path) = ProfilePath();
   CefString(&settings.user_agent_product) = L"Bravelike/0.2";
 
+  CefRefPtr<CefCommandLine> cmd = CefCommandLine::CreateCommandLine();
+  cmd->InitFromString(GetCommandLineW());
+  CefCommandLine::ArgumentList args;
+  cmd->GetArguments(args);
+
   std::string startup_url;
-  if (command_line && wcslen(command_line) > 0) {
-    int argc = 0;
-    wchar_t** argv = CommandLineToArgvW(command_line, &argc);
-    if (argv) {
-      for (int i = 0; i < argc; ++i) {
-        std::wstring arg = argv[i];
-        if (arg.rfind(L"--", 0) != 0 && arg.rfind(L"-", 0) != 0) {
-          std::string str(arg.begin(), arg.end());
-          startup_url = bravelike::ResolveAddressInput(str);
-          break;
-        }
-      }
-      LocalFree(argv);
+  for (const auto& arg : args) {
+    const std::string str = arg.ToString();
+    if (!str.empty() && str.rfind("--", 0) != 0 && str.rfind("-", 0) != 0) {
+      startup_url = bravelike::ResolveAddressInput(str);
+      break;
     }
   }
 
