@@ -26,6 +26,7 @@ add_library(kingfn_core
   src/core/site_shields.cpp
   src/core/url_utils.cpp
   src/core/privacy_stats.cpp
+  src/core/database.cpp
 )
 target_include_directories(kingfn_core PUBLIC src)
 target_compile_features(kingfn_core PUBLIC cxx_std_20)
@@ -62,8 +63,8 @@ if(KINGFN_ENABLE_CEF)
   DownloadSQLite()
 
   # Attach SQLite to kingfn_core so database.cpp can use it.
-  target_sources(kingfn_core PRIVATE src/core/database.cpp)
   target_link_libraries(kingfn_core PUBLIC sqlite3_amalgamation)
+  target_compile_definitions(kingfn_core PUBLIC KINGFN_ENABLE_CEF=1)
 
   set(CEF_VERSION "152.0.7+g83ffcba+chromium-152.0.7977.83" CACHE STRING "CEF binary version")
   set(CEF_CHANNEL    "" CACHE STRING "CEF release channel")

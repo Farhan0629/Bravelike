@@ -1,5 +1,7 @@
 #include "core/database.h"
+#ifdef KINGFN_ENABLE_CEF
 #include <sqlite3.h>
+#endif
 #include <chrono>
 #include <ctime>
 #include <iomanip>
@@ -7,6 +9,8 @@
 #include <stdexcept>
 
 namespace kingfn {
+
+#ifdef KINGFN_ENABLE_CEF
 namespace {
 std::string IsoNow() {
   auto now = std::chrono::system_clock::now();
@@ -344,3 +348,31 @@ void Database::ClearCompletedDownloads() {
 }
 
 }  // namespace kingfn
+
+#else  // !KINGFN_ENABLE_CEF — no-op stubs for non-CEF (test-only) builds
+namespace kingfn {
+Database::Database(const std::string&) {}
+Database::~Database() {}
+void Database::AddHistory(const std::string&, const std::string&) {}
+std::vector<HistoryEntry> Database::GetHistory(int, const std::string&) { return {}; }
+void Database::ClearHistory() {}
+int64_t Database::AddBookmark(const std::string&, const std::string&) { return -1; }
+void Database::RemoveBookmark(int64_t) {}
+bool Database::IsBookmarked(const std::string&) { return false; }
+int64_t Database::GetBookmarkId(const std::string&) { return -1; }
+std::vector<BookmarkEntry> Database::GetBookmarks() { return {}; }
+void Database::SetShieldsEnabled(const std::string&, bool) {}
+bool Database::GetShieldsEnabled(const std::string&, bool d) { return d; }
+std::unordered_set<std::string> Database::GetAllDisabledHosts() { return {}; }
+int64_t Database::AddDownload(const std::string&, const std::string&, const std::string&, int64_t) { return -1; }
+void Database::UpdateDownload(int64_t, int64_t, int64_t, const std::string&) {}
+void Database::CompleteDownload(int64_t, const std::string&) {}
+std::vector<DownloadRecord> Database::GetDownloads(int) { return {}; }
+void Database::ClearCompletedDownloads() {}
+void Database::CreateTables() {}
+void Database::Execute(const char*) {}
+sqlite3_stmt* Database::Prepare(const char*) { return nullptr; }
+std::string Database::NowIso() { return {}; }
+}  // namespace kingfn
+
+#endif  // KINGFN_ENABLE_CEF

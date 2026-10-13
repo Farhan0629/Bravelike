@@ -7,7 +7,7 @@ function(DownloadSQLite)
   FetchContent_Declare(
     sqlite3_src
     URL      https://www.sqlite.org/2024/sqlite-amalgamation-3460100.zip
-    URL_HASH SHA256=2aae070960a021f5a37e7cc36a0a9d4f753de5c21c18e81e24d7cb26f8fdbd63
+    URL_HASH SHA256=77823cb110929c2bcb0f5d48e4833b5c59a8a6e40cdea3936b99e199dbbe5784
     DOWNLOAD_NO_EXTRACT FALSE
   )
   FetchContent_MakeAvailable(sqlite3_src)
